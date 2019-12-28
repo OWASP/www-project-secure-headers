@@ -1,3 +1,3 @@
 ### Leaders
 
-* [Ricardo Iramar](mailto://ricardo.iramar@owasp.org)
+* [Ricardo Iramar](mailto:ricardo.iramar@owasp.org)
