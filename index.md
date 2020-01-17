@@ -1,3 +1,13 @@
+---
+
+layout: col-sidebar
+title: OWASP Secure Headers
+tags: secure headers
+level: 2
+type: code
+
+---
+
 =Main=
 
 [[File:Incubator_banner.jpg| link=https://www.owasp.org/index.php/OWASP_Project_Stages#tab=Incubator_Projects]]
