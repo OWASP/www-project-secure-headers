@@ -1419,7 +1419,3 @@ If you want to help send an email to [mailto:ricardo.iramar@owasp.org ricardo.ir
 * Include X-Permitted-Cross-Domain-Policies under Headers and Best Practices tab.
 * Include Expect-CT header and update HPKP.
 * Include Feature-Policy.
-
-__NOTOC__ <headertabs></headertabs> 
-
-[[Category:OWASP Project]]
