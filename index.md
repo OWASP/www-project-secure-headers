@@ -8,7 +8,6 @@ type: code
 
 ---
 
-
 # OWASP Secure Headers Project
 
 The OWASP Secure Headers Project describes HTTP response headers that your application can use to increase the security of your application. Once set, these HTTP response headers can restrict modern browsers from running into easily preventable vulnerabilities. The OWASP Secure Headers Project intends to raise awareness and use of these headers.
@@ -22,19 +21,17 @@ HTTP headers are well known and also despised. Seeking the balance between usabi
 We aim to publish reports on header usage stats, developments and changes. Code libraries that make these headers easily accessible to developers on a range of platforms. Data sets concerning the general usage of these headers.
 
 ==Licensing==
-OWASP Secure Headers is free to use. It is licensed under the [https://github.com/oshp/headers/blob/master/LICENSE Apache 2.0 License].
 
-{{Social Media Links}}
-| valign="top" style="padding-left:25px;width:200px;border-right: 1px dotted gray;padding-right:25px;" |
+OWASP Secure Headers is free to use. It is licensed under the [https://github.com/oshp/headers/blob/master/LICENSE Apache 2.0 License].
 
 == Project Leader ==
 
-[[User:Riramar | Ricardo Iramar]]<br>
-[[User:Amenezes | Alexandre Menezes]]
+* Ricardo Iramar
+* Alexandre Menezes
 
 == Project Contributors ==
 
-[[User:Jmanico | Jim Manico]]<br />
+* Jim Manico
 
 == Related Projects ==
 
@@ -49,9 +46,8 @@ OWASP Secure Headers is free to use. It is licensed under the [https://github.co
 * [https://github.com/riramar/hsecscan hsecscan A security scanner for HTTP response headers]
 * [https://lists.owasp.org/mailman/listinfo/owasp_secure_headers_project Project Email List]
 
-| valign="top" style="padding-left:25px;width:200px;" |
-
 == News and Events ==
+
 * [23 Jul 2018] Included Feature-Policy header
 * [20 Oct 2017] OWASP Secure Headers Project on [https://github.com/OWASP/Top10/blob/master/2017/OWASP%20Top%2010%202017%20RC2%20Final.pdf | OWASP Top 10 RC2]
 * [14 Mar 2017] [https://hub.docker.com/r/oshp | Docker Hub Organization]
@@ -634,131 +630,102 @@ This section cover a list of tools to analyze, develop and administrate HTTP sec
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
 '''hsecscan'''
 
-<font size="2" style="font-size: 9pt”">
 A security scanner for HTTP response headers.
-</font>
 
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
-<font size="2" style="font-size: 9pt">
+
 * Github: https://github.com/riramar/hsecscan
-</font>
 
 |- valign="top"
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
 '''headers'''
 
-<font size="2" style="font-size: 9pt”">
 Python script to get some response headers from Alexa top sites file and store in a MySQL database.
-</font>
 
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
-<font size="2" style="font-size: 9pt">
+
 * Github: https://github.com/oshp/headers/
-</font>
 
 |- valign="top"
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
 '''securityheaders.io'''
 
-<font size="2" style="font-size: 9pt">
 There are services out there that will analyse the HTTP response headers of other sites but I also wanted to add a rating system to the results. The HTTP response headers that this site analyses provide huge levels of protection and it's important that sites deploy them. Hopefully, by providing an easy mechanism to assess them, and further information on how to deploy missing headers, we can drive up the usage of security based headers across the web.
-</font>
 
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
-<font size="2" style="font-size: 9pt">
+
 * Site: https://securityheaders.io/
-</font>
 
 |- valign="top"
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
 '''Mozilla Observatory'''
 
-<font size="2" style="font-size: 9pt">
 A Mozilla project designed to help developers, system administrators, and security professionals configure their sites safely and securely.
-</font>
 
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
-<font size="2" style="font-size: 9pt">
+
 * Site: https://mozilla.github.io/http-observatory-website/
-</font>
 
 |- valign="top"
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
 '''High-Tech Bridge Web Security Scanner'''
 
-<font size="2" style="font-size: 9pt">
 An online service that will retrieve and analyse headers syntax and proper configuration in a comprehensive way. It will be able for instance to highlight Public-Key-Pins that matches one certificate of the chain or if Content-Security-Policy contains values that could be unsafe or too permissive.
-</font>
 
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
-<font size="2" style="font-size: 9pt”">
+
 * Site: https://www.htbridge.com/websec/
-</font>
 
 |- valign="top"
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
 '''Check Your Headers'''
 
-<font size="2" style="font-size: 9pt">
 Just another web scanner for HTTP response headers.
-</font>
 
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
-<font size="2" style="font-size: 9pt”">
+
 * Site: https://cyh.herokuapp.com/cyh
-</font>
 
 |- valign="top"
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
 '''Recx Security Analyser'''
 
-<font size="2" style="font-size: 9pt">
 Chrome extension that allows the inspection of security aspects of a site's HTTP headers, cookies and other key security settings.
-</font>
 
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
-<font size="2" style="font-size: 9pt”">
+
 * Site: https://chrome.google.com/webstore/detail/recx-security-analyser/ljafjhbjenhgcgnikniijchkngljgjda
-</font>
 
 |- valign="top"
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
 '''KickOff'''
 
-<font size="2" style="font-size: 9pt">
 While each project you launch may have a different feature set, they often share many of the same performance, SEO and security requirements. This tool aims to automate the process of checking your list of requirements shortly before launch or directly after a deployment.
-</font>
 
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
-<font size="2" style="font-size: 9pt”">
+
 * Site: https://github.com/frickelbruder/kickoff
-</font>
 
 |- valign="top"
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
 '''testssl.sh'''
 
-<font size="2" style="font-size: 9pt">
 Easy to use shell script which tests not only SSL/TLS encryption but also checks common headers and analyzes those. Output is screen, JSON, CSV and HTML.
-</font>
 
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
-<font size="2" style="font-size: 9pt”">
+
 * Site: https://github.com/drwetter/testssl.sh
-</font>
 
 |- valign="top"
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
 '''DrHEADer'''
 
-<font size="2" style="font-size: 9pt">
+
 DrHEADer helps with the audit of security headers received in response to a single request or a list of requests.
-</font>
 
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
-<font size="2" style="font-size: 9pt”">
+
 * Site: https://github.com/Santandersecurityresearch/DrHeader
-</font>
 
 |}
 
@@ -773,32 +740,25 @@ DrHEADer helps with the audit of security headers received in response to a sing
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
 '''secureheaders'''
 
-<font size="2" style="font-size: 9pt">
 Security related headers all in one gem.
-</font>
 
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
-<font size="2" style="font-size: 9pt”">
+
 * Ruby
-</font>
 
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
-<font size="2" style="font-size: 9pt”">
+
 * Github: https://github.com/twitter/secureheaders
-</font>
 
 |- valign="top"
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" |
 '''Security Header Injection Module (SHIM)'''
 
-<font size="2" style="font-size: 9pt”">
 SHIM is a HTTP module that provides protection for many vulnerabilities by injecting security-specific HTTP headers into ASP.NET web applications.
-</font>
 
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" | 
-<font size="2" style="font-size: 9pt”">
+
 * ASP.NET
-</font>
 
 | width="“50%”" style="border: 1.00pt solid #000001; padding: 0.18cm" |
 
