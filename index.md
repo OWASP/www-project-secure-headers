@@ -8,14 +8,8 @@ type: code
 
 ---
 
-=Main=
 
-[[File:Incubator_banner.jpg| link=https://www.owasp.org/index.php/OWASP_Project_Stages#tab=Incubator_Projects]]
-
-{| style="padding: 0;margin:0;margin-top:10px;text-align:left;" |-
-| valign="top" style="border-right: 1px dotted gray;padding-right:25px;" |
-
-==OWASP Secure Headers Project==
+# OWASP Secure Headers Project
 
 The OWASP Secure Headers Project describes HTTP response headers that your application can use to increase the security of your application. Once set, these HTTP response headers can restrict modern browsers from running into easily preventable vulnerabilities. The OWASP Secure Headers Project intends to raise awareness and use of these headers.
 
