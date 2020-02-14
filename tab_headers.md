@@ -1,12 +1,10 @@
 ---
-
 title: Headers
 displaytext: Headers
 layout:  null
 tab: true
 order: 1
 tags: secure headers
-
 ---
 
 # Response Headers
