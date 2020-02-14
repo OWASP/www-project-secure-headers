@@ -1,15 +1,12 @@
 ---
-
 title: Compatibility Matrix
 layout: null
 tab: true
 order: 2
 tags: headers
-
 ---
 
-# Browser Support
----
+## Browser Support
 
 Internet Explorer	Edge	Firefox	Chrome	Safari	Opera	Android
 HTTP Strict Transport Security (HSTS)	11	13	47	49	9.1	39	4.4
