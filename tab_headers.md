@@ -1,11 +1,10 @@
 ---
 
 title: Response Headers
-displaytext: Response Headers
-layout:  null
+layout: null
 tab: true
 order: 1
-tags: secure headers
+tags: headers
 
 ---
 
