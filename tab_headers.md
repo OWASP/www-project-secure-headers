@@ -1,7 +1,8 @@
 ---
 
 title: Response Headers
-layout: null
+displaytext: Response Headers
+layout:  null
 tab: true
 order: 1
 tags: secure headers
