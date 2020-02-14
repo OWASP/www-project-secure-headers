@@ -1,14 +1,14 @@
 ---
 
 title: Response Headers
-layout: col-sidebar
+layout: null
 tab: true
 order: 1
 tags: secure headers
 
 ---
 
-# Response Headers
+# Response Headers1
 ----
 
 * HTTP Strict Transport Security (HSTS)
