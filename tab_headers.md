@@ -9,7 +9,7 @@ tags: secure headers
 
 ---
 
-# Response Headers1
+# Response Headers
 ----
 
 * HTTP Strict Transport Security (HSTS)
