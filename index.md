@@ -12,11 +12,11 @@ type: code
 
 The OWASP Secure Headers Project describes HTTP response headers that your application can use to increase the security of your application. Once set, these HTTP response headers can restrict modern browsers from running into easily preventable vulnerabilities. The OWASP Secure Headers Project intends to raise awareness and use of these headers.
 
-Introduction
+## Introduction
 HTTP headers are well known and also despised. Seeking the balance between usability and security developers implement functionality through the headers that can make your more versatile or secure application. But in practice how the headers are being implemented? What sites follow the best implementation practices? Big companies, small, all or none?
 
-Description
+## Description
 We aim to publish reports on header usage stats, developments and changes. Code libraries that make these headers easily accessible to developers on a range of platforms. Data sets concerning the general usage of these headers.
 
-Licensing
+## Licensing
 OWASP Secure Headers is free to use. It is licensed under the Apache 2.0 License.
