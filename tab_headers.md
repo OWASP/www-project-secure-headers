@@ -1,10 +1,12 @@
 ---
+
 title: Headers
 displaytext: Headers
 layout:  null
 tab: true
 order: 1
 tags: secure headers
+
 ---
 
 # Response Headers
@@ -33,13 +35,13 @@ Example
 Strict-Transport-Security: max-age=31536000 ; includeSubDomains
 
 References
-https://tools.ietf.org/html/rfc6797
-https://www.owasp.org/index.php/HTTP_Strict_Transport_Security
-https://www.owasp.org/index.php/Test_HTTP_Strict_Transport_Security_(OTG-CONFIG-007)
-https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
-https://www.chromium.org/hsts
-https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security
-https://raymii.org/s/tutorials/HTTP_Strict_Transport_Security_for_Apache_NGINX_and_Lighttpd.html
+* https://tools.ietf.org/html/rfc6797
+* https://www.owasp.org/index.php/HTTP_Strict_Transport_Security
+* https://www.owasp.org/index.php/Test_HTTP_Strict_Transport_Security_(OTG-CONFIG-007)
+* https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
+* https://www.chromium.org/hsts
+* https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security
+* https://raymii.org/s/tutorials/HTTP_Strict_Transport_Security_for_Apache_NGINX_and_Lighttpd.html
 
 ## Public Key Pinning Extension for HTTP (HPKP)
 
@@ -59,15 +61,15 @@ Example
 Public-Key-Pins: pin-sha256="d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM="; pin-sha256="E9CZ9INDbd+2eRQozYqqbQ2yXLVKB9+xcprMF+44U1g="; report-uri="http://example.com/pkp-report"; max-age=10000; includeSubDomains
 
 References
-https://tools.ietf.org/html/rfc7469
-https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning#HTTP_pinning
-https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning
-https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning
-https://raymii.org/s/articles/HTTP_Public_Key_Pinning_Extension_HPKP.html
-https://labs.detectify.com/2016/07/05/what-hpkp-is-but-isnt/
-https://blog.qualys.com/ssllabs/2016/09/06/is-http-public-key-pinning-dead
-https://scotthelme.co.uk/im-giving-up-on-hpkp/
-https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/he9tr7p3rZ8/eNMwKPmUBAAJ
+* https://tools.ietf.org/html/rfc7469
+* https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning#HTTP_pinning
+* https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning
+* https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning
+* https://raymii.org/s/articles/HTTP_Public_Key_Pinning_Extension_HPKP.html
+* https://labs.detectify.com/2016/07/05/what-hpkp-is-but-isnt/
+* https://blog.qualys.com/ssllabs/2016/09/06/is-http-public-key-pinning-dead
+* https://scotthelme.co.uk/im-giving-up-on-hpkp/
+* https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/he9tr7p3rZ8/eNMwKPmUBAAJ
 
 ## X-Frame-Options
 
@@ -82,12 +84,12 @@ Example
 X-Frame-Options: deny
 
 References
-https://tools.ietf.org/html/rfc7034
-https://tools.ietf.org/html/draft-ietf-websec-x-frame-options-01
-https://tools.ietf.org/html/draft-ietf-websec-frame-options-00
-https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options
-https://www.owasp.org/index.php/Clickjacking
-https://blogs.msdn.microsoft.com/ieinternals/2010/03/30/combating-clickjacking-with-x-frame-options/
+* https://tools.ietf.org/html/rfc7034
+* https://tools.ietf.org/html/draft-ietf-websec-x-frame-options-01
+* https://tools.ietf.org/html/draft-ietf-websec-frame-options-00
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options
+* https://www.owasp.org/index.php/Clickjacking
+* https://blogs.msdn.microsoft.com/ieinternals/2010/03/30/combating-clickjacking-with-x-frame-options/
 
 ## X-XSS-Protection
 
@@ -103,10 +105,10 @@ Example
 X-XSS-Protection: 1; mode=block
 
 References
-https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
-https://www.virtuesecurity.com/blog/understanding-xss-auditor/
-https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers
-http://zinoui.com/blog/security-http-headers#x-xss-protection
+* https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
+* https://www.virtuesecurity.com/blog/understanding-xss-auditor/
+* https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers
+* http://zinoui.com/blog/security-http-headers#x-xss-protection
 
 ## X-Content-Type-Options
 
@@ -119,8 +121,8 @@ Example
 X-Content-Type-Options: nosniff
 
 References
-https://msdn.microsoft.com/en-us/library/gg622941%28v=vs.85%29.aspx
-https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/
+* https://msdn.microsoft.com/en-us/library/gg622941%28v=vs.85%29.aspx
+* https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/
 
 ## Content-Security-Policy
 
@@ -155,13 +157,13 @@ Example
 Content-Security-Policy: script-src 'self'
 
 References
-https://www.w3.org/TR/CSP/
-https://developer.mozilla.org/en-US/docs/Web/Security/CSP
-https://www.owasp.org/index.php/Content_Security_Policy
-https://scotthelme.co.uk/content-security-policy-an-introduction/
-https://report-uri.io
-http://www.cspplayground.com/home
-http://content-security-policy.com
+* https://www.w3.org/TR/CSP/
+* https://developer.mozilla.org/en-US/docs/Web/Security/CSP
+* https://www.owasp.org/index.php/Content_Security_Policy
+* https://scotthelme.co.uk/content-security-policy-an-introduction/
+* https://report-uri.io
+* http://www.cspplayground.com/home
+* http://content-security-policy.com
 
 ## X-Permitted-Cross-Domain-Policies
 
@@ -178,12 +180,12 @@ Example
 X-Permitted-Cross-Domain-Policies: none
 
 References
-https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html
-https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html
-https://www.perpetual-beta.org/weblog/security-headers.html#rule-8470-2-establish-a-cross-domain-meta-policy
-https://danielnixon.org/http-security-headers/
-https://rorsecurity.info/portfolio/new-http-headers-for-more-security
-https://github.com/twitter/secureheaders/issues/88
+* https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html
+* https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html
+* https://www.perpetual-beta.org/weblog/security-headers.html#rule-8470-2-establish-a-cross-domain-meta-policy
+* https://danielnixon.org/http-security-headers/
+* https://rorsecurity.info/portfolio/new-http-headers-for-more-security
+* https://github.com/twitter/secureheaders/issues/88
 
 ## Referrer-Policy
 
@@ -203,8 +205,8 @@ Example
 Referrer-Policy: no-referrer
 
 References
-https://www.w3.org/TR/referrer-policy/
-https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
+* https://www.w3.org/TR/referrer-policy/
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
 
 ## Expect-CT
 
@@ -219,9 +221,9 @@ Example
 Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
 
 References
-https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-02
-http://httpwg.org/http-extensions/expect-ct.html
-https://scotthelme.co.uk/a-new-security-header-expect-ct/
+* https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-02
+* http://httpwg.org/http-extensions/expect-ct.html
+* https://scotthelme.co.uk/a-new-security-header-expect-ct/
 
 ## Feature-Policy
 
@@ -250,6 +252,6 @@ Example
 Feature-Policy: vibrate 'none'; geolocation 'none'
 
 References
-https://wicg.github.io/feature-policy/
-https://github.com/WICG/feature-policy/blob/master/features.md
-https://scotthelme.co.uk/a-new-security-header-feature-policy/
+* https://wicg.github.io/feature-policy/
+* https://github.com/WICG/feature-policy/blob/master/features.md
+* https://scotthelme.co.uk/a-new-security-header-feature-policy/
