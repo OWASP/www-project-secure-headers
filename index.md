@@ -20,6 +20,7 @@ HTTP headers are well known and also despised. Seeking the balance between usabi
 ## Description
 
 We aim to publish reports on header usage stats, developments and changes. Code libraries that make these headers easily accessible to developers on a range of platforms. Data sets concerning the general usage of these headers.
+The old project website can be accessed [here](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project).
 
 ## Licensing
 
