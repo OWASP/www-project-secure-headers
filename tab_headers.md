@@ -12,17 +12,19 @@ tags: secure headers
 # Response Headers
 ----
 
-HTTP Strict Transport Security (HSTS)
-Public Key Pinning Extension for HTTP (HPKP)
-X-Frame-Options
-X-XSS-Protection
-X-Content-Type-Options
-Content-Security-Policy
-X-Permitted-Cross-Domain-Policies
-Referrer-Policy
-Expect-CT
-Feature-Policy
-HTTP Strict Transport Security (HSTS)
+* HTTP Strict Transport Security (HSTS)
+* Public Key Pinning Extension for HTTP (HPKP)
+* X-Frame-Options
+* X-XSS-Protection
+* X-Content-Type-Options
+* Content-Security-Policy
+* X-Permitted-Cross-Domain-Policies
+* Referrer-Policy
+* Expect-CT
+* Feature-Policy
+
+## HTTP Strict Transport Security (HSTS)
+
 HTTP Strict Transport Security (HSTS) is a web security policy mechanism which helps to protect websites against protocol downgrade attacks and cookie hijacking. It allows web servers to declare that web browsers (or other complying user agents) should only interact with it using secure HTTPS connections, and never via the insecure HTTP protocol. HSTS is an IETF standards track protocol and is specified in RFC 6797. A server implements an HSTS policy by supplying a header (Strict-Transport-Security) over an HTTPS connection (HSTS headers over HTTP are ignored).
 
 Values
@@ -40,7 +42,9 @@ https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
 https://www.chromium.org/hsts
 https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security
 https://raymii.org/s/tutorials/HTTP_Strict_Transport_Security_for_Apache_NGINX_and_Lighttpd.html
-Public Key Pinning Extension for HTTP (HPKP)
+
+## Public Key Pinning Extension for HTTP (HPKP)
+
 HTTP Public Key Pinning (HPKP) is a security mechanism which allows HTTPS websites to resist impersonation by attackers using mis-issued or otherwise fraudulent certificates. (For example, sometimes attackers can compromise certificate authorities, and then can mis-issue certificates for a web origin.).
 
 The HTTPS web server serves a list of public key hashes, and on subsequent connections clients expect that server to use one or more of those public keys in its certificate chain. Deploying HPKP safely will require operational and organizational maturity due to the risk that hosts may make themselves unavailable by pinning to a set of public key hashes that becomes invalid. With care, host operators can greatly reduce the risk of man-in-the-middle (MITM) attacks and other false authentication problems for their users without incurring undue risk.
@@ -66,7 +70,9 @@ https://labs.detectify.com/2016/07/05/what-hpkp-is-but-isnt/
 https://blog.qualys.com/ssllabs/2016/09/06/is-http-public-key-pinning-dead
 https://scotthelme.co.uk/im-giving-up-on-hpkp/
 https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/he9tr7p3rZ8/eNMwKPmUBAAJ
-X-Frame-Options
+
+## X-Frame-Options
+
 X-Frame-Options response header improve the protection of web applications against Clickjacking. It declares a policy communicated from a host to the client browser on whether the browser must not display the transmitted content in frames of other web pages.
 
 Values
@@ -84,7 +90,9 @@ https://tools.ietf.org/html/draft-ietf-websec-frame-options-00
 https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options
 https://www.owasp.org/index.php/Clickjacking
 https://blogs.msdn.microsoft.com/ieinternals/2010/03/30/combating-clickjacking-with-x-frame-options/
-X-XSS-Protection
+
+## X-XSS-Protection
+
 This header enables the Cross-site scripting (XSS) filter in your browser.
 
 Values
@@ -101,7 +109,9 @@ https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
 https://www.virtuesecurity.com/blog/understanding-xss-auditor/
 https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers
 http://zinoui.com/blog/security-http-headers#x-xss-protection
-X-Content-Type-Options
+
+## X-Content-Type-Options
+
 Setting this header will prevent the browser from interpreting files as something else than declared by the content type in the HTTP headers.
 
 Values
@@ -113,7 +123,9 @@ X-Content-Type-Options: nosniff
 References
 https://msdn.microsoft.com/en-us/library/gg622941%28v=vs.85%29.aspx
 https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/
-Content-Security-Policy
+
+## Content-Security-Policy
+
 A Content Security Policy (CSP) requires careful tuning and precise definition of the policy. If enabled, CSP has significant impact on the way browsers render pages (e.g., inline JavaScript disabled by default and must be explicitly allowed in policy). CSP prevents a wide range of attacks, including Cross-site scripting and other cross-site injections.
 
 Values
@@ -152,7 +164,9 @@ https://scotthelme.co.uk/content-security-policy-an-introduction/
 https://report-uri.io
 http://www.cspplayground.com/home
 http://content-security-policy.com
-X-Permitted-Cross-Domain-Policies
+
+## X-Permitted-Cross-Domain-Policies
+
 A cross-domain policy file is an XML document that grants a web client, such as Adobe Flash Player or Adobe Acrobat (though not necessarily limited to these), permission to handle data across domains. When clients request content hosted on a particular source domain and that content make requests directed towards a domain other than its own, the remote domain needs to host a cross-domain policy file that grants access to the source domain, allowing the client to continue the transaction. Normally a meta-policy is declared in the master policy file, but for those who can’t write to the root directory, they can also declare a meta-policy using the X-Permitted-Cross-Domain-Policies HTTP response header.
 
 Values
@@ -172,7 +186,9 @@ https://www.perpetual-beta.org/weblog/security-headers.html#rule-8470-2-establis
 https://danielnixon.org/http-security-headers/
 https://rorsecurity.info/portfolio/new-http-headers-for-more-security
 https://github.com/twitter/secureheaders/issues/88
-Referrer-Policy
+
+## Referrer-Policy
+
 The Referrer-Policy HTTP header governs which referrer information, sent in the Referer header, should be included with requests made.
 
 Values
@@ -191,7 +207,9 @@ Referrer-Policy: no-referrer
 References
 https://www.w3.org/TR/referrer-policy/
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
-Expect-CT
+
+## Expect-CT
+
 The Expect-CT header is used by a server to indicate that browsers should evaluate connections to the host emitting the header for Certificate Transparency compliance.
 
 Values
@@ -206,7 +224,9 @@ References
 https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-02
 http://httpwg.org/http-extensions/expect-ct.html
 https://scotthelme.co.uk/a-new-security-header-expect-ct/
-Feature-Policy
+
+## Feature-Policy
+
 The Feature-Policy header allows developers to selectively enable and disable use of various browser features and APIs..
 
 Values
