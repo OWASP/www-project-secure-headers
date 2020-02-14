@@ -1,8 +1,7 @@
 ---
 
-title: Headers
-displaytext: Headers
-layout:  null
+title: Response Headers
+layout: col-sidebar
 tab: true
 order: 1
 tags: secure headers
@@ -34,7 +33,8 @@ includeSubDomains	If this optional parameter is specified, this rule applies to 
 Example
 Strict-Transport-Security: max-age=31536000 ; includeSubDomains
 
-References
+### References
+
 * https://tools.ietf.org/html/rfc6797
 * https://www.owasp.org/index.php/HTTP_Strict_Transport_Security
 * https://www.owasp.org/index.php/Test_HTTP_Strict_Transport_Security_(OTG-CONFIG-007)
@@ -60,7 +60,8 @@ report-uri="<URL>"	If this optional parameter is specified, pin validation failu
 Example
 Public-Key-Pins: pin-sha256="d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM="; pin-sha256="E9CZ9INDbd+2eRQozYqqbQ2yXLVKB9+xcprMF+44U1g="; report-uri="http://example.com/pkp-report"; max-age=10000; includeSubDomains
 
-References
+### References
+
 * https://tools.ietf.org/html/rfc7469
 * https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning#HTTP_pinning
 * https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning
@@ -83,7 +84,8 @@ allow-from: DOMAIN	Allows rendering if framed by frame loaded from DOMAIN.
 Example
 X-Frame-Options: deny
 
-References
+### References
+
 * https://tools.ietf.org/html/rfc7034
 * https://tools.ietf.org/html/draft-ietf-websec-x-frame-options-01
 * https://tools.ietf.org/html/draft-ietf-websec-frame-options-00
@@ -104,7 +106,8 @@ Value	Description
 Example
 X-XSS-Protection: 1; mode=block
 
-References
+### References
+
 * https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
 * https://www.virtuesecurity.com/blog/understanding-xss-auditor/
 * https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers
@@ -120,7 +123,8 @@ nosniff	Will prevent the browser from MIME-sniffing a response away from the dec
 Example
 X-Content-Type-Options: nosniff
 
-References
+### References
+
 * https://msdn.microsoft.com/en-us/library/gg622941%28v=vs.85%29.aspx
 * https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/
 
@@ -156,7 +160,8 @@ report-to	Specifies a group (defined in Report-To header) to which the user agen
 Example
 Content-Security-Policy: script-src 'self'
 
-References
+### References
+
 * https://www.w3.org/TR/CSP/
 * https://developer.mozilla.org/en-US/docs/Web/Security/CSP
 * https://www.owasp.org/index.php/Content_Security_Policy
@@ -179,7 +184,8 @@ all	All policy files on this target domain are allowed.
 Example
 X-Permitted-Cross-Domain-Policies: none
 
-References
+### References
+
 * https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html
 * https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html
 * https://www.perpetual-beta.org/weblog/security-headers.html#rule-8470-2-establish-a-cross-domain-meta-policy
@@ -204,7 +210,8 @@ unsafe-url	Send a full URL (stripped from parameters) when performing a a same-o
 Example
 Referrer-Policy: no-referrer
 
-References
+### References
+
 * https://www.w3.org/TR/referrer-policy/
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
 
@@ -220,7 +227,8 @@ max-age	The max-age directive specifies the number of seconds after the receptio
 Example
 Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
 
-References
+### References
+
 * https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-02
 * http://httpwg.org/http-extensions/expect-ct.html
 * https://scotthelme.co.uk/a-new-security-header-expect-ct/
@@ -251,7 +259,8 @@ vr	Controls access to VR displays.
 Example
 Feature-Policy: vibrate 'none'; geolocation 'none'
 
-References
+### References
+
 * https://wicg.github.io/feature-policy/
 * https://github.com/WICG/feature-policy/blob/master/features.md
 * https://scotthelme.co.uk/a-new-security-header-feature-policy/
