@@ -1,7 +1,8 @@
 ---
 
-title: Response Headers
-layout: col-sidebar
+title: Compatibility Matrix
+displaytext: Compatibility Matrix
+layout:  null
 tab: true
 order: 2
 tags: secure headers
