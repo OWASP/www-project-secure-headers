@@ -1,15 +1,12 @@
 ---
-
 title: Response Headers
 layout: null
 tab: true
 order: 1
 tags: headers
-
 ---
 
-# Response Headers
-----
+## Response Headers
 
 * HTTP Strict Transport Security (HSTS)
 * Public Key Pinning Extension for HTTP (HPKP)
