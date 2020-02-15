@@ -1,13 +1,3 @@
----
-
-layout: col-sidebar
-title: OWASP Secure Headers
-tags: example-tag
-level: 0
-type: code
-
-auto-migrated: 1
----
 # Main
 
 ![Incubator_banner.jpg](Incubator_banner.jpg "Incubator_banner.jpg")
