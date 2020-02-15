@@ -3,9 +3,9 @@
 * Project Type
 * Version, etc
 
-### Downloads or Social Links
-* [Download](#)
-* [Social Link](#)
+### Quick Links
+* [Demo](http://oshp.bsecteam.com/)
+* [hsecscan](https://github.com/riramar/hsecscan)
 
 ### Code Repository
-* [repo](#)-->
+* [Project GitHub Organization](https://github.com/oshp/)-->
