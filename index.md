@@ -1,9 +1,9 @@
 ---
-layout: col-sidebar
 title: OWASP Secure Headers
 tags: headers
 level: 2
 type: documentation
+layout: col-sidebar
 ---
 
 # OWASP Secure Headers Project
