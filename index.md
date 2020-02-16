@@ -23,4 +23,4 @@ We aim to publish reports on header usage stats, developments and changes. Code 
 
 ## Licensing
 
-OWASP Secure Headers is free to use. It is licensed under the [Apache 2.0 License](LICENSE).
+OWASP Secure Headers is free to use. It is licensed under the Apache 2.0 License.
