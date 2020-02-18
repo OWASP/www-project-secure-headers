@@ -1,5 +1,5 @@
 ---
-title: Compatibility Matrix
+title: Compatibility
 displaytext: Compatibility Matrix
 layout: null
 tab: true
