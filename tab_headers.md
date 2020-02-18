@@ -1,5 +1,5 @@
 ---
-title: Response Headers
+title: Response
 layout: null
 tab: true
 order: 1
