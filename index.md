@@ -1,7 +1,7 @@
 ---
 
 layout: col-sidebar
-title: OWASP Secure Headers
+title: OWASPSecureHeaders
 tags: headers
 level: 2
 url: "https://owasp.org/www-project-secure-headers/"
