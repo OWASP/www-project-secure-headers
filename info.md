@@ -1,5 +1,4 @@
 ### Quick Links
-* [Demo](http://oshp.bsecteam.com/)
 * [hsecscan](https://github.com/riramar/hsecscan)
 
 ### Code Repository
