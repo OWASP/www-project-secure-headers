@@ -1,12 +1,11 @@
 ---
-
-layout: col-sidebar
-title: OWASPSecureHeaders
-tags: headers
+title: OWASPSecureHeadersProject
+displaytext: OWASP Secure Headers Project
 level: 2
 url: "https://owasp.org/www-project-secure-headers/"
 type: documentation
-
+layout: col-sidebar
+tags: headers
 ---
 
 # OWASP Secure Headers Project
