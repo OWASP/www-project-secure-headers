@@ -25,11 +25,11 @@ Python script to get some response headers from Alexa top sites file and store i
 
 **Github:** https://github.com/oshp/headers/
 
-### securityheaders.io
+### SecurityHeaders.com
 
 There are services out there that will analyse the HTTP response headers of other sites but I also wanted to add a rating system to the results. The HTTP response headers that this site analyses provide huge levels of protection and it's important that sites deploy them. Hopefully, by providing an easy mechanism to assess them, and further information on how to deploy missing headers, we can drive up the usage of security based headers across the web.
 
-**Site:** https://securityheaders.io/
+**Site:** https://securityheaders.com/
 
 ### Mozilla Observatory
 
