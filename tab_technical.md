@@ -9,7 +9,7 @@ tags: headers
 
 # Technical Resources
 
-This section cover a list of tools to analyze, develop and administrate HTTP secure headers in order to help achieve more secure and trustworthy web systems.
+This section covers a list of tools to analyze, develop and administrate HTTP secure headers to help achieve more secure and trustworthy web systems.
 
 Analysis Tools	Reference
 hsecscan

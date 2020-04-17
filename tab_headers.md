@@ -22,7 +22,7 @@ tags: headers
 
 ## HTTP Strict Transport Security (HSTS)
 
-HTTP Strict Transport Security (HSTS) is a web security policy mechanism which helps to protect websites against protocol downgrade attacks and cookie hijacking. It allows web servers to declare that web browsers (or other complying user agents) should only interact with it using secure HTTPS connections, and never via the insecure HTTP protocol. HSTS is an IETF standards track protocol and is specified in RFC 6797. A server implements an HSTS policy by supplying a header (Strict-Transport-Security) over an HTTPS connection (HSTS headers over HTTP are ignored).
+HTTP Strict Transport Security (HSTS) is a web security policy mechanism which helps to protect websites against protocol downgrade attacks and cookie hijacking. It allows web servers to declare that web browsers (or other complying user agents) should only interact with it using secure HTTPS connections, and never via the insecure HTTP protocol. HSTS is an IETF standards track protocol and is specified in RFC 6797. A server implements an HSTS policy by supplying a header (`Strict-Transport-Security`) over an HTTPS connection (HSTS headers over HTTP are ignored).
 
 Values
 Value	Description
@@ -47,7 +47,7 @@ HTTP Public Key Pinning (HPKP) is a security mechanism which allows HTTPS websit
 
 The HTTPS web server serves a list of public key hashes, and on subsequent connections clients expect that server to use one or more of those public keys in its certificate chain. Deploying HPKP safely will require operational and organizational maturity due to the risk that hosts may make themselves unavailable by pinning to a set of public key hashes that becomes invalid. With care, host operators can greatly reduce the risk of man-in-the-middle (MITM) attacks and other false authentication problems for their users without incurring undue risk.
 
-Before implement HPKP please read this https://www.chromestatus.com/feature/5903385005916160.
+Before implementing HPKP please read this: https://www.chromestatus.com/feature/5903385005916160
 
 Values
 Value	Description
@@ -72,7 +72,7 @@ Public-Key-Pins: pin-sha256="d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM="; pin-
 
 ## X-Frame-Options
 
-X-Frame-Options response header improve the protection of web applications against Clickjacking. It declares a policy communicated from a host to the client browser on whether the browser must not display the transmitted content in frames of other web pages.
+The `X-Frame-Options` response header improves the protection of web applications against clickjacking. It instructs the browser whether the content can be displayed within frames.
 
 Values
 Value	Description
@@ -93,7 +93,7 @@ X-Frame-Options: deny
 
 ## X-XSS-Protection
 
-This header enables the Cross-site scripting (XSS) filter in your browser.
+This header enables the cross-site scripting (XSS) filter in your browser.
 
 Values
 Value	Description
@@ -113,7 +113,7 @@ X-XSS-Protection: 1; mode=block
 
 ## X-Content-Type-Options
 
-Setting this header will prevent the browser from interpreting files as something else than declared by the content type in the HTTP headers.
+Setting this header will prevent the browser from interpreting files as a different MIME type to what is specified in the `Content-Type` HTTP header (e.g. treating `text/plain` as `text/css`).
 
 Values
 Value	Description
@@ -128,7 +128,7 @@ X-Content-Type-Options: nosniff
 
 ## Content-Security-Policy
 
-A Content Security Policy (CSP) requires careful tuning and precise definition of the policy. If enabled, CSP has significant impact on the way browsers render pages (e.g., inline JavaScript disabled by default and must be explicitly allowed in policy). CSP prevents a wide range of attacks, including Cross-site scripting and other cross-site injections.
+A Content Security Policy (CSP) requires careful tuning and precise definition of the policy. If enabled, CSP has significant impact on the way browsers render pages (e.g., inline JavaScript is disabled by default and must be explicitly allowed in the policy). CSP prevents a wide range of attacks, including cross-site scripting and other cross-site injections.
 
 Values
 Directive	Description
@@ -170,7 +170,7 @@ Content-Security-Policy: script-src 'self'
 
 ## X-Permitted-Cross-Domain-Policies
 
-A cross-domain policy file is an XML document that grants a web client, such as Adobe Flash Player or Adobe Acrobat (though not necessarily limited to these), permission to handle data across domains. When clients request content hosted on a particular source domain and that content make requests directed towards a domain other than its own, the remote domain needs to host a cross-domain policy file that grants access to the source domain, allowing the client to continue the transaction. Normally a meta-policy is declared in the master policy file, but for those who can’t write to the root directory, they can also declare a meta-policy using the X-Permitted-Cross-Domain-Policies HTTP response header.
+A cross-domain policy file is an XML document that grants a web client, such as Adobe Flash Player or Adobe Acrobat (though not necessarily limited to these), permission to handle data across domains. When clients request content hosted on a particular source domain and that content makes requests directed towards a domain other than its own, the remote domain needs to host a cross-domain policy file that grants access to the source domain, allowing the client to continue the transaction. Normally a meta-policy is declared in the master policy file, but for those who can’t write to the root directory, they can also declare a meta-policy using the `X-Permitted-Cross-Domain-Policies` HTTP response header.
 
 Values
 Value	Description
@@ -193,7 +193,7 @@ X-Permitted-Cross-Domain-Policies: none
 
 ## Referrer-Policy
 
-The Referrer-Policy HTTP header governs which referrer information, sent in the Referer header, should be included with requests made.
+The `Referrer-Policy` HTTP header governs which referrer information, sent in the `Referer` header, should be included with requests made.
 
 Values
 Value	Description
@@ -215,7 +215,7 @@ Referrer-Policy: no-referrer
 
 ## Expect-CT
 
-The Expect-CT header is used by a server to indicate that browsers should evaluate connections to the host emitting the header for Certificate Transparency compliance.
+The `Expect-CT` header is used by a server to indicate that browsers should evaluate connections to the host for Certificate Transparency compliance.
 
 Values
 Value	Description
