@@ -19,6 +19,10 @@ We aim to publish reports on header usage stats, developments and changes, code 
 
 The OWASP Secure Headers Project is migrating to this new OWASP website. For now you can still access the old website here [https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project).
 
+## Contributors
+
+* [Adam Averay](https://github.com/adamaveray)
+
 ## Licensing
 
 OWASP Secure Headers is free to use. It is licensed under the Apache 2.0 License.
