@@ -11,11 +11,11 @@ The OWASP Secure Headers Project describes HTTP response headers that your appli
 
 ## Introduction
 
-HTTP headers are well known and also despised. Seeking the balance between usability and security developers implement functionality through the headers that can make your more versatile or secure application. But in practice how the headers are being implemented? What sites follow the best implementation practices? Big companies, small, all or none?
+HTTP headers are well-known and also despised. Seeking a balance between usability and security, developers implement functionality through the headers that can make applications more versatile or secure. But in practice how are the headers being implemented? What sites follow the best implementation practices? Big companies, small, all or none?
 
 ## Description
 
-We aim to publish reports on header usage stats, developments and changes. Code libraries that make these headers easily accessible to developers on a range of platforms. Data sets concerning the general usage of these headers.
+We aim to publish reports on header usage stats, developments and changes, code libraries that make these headers easily accessible to developers on a range of platforms, and data sets concerning the general usage of these headers.
 
 The OWASP Secure Headers Project is migrating to this new OWASP website. For now you can still access the old website here [https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project).
 

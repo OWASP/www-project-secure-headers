@@ -13,10 +13,15 @@ HTTP response headers from the top websites in the world.
 
 Command used to extract the headers:
 
+```sh
 curl -L -A "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36" -s -D - https://www.example.com -o /dev/null
+```
 
-Google
+## Google
+
+```
 $ curl -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36" -s -D - https://www.google.com -o /dev/null
+
 HTTP/1.1 302 Found
 Location: https://www.google.com.br/?gws_rd=cr&dcr=0&ei=rtcKWpnkNYaawATUn6agCg
 Cache-Control: private
@@ -46,8 +51,13 @@ Alt-Svc: quic=":443"; ma=2592000; v="41,39,38,37,35"
 Accept-Ranges: none
 Vary: Accept-Encoding
 Transfer-Encoding: chunked
-Facebook
+```
+
+### Facebook
+
+```
 $ curl -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36" -s -D - https://www.facebook.com -o /dev/null
+
 HTTP/1.1 200 OK
 X-XSS-Protection: 0
 Pragma: no-cache
@@ -66,8 +76,13 @@ X-FB-Debug: llncdeFRYCCoWkXqx2VCdUGtdHZvjsr6OA7JNrtEe18ZuZAqcKCH4km9SSkNTHIcuXmz
 Date: Tue, 14 Nov 2017 11:48:57 GMT
 Transfer-Encoding: chunked
 Connection: keep-alive
-Twitter
+```
+
+## Twitter
+
+```
 $ curl -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36" -s -D - https://www.twitter.com -o /dev/null
+
 HTTP/1.1 301 Moved Permanently
 content-length: 0
 date: Tue, 14 Nov 2017 11:50:11 GMT
@@ -104,7 +119,11 @@ x-transaction: 007d216900cbc2ad
 x-twitter-response-tags: BouncerCompliant
 x-ua-compatible: IE=edge,chrome=1
 x-xss-protection: 1; mode=block
-Github
+```
+
+## Github
+
+```
 $ curl -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36" -s -D - https://www.github.com -o /dev/null
 HTTP/1.1 301 Moved Permanently
 Content-length: 0
@@ -132,3 +151,4 @@ X-Frame-Options: deny
 X-XSS-Protection: 1; mode=block
 X-Runtime-rack: 0.043225
 X-GitHub-Request-Id: 9AB0:25783:6A523:B814E:5A0AD8BE
+```
