@@ -113,6 +113,8 @@ X-Frame-Options: deny
 
 This header enables the cross-site scripting (XSS) filter in your browser.
 
+The X-XSS-Protection header has been deprecated by modern browsers and its use can introduce additional security issues on the client side. As such, it is recommended to set the header as `X-XSS-Protection: 0` in order to disable the XSS Auditor, and not allow it to take the default behavior of the browser handling the response.
+
 ### Values
 
 | Value                                           | Description |
@@ -125,11 +127,18 @@ This header enables the cross-site scripting (XSS) filter in your browser.
 ### Example
 
 ```
-X-XSS-Protection: 1; mode=block
+X-XSS-Protection: 0
 ```
 
 ### References
 
+* https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
+* https://www.chromestatus.com/feature/5021976655560704
+* https://bugzilla.mozilla.org/show_bug.cgi?id=528661
+* https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/
+* https://github.com/zaproxy/zaproxy/issues/5849
+* https://scotthelme.co.uk/security-headers-updates/#removing-the-x-xss-protection-header
+* https://portswigger.net/daily-swig/google-chromes-xss-auditor-goes-back-to-filter-mode
 * https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
 * https://www.virtuesecurity.com/blog/understanding-xss-auditor/
 * https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers
