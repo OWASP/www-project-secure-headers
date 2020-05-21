@@ -85,6 +85,7 @@ Public-Key-Pins: pin-sha256="d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM="; pin-
 ## X-Frame-Options
 
 The `X-Frame-Options` response header improves the protection of web applications against clickjacking. It instructs the browser whether the content can be displayed within frames.
+The CSP frame-ancestors directive obsoletes the X-Frame-Options header. If a resource has both policies, the CSP frame-ancestors policy will be enforced and the X-Frame-Options policy will be ignored.
 
 ### Values
 
