@@ -35,7 +35,10 @@ There are services out there that will analyse the HTTP response headers of othe
 
 A Mozilla project designed to help developers, system administrators, and security professionals configure their sites safely and securely.
 
-**Site:** https://mozilla.github.io/http-observatory-website/
+**Site:** https://observatory.mozilla.org/
+
+**GitHub:** https://github.com/mozilla/http-observatory/
+**GitHub:** https://github.com/mozilla/http-observatory-website/
 
 High-Tech Bridge Web Security Scanner
 
