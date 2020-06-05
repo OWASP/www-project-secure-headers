@@ -38,9 +38,10 @@ A Mozilla project designed to help developers, system administrators, and securi
 **Site:** https://observatory.mozilla.org/
 
 **GitHub:** https://github.com/mozilla/http-observatory/
+
 **GitHub:** https://github.com/mozilla/http-observatory-website/
 
-High-Tech Bridge Web Security Scanner
+### High-Tech Bridge Web Security Scanner
 
 An online service that will retrieve and analyse headers syntax and proper configuration in a comprehensive way. It will be able for instance to highlight Public-Key-Pins that matches one certificate of the chain or if Content-Security-Policy contains values that could be unsafe or too permissive.
 
