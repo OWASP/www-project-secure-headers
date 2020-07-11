@@ -10,7 +10,6 @@ tags: headers
 # Response Headers
 
 * HTTP Strict Transport Security (HSTS)
-* Public Key Pinning Extension for HTTP (HPKP)
 * X-Frame-Options
 * X-XSS-Protection
 * X-Content-Type-Options
@@ -19,6 +18,7 @@ tags: headers
 * Referrer-Policy
 * Expect-CT
 * Feature-Policy
+* Public Key Pinning Extension for HTTP (HPKP)
 
 ## HTTP Strict Transport Security (HSTS)
 
@@ -46,41 +46,6 @@ Strict-Transport-Security: max-age=31536000 ; includeSubDomains
 * https://www.chromium.org/hsts
 * https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security
 * https://raymii.org/s/tutorials/HTTP_Strict_Transport_Security_for_Apache_NGINX_and_Lighttpd.html
-
-## Public Key Pinning Extension for HTTP (HPKP)
-
-HTTP Public Key Pinning (HPKP) is a security mechanism which allows HTTPS websites to resist impersonation by attackers using mis-issued or otherwise fraudulent certificates. (For example, sometimes attackers can compromise certificate authorities, and then can mis-issue certificates for a web origin.).
-
-The HTTPS web server serves a list of public key hashes, and on subsequent connections clients expect that server to use one or more of those public keys in its certificate chain. Deploying HPKP safely will require operational and organizational maturity due to the risk that hosts may make themselves unavailable by pinning to a set of public key hashes that becomes invalid. With care, host operators can greatly reduce the risk of man-in-the-middle (MITM) attacks and other false authentication problems for their users without incurring undue risk.
-
-Before implementing HPKP please read this: https://www.chromestatus.com/feature/5903385005916160
-
-### Values
-
-| Value                   | Description |
-|-------------------------|-------------|
-| `pin-sha256="<sha256>"` | The quoted string is the Base64 encoded Subject Public Key Information (SPKI) fingerprint. It is possible to specify multiple pins for different public keys. Some browsers might allow other hashing algorithms than SHA-256 in the future. |
-| `max-age=SECONDS`       | The time, in seconds, that the browser should remember that this site is only to be accessed using one of the pinned keys. |
-| `includeSubDomains`     | If this optional parameter is specified, this rule applies to all of the site's subdomains as well. |
-| `report-uri="<URL>"`    | If this optional parameter is specified, pin validation failures are reported to the given URL. |
-
-### Example
-
-```
-Public-Key-Pins: pin-sha256="d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM="; pin-sha256="E9CZ9INDbd+2eRQozYqqbQ2yXLVKB9+xcprMF+44U1g="; report-uri="http://example.com/pkp-report"; max-age=10000; includeSubDomains
-```
-
-### References
-
-* https://tools.ietf.org/html/rfc7469
-* https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning#HTTP_pinning
-* https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning
-* https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning
-* https://raymii.org/s/articles/HTTP_Public_Key_Pinning_Extension_HPKP.html
-* https://labs.detectify.com/2016/07/05/what-hpkp-is-but-isnt/
-* https://blog.qualys.com/ssllabs/2016/09/06/is-http-public-key-pinning-dead
-* https://scotthelme.co.uk/im-giving-up-on-hpkp/
-* https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/he9tr7p3rZ8/eNMwKPmUBAAJ
 
 ## X-Frame-Options
 
@@ -332,3 +297,42 @@ Feature-Policy: vibrate 'none'; geolocation 'none'
 * https://wicg.github.io/feature-policy/
 * https://github.com/WICG/feature-policy/blob/master/features.md
 * https://scotthelme.co.uk/a-new-security-header-feature-policy/
+
+## Public Key Pinning Extension for HTTP (HPKP)
+
+> **Warning:** This header has been deprecated by all major browsers and is no longer recommended. **Avoid using it**, and update existing code if possible;
+
+HTTP Public Key Pinning (HPKP) is a security mechanism which allows HTTPS websites to resist impersonation by attackers using mis-issued or otherwise fraudulent certificates. (For example, sometimes attackers can compromise certificate authorities, and then can mis-issue certificates for a web origin.).
+
+The HTTPS web server serves a list of public key hashes, and on subsequent connections clients expect that server to use one or more of those public keys in its certificate chain. Deploying HPKP safely will require operational and organizational maturity due to the risk that hosts may make themselves unavailable by pinning to a set of public key hashes that becomes invalid. With care, host operators can greatly reduce the risk of man-in-the-middle (MITM) attacks and other false authentication problems for their users without incurring undue risk.
+
+### Deprecation Reason
+
+Criticism and concern revolved around malicious or human error scenarios known as [HPKP Suicide and Ransom PKP](https://scotthelme.co.uk/using-security-features-to-do-bad-things/). In such scenarios, a website owner would have their ability to publish new contents to their domain severely hampered by either losing access to their own keys or having new keys announced by a malicious attacker.
+
+### Values
+
+| Value                   | Description |
+|-------------------------|-------------|
+| `pin-sha256="<sha256>"` | The quoted string is the Base64 encoded Subject Public Key Information (SPKI) fingerprint. It is possible to specify multiple pins for different public keys. Some browsers might allow other hashing algorithms than SHA-256 in the future. |
+| `max-age=SECONDS`       | The time, in seconds, that the browser should remember that this site is only to be accessed using one of the pinned keys. |
+| `includeSubDomains`     | If this optional parameter is specified, this rule applies to all of the site's subdomains as well. |
+| `report-uri="<URL>"`    | If this optional parameter is specified, pin validation failures are reported to the given URL. |
+
+### Example
+
+```
+Public-Key-Pins: pin-sha256="d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM="; pin-sha256="E9CZ9INDbd+2eRQozYqqbQ2yXLVKB9+xcprMF+44U1g="; report-uri="http://example.com/pkp-report"; max-age=10000; includeSubDomains
+```
+
+### References
+
+* https://tools.ietf.org/html/rfc7469
+* https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning#HTTP_pinning
+* https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning
+* https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning
+* https://raymii.org/s/articles/HTTP_Public_Key_Pinning_Extension_HPKP.html
+* https://labs.detectify.com/2016/07/05/what-hpkp-is-but-isnt/
+* https://blog.qualys.com/ssllabs/2016/09/06/is-http-public-key-pinning-dead
+* https://scotthelme.co.uk/im-giving-up-on-hpkp/
+* https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/he9tr7p3rZ8/eNMwKPmUBAAJ
