@@ -16,9 +16,9 @@ tags: headers
 * Content-Security-Policy
 * X-Permitted-Cross-Domain-Policies
 * Referrer-Policy
-* Expect-CT
 * Feature-Policy
 * Public Key Pinning Extension for HTTP (HPKP)
+* Expect-CT
 
 ## HTTP Strict Transport Security (HSTS)
 
@@ -236,30 +236,6 @@ Referrer-Policy: no-referrer
 * https://www.w3.org/TR/referrer-policy/
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
 
-## Expect-CT
-
-The `Expect-CT` header is used by a server to indicate that browsers should evaluate connections to the host for Certificate Transparency compliance.
-
-### Values
-
-| Value         | Description |
-|---------------|-------------|
-| `report-uri`  | _(Optional)_ Indicates the URL to which the browser should report Expect-CT failures. |
-| `enforce`     | _(Optional)_ A valueless directive that, if present, signals to the browser that compliance to the CT Policy should be enforced (rather than report-only) and that the browser should refuse future connections that violate its CT Policy. When both the `enforce` and `report-uri` directives are present, the configuration is referred to as an "enforce-and-report" configuration, signalling to the browser both that compliance to the CT Policy should be enforced and that violations should be reported. |
-| `max-age`     | Specifies the number of seconds after the response is received the browser should remember and enforce certificate transparency compliance. |
-
-### Example
-
-```
-Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
-```
-
-### References
-
-* https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-02
-* http://httpwg.org/http-extensions/expect-ct.html
-* https://scotthelme.co.uk/a-new-security-header-expect-ct/
-
 ## Feature-Policy
 
 The Feature-Policy header allows developers to selectively enable and disable use of various browser features and APIs..
@@ -336,3 +312,32 @@ Public-Key-Pins: pin-sha256="d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM="; pin-
 * https://blog.qualys.com/ssllabs/2016/09/06/is-http-public-key-pinning-dead
 * https://scotthelme.co.uk/im-giving-up-on-hpkp/
 * https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/he9tr7p3rZ8/eNMwKPmUBAAJ
+
+## Expect-CT
+
+> **Note:** This header will likely become obsolete in June 2021. Since May 2018 new certificates are expected to support SCTs by default. Certificates before March 2018 were allowed to have a lifetime of 39 months, those will all be expired in June 2021.
+
+The `Expect-CT` header is used by a server to indicate that browsers should evaluate connections to the host for Certificate Transparency compliance.  
+In Chrome 61 (Aug 2017) Chrome enabled its enforcement via SCT by default ([source](https://www.chromestatus.com/feature/5677171733430272)). You can still use this header to specify an `report-uri`.  
+  
+This header comes from the (now expired) internet draft [Expect-CT Extension for HTTP](https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-08).
+
+### Values
+
+| Value         | Description |
+|---------------|-------------|
+| `report-uri`  | _(Optional)_ Indicates the URL to which the browser should report Expect-CT failures. |
+| `enforce`     | _(Optional)_ A valueless directive that, if present, signals to the browser that compliance to the CT Policy should be enforced (rather than report-only) and that the browser should refuse future connections that violate its CT Policy. When both the `enforce` and `report-uri` directives are present, the configuration is referred to as an "enforce-and-report" configuration, signalling to the browser both that compliance to the CT Policy should be enforced and that violations should be reported. |
+| `max-age`     | Specifies the number of seconds after the response is received the browser should remember and enforce certificate transparency compliance. |
+
+### Example
+
+```
+Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
+```
+
+### References
+
+* https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-02
+* http://httpwg.org/http-extensions/expect-ct.html
+* https://scotthelme.co.uk/a-new-security-header-expect-ct/

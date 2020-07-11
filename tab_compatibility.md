@@ -18,9 +18,9 @@ tags: headers
 | Content-Security-Policy                      | 11                | 13   | 47      | 49     | 9.1    | 39    | 4.4     |
 | X-Permitted-Cross-Domain-Policies            |                   |      |         |        |        |       |         |
 | Referrer-Policy                              | NS                | NS   | 50      | 56     | NS     | 43    |         | 
-| Expect-CT                                    |                   |      |         | 61     |        | 48    |         | 
 | Feature-Policy                               |                   |      |         |        |        |       |         | 
 | Public Key Pinning Extension for HTTP (HPKP) | NS                | NS   | 35-71   | 38-71  | NS     | 23-65 | NS      |
+| Expect-CT                                    |                   |      |         | 61     |        | 48    |         | 
 
 _`NS` = Not Supported_  
 _`+` = Specified version and above_
