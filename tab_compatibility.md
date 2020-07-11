@@ -9,18 +9,18 @@ tags: headers
 
 # Browser Support
 
-| Feature                                      | Internet Explorer | Edge | Firefox | Chrome | Safari | Opera | Android |
-| ---------------------------------------------|-------------------|------|---------|--------|--------|-------|---------|
-| HTTP Strict Transport Security (HSTS)        | 11                | 13   | 47      | 49     | 9.1    | 39    | 4.4     |
-| X-Frame-Options                              | 8                 | 13   | 47      | 49     | 9.1    | 39    | 4.4     |
-| X-XSS-Protection                             | 8                 |      | NS      | 4+     |        |       |         |
-| X-Content-Type-Options                       | 8                 |      | 51      | 1.0    | NS     | 13    |         |
-| Content-Security-Policy                      | 11                | 13   | 47      | 49     | 9.1    | 39    | 4.4     |
-| X-Permitted-Cross-Domain-Policies            |                   |      |         |        |        |       |         |
-| Referrer-Policy                              | NS                | NS   | 50      | 56     | NS     | 43    |         | 
-| Feature-Policy                               |                   |      |         |        |        |       |         | 
-| Public Key Pinning Extension for HTTP (HPKP) | NS                | NS   | 35-71   | 38-71  | NS     | 23-65 | NS      |
-| Expect-CT                                    |                   |      |         | 61     |        | 48    |         | 
+| Feature                                      | Internet Explorer | Edge  | Firefox | Chrome | Safari | Opera | Android |
+| ---------------------------------------------|-------------------|-------|---------|--------|--------|-------|---------|
+| HTTP Strict Transport Security (HSTS)        | 11                | 13    | 47      | 49     | 9.1    | 39    | 4.4     |
+| X-Frame-Options                              | 8                 | 13    | 47      | 49     | 9.1    | 39    | 4.4     |
+| X-Content-Type-Options                       | 8                 |       | 51      | 1.0    | NS     | 13    |         |
+| Content-Security-Policy                      | 11                | 13    | 47      | 49     | 9.1    | 39    | 4.4     |
+| X-Permitted-Cross-Domain-Policies            |                   |       |         |        |        |       |         |
+| Referrer-Policy                              | NS                | NS    | 50      | 56     | NS     | 43    |         | 
+| Feature-Policy                               |                   |       |         |        |        |       |         | 
+| Public Key Pinning Extension for HTTP (HPKP) | NS                | NS    | 35-71   | 38-71  | NS     | 23-65 | NS      |
+| Expect-CT                                    |                   |       |         | 61     |        | 48    |         | 
+| X-XSS-Protection                             | 8                 | 12-16 | NS      | 4-77   | 13.1+  | 10-64 | NS      |
 
 _`NS` = Not Supported_  
 _`+` = Specified version and above_
@@ -36,10 +36,6 @@ _`+` = Specified version and above_
 * X-Frame-Options
   - http://caniuse.com/#search=X-Frame-Options
 
-* X-XSS-Protection
-  - https://wiki.mozilla.org/Security/Features/XSS_Filter
-  - https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/
-  
 * X-Content-Type-Options
   - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
 
@@ -52,9 +48,6 @@ _`+` = Specified version and above_
 * Referrer-Policy
   - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
 
-* Expect-CT
-  - https://www.chromestatus.com/feature/5677171733430272
-
 * Feature-Policy
   - _(Update needed)_
 
@@ -62,3 +55,10 @@ _`+` = Specified version and above_
   - http://caniuse.com/#search=Public%20Key%20Pinning
   - https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/he9tr7p3rZ8/eNMwKPmUBAAJ
   - https://www.chromestatus.com/feature/5903385005916160
+
+* Expect-CT
+  - https://www.chromestatus.com/feature/5677171733430272
+
+* X-XSS-Protection
+  - https://wiki.mozilla.org/Security/Features/XSS_Filter
+  - https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/

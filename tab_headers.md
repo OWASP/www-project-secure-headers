@@ -11,7 +11,6 @@ tags: headers
 
 * HTTP Strict Transport Security (HSTS)
 * X-Frame-Options
-* X-XSS-Protection
 * X-Content-Type-Options
 * Content-Security-Policy
 * X-Permitted-Cross-Domain-Policies
@@ -19,6 +18,7 @@ tags: headers
 * Feature-Policy
 * Public Key Pinning Extension for HTTP (HPKP)
 * Expect-CT
+* X-XSS-Protection
 
 ## HTTP Strict Transport Security (HSTS)
 
@@ -74,41 +74,6 @@ X-Frame-Options: deny
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options
 * https://www.owasp.org/index.php/Clickjacking
 * https://blogs.msdn.microsoft.com/ieinternals/2010/03/30/combating-clickjacking-with-x-frame-options/
-
-## X-XSS-Protection
-
-This header enables the cross-site scripting (XSS) filter in your browser.
-
-The X-XSS-Protection header has been deprecated by modern browsers and its use can introduce additional security issues on the client side. As such, it is recommended to set the header as `X-XSS-Protection: 0` in order to disable the XSS Auditor, and not allow it to take the default behavior of the browser handling the response.
-
-### Values
-
-| Value                                           | Description |
-|-------------------------------------------------|-------------|
-| `0`                                             | Filter disabled. |
-| `1`                                             | Filter enabled. If a cross-site scripting attack is detected, in order to stop the attack, the browser will sanitize the page. |
-| `1; mode=block`                                 | Filter enabled. Rather than sanitize the page, when a XSS attack is detected, the browser will prevent rendering of the page. |
-| `1; report=http://[YOURDOMAIN]/your_report_URI` | Filter enabled. The browser will sanitize the page and report the violation. This is a Chromium function utilizing CSP violation reports to send details to a URI of your choice. |
-
-### Example
-
-```
-X-XSS-Protection: 0
-```
-
-### References
-
-* https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
-* https://www.chromestatus.com/feature/5021976655560704
-* https://bugzilla.mozilla.org/show_bug.cgi?id=528661
-* https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/
-* https://github.com/zaproxy/zaproxy/issues/5849
-* https://scotthelme.co.uk/security-headers-updates/#removing-the-x-xss-protection-header
-* https://portswigger.net/daily-swig/google-chromes-xss-auditor-goes-back-to-filter-mode
-* https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
-* https://www.virtuesecurity.com/blog/understanding-xss-auditor/
-* https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers
-* http://zinoui.com/blog/security-http-headers#x-xss-protection
 
 ## X-Content-Type-Options
 
@@ -341,3 +306,38 @@ Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
 * https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-02
 * http://httpwg.org/http-extensions/expect-ct.html
 * https://scotthelme.co.uk/a-new-security-header-expect-ct/
+
+## X-XSS-Protection
+
+> **Warning:** The X-XSS-Protection header has been deprecated by modern browsers and its use can introduce additional security issues on the client side. As such, it is recommended to set the header as `X-XSS-Protection: 0` in order to disable the XSS Auditor, and not allow it to take the default behavior of the browser handling the response. Please use `Content-Security-Policy` instead.
+
+This header enables the cross-site scripting (XSS) filter in your browser.
+
+### Values
+
+| Value                                           | Description |
+|-------------------------------------------------|-------------|
+| `0`                                             | Filter disabled. |
+| `1`                                             | Filter enabled. If a cross-site scripting attack is detected, in order to stop the attack, the browser will sanitize the page. |
+| `1; mode=block`                                 | Filter enabled. Rather than sanitize the page, when a XSS attack is detected, the browser will prevent rendering of the page. |
+| `1; report=http://[YOURDOMAIN]/your_report_URI` | Filter enabled. The browser will sanitize the page and report the violation. This is a Chromium function utilizing CSP violation reports to send details to a URI of your choice. |
+
+### Example
+
+```
+X-XSS-Protection: 0
+```
+
+### References
+
+* https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
+* https://www.chromestatus.com/feature/5021976655560704
+* https://bugzilla.mozilla.org/show_bug.cgi?id=528661
+* https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/
+* https://github.com/zaproxy/zaproxy/issues/5849
+* https://scotthelme.co.uk/security-headers-updates/#removing-the-x-xss-protection-header
+* https://portswigger.net/daily-swig/google-chromes-xss-auditor-goes-back-to-filter-mode
+* https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
+* https://www.virtuesecurity.com/blog/understanding-xss-auditor/
+* https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers
+* http://zinoui.com/blog/security-http-headers#x-xss-protection
