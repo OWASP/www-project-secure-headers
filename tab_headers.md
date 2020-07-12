@@ -203,7 +203,10 @@ Referrer-Policy: no-referrer
 
 ## Feature-Policy
 
-The Feature-Policy header allows developers to selectively enable and disable use of various browser features and APIs..
+> **Note:** This header was split into [Permissions-Policy](https://w3c.github.io/webappsec-feature-policy/#permissions-policy-http-header-field) and [Document-Policy](https://w3c.github.io/webappsec-feature-policy/document-policy#document-policy-http-header) and will be considered deprecated once all impacted features are moved off of feature policy.
+
+The Feature-Policy header is an **experimental** feature that allows developers to selectively enable and disable use of various browser features and APIs.  
+The two most well supported values are `microphone` and `camera`. For all the other ones, please consult [this](https://caniuse.com/#search=Feature-Policy) page.
 
 ### Values
 
@@ -212,7 +215,10 @@ The Feature-Policy header allows developers to selectively enable and disable us
 | `accelerometer`        | Controls access to accelerometer sensors on the device. |
 | `ambient-light-sensor` | Controls access to ambient light sensors on the device. |
 | `autoplay`             | Controls access to autoplay through `play()` and the `autoplay` attribute. |
+| `battery`              | Controls access to the BatteryManager API. |
 | `camera`               | Controls access to video input devices. |
+| `display-capture`      | Controls access to capturing the display output. |
+| `document-domain`      | Controls access to setting `document.domain`. |
 | `encrypted-media`      | Controls whether `requestMediaKeySystemAccess()` is allowed. |
 | `fullscreen`           | Controls whether `requestFullscreen()` is allowed. |
 | `geolocation`          | Controls access to the `Geolocation` interface. |
@@ -220,12 +226,13 @@ The Feature-Policy header allows developers to selectively enable and disable us
 | `magnetometer`         | Controls access to magnetometer sensors on the device. |
 | `microphone`           | Controls access to audio input devices. |
 | `midi`                 | Controls access to `requestMIDIAccess()` method. |
+| `navigation-override`  | Controls access to override of the spatial navigation API. |
 | `payment`              | Controls access to the `PaymentRequest` interface. |
 | `picture-in-picture`   | Controls access to picture-in-picture. |
 | `speaker`              | Controls access to audio output devices. |
 | `usb`                  | Controls access to USB devices. |
-| `vibrate`              | Controls access to the `vibrate()` method. |
-| `vr`                   | Controls access to VR displays. |
+| `vibrate`              | (**deprecated**) Controls access to the `vibrate()` method. |
+| `vr`                   | (**deprecated**) Controls access to VR displays. |
 
 ### Example
 

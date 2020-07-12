@@ -17,7 +17,7 @@ tags: headers
 | Content-Security-Policy                      | 11                | 13    | 47      | 49     | 9.1    | 39    | 4.4     |
 | X-Permitted-Cross-Domain-Policies            |                   |       |         |        |        |       |         |
 | Referrer-Policy                              | NS                | NS    | 50      | 56     | NS     | 43    |         | 
-| Feature-Policy                               |                   |       |         |        |        |       |         | 
+| Feature-Policy                               | NS                | 79    | 74      | 60     | 11.1   | 47    | 81      | 
 | Public Key Pinning Extension for HTTP (HPKP) | NS                | NS    | 35-71   | 38-71  | NS     | 23-65 | NS      |
 | Expect-CT                                    |                   |       |         | 61     |        | 48    |         | 
 | X-XSS-Protection                             | 8                 | 12-16 | NS      | 4-77   | 13.1+  | 10-64 | NS      |
@@ -49,7 +49,9 @@ _`+` = Specified version and above_
   - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
 
 * Feature-Policy
-  - _(Update needed)_
+  - Note: Depends greatly on the specific attribute
+  - https://caniuse.com/#search=Feature-Policy
+  - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy
 
 * Public Key Pinning Extension for HTTP (HPKP)
   - http://caniuse.com/#search=Public%20Key%20Pinning
