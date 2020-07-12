@@ -31,16 +31,16 @@ _`+` = Specified version and above_
   - https://blogs.windows.com/msedgedev/2015/06/09/http-strict-transport-security-comes-to-internet-explorer-11-on-windows-8-1-and-windows-7/
   - https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
   - https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html
-  - http://caniuse.com/#search=HSTS
+  - https://caniuse.com/#search=HSTS
 
 * X-Frame-Options
-  - http://caniuse.com/#search=X-Frame-Options
+  - https://caniuse.com/#search=X-Frame-Options
 
 * X-Content-Type-Options
   - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
 
 * Content-Security-Policy
-  - http://caniuse.com/#search=Content%20Security%20Policy
+  - https://caniuse.com/#search=Content%20Security%20Policy
 
 * X-Permitted-Cross-Domain-Policies
   - https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html
@@ -54,7 +54,7 @@ _`+` = Specified version and above_
   - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy
 
 * Public Key Pinning Extension for HTTP (HPKP)
-  - http://caniuse.com/#search=Public%20Key%20Pinning
+  - https://caniuse.com/#search=Public%20Key%20Pinning
   - https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/he9tr7p3rZ8/eNMwKPmUBAAJ
   - https://www.chromestatus.com/feature/5903385005916160
 

@@ -141,7 +141,7 @@ Content-Security-Policy: script-src 'self'
 * https://owasp.org/www-community/attacks/Content_Security_Policy
 * https://scotthelme.co.uk/content-security-policy-an-introduction/
 * https://report-uri.io
-* http://content-security-policy.com
+* https://content-security-policy.com
 
 ## X-Permitted-Cross-Domain-Policies
 
@@ -312,7 +312,7 @@ Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
 ### References
 
 * https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-02
-* http://httpwg.org/http-extensions/expect-ct.html
+* https://httpwg.org/http-extensions/expect-ct.html
 * https://scotthelme.co.uk/a-new-security-header-expect-ct/
 
 ## X-XSS-Protection

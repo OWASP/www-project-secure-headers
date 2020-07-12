@@ -96,7 +96,7 @@ SHIM is a HTTP module that provides protection for many vulnerabilities by injec
 
 Spring Security’s support for adding various security headers to the response.
 
-**Site:** http://docs.spring.io/spring-security/site/docs/current/reference/html/headers.html
+**Site:** https://docs.spring.io/spring-security/site/docs/current/reference/html/headers.html
 
 ### SecureHeaders (PHP)
 
