@@ -10,15 +10,15 @@ tags: headers
 # Response Headers
 
 * HTTP Strict Transport Security (HSTS)
-* Public Key Pinning Extension for HTTP (HPKP)
 * X-Frame-Options
-* X-XSS-Protection
 * X-Content-Type-Options
 * Content-Security-Policy
 * X-Permitted-Cross-Domain-Policies
 * Referrer-Policy
-* Expect-CT
 * Feature-Policy
+* Public Key Pinning Extension for HTTP (HPKP)
+* Expect-CT
+* X-XSS-Protection
 
 ## HTTP Strict Transport Security (HSTS)
 
@@ -40,47 +40,12 @@ Strict-Transport-Security: max-age=31536000 ; includeSubDomains
 ### References
 
 * https://tools.ietf.org/html/rfc6797
-* https://www.owasp.org/index.php/HTTP_Strict_Transport_Security
-* https://www.owasp.org/index.php/Test_HTTP_Strict_Transport_Security_(OTG-CONFIG-007)
+* https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html
+* https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/07-Test_HTTP_Strict_Transport_Security.html
 * https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
 * https://www.chromium.org/hsts
 * https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security
 * https://raymii.org/s/tutorials/HTTP_Strict_Transport_Security_for_Apache_NGINX_and_Lighttpd.html
-
-## Public Key Pinning Extension for HTTP (HPKP)
-
-HTTP Public Key Pinning (HPKP) is a security mechanism which allows HTTPS websites to resist impersonation by attackers using mis-issued or otherwise fraudulent certificates. (For example, sometimes attackers can compromise certificate authorities, and then can mis-issue certificates for a web origin.).
-
-The HTTPS web server serves a list of public key hashes, and on subsequent connections clients expect that server to use one or more of those public keys in its certificate chain. Deploying HPKP safely will require operational and organizational maturity due to the risk that hosts may make themselves unavailable by pinning to a set of public key hashes that becomes invalid. With care, host operators can greatly reduce the risk of man-in-the-middle (MITM) attacks and other false authentication problems for their users without incurring undue risk.
-
-Before implementing HPKP please read this: https://www.chromestatus.com/feature/5903385005916160
-
-### Values
-
-| Value                   | Description |
-|-------------------------|-------------|
-| `pin-sha256="<sha256>"` | The quoted string is the Base64 encoded Subject Public Key Information (SPKI) fingerprint. It is possible to specify multiple pins for different public keys. Some browsers might allow other hashing algorithms than SHA-256 in the future. |
-| `max-age=SECONDS`       | The time, in seconds, that the browser should remember that this site is only to be accessed using one of the pinned keys. |
-| `includeSubDomains`     | If this optional parameter is specified, this rule applies to all of the site's subdomains as well. |
-| `report-uri="<URL>"`    | If this optional parameter is specified, pin validation failures are reported to the given URL. |
-
-### Example
-
-```
-Public-Key-Pins: pin-sha256="d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM="; pin-sha256="E9CZ9INDbd+2eRQozYqqbQ2yXLVKB9+xcprMF+44U1g="; report-uri="http://example.com/pkp-report"; max-age=10000; includeSubDomains
-```
-
-### References
-
-* https://tools.ietf.org/html/rfc7469
-* https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning#HTTP_pinning
-* https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning
-* https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning
-* https://raymii.org/s/articles/HTTP_Public_Key_Pinning_Extension_HPKP.html
-* https://labs.detectify.com/2016/07/05/what-hpkp-is-but-isnt/
-* https://blog.qualys.com/ssllabs/2016/09/06/is-http-public-key-pinning-dead
-* https://scotthelme.co.uk/im-giving-up-on-hpkp/
-* https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/he9tr7p3rZ8/eNMwKPmUBAAJ
 
 ## X-Frame-Options
 
@@ -107,43 +72,8 @@ X-Frame-Options: deny
 * https://tools.ietf.org/html/draft-ietf-websec-x-frame-options-01
 * https://tools.ietf.org/html/draft-ietf-websec-frame-options-00
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options
-* https://www.owasp.org/index.php/Clickjacking
+* https://owasp.org/www-community/attacks/Clickjacking
 * https://blogs.msdn.microsoft.com/ieinternals/2010/03/30/combating-clickjacking-with-x-frame-options/
-
-## X-XSS-Protection
-
-This header enables the cross-site scripting (XSS) filter in your browser.
-
-The X-XSS-Protection header has been deprecated by modern browsers and its use can introduce additional security issues on the client side. As such, it is recommended to set the header as `X-XSS-Protection: 0` in order to disable the XSS Auditor, and not allow it to take the default behavior of the browser handling the response.
-
-### Values
-
-| Value                                           | Description |
-|-------------------------------------------------|-------------|
-| `0`                                             | Filter disabled. |
-| `1`                                             | Filter enabled. If a cross-site scripting attack is detected, in order to stop the attack, the browser will sanitize the page. |
-| `1; mode=block`                                 | Filter enabled. Rather than sanitize the page, when a XSS attack is detected, the browser will prevent rendering of the page. |
-| `1; report=http://[YOURDOMAIN]/your_report_URI` | Filter enabled. The browser will sanitize the page and report the violation. This is a Chromium function utilizing CSP violation reports to send details to a URI of your choice. |
-
-### Example
-
-```
-X-XSS-Protection: 0
-```
-
-### References
-
-* https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
-* https://www.chromestatus.com/feature/5021976655560704
-* https://bugzilla.mozilla.org/show_bug.cgi?id=528661
-* https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/
-* https://github.com/zaproxy/zaproxy/issues/5849
-* https://scotthelme.co.uk/security-headers-updates/#removing-the-x-xss-protection-header
-* https://portswigger.net/daily-swig/google-chromes-xss-auditor-goes-back-to-filter-mode
-* https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
-* https://www.virtuesecurity.com/blog/understanding-xss-auditor/
-* https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers
-* http://zinoui.com/blog/security-http-headers#x-xss-protection
 
 ## X-Content-Type-Options
 
@@ -208,11 +138,10 @@ Content-Security-Policy: script-src 'self'
 
 * https://www.w3.org/TR/CSP/
 * https://developer.mozilla.org/en-US/docs/Web/Security/CSP
-* https://www.owasp.org/index.php/Content_Security_Policy
+* https://owasp.org/www-community/attacks/Content_Security_Policy
 * https://scotthelme.co.uk/content-security-policy-an-introduction/
 * https://report-uri.io
-* http://www.cspplayground.com/home
-* http://content-security-policy.com
+* https://content-security-policy.com
 
 ## X-Permitted-Cross-Domain-Policies
 
@@ -271,9 +200,100 @@ Referrer-Policy: no-referrer
 * https://www.w3.org/TR/referrer-policy/
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
 
+## Feature-Policy
+
+> **Note:** This header was split into [Permissions-Policy](https://w3c.github.io/webappsec-feature-policy/#permissions-policy-http-header-field) and [Document-Policy](https://w3c.github.io/webappsec-feature-policy/document-policy#document-policy-http-header) and will be considered deprecated once all impacted features are moved off of feature policy.
+
+The Feature-Policy header is an **experimental** feature that allows developers to selectively enable and disable use of various browser features and APIs.  
+The two most well supported values are `microphone` and `camera`. For all the other ones, please consult [this](https://caniuse.com/#search=Feature-Policy) page.
+
+### Values
+
+| Value                  | Description |
+|------------------------|-------------|
+| `accelerometer`        | Controls access to accelerometer sensors on the device. |
+| `ambient-light-sensor` | Controls access to ambient light sensors on the device. |
+| `autoplay`             | Controls access to autoplay through `play()` and the `autoplay` attribute. |
+| `battery`              | Controls access to the BatteryManager API. |
+| `camera`               | Controls access to video input devices. |
+| `display-capture`      | Controls access to capturing the display output. |
+| `document-domain`      | Controls access to setting `document.domain`. |
+| `encrypted-media`      | Controls whether `requestMediaKeySystemAccess()` is allowed. |
+| `fullscreen`           | Controls whether `requestFullscreen()` is allowed. |
+| `geolocation`          | Controls access to the `Geolocation` interface. |
+| `gyroscope`            | Controls access to gyroscope sensors on the device. |
+| `magnetometer`         | Controls access to magnetometer sensors on the device. |
+| `microphone`           | Controls access to audio input devices. |
+| `midi`                 | Controls access to `requestMIDIAccess()` method. |
+| `navigation-override`  | Controls access to override of the spatial navigation API. |
+| `payment`              | Controls access to the `PaymentRequest` interface. |
+| `picture-in-picture`   | Controls access to picture-in-picture. |
+| `speaker`              | Controls access to audio output devices. |
+| `usb`                  | Controls access to USB devices. |
+| `vibrate`              | (**deprecated**) Controls access to the `vibrate()` method. |
+| `vr`                   | (**deprecated**) Controls access to VR displays. |
+
+_Some experimental features are not present in this list, please check the references below for a complete list._
+
+### Example
+
+```
+Feature-Policy: vibrate 'none'; geolocation 'none'
+```
+
+### References
+
+* https://w3c.github.io/webappsec-feature-policy/
+* https://scotthelme.co.uk/a-new-security-header-feature-policy/
+* https://github.com/w3c/webappsec-feature-policy/blob/master/features.md
+
+## Public Key Pinning Extension for HTTP (HPKP)
+
+> **Warning:** This header has been deprecated by all major browsers and is no longer recommended. **Avoid using it**, and update existing code if possible;
+
+HTTP Public Key Pinning (HPKP) is a security mechanism which allows HTTPS websites to resist impersonation by attackers using mis-issued or otherwise fraudulent certificates. (For example, sometimes attackers can compromise certificate authorities, and then can mis-issue certificates for a web origin.).
+
+The HTTPS web server serves a list of public key hashes, and on subsequent connections clients expect that server to use one or more of those public keys in its certificate chain. Deploying HPKP safely will require operational and organizational maturity due to the risk that hosts may make themselves unavailable by pinning to a set of public key hashes that becomes invalid. With care, host operators can greatly reduce the risk of man-in-the-middle (MITM) attacks and other false authentication problems for their users without incurring undue risk.
+
+### Deprecation Reason
+
+Criticism and concern revolved around malicious or human error scenarios known as [HPKP Suicide and Ransom PKP](https://scotthelme.co.uk/using-security-features-to-do-bad-things/). In such scenarios, a website owner would have their ability to publish new contents to their domain severely hampered by either losing access to their own keys or having new keys announced by a malicious attacker.
+
+### Values
+
+| Value                   | Description |
+|-------------------------|-------------|
+| `pin-sha256="<sha256>"` | The quoted string is the Base64 encoded Subject Public Key Information (SPKI) fingerprint. It is possible to specify multiple pins for different public keys. Some browsers might allow other hashing algorithms than SHA-256 in the future. |
+| `max-age=SECONDS`       | The time, in seconds, that the browser should remember that this site is only to be accessed using one of the pinned keys. |
+| `includeSubDomains`     | If this optional parameter is specified, this rule applies to all of the site's subdomains as well. |
+| `report-uri="<URL>"`    | If this optional parameter is specified, pin validation failures are reported to the given URL. |
+
+### Example
+
+```
+Public-Key-Pins: pin-sha256="d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM="; pin-sha256="E9CZ9INDbd+2eRQozYqqbQ2yXLVKB9+xcprMF+44U1g="; report-uri="http://example.com/pkp-report"; max-age=10000; includeSubDomains
+```
+
+### References
+
+* https://tools.ietf.org/html/rfc7469
+* https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning#HTTP_pinning
+* https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning
+* https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning
+* https://raymii.org/s/articles/HTTP_Public_Key_Pinning_Extension_HPKP.html
+* https://labs.detectify.com/2016/07/05/what-hpkp-is-but-isnt/
+* https://blog.qualys.com/ssllabs/2016/09/06/is-http-public-key-pinning-dead
+* https://scotthelme.co.uk/im-giving-up-on-hpkp/
+* https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/he9tr7p3rZ8/eNMwKPmUBAAJ
+
 ## Expect-CT
 
-The `Expect-CT` header is used by a server to indicate that browsers should evaluate connections to the host for Certificate Transparency compliance.
+> **Note:** This header will likely become obsolete in June 2021. Since May 2018 new certificates are expected to support SCTs by default. Certificates before March 2018 were allowed to have a lifetime of 39 months, those will all be expired in June 2021.
+
+The `Expect-CT` header is used by a server to indicate that browsers should evaluate connections to the host for Certificate Transparency compliance.  
+In Chrome 61 (Aug 2017) Chrome enabled its enforcement via SCT by default ([source](https://www.chromestatus.com/feature/5677171733430272)). You can still use this header to specify an `report-uri`.  
+  
+This header comes from the (now expired) internet draft [Expect-CT Extension for HTTP](https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-08).
 
 ### Values
 
@@ -292,43 +312,40 @@ Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
 ### References
 
 * https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-02
-* http://httpwg.org/http-extensions/expect-ct.html
+* https://httpwg.org/http-extensions/expect-ct.html
 * https://scotthelme.co.uk/a-new-security-header-expect-ct/
 
-## Feature-Policy
+## X-XSS-Protection
 
-The Feature-Policy header allows developers to selectively enable and disable use of various browser features and APIs..
+> **Warning:** The X-XSS-Protection header has been deprecated by modern browsers and its use can introduce additional security issues on the client side. As such, it is recommended to set the header as `X-XSS-Protection: 0` in order to disable the XSS Auditor, and not allow it to take the default behavior of the browser handling the response. Please use `Content-Security-Policy` instead.
+
+This header enables the cross-site scripting (XSS) filter in your browser.
 
 ### Values
 
-| Value                  | Description |
-|------------------------|-------------|
-| `accelerometer`        | Controls access to accelerometer sensors on the device. |
-| `ambient-light-sensor` | Controls access to ambient light sensors on the device. |
-| `autoplay`             | Controls access to autoplay through `play()` and the `autoplay` attribute. |
-| `camera`               | Controls access to video input devices. |
-| `encrypted-media`      | Controls whether `requestMediaKeySystemAccess()` is allowed. |
-| `fullscreen`           | Controls whether `requestFullscreen()` is allowed. |
-| `geolocation`          | Controls access to the `Geolocation` interface. |
-| `gyroscope`            | Controls access to gyroscope sensors on the device. |
-| `magnetometer`         | Controls access to magnetometer sensors on the device. |
-| `microphone`           | Controls access to audio input devices. |
-| `midi`                 | Controls access to `requestMIDIAccess()` method. |
-| `payment`              | Controls access to the `PaymentRequest` interface. |
-| `picture-in-picture`   | Controls access to picture-in-picture. |
-| `speaker`              | Controls access to audio output devices. |
-| `usb`                  | Controls access to USB devices. |
-| `vibrate`              | Controls access to the `vibrate()` method. |
-| `vr`                   | Controls access to VR displays. |
+| Value                                           | Description |
+|-------------------------------------------------|-------------|
+| `0`                                             | Filter disabled. |
+| `1`                                             | Filter enabled. If a cross-site scripting attack is detected, in order to stop the attack, the browser will sanitize the page. |
+| `1; mode=block`                                 | Filter enabled. Rather than sanitize the page, when a XSS attack is detected, the browser will prevent rendering of the page. |
+| `1; report=http://[YOURDOMAIN]/your_report_URI` | Filter enabled. The browser will sanitize the page and report the violation. This is a Chromium function utilizing CSP violation reports to send details to a URI of your choice. |
 
 ### Example
 
 ```
-Feature-Policy: vibrate 'none'; geolocation 'none'
+X-XSS-Protection: 0
 ```
 
 ### References
 
-* https://wicg.github.io/feature-policy/
-* https://github.com/WICG/feature-policy/blob/master/features.md
-* https://scotthelme.co.uk/a-new-security-header-feature-policy/
+* https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
+* https://www.chromestatus.com/feature/5021976655560704
+* https://bugzilla.mozilla.org/show_bug.cgi?id=528661
+* https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/
+* https://github.com/zaproxy/zaproxy/issues/5849
+* https://scotthelme.co.uk/security-headers-updates/#removing-the-x-xss-protection-header
+* https://portswigger.net/daily-swig/google-chromes-xss-auditor-goes-back-to-filter-mode
+* https://owasp.org/www-community/attacks/xss/
+* https://www.virtuesecurity.com/blog/understanding-xss-auditor/
+* https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers
+* http://zinoui.com/blog/security-http-headers#x-xss-protection
