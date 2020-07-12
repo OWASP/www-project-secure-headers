@@ -30,7 +30,7 @@ _`+` = Specified version and above_
 * HTTP Strict Transport Security (HSTS)
   - https://blogs.windows.com/msedgedev/2015/06/09/http-strict-transport-security-comes-to-internet-explorer-11-on-windows-8-1-and-windows-7/
   - https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
-  - https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet
+  - https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html
   - http://caniuse.com/#search=HSTS
 
 * X-Frame-Options

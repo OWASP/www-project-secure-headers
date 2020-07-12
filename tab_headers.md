@@ -40,8 +40,8 @@ Strict-Transport-Security: max-age=31536000 ; includeSubDomains
 ### References
 
 * https://tools.ietf.org/html/rfc6797
-* https://www.owasp.org/index.php/HTTP_Strict_Transport_Security
-* https://www.owasp.org/index.php/Test_HTTP_Strict_Transport_Security_(OTG-CONFIG-007)
+* https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html
+* https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/07-Test_HTTP_Strict_Transport_Security.html
 * https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
 * https://www.chromium.org/hsts
 * https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security
@@ -72,7 +72,7 @@ X-Frame-Options: deny
 * https://tools.ietf.org/html/draft-ietf-websec-x-frame-options-01
 * https://tools.ietf.org/html/draft-ietf-websec-frame-options-00
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options
-* https://www.owasp.org/index.php/Clickjacking
+* https://owasp.org/www-community/attacks/Clickjacking
 * https://blogs.msdn.microsoft.com/ieinternals/2010/03/30/combating-clickjacking-with-x-frame-options/
 
 ## X-Content-Type-Options
@@ -138,10 +138,9 @@ Content-Security-Policy: script-src 'self'
 
 * https://www.w3.org/TR/CSP/
 * https://developer.mozilla.org/en-US/docs/Web/Security/CSP
-* https://www.owasp.org/index.php/Content_Security_Policy
+* https://owasp.org/www-community/attacks/Content_Security_Policy
 * https://scotthelme.co.uk/content-security-policy-an-introduction/
 * https://report-uri.io
-* http://www.cspplayground.com/home
 * http://content-security-policy.com
 
 ## X-Permitted-Cross-Domain-Policies
@@ -278,7 +277,7 @@ Public-Key-Pins: pin-sha256="d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM="; pin-
 ### References
 
 * https://tools.ietf.org/html/rfc7469
-* https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning#HTTP_pinning
+* https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning#HTTP_pinning
 * https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning
 * https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning
 * https://raymii.org/s/articles/HTTP_Public_Key_Pinning_Extension_HPKP.html
@@ -346,7 +345,7 @@ X-XSS-Protection: 0
 * https://github.com/zaproxy/zaproxy/issues/5849
 * https://scotthelme.co.uk/security-headers-updates/#removing-the-x-xss-protection-header
 * https://portswigger.net/daily-swig/google-chromes-xss-auditor-goes-back-to-filter-mode
-* https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
+* https://owasp.org/www-community/attacks/xss/
 * https://www.virtuesecurity.com/blog/understanding-xss-auditor/
 * https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers
 * http://zinoui.com/blog/security-http-headers#x-xss-protection
