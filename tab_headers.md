@@ -234,6 +234,8 @@ The two most well supported values are `microphone` and `camera`. For all the ot
 | `vibrate`              | (**deprecated**) Controls access to the `vibrate()` method. |
 | `vr`                   | (**deprecated**) Controls access to VR displays. |
 
+_Some experimental features are not present in this list, please check the references below for a complete list._
+
 ### Example
 
 ```
@@ -242,9 +244,9 @@ Feature-Policy: vibrate 'none'; geolocation 'none'
 
 ### References
 
-* https://wicg.github.io/feature-policy/
-* https://github.com/WICG/feature-policy/blob/master/features.md
+* https://w3c.github.io/webappsec-feature-policy/
 * https://scotthelme.co.uk/a-new-security-header-feature-policy/
+* https://github.com/w3c/webappsec-feature-policy/blob/master/features.md
 
 ## Public Key Pinning Extension for HTTP (HPKP)
 
