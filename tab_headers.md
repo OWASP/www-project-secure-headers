@@ -15,10 +15,10 @@ tags: headers
 * Content-Security-Policy
 * X-Permitted-Cross-Domain-Policies
 * Referrer-Policy
-* Feature-Policy
-* Public Key Pinning Extension for HTTP (HPKP)
-* Expect-CT
-* X-XSS-Protection
+* Feature-Policy (almost deprecated)
+* Public Key Pinning Extension for HTTP (HPKP) (deprecated)
+* Expect-CT (almost deprecated)
+* X-XSS-Protection (deprecated)
 
 ## HTTP Strict Transport Security (HSTS)
 
@@ -200,9 +200,9 @@ Referrer-Policy: no-referrer
 * https://www.w3.org/TR/referrer-policy/
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
 
-## Feature-Policy
+## Feature-Policy (almost deprecated)
 
-> **Note:** This header was split into [Permissions-Policy](https://w3c.github.io/webappsec-feature-policy/#permissions-policy-http-header-field) and [Document-Policy](https://w3c.github.io/webappsec-feature-policy/document-policy#document-policy-http-header) and will be considered deprecated once all impacted features are moved off of feature policy.
+> **⚠️ Warning:** This header was split into [Permissions-Policy](https://w3c.github.io/webappsec-feature-policy/#permissions-policy-http-header-field) and [Document-Policy](https://w3c.github.io/webappsec-feature-policy/document-policy#document-policy-http-header) and will be considered deprecated once all impacted features are moved off of feature policy.
 
 The Feature-Policy header is an **experimental** feature that allows developers to selectively enable and disable use of various browser features and APIs.  
 The two most well supported values are `microphone` and `camera`. For all the other ones, please consult [this](https://caniuse.com/#search=Feature-Policy) page.
@@ -247,9 +247,9 @@ Feature-Policy: vibrate 'none'; geolocation 'none'
 * https://scotthelme.co.uk/a-new-security-header-feature-policy/
 * https://github.com/w3c/webappsec-feature-policy/blob/master/features.md
 
-## Public Key Pinning Extension for HTTP (HPKP)
+## Public Key Pinning Extension for HTTP (HPKP) (deprecated)
 
-> **Warning:** This header has been deprecated by all major browsers and is no longer recommended. **Avoid using it**, and update existing code if possible;
+> **⚠️ Warning:** This header has been deprecated by all major browsers and is no longer recommended. **Avoid using it**, and update existing code if possible;
 
 HTTP Public Key Pinning (HPKP) is a security mechanism which allows HTTPS websites to resist impersonation by attackers using mis-issued or otherwise fraudulent certificates. (For example, sometimes attackers can compromise certificate authorities, and then can mis-issue certificates for a web origin.).
 
@@ -286,9 +286,9 @@ Public-Key-Pins: pin-sha256="d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM="; pin-
 * https://scotthelme.co.uk/im-giving-up-on-hpkp/
 * https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/he9tr7p3rZ8/eNMwKPmUBAAJ
 
-## Expect-CT
+## Expect-CT (almost deprecated)
 
-> **Note:** This header will likely become obsolete in June 2021. Since May 2018 new certificates are expected to support SCTs by default. Certificates before March 2018 were allowed to have a lifetime of 39 months, those will all be expired in June 2021.
+> **⚠️ Warning:** This header will likely become obsolete in June 2021. Since May 2018 new certificates are expected to support SCTs by default. Certificates before March 2018 were allowed to have a lifetime of 39 months, those will all be expired in June 2021.
 
 The `Expect-CT` header is used by a server to indicate that browsers should evaluate connections to the host for Certificate Transparency compliance.  
 In Chrome 61 (Aug 2017) Chrome enabled its enforcement via SCT by default ([source](https://www.chromestatus.com/feature/5677171733430272)). You can still use this header to specify an `report-uri`.  
@@ -315,9 +315,9 @@ Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
 * https://httpwg.org/http-extensions/expect-ct.html
 * https://scotthelme.co.uk/a-new-security-header-expect-ct/
 
-## X-XSS-Protection
+## X-XSS-Protection (depracted)
 
-> **Warning:** The X-XSS-Protection header has been deprecated by modern browsers and its use can introduce additional security issues on the client side. As such, it is recommended to set the header as `X-XSS-Protection: 0` in order to disable the XSS Auditor, and not allow it to take the default behavior of the browser handling the response. Please use `Content-Security-Policy` instead.
+> **⚠️ Warning:** The X-XSS-Protection header has been deprecated by modern browsers and its use can introduce additional security issues on the client side. As such, it is recommended to set the header as `X-XSS-Protection: 0` in order to disable the XSS Auditor, and not allow it to take the default behavior of the browser handling the response. Please use `Content-Security-Policy` instead.
 
 This header enables the cross-site scripting (XSS) filter in your browser.
 
