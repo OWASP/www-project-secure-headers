@@ -19,6 +19,7 @@ tags: headers
 * Public Key Pinning Extension for HTTP (HPKP) (deprecated)
 * Expect-CT (almost deprecated)
 * X-XSS-Protection (deprecated)
+* Clear-Site-Data
 
 ## HTTP Strict Transport Security (HSTS)
 
@@ -315,7 +316,7 @@ Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
 * https://httpwg.org/http-extensions/expect-ct.html
 * https://scotthelme.co.uk/a-new-security-header-expect-ct/
 
-## X-XSS-Protection (depracted)
+## X-XSS-Protection (deprecated)
 
 > **⚠️ Warning:** The X-XSS-Protection header has been deprecated by modern browsers and its use can introduce additional security issues on the client side. As such, it is recommended to set the header as `X-XSS-Protection: 0` in order to disable the XSS Auditor, and not allow it to take the default behavior of the browser handling the response. Please use `Content-Security-Policy` instead.
 
@@ -349,3 +350,32 @@ X-XSS-Protection: 0
 * https://www.virtuesecurity.com/blog/understanding-xss-auditor/
 * https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers
 * http://zinoui.com/blog/security-http-headers#x-xss-protection
+
+## Clear-Site-Data
+
+The Clear-Site-Data header clears browsing data (cookies, storage, cache) associated with the requesting website. It allows web developers to have more control over the data stored locally by a browser for their origins (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data)). This header is useful for example, during a logout process, in order to ensure that all stored content on the client side like cookies, storage and cache are removed.
+
+### Values
+
+| Value               | Description |
+|---------------------|-------------|
+| `"cache"`   | Indicates that the server wishes to remove locally cached data for the origin of the response URL. |
+| `"cookies"` | Indicates that the server wishes to remove all cookies for the origin of the response URL. HTTP authentication credentials are also cleared out. This affects the entire registered domain, including subdomains. |
+| `"storage"` | Indicates that the server wishes to remove all DOM storage for the origin of the response URL. |
+| `"executionContexts"` | Indicates that the server wishes to reload all browsing contexts for the origin of the response. Currently, this value is only supported by a small subset of browsers. |
+| `"*"` | Indicates that the server wishes to clear all types of data for the origin of the response. If more data types are added in future versions of this header, they will also be covered by it. |
+
+### Example
+
+```
+Clear-Site-Data: "cache","cookies","storage"
+```
+
+### References
+
+* https://w3c.github.io/webappsec-clear-site-data/ 
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data
+* https://caniuse.com/?search=clear-site-data
+* https://www.chromestatus.com/feature/4713262029471744
+* https://github.com/w3c/webappsec-clear-site-data
+* https://github.com/w3c/webappsec-clear-site-data/tree/master/demo

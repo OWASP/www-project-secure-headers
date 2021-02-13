@@ -21,6 +21,7 @@ tags: headers
 | Public Key Pinning Extension for HTTP (HPKP) | NS                | NS    | 35-71   | 38-71  | NS     | 23-65 | NS      |
 | Expect-CT                                    |                   |       |         | 61     |        | 48    |         | 
 | X-XSS-Protection                             | 8                 | 12-16 | NS      | 4-77   | 13.1+  | 10-64 | NS      |
+| Clear-Site-Data                              | NS                | 79    | 63      | 61     | NS     | 48    | 61      |
 
 _`NS` = Not Supported_  
 _`+` = Specified version and above_
@@ -64,3 +65,8 @@ _`+` = Specified version and above_
 * X-XSS-Protection
   - https://wiki.mozilla.org/Security/Features/XSS_Filter
   - https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/
+  
+* Clear-Site-Data 
+  - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#browser_compatibility
+  - https://www.chromestatus.com/feature/4713262029471744
+  - https://caniuse.com/?search=clear-site-data
