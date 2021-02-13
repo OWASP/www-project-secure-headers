@@ -16,10 +16,13 @@ tags: headers
 * X-Permitted-Cross-Domain-Policies
 * Referrer-Policy
 * Feature-Policy (almost deprecated)
-* Public Key Pinning Extension for HTTP (HPKP) (deprecated)
-* Expect-CT (almost deprecated)
-* X-XSS-Protection (deprecated)
+* Public Key Pinning Extension for HTTP (HPKP) **(deprecated)**
+* Expect-CT **(almost deprecated)**
+* X-XSS-Protection **(deprecated)**
 * Clear-Site-Data
+* Cross-Origin-Embedder-Policy (COEP)
+* Cross-Origin-Opener-Policy (COOP)
+* Cross-Origin-Resource-Policy (CORP)
 
 ## HTTP Strict Transport Security (HSTS)
 
@@ -433,3 +436,27 @@ Cross-Origin-Opener-Policy: same-origin
 * https://github.com/xsleaks/xsleaks
 * https://portswigger.net/daily-swig/xs-leak
 * https://portswigger.net/research/xs-leak-detecting-ids-using-portal
+
+## Cross-Origin-Resource-Policy (CORP)
+
+This response header allows to define a policy that lets web sites and applications opt in to protection against certain requests from other origins (such as those issued with elements like `<script>` and `<img>`), to mitigate speculative [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack), like [Spectre](https://spectreattack.com/), as well as [Cross-Site Script Inclusion (XSSI)](https://www.scip.ch/en/?labs.20160414) attacks (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy)).
+
+### Values
+
+| Value               | Description |
+|---------------------|-------------|
+| `same-site`   | Only requests from the same [Site](https://developer.mozilla.org/en-US/docs/Glossary/Site) can read the resource. |
+| `same-origin` | Only requests from the same [Origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) (i.e. scheme + host + port) can read the resource. |
+| `cross-origin` | Requests from any [Origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) (both `same-site` and `cross-site`) can read the resource. |
+
+### Example
+
+```
+Cross-Origin-Resource-Policy: same-origin
+```
+
+### References
+
+* https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy
+* https://caniuse.com/?search=Cross-Origin-Resource-Policy

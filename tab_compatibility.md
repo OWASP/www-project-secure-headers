@@ -16,14 +16,15 @@ tags: headers
 | X-Content-Type-Options                       | 8                 |       | 51      | 1.0    | NS     | 13    |         |
 | Content-Security-Policy                      | 11                | 13    | 47      | 49     | 9.1    | 39    | 4.4     |
 | X-Permitted-Cross-Domain-Policies            |                   |       |         |        |        |       |         |
-| Referrer-Policy                              | NS                | NS    | 50      | 56     | NS     | 43    |         | 
-| Feature-Policy                               | NS                | 79    | 74      | 60     | 11.1   | 47    | 81      | 
+| Referrer-Policy                              | NS                | NS    | 50      | 56     | NS     | 43    |         |
+| Feature-Policy                               | NS                | 79    | 74      | 60     | 11.1   | 47    | 81      |
 | Public Key Pinning Extension for HTTP (HPKP) | NS                | NS    | 35-71   | 38-71  | NS     | 23-65 | NS      |
-| Expect-CT                                    |                   |       |         | 61     |        | 48    |         | 
+| Expect-CT                                    |                   |       |         | 61     |        | 48    |         |
 | X-XSS-Protection                             | 8                 | 12-16 | NS      | 4-77   | 13.1+  | 10-64 | NS      |
 | Clear-Site-Data                              | NS                | 79    | 63      | 61     | NS     | 48    | 61      |
 | Cross-Origin-Embedder-Policy (COEP)          | NS                | 83    | 79      | 83     | NS     | NS    | NS      |
 | Cross-Origin-Opener-Policy (COOP)            | NS                | 83    | 79      | 83     | NS     | NS    | NS      |
+| Cross-Origin-Resource-Policy (CORP)          | NS                | 79    | 74      | 73     | 12     | NS    | 73      |
 
 _`NS` = Not Supported_  
 _`+` = Specified version and above_
@@ -80,3 +81,7 @@ _`+` = Specified version and above_
 * Cross-Origin-Opener-Policy (COOP)
   - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy#browser_compatibility
   - https://caniuse.com/?search=Cross-Origin-Opener-Policy
+
+* Cross-Origin-Resource-Policy (CORP)
+  - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy#browser_compatibility
+  - https://caniuse.com/?search=Cross-Origin-Resource-Policy
