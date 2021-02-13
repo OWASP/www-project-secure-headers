@@ -460,3 +460,4 @@ Cross-Origin-Resource-Policy: same-origin
 * https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy
 * https://caniuse.com/?search=Cross-Origin-Resource-Policy
+* https://resourcepolicy.fyi/
