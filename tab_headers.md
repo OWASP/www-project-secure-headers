@@ -379,3 +379,28 @@ Clear-Site-Data: "cache","cookies","storage"
 * https://www.chromestatus.com/feature/4713262029471744
 * https://github.com/w3c/webappsec-clear-site-data
 * https://github.com/w3c/webappsec-clear-site-data/tree/master/demo
+
+## Cross-Origin-Embedder-Policy (COEP)
+
+This response header prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy)).
+
+### Values
+
+| Value               | Description |
+|---------------------|-------------|
+| `unsafe-none`   | Allows the document to fetch cross-origin resources without giving explicit permission through the [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) protocol or the [Cross-Origin-Resource-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)) header (it is the default value). |
+| `require-corp` | A document can only load resources from the same origin, or resources explicitly marked as loadable from another origin. |
+
+### Example
+
+```
+Cross-Origin-Embedder-Policy: require-corp
+```
+
+### References
+
+* https://html.spec.whatwg.org/multipage/origin.html#coep
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy
+* https://caniuse.com/?search=Cross-Origin-Embedder-Policy
+* https://web.dev/coop-coep/
+* https://web.dev/why-coop-coep/
