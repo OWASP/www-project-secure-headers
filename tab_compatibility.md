@@ -23,6 +23,7 @@ tags: headers
 | X-XSS-Protection                             | 8                 | 12-16 | NS      | 4-77   | 13.1+  | 10-64 | NS      |
 | Clear-Site-Data                              | NS                | 79    | 63      | 61     | NS     | 48    | 61      |
 | Cross-Origin-Embedder-Policy (COEP)          | NS                | 83    | 79      | 83     | NS     | NS    | NS      |
+| Cross-Origin-Opener-Policy (COOP)            | NS                | 83    | 79      | 83     | NS     | NS    | NS      |
 
 _`NS` = Not Supported_  
 _`+` = Specified version and above_
@@ -75,3 +76,7 @@ _`+` = Specified version and above_
 * Cross-Origin-Embedder-Policy (COEP)
   - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy#browser_compatibility
   - https://caniuse.com/?search=Cross-Origin-Embedder-Policy
+
+* Cross-Origin-Opener-Policy (COOP)
+  - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy#browser_compatibility
+  - https://caniuse.com/?search=Cross-Origin-Opener-Policy

@@ -404,3 +404,32 @@ Cross-Origin-Embedder-Policy: require-corp
 * https://caniuse.com/?search=Cross-Origin-Embedder-Policy
 * https://web.dev/coop-coep/
 * https://web.dev/why-coop-coep/
+
+## Cross-Origin-Opener-Policy (COOP)
+
+This response header allows you to ensure a top-level document does not share a browsing context group with cross-origin documents. COOP will process-isolate your document and potential attackers can't access to your global object if they were opening it in a popup, preventing a set of cross-origin attacks dubbed [XS-Leaks](https://xsleaks.dev/) (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy)).
+
+### Values
+
+| Value               | Description |
+|---------------------|-------------|
+| `unsafe-none`   | Allows the document to be added to its opener's browsing context group unless the opener itself has a COOP of `same-origin` or `same-origin-allow-popups` (it is the default value). |
+| `same-origin-allow-popups` | Retains references to newly opened windows or tabs which either don't set COOP or which opt out of isolation by setting a COOP of `unsafe-none`. |
+| `same-origin` | Isolates the browsing context exclusively to same-origin documents. Cross-origin documents are not loaded in the same browsing context. |
+
+### Example
+
+```
+Cross-Origin-Opener-Policy: same-origin
+```
+
+### References
+
+* https://html.spec.whatwg.org/multipage/origin.html#cross-origin-opener-policies
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy
+* https://caniuse.com/?search=Cross-Origin-Opener-Policy
+* https://web.dev/coop-coep/
+* https://web.dev/why-coop-coep/
+* https://github.com/xsleaks/xsleaks
+* https://portswigger.net/daily-swig/xs-leak
+* https://portswigger.net/research/xs-leak-detecting-ids-using-portal
