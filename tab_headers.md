@@ -15,11 +15,15 @@ tags: headers
 * Content-Security-Policy
 * X-Permitted-Cross-Domain-Policies
 * Referrer-Policy
-* Feature-Policy (almost deprecated)
-* Public Key Pinning Extension for HTTP (HPKP) (deprecated)
-* Expect-CT (almost deprecated)
-* X-XSS-Protection (deprecated)
 * Clear-Site-Data
+* Cross-Origin-Embedder-Policy (COEP)
+* Cross-Origin-Opener-Policy (COOP)
+* Cross-Origin-Resource-Policy (CORP)
+* Feature-Policy **(almost deprecated)**
+* Public Key Pinning Extension for HTTP (HPKP) **(deprecated)**
+* Expect-CT **(almost deprecated)**
+* X-XSS-Protection **(deprecated)**
+
 
 ## HTTP Strict Transport Security (HSTS)
 
@@ -201,6 +205,114 @@ Referrer-Policy: no-referrer
 * https://www.w3.org/TR/referrer-policy/
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
 
+## Clear-Site-Data
+
+The Clear-Site-Data header clears browsing data (cookies, storage, cache) associated with the requesting website. It allows web developers to have more control over the data stored locally by a browser for their origins (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data)). This header is useful for example, during a logout process, in order to ensure that all stored content on the client side like cookies, storage and cache are removed.
+
+### Values
+
+| Value               | Description |
+|---------------------|-------------|
+| `"cache"`   | Indicates that the server wishes to remove locally cached data for the origin of the response URL. |
+| `"cookies"` | Indicates that the server wishes to remove all cookies for the origin of the response URL. HTTP authentication credentials are also cleared out. This affects the entire registered domain, including subdomains. |
+| `"storage"` | Indicates that the server wishes to remove all DOM storage for the origin of the response URL. |
+| `"executionContexts"` | Indicates that the server wishes to reload all browsing contexts for the origin of the response. Currently, this value is only supported by a small subset of browsers. |
+| `"*"` | Indicates that the server wishes to clear all types of data for the origin of the response. If more data types are added in future versions of this header, they will also be covered by it. |
+
+### Example
+
+```
+Clear-Site-Data: "cache","cookies","storage"
+```
+
+### References
+
+* https://w3c.github.io/webappsec-clear-site-data/ 
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data
+* https://caniuse.com/?search=clear-site-data
+* https://www.chromestatus.com/feature/4713262029471744
+* https://github.com/w3c/webappsec-clear-site-data
+* https://github.com/w3c/webappsec-clear-site-data/tree/master/demo
+
+## Cross-Origin-Embedder-Policy (COEP)
+
+This response header prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy)).
+
+### Values
+
+| Value               | Description |
+|---------------------|-------------|
+| `unsafe-none`   | Allows the document to fetch cross-origin resources without giving explicit permission through the [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) protocol or the [Cross-Origin-Resource-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)) header (it is the default value). |
+| `require-corp` | A document can only load resources from the same origin, or resources explicitly marked as loadable from another origin. |
+
+### Example
+
+```
+Cross-Origin-Embedder-Policy: require-corp
+```
+
+### References
+
+* https://html.spec.whatwg.org/multipage/origin.html#coep
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy
+* https://caniuse.com/?search=Cross-Origin-Embedder-Policy
+* https://web.dev/coop-coep/
+* https://web.dev/why-coop-coep/
+
+## Cross-Origin-Opener-Policy (COOP)
+
+This response header allows you to ensure a top-level document does not share a browsing context group with cross-origin documents. COOP will process-isolate your document and potential attackers can't access to your global object if they were opening it in a popup, preventing a set of cross-origin attacks dubbed [XS-Leaks](https://xsleaks.dev/) (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy)).
+
+### Values
+
+| Value               | Description |
+|---------------------|-------------|
+| `unsafe-none`   | Allows the document to be added to its opener's browsing context group unless the opener itself has a COOP of `same-origin` or `same-origin-allow-popups` (it is the default value). |
+| `same-origin-allow-popups` | Retains references to newly opened windows or tabs which either don't set COOP or which opt out of isolation by setting a COOP of `unsafe-none`. |
+| `same-origin` | Isolates the browsing context exclusively to same-origin documents. Cross-origin documents are not loaded in the same browsing context. |
+
+### Example
+
+```
+Cross-Origin-Opener-Policy: same-origin
+```
+
+### References
+
+* https://html.spec.whatwg.org/multipage/origin.html#cross-origin-opener-policies
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy
+* https://caniuse.com/?search=Cross-Origin-Opener-Policy
+* https://web.dev/coop-coep/
+* https://web.dev/why-coop-coep/
+* https://github.com/xsleaks/xsleaks
+* https://portswigger.net/daily-swig/xs-leak
+* https://portswigger.net/research/xs-leak-detecting-ids-using-portal
+
+## Cross-Origin-Resource-Policy (CORP)
+
+This response header allows to define a policy that lets web sites and applications opt in to protection against certain requests from other origins (such as those issued with elements like `<script>` and `<img>`), to mitigate speculative [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack), like [Spectre](https://spectreattack.com/), as well as [Cross-Site Script Inclusion (XSSI)](https://www.scip.ch/en/?labs.20160414) attacks (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy)).
+
+### Values
+
+| Value               | Description |
+|---------------------|-------------|
+| `same-site`   | Only requests from the same [Site](https://developer.mozilla.org/en-US/docs/Glossary/Site) can read the resource. |
+| `same-origin` | Only requests from the same [Origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) (i.e. scheme + host + port) can read the resource. |
+| `cross-origin` | Requests from any [Origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) (both `same-site` and `cross-site`) can read the resource. Browsers are using this policy when an [CORP header is not specified](https://resourcepolicy.fyi/#corp-and-isolation). |
+
+### Example
+
+```
+Cross-Origin-Resource-Policy: same-origin
+```
+
+### References
+
+* https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy
+* https://caniuse.com/?search=Cross-Origin-Resource-Policy
+* https://resourcepolicy.fyi/
+
 ## Feature-Policy (almost deprecated)
 
 > **⚠️ Warning:** This header was split into [Permissions-Policy](https://w3c.github.io/webappsec-feature-policy/#permissions-policy-http-header-field) and [Document-Policy](https://w3c.github.io/webappsec-feature-policy/document-policy#document-policy-http-header) and will be considered deprecated once all impacted features are moved off of feature policy.
@@ -350,32 +462,3 @@ X-XSS-Protection: 0
 * https://www.virtuesecurity.com/blog/understanding-xss-auditor/
 * https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers
 * http://zinoui.com/blog/security-http-headers#x-xss-protection
-
-## Clear-Site-Data
-
-The Clear-Site-Data header clears browsing data (cookies, storage, cache) associated with the requesting website. It allows web developers to have more control over the data stored locally by a browser for their origins (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data)). This header is useful for example, during a logout process, in order to ensure that all stored content on the client side like cookies, storage and cache are removed.
-
-### Values
-
-| Value               | Description |
-|---------------------|-------------|
-| `"cache"`   | Indicates that the server wishes to remove locally cached data for the origin of the response URL. |
-| `"cookies"` | Indicates that the server wishes to remove all cookies for the origin of the response URL. HTTP authentication credentials are also cleared out. This affects the entire registered domain, including subdomains. |
-| `"storage"` | Indicates that the server wishes to remove all DOM storage for the origin of the response URL. |
-| `"executionContexts"` | Indicates that the server wishes to reload all browsing contexts for the origin of the response. Currently, this value is only supported by a small subset of browsers. |
-| `"*"` | Indicates that the server wishes to clear all types of data for the origin of the response. If more data types are added in future versions of this header, they will also be covered by it. |
-
-### Example
-
-```
-Clear-Site-Data: "cache","cookies","storage"
-```
-
-### References
-
-* https://w3c.github.io/webappsec-clear-site-data/ 
-* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data
-* https://caniuse.com/?search=clear-site-data
-* https://www.chromestatus.com/feature/4713262029471744
-* https://github.com/w3c/webappsec-clear-site-data
-* https://github.com/w3c/webappsec-clear-site-data/tree/master/demo
