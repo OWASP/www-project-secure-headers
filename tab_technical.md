@@ -77,6 +77,12 @@ DrHEADer helps with the audit of security headers received in response to a sing
 
 **Site:** https://github.com/Santandersecurityresearch/DrHeader
 
+### API-Security
+
+This is a Python based API-Security framework containing ApiSecurityHeader.py script which will check the above mentioned Security response headers are present and contains the required value.
+
+**Site:** https://github.com/AmitKulkarni9/API-Security
+
 
 ## Development Libraries
 
