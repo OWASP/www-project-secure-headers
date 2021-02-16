@@ -77,6 +77,9 @@ DrHEADer helps with the audit of security headers received in response to a sing
 
 **Site:** https://github.com/Santandersecurityresearch/DrHeader
 
+API Security using OWASP Secure Headers Project. Python based API-Security framework containing ApiSecurityHeader.py script which checks the security response headers exists and contains the required value. The script will work for ANY API provided. It supports both get and post method.
+
+**Site:** https://github.com/AmitKulkarni9/API-Security
 
 ## Development Libraries
 
