@@ -87,7 +87,7 @@ This is a Python based API-Security framework containing ApiSecurityHeader.py sc
 
 Test suites for [Venom](https://github.com/ovh/venom) checking the presence and the value for the different response headers proposed by the [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/).
 
-**GitHub:** https://gist.github.com/righettod/
+**GitHub:** https://gist.github.com/righettod/f63548ebd96bed82269dcc3dfea27056
 
 ## Development Libraries
 
