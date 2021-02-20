@@ -44,13 +44,13 @@ Strict-Transport-Security: max-age=31536000 ; includeSubDomains
 
 ### References
 
-* https://tools.ietf.org/html/rfc6797
-* https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html
-* https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/07-Test_HTTP_Strict_Transport_Security.html
-* https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
-* https://www.chromium.org/hsts
-* https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security
-* https://raymii.org/s/tutorials/HTTP_Strict_Transport_Security_for_Apache_NGINX_and_Lighttpd.html
+* <https://tools.ietf.org/html/rfc6797>
+* <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html>
+* <https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/07-Test_HTTP_Strict_Transport_Security.html>
+* <https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security>
+* <https://www.chromium.org/hsts>
+* <https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security>
+* <https://raymii.org/s/tutorials/HTTP_Strict_Transport_Security_for_Apache_NGINX_and_Lighttpd.html>
 
 ## X-Frame-Options
 
@@ -73,12 +73,12 @@ X-Frame-Options: deny
 
 ### References
 
-* https://tools.ietf.org/html/rfc7034
-* https://tools.ietf.org/html/draft-ietf-websec-x-frame-options-01
-* https://tools.ietf.org/html/draft-ietf-websec-frame-options-00
-* https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options
-* https://owasp.org/www-community/attacks/Clickjacking
-* https://blogs.msdn.microsoft.com/ieinternals/2010/03/30/combating-clickjacking-with-x-frame-options/
+* <https://tools.ietf.org/html/rfc7034>
+* <https://tools.ietf.org/html/draft-ietf-websec-x-frame-options-01>
+* <https://tools.ietf.org/html/draft-ietf-websec-frame-options-00>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options>
+* <https://owasp.org/www-community/attacks/Clickjacking>
+* <https://blogs.msdn.microsoft.com/ieinternals/2010/03/30/combating-clickjacking-with-x-frame-options/>
 
 ## X-Content-Type-Options
 
@@ -141,12 +141,12 @@ Content-Security-Policy: script-src 'self'
 
 ### References
 
-* https://www.w3.org/TR/CSP/
-* https://developer.mozilla.org/en-US/docs/Web/Security/CSP
-* https://owasp.org/www-community/attacks/Content_Security_Policy
-* https://scotthelme.co.uk/content-security-policy-an-introduction/
-* https://report-uri.io
-* https://content-security-policy.com
+* <https://www.w3.org/TR/CSP/>
+* <https://developer.mozilla.org/en-US/docs/Web/Security/CSP>
+* <https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html>
+* <https://scotthelme.co.uk/content-security-policy-an-introduction/>
+* <https://report-uri.io>
+* <https://content-security-policy.com>
 
 ## X-Permitted-Cross-Domain-Policies
 
@@ -170,12 +170,12 @@ X-Permitted-Cross-Domain-Policies: none
 
 ### References
 
-* https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html
-* https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html
-* https://www.perpetual-beta.org/weblog/security-headers.html#rule-8470-2-establish-a-cross-domain-meta-policy
-* https://danielnixon.org/http-security-headers/
-* https://rorsecurity.info/portfolio/new-http-headers-for-more-security
-* https://github.com/twitter/secureheaders/issues/88
+* <https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html>
+* <https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html>
+* <https://www.perpetual-beta.org/weblog/security-headers.html#rule-8470-2-establish-a-cross-domain-meta-policy>
+* <https://danielnixon.org/http-security-headers/>
+* <https://rorsecurity.info/portfolio/new-http-headers-for-more-security>
+* <https://github.com/twitter/secureheaders/issues/88>
 
 ## Referrer-Policy
 
@@ -202,8 +202,8 @@ Referrer-Policy: no-referrer
 
 ### References
 
-* https://www.w3.org/TR/referrer-policy/
-* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
+* <https://www.w3.org/TR/referrer-policy/>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy>
 
 ## Clear-Site-Data
 
@@ -227,12 +227,12 @@ Clear-Site-Data: "cache","cookies","storage"
 
 ### References
 
-* https://w3c.github.io/webappsec-clear-site-data/ 
-* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data
-* https://caniuse.com/?search=clear-site-data
-* https://www.chromestatus.com/feature/4713262029471744
-* https://github.com/w3c/webappsec-clear-site-data
-* https://github.com/w3c/webappsec-clear-site-data/tree/master/demo
+* <https://w3c.github.io/webappsec-clear-site-data/>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data>
+* <https://caniuse.com/?search=clear-site-data>
+* <https://www.chromestatus.com/feature/4713262029471744>
+* <https://github.com/w3c/webappsec-clear-site-data>
+* <https://github.com/w3c/webappsec-clear-site-data/tree/master/demo>
 
 ## Cross-Origin-Embedder-Policy (COEP)
 
@@ -253,11 +253,11 @@ Cross-Origin-Embedder-Policy: require-corp
 
 ### References
 
-* https://html.spec.whatwg.org/multipage/origin.html#coep
-* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy
-* https://caniuse.com/?search=Cross-Origin-Embedder-Policy
-* https://web.dev/coop-coep/
-* https://web.dev/why-coop-coep/
+* <https://html.spec.whatwg.org/multipage/origin.html#coep>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy>
+* <https://caniuse.com/?search=Cross-Origin-Embedder-Policy>
+* <https://web.dev/coop-coep/>
+* <https://web.dev/why-coop-coep/>
 
 ## Cross-Origin-Opener-Policy (COOP)
 
@@ -279,14 +279,14 @@ Cross-Origin-Opener-Policy: same-origin
 
 ### References
 
-* https://html.spec.whatwg.org/multipage/origin.html#cross-origin-opener-policies
-* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy
-* https://caniuse.com/?search=Cross-Origin-Opener-Policy
-* https://web.dev/coop-coep/
-* https://web.dev/why-coop-coep/
-* https://github.com/xsleaks/xsleaks
-* https://portswigger.net/daily-swig/xs-leak
-* https://portswigger.net/research/xs-leak-detecting-ids-using-portal
+* <https://html.spec.whatwg.org/multipage/origin.html#cross-origin-opener-policies>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy>
+* <https://caniuse.com/?search=Cross-Origin-Opener-Policy>
+* <https://web.dev/coop-coep/>
+* <https://web.dev/why-coop-coep/>
+* <https://github.com/xsleaks/xsleaks>
+* <https://portswigger.net/daily-swig/xs-leak>
+* <https://portswigger.net/research/xs-leak-detecting-ids-using-portal>
 
 ## Cross-Origin-Resource-Policy (CORP)
 
@@ -308,10 +308,10 @@ Cross-Origin-Resource-Policy: same-origin
 
 ### References
 
-* https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header
-* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy
-* https://caniuse.com/?search=Cross-Origin-Resource-Policy
-* https://resourcepolicy.fyi/
+* <https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy>
+* <https://caniuse.com/?search=Cross-Origin-Resource-Policy>
+* <https://resourcepolicy.fyi/>
 
 ## Feature-Policy (almost deprecated)
 
@@ -356,9 +356,9 @@ Feature-Policy: vibrate 'none'; geolocation 'none'
 
 ### References
 
-* https://w3c.github.io/webappsec-feature-policy/
-* https://scotthelme.co.uk/a-new-security-header-feature-policy/
-* https://github.com/w3c/webappsec-feature-policy/blob/master/features.md
+* <https://w3c.github.io/webappsec-feature-policy/>
+* <https://scotthelme.co.uk/a-new-security-header-feature-policy/>
+* <https://github.com/w3c/webappsec-feature-policy/blob/master/features.md>
 
 ## Public Key Pinning Extension for HTTP (HPKP) (deprecated)
 
@@ -389,15 +389,15 @@ Public-Key-Pins: pin-sha256="d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM="; pin-
 
 ### References
 
-* https://tools.ietf.org/html/rfc7469
-* https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning#HTTP_pinning
-* https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning
-* https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning
-* https://raymii.org/s/articles/HTTP_Public_Key_Pinning_Extension_HPKP.html
-* https://labs.detectify.com/2016/07/05/what-hpkp-is-but-isnt/
-* https://blog.qualys.com/ssllabs/2016/09/06/is-http-public-key-pinning-dead
-* https://scotthelme.co.uk/im-giving-up-on-hpkp/
-* https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/he9tr7p3rZ8/eNMwKPmUBAAJ
+* <https://tools.ietf.org/html/rfc7469>
+* <https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning#HTTP_pinning>
+* <https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning>
+* <https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning>
+* <https://raymii.org/s/articles/HTTP_Public_Key_Pinning_Extension_HPKP.html>
+* <https://labs.detectify.com/2016/07/05/what-hpkp-is-but-isnt/>
+* <https://blog.qualys.com/ssllabs/2016/09/06/is-http-public-key-pinning-dead>
+* <https://scotthelme.co.uk/im-giving-up-on-hpkp/>
+* <https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/he9tr7p3rZ8/eNMwKPmUBAAJ>
 
 ## Expect-CT (almost deprecated)
 
@@ -424,9 +424,9 @@ Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
 
 ### References
 
-* https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-02
-* https://httpwg.org/http-extensions/expect-ct.html
-* https://scotthelme.co.uk/a-new-security-header-expect-ct/
+* <https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-02>
+* <https://httpwg.org/http-extensions/draft-ietf-httpbis-expect-ct.html>
+* <https://scotthelme.co.uk/a-new-security-header-expect-ct/>
 
 ## X-XSS-Protection (deprecated)
 
@@ -451,14 +451,14 @@ X-XSS-Protection: 0
 
 ### References
 
-* https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
-* https://www.chromestatus.com/feature/5021976655560704
-* https://bugzilla.mozilla.org/show_bug.cgi?id=528661
-* https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/
-* https://github.com/zaproxy/zaproxy/issues/5849
-* https://scotthelme.co.uk/security-headers-updates/#removing-the-x-xss-protection-header
-* https://portswigger.net/daily-swig/google-chromes-xss-auditor-goes-back-to-filter-mode
-* https://owasp.org/www-community/attacks/xss/
-* https://www.virtuesecurity.com/blog/understanding-xss-auditor/
-* https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers
-* http://zinoui.com/blog/security-http-headers#x-xss-protection
+* <https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html>
+* <https://www.chromestatus.com/feature/5021976655560704>
+* <https://bugzilla.mozilla.org/show_bug.cgi?id=528661>
+* <https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/>
+* <https://github.com/zaproxy/zaproxy/issues/5849>
+* <https://scotthelme.co.uk/security-headers-updates/#removing-the-x-xss-protection-header>
+* <https://portswigger.net/daily-swig/google-chromes-xss-auditor-goes-back-to-filter-mode>
+* <https://owasp.org/www-community/attacks/xss/>
+* <https://www.virtuesecurity.com/blog/understanding-xss-auditor/>
+* <https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers>
+* <http://zinoui.com/blog/security-http-headers#x-xss-protection>
