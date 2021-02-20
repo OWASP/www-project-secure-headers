@@ -1,0 +1,23 @@
+# Tool "markdown-link-check" is used to validate the links
+# See https://www.npmjs.com/package/markdown-link-check
+# See https://github.com/gaurav-nelson/github-action-markdown-link-check
+name: check_validity_of_all_external_links
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest  
+    steps:
+    - name: Setup Action
+      uses: actions/checkout@v2
+    - name: Run check
+      uses: gaurav-nelson/github-action-markdown-link-check@v1
+      with:
+        use-quiet-mode: 'yes'
+        use-verbose-mode: 'yes'
+        max-depth: 10
+        file-path: '.'
