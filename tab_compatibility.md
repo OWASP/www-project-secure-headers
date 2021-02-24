@@ -32,56 +32,56 @@ _`+` = Specified version and above_
 ## References
 
 * HTTP Strict Transport Security (HSTS)
-  - https://blogs.windows.com/msedgedev/2015/06/09/http-strict-transport-security-comes-to-internet-explorer-11-on-windows-8-1-and-windows-7/
-  - https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
-  - https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html
-  - https://caniuse.com/#search=HSTS
+  - <https://blogs.windows.com/msedgedev/2015/06/09/http-strict-transport-security-comes-to-internet-explorer-11-on-windows-8-1-and-windows-7/>
+  - <https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security>
+  - <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html>
+  - <https://caniuse.com/#search=HSTS>
 
 * X-Frame-Options
-  - https://caniuse.com/#search=X-Frame-Options
+  - <https://caniuse.com/#search=X-Frame-Options>
 
 * X-Content-Type-Options
-  - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
+  - <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options>
 
 * Content-Security-Policy
-  - https://caniuse.com/#search=Content%20Security%20Policy
+  - <https://caniuse.com/#search=Content%20Security%20Policy>
 
 * X-Permitted-Cross-Domain-Policies
-  - https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html
+  - <https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html>
 
 * Referrer-Policy
-  - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
+  - <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy>
 
 * Feature-Policy
   - Note: Depends greatly on the specific attribute
-  - https://caniuse.com/#search=Feature-Policy
-  - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy
+  - <https://caniuse.com/#search=Feature-Policy>
+  - <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy>
 
 * Public Key Pinning Extension for HTTP (HPKP)
-  - https://caniuse.com/#search=Public%20Key%20Pinning
-  - https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/he9tr7p3rZ8/eNMwKPmUBAAJ
-  - https://www.chromestatus.com/feature/5903385005916160
+  - <https://caniuse.com/#search=Public%20Key%20Pinning>
+  - <https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/he9tr7p3rZ8/eNMwKPmUBAAJ>
+  - <https://www.chromestatus.com/feature/5903385005916160>
 
 * Expect-CT
-  - https://www.chromestatus.com/feature/5677171733430272
+  - <https://www.chromestatus.com/feature/5677171733430272>
 
 * X-XSS-Protection
-  - https://wiki.mozilla.org/Security/Features/XSS_Filter
-  - https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/
+  - <https://wiki.mozilla.org/Security/Features/XSS_Filter>
+  - <https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/>
   
 * Clear-Site-Data 
-  - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#browser_compatibility
-  - https://www.chromestatus.com/feature/4713262029471744
-  - https://caniuse.com/?search=clear-site-data
+  - <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#browser_compatibility>
+  - <https://www.chromestatus.com/feature/4713262029471744>
+  - <https://caniuse.com/?search=clear-site-data>
 
 * Cross-Origin-Embedder-Policy (COEP)
-  - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy#browser_compatibility
-  - https://caniuse.com/?search=Cross-Origin-Embedder-Policy
+  - <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy#browser_compatibility>
+  - <https://caniuse.com/?search=Cross-Origin-Embedder-Policy>
 
 * Cross-Origin-Opener-Policy (COOP)
-  - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy#browser_compatibility
-  - https://caniuse.com/?search=Cross-Origin-Opener-Policy
+  - <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy#browser_compatibility>
+  - <https://caniuse.com/?search=Cross-Origin-Opener-Policy>
 
 * Cross-Origin-Resource-Policy (CORP)
-  - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy#browser_compatibility
-  - https://caniuse.com/?search=Cross-Origin-Resource-Policy
+  - <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy#browser_compatibility>
+  - <https://caniuse.com/?search=Cross-Origin-Resource-Policy>
