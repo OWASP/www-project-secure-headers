@@ -41,12 +41,6 @@ A Mozilla project designed to help developers, system administrators, and securi
 
 **GitHub:** <https://github.com/mozilla/http-observatory-website/>
 
-### Check Your Headers
-
-Just another web scanner for HTTP response headers.
-
-**Site:** <https://cyh.herokuapp.com/cyh>
-
 ### Recx Security Analyser
 
 Chrome extension that allows the inspection of security aspects of a site's HTTP headers, cookies and other key security settings.
