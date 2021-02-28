@@ -14,6 +14,7 @@ The OWASP Secure Headers Project is migrating to this new OWASP website. For now
 ## Contributors
 
 * [Adam Averay](https://github.com/adamaveray)
+* [Dominique Righetto](https://righettod.eu)
 * [Jim Manico](https://twitter.com/manicode)
 
 ## Licensing
