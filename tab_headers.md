@@ -9,25 +9,32 @@ tags: headers
 
 # Response Headers
 
-* HTTP Strict Transport Security (HSTS)
-* X-Frame-Options
-* X-Content-Type-Options
-* Content-Security-Policy
-* X-Permitted-Cross-Domain-Policies
-* Referrer-Policy
-* Clear-Site-Data
-* Cross-Origin-Embedder-Policy (COEP)
-* Cross-Origin-Opener-Policy (COOP)
-* Cross-Origin-Resource-Policy (CORP)
-* Feature-Policy **(almost deprecated)**
-* Public Key Pinning Extension for HTTP (HPKP) **(deprecated)**
-* Expect-CT **(almost deprecated)**
-* X-XSS-Protection **(deprecated)**
+**Active**
 
+* [HTTP Strict Transport Security](#http-strict-transport-security)
+* [X-Frame-Options](#x-frame-options)
+* [X-Content-Type-Options](#x-content-type-options)
+* [Content-Security-Policy](#content-security-policy)
+* [X-Permitted-Cross-Domain-Policies](#x-permitted-cross-domain-policies)
+* [Referrer-Policy](#referrer-policy)
+* [Clear-Site-Data](#clear-site-data)
+* [Cross-Origin-Embedder-Policy](#cross-origin-embedder-policy)
+* [Cross-Origin-Opener-Policy](#cross-origin-opener-policy)
+* [Cross-Origin-Resource-Policy](#cross-origin-resource-policy)
 
-## HTTP Strict Transport Security (HSTS)
+**Almost deprecated**
 
-HTTP Strict Transport Security (HSTS) is a web security policy mechanism which helps to protect websites against protocol downgrade attacks and cookie hijacking. It allows web servers to declare that web browsers (or other complying user agents) should only interact with it using secure HTTPS connections, and never via the insecure HTTP protocol. HSTS is an IETF standards track protocol and is specified in RFC 6797. A server implements an HSTS policy by supplying a header (`Strict-Transport-Security`) over an HTTPS connection (HSTS headers over HTTP are ignored).
+* [Feature-Policy](#feature-policy)
+* [Expect-CT](#expect-ct)
+
+**Deprecated**
+
+* [Public-Key-Pins](#public-key-pins)
+* [X-XSS-Protection](#x-xss-protection)
+
+## HTTP Strict Transport Security
+
+HTTP Strict Transport Security (also named HSTS) is a web security policy mechanism which helps to protect websites against protocol downgrade attacks and cookie hijacking. It allows web servers to declare that web browsers (or other complying user agents) should only interact with it using secure HTTPS connections, and never via the insecure HTTP protocol. HSTS is an IETF standards track protocol and is specified in RFC 6797. A server implements an HSTS policy by supplying a header (`Strict-Transport-Security`) over an HTTPS connection (HSTS headers over HTTP are ignored).
 
 ### Values
 
@@ -51,10 +58,11 @@ Strict-Transport-Security: max-age=31536000 ; includeSubDomains
 * <https://www.chromium.org/hsts>
 * <https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security>
 * <https://raymii.org/s/tutorials/HTTP_Strict_Transport_Security_for_Apache_NGINX_and_Lighttpd.html>
+* <https://blogs.windows.com/msedgedev/2015/06/09/http-strict-transport-security-comes-to-internet-explorer-11-on-windows-8-1-and-windows-7/>
 
 ## X-Frame-Options
 
-The `X-Frame-Options` response header improves the protection of web applications against clickjacking. It instructs the browser whether the content can be displayed within frames.
+The `X-Frame-Options` response header (also named XFO) improves the protection of web applications against clickjacking. It instructs the browser whether the content can be displayed within frames.
 The CSP frame-ancestors directive obsoletes the X-Frame-Options header. If a resource has both policies, the CSP frame-ancestors policy will be enforced and the X-Frame-Options policy will be ignored.
 
 ### Values
@@ -98,12 +106,13 @@ X-Content-Type-Options: nosniff
 
 ### References
 
-* https://msdn.microsoft.com/en-us/library/gg622941%28v=vs.85%29.aspx
-* https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/
+* <https://msdn.microsoft.com/en-us/library/gg622941%28v=vs.85%29.aspx>
+* <https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options>
 
 ## Content-Security-Policy
 
-A Content Security Policy (CSP) requires careful tuning and precise definition of the policy. If enabled, CSP has significant impact on the way browsers render pages (e.g., inline JavaScript is disabled by default and must be explicitly allowed in the policy). CSP prevents a wide range of attacks, including cross-site scripting and other cross-site injections.
+A Content Security Policy (also named CSP) requires careful tuning and precise definition of the policy. If enabled, CSP has significant impact on the way browsers render pages (e.g., inline JavaScript is disabled by default and must be explicitly allowed in the policy). CSP prevents a wide range of attacks, including cross-site scripting and other cross-site injections.
 
 ### Values
 
@@ -147,6 +156,8 @@ Content-Security-Policy: script-src 'self'
 * <https://scotthelme.co.uk/content-security-policy-an-introduction/>
 * <https://report-uri.io>
 * <https://content-security-policy.com>
+* <https://report-uri.com/home/generate>
+* <https://csp-evaluator.withgoogle.com/>
 
 ## X-Permitted-Cross-Domain-Policies
 
@@ -176,6 +187,7 @@ X-Permitted-Cross-Domain-Policies: none
 * <https://danielnixon.org/http-security-headers/>
 * <https://rorsecurity.info/portfolio/new-http-headers-for-more-security>
 * <https://github.com/twitter/secureheaders/issues/88>
+* <https://gf.dev/cross-domain-policy-test>
 
 ## Referrer-Policy
 
@@ -229,14 +241,13 @@ Clear-Site-Data: "cache","cookies","storage"
 
 * <https://w3c.github.io/webappsec-clear-site-data/>
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data>
-* <https://caniuse.com/?search=clear-site-data>
 * <https://www.chromestatus.com/feature/4713262029471744>
 * <https://github.com/w3c/webappsec-clear-site-data>
 * <https://github.com/w3c/webappsec-clear-site-data/tree/master/demo>
 
-## Cross-Origin-Embedder-Policy (COEP)
+## Cross-Origin-Embedder-Policy
 
-This response header prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy)).
+This response header (also named COEP) prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy)).
 
 ### Values
 
@@ -258,10 +269,11 @@ Cross-Origin-Embedder-Policy: require-corp
 * <https://caniuse.com/?search=Cross-Origin-Embedder-Policy>
 * <https://web.dev/coop-coep/>
 * <https://web.dev/why-coop-coep/>
+* <https://web.dev/cross-origin-isolation-guide/>
 
-## Cross-Origin-Opener-Policy (COOP)
+## Cross-Origin-Opener-Policy
 
-This response header allows you to ensure a top-level document does not share a browsing context group with cross-origin documents. COOP will process-isolate your document and potential attackers can't access to your global object if they were opening it in a popup, preventing a set of cross-origin attacks dubbed [XS-Leaks](https://xsleaks.dev/) (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy)).
+This response header (also named COOP) allows you to ensure a top-level document does not share a browsing context group with cross-origin documents. COOP will process-isolate your document and potential attackers can't access to your global object if they were opening it in a popup, preventing a set of cross-origin attacks dubbed [XS-Leaks](https://xsleaks.dev/) (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy)).
 
 ### Values
 
@@ -281,16 +293,16 @@ Cross-Origin-Opener-Policy: same-origin
 
 * <https://html.spec.whatwg.org/multipage/origin.html#cross-origin-opener-policies>
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy>
-* <https://caniuse.com/?search=Cross-Origin-Opener-Policy>
 * <https://web.dev/coop-coep/>
 * <https://web.dev/why-coop-coep/>
 * <https://github.com/xsleaks/xsleaks>
 * <https://portswigger.net/daily-swig/xs-leak>
 * <https://portswigger.net/research/xs-leak-detecting-ids-using-portal>
+* <https://web.dev/cross-origin-isolation-guide/>
 
-## Cross-Origin-Resource-Policy (CORP)
+## Cross-Origin-Resource-Policy
 
-This response header allows to define a policy that lets web sites and applications opt in to protection against certain requests from other origins (such as those issued with elements like `<script>` and `<img>`), to mitigate speculative [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack), like [Spectre](https://spectreattack.com/), as well as [Cross-Site Script Inclusion (XSSI)](https://www.scip.ch/en/?labs.20160414) attacks (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy)).
+This response header (also named CORP) allows to define a policy that lets web sites and applications opt in to protection against certain requests from other origins (such as those issued with elements like `<script>` and `<img>`), to mitigate speculative [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack), like [Spectre](https://spectreattack.com/), as well as [Cross-Site Script Inclusion (XSSI)](https://www.scip.ch/en/?labs.20160414) attacks (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy)).
 
 ### Values
 
@@ -310,15 +322,19 @@ Cross-Origin-Resource-Policy: same-origin
 
 * <https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header>
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy>
-* <https://caniuse.com/?search=Cross-Origin-Resource-Policy>
 * <https://resourcepolicy.fyi/>
+* <https://web.dev/cross-origin-isolation-guide/>
 
-## Feature-Policy (almost deprecated)
+## Feature-Policy
+
+> **Almost deprecated.**
 
 > **⚠️ Warning:** This header was split into [Permissions-Policy](https://w3c.github.io/webappsec-feature-policy/#permissions-policy-http-header-field) and [Document-Policy](https://w3c.github.io/webappsec-feature-policy/document-policy#document-policy-http-header) and will be considered deprecated once all impacted features are moved off of feature policy.
 
 The Feature-Policy header is an **experimental** feature that allows developers to selectively enable and disable use of various browser features and APIs.  
 The two most well supported values are `microphone` and `camera`. For all the other ones, please consult [this](https://caniuse.com/#search=Feature-Policy) page.
+
+⏰ *Permissions-Policy* header usage is not recommended yet by OSHP because it is currently [not supported by default by any major browser](https://caniuse.com/permissions-policy).
 
 ### Values
 
@@ -359,8 +375,44 @@ Feature-Policy: vibrate 'none'; geolocation 'none'
 * <https://w3c.github.io/webappsec-feature-policy/>
 * <https://scotthelme.co.uk/a-new-security-header-feature-policy/>
 * <https://github.com/w3c/webappsec-feature-policy/blob/master/features.md>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy>
+* <https://caniuse.com/permissions-policy>
 
-## Public Key Pinning Extension for HTTP (HPKP) (deprecated)
+## Expect-CT
+
+> **Almost deprecated.**
+
+> **⚠️ Warning:** This header will likely become obsolete in June 2021. Since May 2018 new certificates are expected to support SCTs by default. Certificates before March 2018 were allowed to have a lifetime of 39 months, those will all be expired in June 2021.
+
+The `Expect-CT` header is used by a server to indicate that browsers should evaluate connections to the host for Certificate Transparency compliance.  
+In Chrome 61 (Aug 2017) Chrome enabled its enforcement via SCT by default ([source](https://www.chromestatus.com/feature/5677171733430272)). You can still use this header to specify an `report-uri`.  
+  
+This header comes from the (now expired) internet draft [Expect-CT Extension for HTTP](https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-08).
+
+### Values
+
+| Value         | Description |
+|---------------|-------------|
+| `report-uri`  | _(Optional)_ Indicates the URL to which the browser should report Expect-CT failures. |
+| `enforce`     | _(Optional)_ A valueless directive that, if present, signals to the browser that compliance to the CT Policy should be enforced (rather than report-only) and that the browser should refuse future connections that violate its CT Policy. When both the `enforce` and `report-uri` directives are present, the configuration is referred to as an "enforce-and-report" configuration, signalling to the browser both that compliance to the CT Policy should be enforced and that violations should be reported. |
+| `max-age`     | Specifies the number of seconds after the response is received the browser should remember and enforce certificate transparency compliance. |
+
+### Example
+
+```
+Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
+```
+
+### References
+
+* <https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-02>
+* <https://httpwg.org/http-extensions/draft-ietf-httpbis-expect-ct.html>
+* <https://scotthelme.co.uk/a-new-security-header-expect-ct/>
+* <https://www.chromestatus.com/feature/5677171733430272>
+
+## Public-Key-Pins
+
+> **Deprecated.**
 
 > **⚠️ Warning:** This header has been deprecated by all major browsers and is no longer recommended. **Avoid using it**, and update existing code if possible;
 
@@ -399,36 +451,9 @@ Public-Key-Pins: pin-sha256="d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM="; pin-
 * <https://scotthelme.co.uk/im-giving-up-on-hpkp/>
 * <https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/he9tr7p3rZ8/eNMwKPmUBAAJ>
 
-## Expect-CT (almost deprecated)
+## X-XSS-Protection
 
-> **⚠️ Warning:** This header will likely become obsolete in June 2021. Since May 2018 new certificates are expected to support SCTs by default. Certificates before March 2018 were allowed to have a lifetime of 39 months, those will all be expired in June 2021.
-
-The `Expect-CT` header is used by a server to indicate that browsers should evaluate connections to the host for Certificate Transparency compliance.  
-In Chrome 61 (Aug 2017) Chrome enabled its enforcement via SCT by default ([source](https://www.chromestatus.com/feature/5677171733430272)). You can still use this header to specify an `report-uri`.  
-  
-This header comes from the (now expired) internet draft [Expect-CT Extension for HTTP](https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-08).
-
-### Values
-
-| Value         | Description |
-|---------------|-------------|
-| `report-uri`  | _(Optional)_ Indicates the URL to which the browser should report Expect-CT failures. |
-| `enforce`     | _(Optional)_ A valueless directive that, if present, signals to the browser that compliance to the CT Policy should be enforced (rather than report-only) and that the browser should refuse future connections that violate its CT Policy. When both the `enforce` and `report-uri` directives are present, the configuration is referred to as an "enforce-and-report" configuration, signalling to the browser both that compliance to the CT Policy should be enforced and that violations should be reported. |
-| `max-age`     | Specifies the number of seconds after the response is received the browser should remember and enforce certificate transparency compliance. |
-
-### Example
-
-```
-Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
-```
-
-### References
-
-* <https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-02>
-* <https://httpwg.org/http-extensions/draft-ietf-httpbis-expect-ct.html>
-* <https://scotthelme.co.uk/a-new-security-header-expect-ct/>
-
-## X-XSS-Protection (deprecated)
+> **Deprecated.**
 
 > **⚠️ Warning:** The X-XSS-Protection header has been deprecated by modern browsers and its use can introduce additional security issues on the client side. As such, it is recommended to set the header as `X-XSS-Protection: 0` in order to disable the XSS Auditor, and not allow it to take the default behavior of the browser handling the response. Please use `Content-Security-Policy` instead.
 
