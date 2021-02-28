@@ -410,7 +410,7 @@ This header comes from the (now expired) internet draft [Expect-CT Extension for
 
 ### Values
 
-| Value         | Description |
+| Value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      | Description |
 |---------------|-------------|
 | `report-uri`  | _(Optional)_ Indicates the URL to which the browser should report Expect-CT failures. |
 | `enforce`     | _(Optional)_ A valueless directive that, if present, signals to the browser that compliance to the CT Policy should be enforced (rather than report-only) and that the browser should refuse future connections that violate its CT Policy. When both the `enforce` and `report-uri` directives are present, the configuration is referred to as an "enforce-and-report" configuration, signalling to the browser both that compliance to the CT Policy should be enforced and that violations should be reported. |
