@@ -13,13 +13,13 @@ tags: headers
 | ---------------------------------------------|-------------------|-------|---------|--------|--------|-------|---------|
 | HTTP Strict Transport Security (HSTS)        | 11                | 13    | 47      | 49     | 9.1    | 39    | 4.4     |
 | X-Frame-Options                              | 8                 | 13    | 47      | 49     | 9.1    | 39    | 4.4     |
-| X-Content-Type-Options                       | 8                 |       | 51      | 1.0    | NS     | 13    |         |
+| X-Content-Type-Options                       | 8                 | 12    | 50      | 64     | 11     | 73    | 81      |
 | Content-Security-Policy                      | 11                | 13    | 47      | 49     | 9.1    | 39    | 4.4     |
 | X-Permitted-Cross-Domain-Policies            |                   |       |         |        |        |       |         |
 | Referrer-Policy                              | NS                | NS    | 50      | 56     | NS     | 43    |         |
 | Feature-Policy                               | NS                | 79    | 74      | 60     | 11.1   | 47    | 81      |
 | Public Key Pinning Extension for HTTP (HPKP) | NS                | NS    | 35-71   | 38-71  | NS     | 23-65 | NS      |
-| Expect-CT                                    |                   |       |         | 61     |        | 48    |         |
+| Expect-CT                                    | NS                | 79    | NS      | 61     | NS     | 48    | NS      |
 | X-XSS-Protection                             | 8                 | 12-16 | NS      | 4-77   | 13.1+  | 10-64 | NS      |
 | Clear-Site-Data                              | NS                | 79    | 63      | 61     | NS     | 48    | 61      |
 | Cross-Origin-Embedder-Policy (COEP)          | NS                | 83    | 79      | 83     | NS     | NS    | NS      |
@@ -42,6 +42,7 @@ _`+` = Specified version and above_
 
 * X-Content-Type-Options
   - <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options>
+  - <https://caniuse.com/mdn-http_headers_x-content-type-options>
 
 * Content-Security-Policy
   - <https://caniuse.com/#search=Content%20Security%20Policy>
@@ -64,6 +65,7 @@ _`+` = Specified version and above_
 
 * Expect-CT
   - <https://www.chromestatus.com/feature/5677171733430272>
+  - <https://caniuse.com/mdn-http_headers_expect-ct>
 
 * X-XSS-Protection
   - <https://wiki.mozilla.org/Security/Features/XSS_Filter>
