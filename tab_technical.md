@@ -11,6 +11,34 @@ tags: headers
 
 This section covers a list of tools to analyze, develop and administrate HTTP secure headers to help achieve more secure and trustworthy web systems.
 
+## Quickly check security HTTP headers for applications exposed on the Internet
+
+The online tool [securityheaders.com](https://securityheaders.com) can be used. It return the grade in the following HTTP response headers:
+
+- **x-score**: Contains a Base64 encoded JSON object with the grade letter and its associated color name.
+- **x-grade**: Contains the grade letter.
+
+```shell
+$ curl -v "https://securityheaders.com/?hide=on&followRedirects=on&q=https://mozilla.org"
+> Trying 104.21.70.128:443...
+> Connected to securityheaders.com (104.21.70.128) port 443
+> ...
+< HTTP/2 200
+< date: Tue, 02 Mar 2021 17:29:23 GMT
+< content-type: text/html; charset=UTF-8
+< vary: Accept-Encoding
+< x-score: eyJzY29yZSI6IkEiLCAiY29sb3VyIjoiZ3JlZW4ifQ==
+< x-grade: A
+< ...
+```
+
+Content of the **x-score** header value:
+
+```shell
+$ echo eyJzY29yZSI6IkEiLCAiY29sb3VyIjoiZ3JlZW4ifQ== | base64 -d
+{"score":"A", "colour":"green"}
+```
+
 ## Analysis Tools
 
 ### hsecscan
