@@ -15,7 +15,7 @@ This section covers a list of tools to analyze, develop and administrate HTTP se
 
 The online tool [securityheaders.com](https://securityheaders.com) can be used to achieve that objective.
 
-It return the grade in the following HTTP response headers:
+It returns the grade in the following HTTP response headers:
 
 - **x-score**: Contains a Base64 encoded JSON object with the grade letter and its associated color name.
 - **x-grade**: Contains the grade letter.
