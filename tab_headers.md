@@ -9,6 +9,10 @@ tags: headers
 
 # Response Headers
 
+**Working draft**
+
+* [Permissions Policy](#permissions-policy)
+
 **Active**
 
 * [HTTP Strict Transport Security](#http-strict-transport-security)
@@ -325,6 +329,79 @@ Cross-Origin-Resource-Policy: same-origin
 * <https://resourcepolicy.fyi/>
 * <https://web.dev/cross-origin-isolation-guide/>
 
+## Permissions Policy
+
+> **Working draft.**
+
+The Permissions-Policy header replaces the existing **Feature-Policy** header for controlling delegation of permissions and powerful features. The header uses a structured syntax, and allows sites to more tightly restrict which origins can be granted access to features (source [Chrome platform status](https://www.chromestatus.com/feature/5745992911552512)).
+
+### Values
+
+|     Value    | Description |
+|:------------:|:----------:|
+|`accelerometer`|Controls whether the current document is allowed to gather information about the acceleration of the device through the Accelerometer interface.
+|`ambient-light-sensor`|Controls whether the current document is allowed to gather information about the amount of light in the environment around the device through the AmbientLightSensor interface.|
+|`autoplay`|Controls whether the current document is allowed to autoplay media requested through the HTMLMediaElement interface.|
+|`battery`|Controls whether the use of the Battery Status API is allowed.|
+|`camera`|Controls whether the current document is allowed to use video input devices.|
+|`display-capture`|Controls whether or not the current document is permitted to use the `getDisplayMedia()` method to capture screen contents.|
+|`document-domain`|Controls whether the current document is allowed to set document.domain.|
+|`encrypted-media`|Controls whether the current document is allowed to use the Encrypted Media Extensions API (EME).|
+|`execution-while-not-rendered`|Controls whether tasks should execute in frames while they're not being rendered (e.g. if an iframe is hidden or `display: none`).|
+|`execution-while-out-of-viewport`|Controls whether tasks should execute in frames while they're outside of the visible viewport.|
+|`fullscreen`|Controls whether the current document is allowed to use `Element.requestFullScreen()`.|
+|`geolocation`|Controls whether the current document is allowed to use the Geolocation Interface.|
+|`gyroscope`|Controls whether the current document is allowed to gather information about the orientation of the device through the Gyroscope interface.|
+|`layout-animations`|Controls whether the current document is allowed to show layout animations.|
+|`legacy-image-formats`|Controls whether the current document is allowed to display images in legacy formats.|
+|`magnetometer`|Controls whether the current document is allowed to gather information about the orientation of the device through the Magnetometer interface.|
+|`microphone`|Controls whether the current document is allowed to use audio input devices.|
+|`midi`|Controls whether the current document is allowed to use the Web MIDI API.|
+|`navigation-override`|Controls the availability of mechanisms that enables the page author to take control over the behavior of spatial navigation, or to cancel it outright.|
+|`oversized-images`|Controls whether the current document is allowed to download and display large images.|
+|`payment`|Controls whether the current document is allowed to use the Payment Request API.|
+|`picture-in-picture`|Controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.|
+|`publickey-credentials-get`|Controls whether the current document is allowed to use the Web Authentication API to retrieve already stored public-key credentials, i.e. via `navigator.credentials.get({publicKey: ..., ...})`.|
+|`sync-xhr`|Controls whether the current document is allowed to make synchronous XMLHttpRequest requests.|
+|`usb`|Controls whether the current document is allowed to use the WebUSB API.|
+|`vr`|Controls whether the current document is allowed to use the WebVR API.|
+|`wake-lock`|Controls whether the current document is allowed to use Wake Lock API to indicate that device should not enter power-saving mode.|
+|`screen-wake-lock`|Controls whether the current document is allowed to use Screen Wake Lock API to indicate that device should not turn off or dim the screen.|
+|`web-share`|Controls whether or not the current document is allowed to use the `Navigator.share()` of Web Share API to share text, links, images, and other content to arbitrary destinations of user's choice, e.g. mobile apps.|
+|`xr-spatial-tracking`|Controls whether or not the current document is allowed to use the WebXR Device API to interact with a WebXR session.|
+
+### Example
+
+```
+Permissions-Policy: accelerometer=(),autoplay=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),geolocation=(),gyroscope=(),magnetometer=(),microphone=(),midi=(),payment=(),picture-in-picture=(),publickey-credentials-get=(),screen-wake-lock=(),sync-xhr=(self),usb=(),web-share=(),xr-spatial-tracking=()
+```
+
+### Remarks
+
+Usage of all possible values from the table above raised the following error on *Chrome 90.0.4430.212* and *Edge 90.0.818.62*:
+
+```
+Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.
+Error with Permissions-Policy header: Unrecognized feature: 'battery'.
+Error with Permissions-Policy header: Unrecognized feature: 'execution-while-not-rendered'.
+Error with Permissions-Policy header: Unrecognized feature: 'execution-while-out-of-viewport'.
+Error with Permissions-Policy header: Unrecognized feature: 'layout-animations'.
+Error with Permissions-Policy header: Unrecognized feature: 'legacy-image-formats'.
+Error with Permissions-Policy header: Unrecognized feature: 'navigation-override'.
+Error with Permissions-Policy header: Unrecognized feature: 'oversized-images'.
+Error with Permissions-Policy header: Unrecognized feature: 'vr'.
+Error with Permissions-Policy header: Unrecognized feature: 'wake-lock'.
+```
+
+### References
+
+* <https://github.com/w3c/webappsec-permissions-policy/blob/main/permissions-policy-explainer.md>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy#directives>
+* <https://caniuse.com/permissions-policy>
+* <https://www.w3.org/TR/permissions-policy-1/>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy>
+* <https://www.chromestatus.com/feature/5745992911552512>
+
 ## Feature-Policy
 
 > **Almost deprecated.**
@@ -333,8 +410,6 @@ Cross-Origin-Resource-Policy: same-origin
 
 The Feature-Policy header is an **experimental** feature that allows developers to selectively enable and disable use of various browser features and APIs.  
 The two most well supported values are `microphone` and `camera`. For all the other ones, please consult [this](https://caniuse.com/#search=Feature-Policy) page.
-
-⏰ *Permissions-Policy* header usage is not recommended yet by OSHP because it is currently [not supported by default by any major browser](https://caniuse.com/permissions-policy).
 
 ### Values
 

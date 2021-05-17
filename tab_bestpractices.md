@@ -17,7 +17,7 @@ tags: headers
 
 Please note the best practices below suggest methods to change webserver configuration to add headers. Security headers can also be successfully added to your application at the software level as well in almost every web language. Many web frameworks add some of these headers automatically.
 
-The following section propose a configuration for the [actively supported security headers](https://owasp.org/www-project-secure-headers/#div-headers).
+The following section propose a configuration for the [actively supported and working draft security headers](https://owasp.org/www-project-secure-headers/#div-headers).
 
 ### Proposed values
 
@@ -33,6 +33,7 @@ The following section propose a configuration for the [actively supported securi
 | Cross-Origin-Embedder-Policy (COEP)          | `require-corp`   |
 | Cross-Origin-Opener-Policy (COOP)            | `same-origin`   |
 | Cross-Origin-Resource-Policy (CORP)          | `same-origin`  |
+| Permissions-Policy                           | `accelerometer=(),autoplay=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),geolocation=(),gyroscope=(),magnetometer=(),microphone=(),midi=(),payment=(),picture-in-picture=(),publickey-credentials-get=(),screen-wake-lock=(),sync-xhr=(self),usb=(),web-share=(),xr-spatial-tracking=()` |
 
 ### Web server syntax
 
@@ -100,6 +101,7 @@ $ venom run --var="target_site=https://mozilla.org" --var="logout_url=/logout" v
     • Cross-Origin-Embedder-Policy SUCCESS
     • Cross-Origin-Opener-Policy SUCCESS
     • Cross-Origin-Resource-Policy SUCCESS
+    • Permissions-Policy SUCCESS    
     • Feature-Policy SUCCESS
         [info] This header was split into Permissions-Policy and Document-Policy and will be considered deprecated once all impacted features are moved off of feature policy. (venom_security_headers_tests_suite.yml:152)
     • Public-Key-Pins SUCCESS
