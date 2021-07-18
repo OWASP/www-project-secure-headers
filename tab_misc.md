@@ -9,7 +9,7 @@ tags: headers
 
 # Miscellaneous
 
-This section provide extra extra useful information about HTTP Security headers.
+This section provide extra useful information about HTTP Security headers.
 
 ## Request headers
 
