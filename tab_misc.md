@@ -21,6 +21,8 @@ These headers are prefixed with `Sec-`, and hence have [forbidden header names](
 
 Source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Glossary/Fetch_metadata_request_header).
 
+These headers can be leveraged to add protection measures against [XS-Leaks](https://xsleaks.dev/docs/defenses/opt-in/fetch-metadata/) attacks.
+
 #### Sec-Fetch-Dest
 
 The `Sec-Fetch-Dest` fetch metadata request header indicates the request's destination. That is the initiator of the original fetch request, which is where (and how) the fetched data will be used.
@@ -83,3 +85,4 @@ Sec-Fetch-User: ?1
 * <https://web.dev/same-site-same-origin/>
 * <https://jub0bs.com/posts/2021-01-29-great-samesite-confusion/#are-site-and-origin-interchangeable>
 * <https://portswigger.net/daily-swig/firefox-becomes-latest-browser-to-support-fetch-metadata-request-headers>
+* <https://xsleaks.dev/docs/defenses/opt-in/fetch-metadata/>
