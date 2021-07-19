@@ -1,6 +1,9 @@
 # Tool "markdown-link-check" is used to validate the links
 # See https://www.npmjs.com/package/markdown-link-check
 # See https://github.com/gaurav-nelson/github-action-markdown-link-check
+# For the config file:
+# See https://github.com/gaurav-nelson/github-action-markdown-link-check#custom-variables
+# See https://github.com/tcort/markdown-link-check#config-file-format
 name: check_validity_of_all_external_links
 on:
   workflow_dispatch:
