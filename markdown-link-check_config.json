@@ -8,6 +8,6 @@
             "Referer": "https://www.google.com/"
         }
     }],
-    "timeout": "60s",
+    "timeout": "20s",
     "retryCount": 5
 }
