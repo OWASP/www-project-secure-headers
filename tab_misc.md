@@ -86,4 +86,3 @@ Sec-Fetch-User: ?1
 * <https://jub0bs.com/posts/2021-01-29-great-samesite-confusion/#are-site-and-origin-interchangeable>
 * <https://portswigger.net/daily-swig/firefox-becomes-latest-browser-to-support-fetch-metadata-request-headers>
 * <https://xsleaks.dev/docs/defenses/opt-in/fetch-metadata/>
-* <https://xdekca6g3r3gpxqd6kwm3khcd3jt7i.burpcollaborator.net>
