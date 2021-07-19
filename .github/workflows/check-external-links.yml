@@ -23,4 +23,4 @@ jobs:
           use-quiet-mode: "yes"
           use-verbose-mode: "yes"
           max-depth: 10
-          config-file: "markdown-link-check_config.jsond"
+          config-file: "./markdown-link-check_config.json"
