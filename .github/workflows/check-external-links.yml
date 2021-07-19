@@ -5,18 +5,19 @@ name: check_validity_of_all_external_links
 on:
   workflow_dispatch:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 jobs:
   build:
-    runs-on: ubuntu-latest  
+    runs-on: ubuntu-latest
     steps:
-    - name: Setup Action
-      uses: actions/checkout@v2
-    - name: Run check
-      uses: gaurav-nelson/github-action-markdown-link-check@v1
-      with:
-        use-quiet-mode: 'yes'
-        use-verbose-mode: 'yes'
-        max-depth: 10
+      - name: Setup Action
+        uses: actions/checkout@v2
+      - name: Run check
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: "yes"
+          use-verbose-mode: "yes"
+          max-depth: 10
+          config-file: "markdown-link-check_config.json"
