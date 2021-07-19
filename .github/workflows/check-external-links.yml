@@ -20,7 +20,7 @@ jobs:
       - name: Run check
         uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
-          use-quiet-mode: "no"
+          use-quiet-mode: "yes"
           use-verbose-mode: "yes"
           max-depth: 10
           config-file: "markdown-link-check_config.json"
