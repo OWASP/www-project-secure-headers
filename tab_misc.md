@@ -57,7 +57,7 @@ Possible values are detailled [here](https://developer.mozilla.org/en-US/docs/We
 
 Source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site).
 
-Explanation about **Site** vs **Origin** can found [here](https://web.dev/same-site-same-origin/).
+Explanation about **Site** vs **Origin** can be found [here](https://web.dev/same-site-same-origin/).
 
 #### Example
 
