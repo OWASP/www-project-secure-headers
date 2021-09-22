@@ -17,7 +17,7 @@ tags: headers
 | X-Frame-Options                              | <https://caniuse.com/x-frame-options> |
 | X-Content-Type-Options                       | <https://caniuse.com/mdn-http_headers_x-content-type-options>|
 | Content-Security-Policy                      | <https://caniuse.com/?search=content-security-policy> |
-| X-Permitted-Cross-Domain-Policies            | [Header value handled by Adobe products and not the browser](https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html)                |
+| X-Permitted-Cross-Domain-Policies            | <https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html>                |
 | Referrer-Policy                              | <https://caniuse.com/referrer-policy>  |
 | Feature-Policy                               | <https://caniuse.com/feature-policy>  |
 | HTTP Public-Key-Pins (HPKP)                  | <https://caniuse.com/publickeypinning>  |

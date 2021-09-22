@@ -26,7 +26,7 @@ The following section propose a configuration for the [actively supported and wo
 | HTTP Strict Transport Security (HSTS)        | `max-age=31536000 ; includeSubDomains` |
 | X-Frame-Options                              | `deny` |
 | X-Content-Type-Options                       | `nosniff` |
-| Content-Security-Policy                      | `default-src 'self' data:; object-src 'none'; child-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content` |
+| Content-Security-Policy                      | `default-src 'self'; object-src 'none'; child-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content` |
 | X-Permitted-Cross-Domain-Policies            | `none` |
 | Referrer-Policy                              | `no-referrer`  |
 | Clear-Site-Data                              | `"cache","cookies","storage"` |
