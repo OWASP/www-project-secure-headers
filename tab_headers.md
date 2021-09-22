@@ -186,8 +186,6 @@ X-Permitted-Cross-Domain-Policies: none
 ### References
 
 * <https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html>
-* <https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html>
-* <https://www.perpetual-beta.org/weblog/security-headers.html#rule-8470-2-establish-a-cross-domain-meta-policy>
 * <https://danielnixon.org/http-security-headers/>
 * <https://rorsecurity.info/portfolio/new-http-headers-for-more-security>
 * <https://github.com/twitter/secureheaders/issues/88>
