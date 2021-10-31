@@ -25,6 +25,7 @@ tags: headers
 * [Cross-Origin-Embedder-Policy](#cross-origin-embedder-policy)
 * [Cross-Origin-Opener-Policy](#cross-origin-opener-policy)
 * [Cross-Origin-Resource-Policy](#cross-origin-resource-policy)
+* [Cache-Control](#cache-control)
 
 **Almost deprecated**
 
@@ -326,6 +327,64 @@ Cross-Origin-Resource-Policy: same-origin
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy>
 * <https://resourcepolicy.fyi/>
 * <https://web.dev/cross-origin-isolation-guide/>
+
+## Cache-Control
+
+This header holds directives (instructions) for caching in both **requests** and **responses**. If a given directive is in a request, it does not mean this directive is in the response (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)). Specify the capability of a resource to be cached is important to prevent [exposure of information via the cache](https://cwe.mitre.org/data/definitions/525.html).
+
+The headers named [Expires](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires) and [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) can be used in addition to the [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) header. [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) header can be used for backwards compatibility with the HTTP/1.0 caches. However, *Cache-Control* is the recommanded way to define the caching policy.
+
+### Values applicable for HTTP responses
+
+| Value               | Description |
+|---------------------|-------------|
+| `must-revalidate`   | Indicates that once a resource becomes stale, caches do not use their stale copy without successful validation on the origin server. |
+| `no-cache` | The response may be stored by any cache, even if the response is normally non-cacheable. However, the stored response **MUST always** go through validation with the origin server first before using it. |
+| `no-store` | The response may not be stored in any cache. |
+| `no-transform` | An intermediate cache or proxy cannot edit the response body, `Content-Encoding`, `Content-Range`, or `Content-Type`. |
+| `public` | The response may be stored by any cache, even if the response is normally non-cacheable. |
+| `private` | The response may be stored only by a browser's cache, even if the response is normally non-cacheable. |
+| `proxy-revalidate` | Like `must-revalidate`, but only for shared caches (e.g., proxies). Ignored by private caches. |
+| `max-age=<seconds>` | The maximum amount of time a resource is considered fresh. Unlike [Expires](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires), this directive is relative to the time of the request. |
+| `s-maxage=<seconds>` | Overrides `max-age` or the [Expires](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires) header, but only for shared caches (e.g., proxies). Ignored by private caches. |
+
+### Extended values
+
+The following directives are not part of the core [HTTP caching standards document](https://datatracker.ietf.org/doc/html/rfc7234). Therefore, check this [table](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#browser_compatibility) for their support.
+
+| Value               | Description |
+|---------------------|-------------|
+| `immutable`   | Indicates that the response body will not change over time. |
+| `stale-while-revalidate=<seconds>`   | Indicates the client can accept a stale response, while asynchronously checking in the background for a fresh one. The **seconds** value indicates how long the client can accept a stale response. |
+| `stale-if-error=<seconds>`   | Indicates the client can accept a stale response if the check for a fresh one fails. The **seconds** value indicates how long the client can accept the stale response after the initial expiration. |
+
+### Example
+
+No caching allowed, clear any previously cached resources and include support for HTTP/1.0 caches:
+
+```
+Cache-Control: no-store, max-age=0
+Pragma: no-cache
+```
+
+Caching allowed with a cache duration of one week:
+
+```
+Cache-Control: public, max-age=604800
+```
+
+### References
+
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching>
+* <https://datatracker.ietf.org/doc/html/rfc7234>
+* <https://cwe.mitre.org/data/definitions/524.html>
+* <https://cwe.mitre.org/data/definitions/525.html>
+* <https://portswigger.net/web-security/web-cache-poisoning>
+* <https://portswigger.net/research/practical-web-cache-poisoning>
+* <https://portswigger.net/research/web-cache-entanglement>
 
 ## Permissions Policy
 

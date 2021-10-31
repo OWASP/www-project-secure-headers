@@ -21,6 +21,8 @@ The following section propose a configuration for the [actively supported and wo
 
 ### Proposed values
 
+ ⚠️ The `Pragma` header is only specified for backwards compatibility with the HTTP/1.0 caches.
+
 | Header name                                  | Proposed value  |
 | ---------------------------------------------|------------|
 | HTTP Strict Transport Security (HSTS)        | `max-age=31536000 ; includeSubDomains` |
@@ -34,6 +36,8 @@ The following section propose a configuration for the [actively supported and wo
 | Cross-Origin-Opener-Policy (COOP)            | `same-origin`   |
 | Cross-Origin-Resource-Policy (CORP)          | `same-origin`  |
 | Permissions-Policy                           | `accelerometer=(),autoplay=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),geolocation=(),gyroscope=(),magnetometer=(),microphone=(),midi=(),payment=(),picture-in-picture=(),publickey-credentials-get=(),screen-wake-lock=(),sync-xhr=(self),usb=(),web-share=(),xr-spatial-tracking=()` |
+| Cache-Control         | `no-store, max-age=0`  |
+| Pragma         | `no-cache`  |
 
 ### Web server syntax
 
@@ -102,6 +106,7 @@ $ venom run --var="target_site=https://mozilla.org" --var="logout_url=/logout" v
     • Cross-Origin-Opener-Policy SUCCESS
     • Cross-Origin-Resource-Policy SUCCESS
     • Permissions-Policy SUCCESS    
+    • Cache-Control SUCCESS    
     • Feature-Policy SUCCESS
         [info] This header was split into Permissions-Policy and Document-Policy and will be considered deprecated once all impacted features are moved off of feature policy. (venom_security_headers_tests_suite.yml:152)
     • Public-Key-Pins SUCCESS

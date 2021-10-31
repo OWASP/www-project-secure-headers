@@ -85,12 +85,6 @@ Security related headers all in one gem.
 
 **Github:** <https://github.com/twitter/secureheaders>
 
-### Security Header Injection Module (SHIM) (ASP.NET)
-
-SHIM is a HTTP module that provides protection for many vulnerabilities by injecting security-specific HTTP headers into ASP.NET web applications.
-
-**Site:** <https://shim.codeplex.com/>
-
 ### Spring Security (Java)
 
 Spring Security’s support for adding various security headers to the response.
