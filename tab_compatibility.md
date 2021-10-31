@@ -28,3 +28,5 @@ tags: headers
 | Cross-Origin-Opener-Policy (COOP)            | <https://caniuse.com/mdn-http_headers_cross-origin-opener-policy>   |
 | Cross-Origin-Resource-Policy (CORP)          | <https://caniuse.com/mdn-http_headers_cross-origin-resource-policy>  |
 | Permissions Policy                           | <https://caniuse.com/permissions-policy>  |
+| Cache-Control                                | <https://caniuse.com/mdn-http_headers_cache-control>  |
+| Pragma                                       | <https://caniuse.com/mdn-http_headers_pragma>  |
