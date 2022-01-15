@@ -1,5 +1,5 @@
 ---
-title: top
+title: casestudies
 displaytext: Case Studies
 layout: null
 tab: true
