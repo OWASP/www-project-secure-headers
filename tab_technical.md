@@ -89,7 +89,7 @@ Security related headers all in one gem.
 
 Spring Security’s support for adding various security headers to the response.
 
-**Site:** <https://docs.spring.io/spring-security/site/docs/current/reference/html/headers.html>
+**Site:** <https://docs.spring.io/spring-security/reference/features/exploits/headers.html>
 
 ### SecureHeaders (PHP)
 
