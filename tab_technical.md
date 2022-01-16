@@ -89,6 +89,12 @@ NWebsec consists of several security libraries for ASP.NET applications.
 
 **Site:** <https://docs.nwebsec.com>
 
+#### NetEscapades.AspNetCore.SecurityHeaders
+
+Small package to allow adding security headers to ASP.NET Core websites.
+
+**Github**: <https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders>
+
 ### Ruby
 
 #### secure_headers
