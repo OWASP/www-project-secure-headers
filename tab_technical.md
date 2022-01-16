@@ -111,6 +111,12 @@ A PHP class aiming to make the use of browser security features more accessible.
 
 **Github:** <https://github.com/aidantwoods/SecureHeaders>
 
+#### secure-headers
+
+PHP Secure Headers for Laravel and non-Laravel projects.
+
+**Github**: <https://github.com/bepsvpt/secure-headers>
+
 ### RACK
 
 #### rack-secure_headers
