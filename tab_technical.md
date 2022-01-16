@@ -37,9 +37,9 @@ A Mozilla project designed to help developers, system administrators, and securi
 
 **Site:** <https://observatory.mozilla.org/>
 
-**GitHub:** <https://github.com/mozilla/http-observatory/>
+**Github:** <https://github.com/mozilla/http-observatory/>
 
-**GitHub:** <https://github.com/mozilla/http-observatory-website/>
+**Github:** <https://github.com/mozilla/http-observatory-website/>
 
 ### Recx Security Analyser
 
@@ -47,117 +47,119 @@ Chrome extension that allows the inspection of security aspects of a site's HTTP
 
 **Site:** <https://chrome.google.com/webstore/detail/recx-security-analyser/ljafjhbjenhgcgnikniijchkngljgjda>
 
-### KickOff
-
-While each project you launch may have a different feature set, they often share many of the same performance, SEO and security requirements. This tool aims to automate the process of checking your list of requirements shortly before launch or directly after a deployment.
-
-**Site:** <https://github.com/frickelbruder/kickoff>
-
 ### testssl.sh
 
 Easy to use shell script which tests not only SSL/TLS encryption but also checks common headers and analyzes those. Output is screen, JSON, CSV and HTML.
 
-**Site:** <https://github.com/drwetter/testssl.sh>
+**Github:** <https://github.com/drwetter/testssl.sh>
 
 ### DrHEADer
 
 DrHEADer helps with the audit of security headers received in response to a single request or a list of requests.
 
-**Site:** <https://github.com/Santandersecurityresearch/DrHeader>
+**Github:** <https://github.com/Santandersecurityresearch/DrHeader>
 
 ### API-Security
 
 This is a Python based API-Security framework containing ApiSecurityHeader.py script which will check the above mentioned Security response headers are present and contains the required value.
 
-**Site:** <https://github.com/AmitKulkarni9/API-Security>
+**Github:** <https://github.com/AmitKulkarni9/API-Security>
 
 ### Venom Test Suites
 
 Test suites for [Venom](https://github.com/ovh/venom) checking the presence and the value for the different response headers proposed by the [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/).
 
-**GitHub:** <https://gist.github.com/righettod/f63548ebd96bed82269dcc3dfea27056>
+**Github:** <https://gist.github.com/righettod/f63548ebd96bed82269dcc3dfea27056>
 
 ## Development Libraries
 
-### secureheaders (Ruby)
+### Java
 
-Security related headers all in one gem.
-
-**Github:** <https://github.com/twitter/secureheaders>
-
-### Spring Security (Java)
+#### Spring Security
 
 Spring Security’s support for adding various security headers to the response.
 
 **Site:** <https://docs.spring.io/spring-security/reference/features/exploits/headers.html>
 
-### SecureHeaders (PHP)
+### .NET
 
-A PHP class aiming to make the use of browser security features more accessible.
-
-**Site:** <https://github.com/aidantwoods/SecureHeaders>
-
-### rack-secure_headers (Rack)
-
-Security related HTTP headers for Rack applications.
-
-**Site:** <https://github.com/frodsan/rack-secure_headers>
-
-### helmet and hood (Node.js + express)
-
-**Site:** <https://github.com/helmetjs/helmet>
-**Site:** <https://github.com/seanmonstar/hood>
-
-### blankie (hapi)
-
-A CSP plugin for hapi.
-
-**Site:** <https://github.com/nlf/blankie>
-
-### NWebsec (ASP.NET)
+#### NWebsec
 
 NWebsec consists of several security libraries for ASP.NET applications.
 
 **Site:** <https://docs.nwebsec.com>
 
-### django-csp + commonware; django-security (Python)
+### Ruby
 
-django-csp + commonware; django-security.
+#### secure_headers
 
-**Site:** <https://github.com/mozilla/django-csp>  
-**Site:** <https://github.com/jsocol/commonware/>  
-**Site:** <https://github.com/sdelements/django-security>
+Security related headers all in one gem.
 
-### Secure (Python)
+**Github:** <https://github.com/github/secure_headers>
 
-Secure is a lightweight package that adds optional security headers and cookie attributes for Python web frameworks.
+### PHP
 
-**Site:** <https://github.com/cakinney/secure>
+#### SecureHeaders
 
-### secureheader (Go)
+A PHP class aiming to make the use of browser security features more accessible.
 
-Package secureheader adds some HTTP header fields widely considered to improve safety of HTTP requests.
+**Github:** <https://github.com/aidantwoods/SecureHeaders>
 
-**Site:** <https://github.com/kr/secureheader>
+### RACK
 
-### secure_headers (Elixir)
+#### rack-secure_headers
 
-This Plug will automatically apply several security headers to the Plug.Conn response. By design SecureHeaders will attempt to apply the most strict security policy. Although, security headers are configurable and are validated to avoid misconfiguration.
+Security related HTTP headers for Rack applications.
 
-**Site:** <https://github.com/anotherhale/secure_headers>
+**Github:** <https://github.com/frodsan/rack-secure_headers>
 
-### dropwizard-web-security (Dropwizard)
+### NodeJS
 
-A bundle for applying default web security functionality to a dropwizard application.
+#### helmet
 
-**Site:** <https://github.com/palantir/dropwizard-web-security>
+Module to help secure Express apps with various HTTP headers.
 
-### ember-cli-content-security-policy (Ember.js)
+**Github:** <https://github.com/helmetjs/helmet>
+
+#### ember-cli-content-security-policy
 
 This addon makes it easy to use Content Security Policy (CSP) in your project. It can be deployed either via a Content-Security-Policy header sent from the Ember CLI Express server, or as a meta tag in the index.html file.
 
-**Site:** <https://github.com/rwjblue/ember-cli-content-security-policy/>
+**Github:** <https://github.com/rwjblue/ember-cli-content-security-policy/>
 
+### HAPI
+
+#### blankie
+
+A CSP plugin for hapi.
+
+**Github:** <https://github.com/nlf/blankie>
+
+### Python
+
+#### django-csp and django-security
+
+Content Security Policy for Django.
+
+**Github:** <https://github.com/mozilla/django-csp>
+
+A collection of models, views, middlewares, and forms to help secure a Django project.
+
+**Github:** <https://github.com/sdelements/django-security>
+
+#### Secure
+
+Secure headers for Python web frameworks.
+
+**Github:** <https://github.com/TypeError/secure>
+
+### Go
+
+#### helmet
+
+HTTP security middleware for Go(lang) inspired by HelmetJS.
+
+**Github:** <https://github.com/goddtriffin/helmet>
 
 ## Operation Tools
 
@@ -172,4 +174,5 @@ Puppet module to enable, configure and manage secure http headers on web servers
 - Lighttpd
 
 **Github:** <https://github.com/amenezes/http_hardening>  
+
 **Puppet Forge:** <https://forge.puppet.com/amenezes/http_hardening>
