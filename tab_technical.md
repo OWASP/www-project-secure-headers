@@ -165,7 +165,7 @@ HTTP security middleware for Go(lang) inspired by HelmetJS.
 
 Best-practice OWASP HTTP response headers for Rust.
 
-**Site:** <https://crates.io/crates/owasp-headers>
+**Site:** <https://docs.rs/owasp-headers/0.1.2/owasp_headers/>
 
 ## Operation Tools
 
