@@ -10,6 +10,7 @@ tags: headers
 # Best Practices
 
 * [Configuration proposal](#configuration-proposal)
+* [Prevent information disclosure via HTTP headers](#prevent-information-disclosure-via-http-headers)
 * [Quickly check security HTTP headers for applications exposed on the Internet](#quickly-check-security-http-headers-for-applications-exposed-on-the-internet)
 * [Quickly check security HTTP headers for applications exposed internally](#quickly-check-security-http-headers-for-applications-exposed-internally)
 
@@ -21,7 +22,7 @@ The following section propose a configuration for the [actively supported and wo
 
 ### Proposed values
 
- ⚠️ The `Pragma` header is only specified for backwards compatibility with the HTTP/1.0 caches.
+⚠️ The `Pragma` header is only specified for backwards compatibility with the HTTP/1.0 caches.
 
 | Header name                                  | Proposed value  |
 | ---------------------------------------------|------------|
@@ -117,3 +118,30 @@ $ venom run --var="target_site=https://mozilla.org" --var="logout_url=/logout" v
         [info] The X-XSS-Protection header has been deprecated by modern browsers and its use can introduce additional security issues on the client side. (venom_security_headers_tests_suite.yml:189)
     • SecurityHeaders-Rating SKIPPED
 ```
+
+## Prevent information disclosure via HTTP headers
+
+This section provides a collection of HTTP response headers to remove, when possible, from any HTTP response to prevent any [disclosure of technical information](https://cwe.mitre.org/data/definitions/200.html) on production environment. The following list of headers can be used to configure a reverse proxy or a web application firewall to handle removal operation of the mentioned headers.
+
+⚠️ The [Server](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server) header can be a source of information disclosure. Therefore, ensure that it does not contain any technical detail about the server in use (example of value `ATS/8.0.8`).
+
+| Header name         | Header value example | Description |
+| --------------------|----------------------|-------------|
+| `X-Powered-By` | `PHP/5.3.3` | Contain information about hosting environments or other frameworks in use. |
+| `SourceMap` or `X-SourceMap` | `https://mysite.com/js/mylib.js.map`| Links generated code to a [source map](https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map), enabling the browser to reconstruct the original source and present the reconstructed original in the debugger (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/SourceMap)). |
+| `X-AspNetMvc-Version` | `5.2` | Contain the version of the ASP DotNet MVC framework in use. |
+| `X-AspNet-Version` | `4.0.30319` | Contain the version of the ASP DotNet framework in use. |
+| `X-SourceFiles`  | `=?UTF-8?B?QzpcVXNlcnN?=` | Contain information needed by the .NET SDK debugger during debugging operation on a project. |
+| `X-Redirect-By` | `TYPO3 Shortcut/Mountpoint` | Specifies the component that is responsible for a particular redirect (source [Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)). |
+| `Liferay-Portal` | `Liferay Digital Experience Platform 7.2.10 GA1` | Contain the version of the [Liferay](https://www.liferay.com) platform in use. |
+
+References (*when found*):
+
+* `X-Powered-By`:
+    * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers>
+* `SourceMap / X-SourceMap`:
+    * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/SourceMap>
+    * <https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map>
+* `X-Redirect-By`:
+    * <https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/ApiOverview/PageTypes/RedirectHeaders.html>
+    * <https://en.wikipedia.org/wiki/List_of_HTTP_header_fields>
