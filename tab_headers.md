@@ -9,6 +9,8 @@ tags: headers
 
 # Response Headers
 
+> Header lifecycle flow: `Working draft -> Active -> Almost deprecated -> Deprecated`.
+
 **Working draft**
 
 * [Permissions Policy](#permissions-policy)
