@@ -9,6 +9,8 @@ tags: headers
 
 # Response Headers
 
+> Header lifecycle flow: `Working draft -> Active -> Almost deprecated -> Deprecated`.
+
 **Working draft**
 
 * [Permissions Policy](#permissions-policy)
@@ -30,10 +32,10 @@ tags: headers
 **Almost deprecated**
 
 * [Feature-Policy](#feature-policy)
-* [Expect-CT](#expect-ct)
 
 **Deprecated**
 
+* [Expect-CT](#expect-ct)
 * [Public-Key-Pins](#public-key-pins)
 * [X-XSS-Protection](#x-xss-protection)
 
@@ -207,7 +209,7 @@ The `Referrer-Policy` HTTP header governs which referrer information, sent in th
 | `same-origin`                     | A referrer will be sent for same-site origins, but cross-origin requests will contain no referrer information. |
 | `strict-origin`                   | Only send the origin of the document as the referrer to a-priori as-much-secure destination (HTTPS → HTTPS), but don't send it to a less secure destination (HTTPS → HTTP). |
 | `strict-origin-when-cross-origin` | Send a full URL when performing a same-origin request, only send the origin of the document to a-priori as-much-secure destination (HTTPS → HTTPS), and send no header to a less secure destination (HTTPS → HTTP). |
-| `unsafe-url`                      | Send a full URL (stripped from parameters) when performing a a same-origin or cross-origin request. |
+| `unsafe-url`                      | Send a full URL (stripped from parameters) when performing a same-origin or cross-origin request. |
 
 ### Example
 
@@ -512,7 +514,7 @@ Feature-Policy: vibrate 'none'; geolocation 'none'
 
 ## Expect-CT
 
-> **Almost deprecated.**
+> **Deprecated.**
 
 > **⚠️ Warning:** This header will likely become obsolete in June 2021. Since May 2018 new certificates are expected to support SCTs by default. Certificates before March 2018 were allowed to have a lifetime of 39 months, those will all be expired in June 2021.
 
