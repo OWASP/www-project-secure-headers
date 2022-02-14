@@ -21,10 +21,7 @@ The OWASP Secure Headers Project is migrating to this new OWASP website. For now
 
 ## Discussions and information
 
-The following spaces are used for discussions about the project as well as spreading global information about it:
-
-* GitHub [discussions](https://github.com/OWASP/www-project-secure-headers/discussions) area.
-* Dedicated [Google group](https://groups.google.com/a/owasp.org/g/secure-headers-project).
+We use the GitHub [discussions](https://github.com/OWASP/www-project-secure-headers/discussions) area for discussions about the project as well as spreading global information about it.
 
 ## Contributors
 
