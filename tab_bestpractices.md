@@ -11,6 +11,7 @@ tags: headers
 
 * [Configuration proposal](#configuration-proposal)
 * [Prevent information disclosure via HTTP headers](#prevent-information-disclosure-via-http-headers)
+* [Prevent exposure to cross-site scripting when hosting uploaded files](#prevent-exposure-to-cross-site-scripting-when-hosting-uploaded-files)
 * [Quickly check security HTTP headers for applications exposed on the Internet](#quickly-check-security-http-headers-for-applications-exposed-on-the-internet)
 * [Quickly check security HTTP headers for applications exposed internally](#quickly-check-security-http-headers-for-applications-exposed-internally)
 
@@ -139,3 +140,15 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-Generator](https://webtechsurvey.com/response-header/x-generator) | `Drupal 8` | Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response. |
 | [X-Generated-By](https://webtechsurvey.com/response-header/x-generated-by) | `Smartsite version 7.11.1.3` | Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response. |
 | [X-CMS](https://webtechsurvey.com/response-header/x-cms) | `Thinq CMS 1.7.0.0` | Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response. |
+
+## Prevent exposure to cross-site scripting when hosting uploaded files
+
+This section describes, how the HTTP response header named [Content-Disposition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition), can be used to prevent exposure to cross-site scripting when hosting uploaded files and opening them in the same web browsing context than the application.
+
+It can happen a case in which an application allows a user to an upload file and then allow this file to be accessed by other users. If such feature allows uploading of HTML files (also apply for [SVG file](http://ghostlulz.com/xss-svg/)) then it can be used as a vector to store an HTML file containing JavaScript code. Therefore, the feature become prone to [stored cross-site scripting](https://portswigger.net/web-security/cross-site-scripting/stored) vulnerability.
+
+To prevent this exposure, the HTTP response header named [Content-Disposition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition), can be used with the following value to instruct browsers to download the file instead of open it in the same web browsing context than the application:
+
+```
+Content-Disposition: attachment; filename="myfile.html"
+```
