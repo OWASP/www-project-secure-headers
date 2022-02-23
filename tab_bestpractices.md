@@ -145,7 +145,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 
 This section describes, how the HTTP response header named [Content-Disposition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition), can be used to prevent exposure to cross-site scripting when hosting uploaded files and opening them in the same web browsing context than the application.
 
-It can happen a case in which an application allows a user to an upload file and then allow this file to be accessed by other users. If such feature allows uploading of HTML files (also apply for [SVG file](http://ghostlulz.com/xss-svg/)) then it can be used as a vector to store an HTML file containing JavaScript code. Therefore, the feature become prone to [stored cross-site scripting](https://portswigger.net/web-security/cross-site-scripting/stored) vulnerability.
+It can happen a case in which an application allows a user to upload a file and then allow this file to be accessed by other users. If such feature allows uploading of HTML files (also apply for [SVG file](http://ghostlulz.com/xss-svg/)) then it can be used, as a vector, to store an HTML file containing JavaScript code. Therefore, the feature become prone to [stored cross-site scripting](https://portswigger.net/web-security/cross-site-scripting/stored) vulnerability.
 
 To prevent this exposure, the HTTP response header named [Content-Disposition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition), can be used with the following value to instruct browsers to download the file instead of open it in the same web browsing context than the application:
 
