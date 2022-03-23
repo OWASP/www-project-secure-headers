@@ -7,7 +7,7 @@ layout: col-sidebar
 tags: headers
 ---
 
-The OWASP Secure Headers Project describes HTTP response headers that your application can use to increase the security of your application. Once set, these HTTP response headers can restrict modern browsers from running into easily preventable vulnerabilities. The OWASP Secure Headers Project intends to raise awareness and use of these headers.
+The OWASP Secure Headers Project (also called OSHP) describes HTTP response headers that your application can use to increase the security of your application. Once set, these HTTP response headers can restrict modern browsers from running into easily preventable vulnerabilities. The OWASP Secure Headers Project intends to raise awareness and use of these headers.
 
 ## Introduction
 
@@ -17,7 +17,13 @@ HTTP headers are well-known and also despised. Seeking a balance between usabili
 
 We aim to publish reports on header usage stats, developments and changes, code libraries that make these headers easily accessible to developers on a range of platforms, and data sets concerning the general usage of these headers.
 
-The OWASP Secure Headers Project is migrating to this new OWASP website. For now you can still access the old website here [https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project).
+The OWASP Secure Headers Project is migrating to this new OWASP website. For now you can still access the old website [here](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project).
+
+## Security headers usage statistics
+
+We provide statistics, updated every month, about HTTP response security headers usage mentioned by the OWASP Secure Headers Project.
+
+They are available through [this GitHub project](https://github.com/oshp/oshp-stats).
 
 ## Discussions and information
 
