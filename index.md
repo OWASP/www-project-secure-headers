@@ -17,7 +17,9 @@ HTTP headers are well-known and also despised. Seeking a balance between usabili
 
 We aim to publish reports on header usage stats, developments and changes, code libraries that make these headers easily accessible to developers on a range of platforms, and data sets concerning the general usage of these headers.
 
-The OWASP Secure Headers Project is migrating to this new OWASP website. For now you can still access the old website [here](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project).
+## Migration
+
+The OWASP Secure Headers Project was migrated from the [old website](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project) to the [GitHub OWASP organization](https://github.com/OWASP/www-project-secure-headers).
 
 ## Security headers usage statistics
 
