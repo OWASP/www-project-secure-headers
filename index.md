@@ -7,15 +7,24 @@ layout: col-sidebar
 tags: headers
 ---
 
-The OWASP Secure Headers Project (also called OSHP) describes HTTP response headers that your application can use to increase the security of your application. Once set, these HTTP response headers can restrict modern browsers from running into easily preventable vulnerabilities. The OWASP Secure Headers Project intends to raise awareness and use of these headers.
-
 ## Introduction
+
+The OWASP Secure Headers Project (also called OSHP) describes HTTP response headers that your application can use to increase the security of your application. Once set, these HTTP response headers can restrict modern browsers from running into easily preventable vulnerabilities. The OWASP Secure Headers Project intends to raise awareness and use of these headers.
 
 HTTP headers are well-known and also despised. Seeking a balance between usability and security, developers implement functionality through the headers that can make applications more versatile or secure. But in practice how are the headers being implemented? What sites follow the best implementation practices? Big companies, small, all or none?
 
 ## Description
 
-We aim to publish reports on header usage stats, developments and changes, code libraries that make these headers easily accessible to developers on a range of platforms, and data sets concerning the general usage of these headers.
+The OWASP Secure Headers Project aim to provide elements about the following aspects regarding HTTP security headers:
+
+* [Guidance](https://owasp.org/www-project-secure-headers/#div-headers) about the recommended HTTP security headers that can be leveraged.
+* [Guidance](https://owasp.org/www-project-secure-headers/#div-bestpractices) about the HTTP headers that should be removed.
+* [Tools](https://owasp.org/www-project-secure-headers/#div-technical) to validate an HTTP security header configuration.
+* [Code](https://owasp.org/www-project-secure-headers/#div-technical) libraries that can be leveraged to configure recommended HTTP security headers.
+* [Statistics](https://github.com/oshp/oshp-stats) about usage of the recommended HTTP security headers.
+* [REST API](https://github.com/OWASP/www-project-secure-headers/discussions/58) allowing to obtain the recommended configuration for different web server.
+
+All the tools provided by the OSHP are gathered under this [GitHub organization](https://github.com/oshp/).
 
 ## Migration
 
