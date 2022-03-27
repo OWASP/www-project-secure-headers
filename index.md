@@ -9,6 +9,9 @@ tags: headers
 
 ## Introduction
 
+[![OWASP Incubator](https://img.shields.io/badge/owasp-incubator-blue.svg)](https://owasp.org/projects)
+[![External Links Validity Check](https://github.com/OWASP/www-project-secure-headers/actions/workflows/check-external-links.yml/badge.svg?branch=master)](https://github.com/OWASP/www-project-secure-headers/actions/workflows/check-external-links.yml)
+
 The OWASP Secure Headers Project (also called OSHP) describes HTTP response headers that your application can use to increase the security of your application. Once set, these HTTP response headers can restrict modern browsers from running into easily preventable vulnerabilities. The OWASP Secure Headers Project intends to raise awareness and use of these headers.
 
 HTTP headers are well-known and also despised. Seeking a balance between usability and security, developers implement functionality through the headers that can make applications more versatile or secure. But in practice how are the headers being implemented? What sites follow the best implementation practices? Big companies, small, all or none?
@@ -35,6 +38,12 @@ The OWASP Secure Headers Project was migrated from the [old website](https://wik
 We provide statistics, updated every month, about HTTP response security headers usage mentioned by the OWASP Secure Headers Project.
 
 They are available through [this GitHub project](https://github.com/oshp/oshp-stats).
+
+## Security headers usage validator
+
+We provide a [venom](https://github.com/ovh/venom) tests suite to validate an HTTP security response header configuration against OWASP Secure Headers Project recommendation.
+
+It is available through [this GitHub project](https://github.com/oshp/oshp-validator).
 
 ## Discussions and information
 
