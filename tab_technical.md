@@ -65,12 +65,6 @@ This is a Python based API-Security framework containing ApiSecurityHeader.py sc
 
 **Github:** <https://github.com/AmitKulkarni9/API-Security>
 
-### Venom Test Suites
-
-Test suites for [Venom](https://github.com/ovh/venom) checking the presence and the value for the different response headers proposed by the [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/).
-
-**Github:** <https://gist.github.com/righettod/f63548ebd96bed82269dcc3dfea27056>
-
 ## Development Libraries
 
 ### Java
