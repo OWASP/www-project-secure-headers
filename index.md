@@ -33,6 +33,11 @@ All the tools provided by the OSHP are gathered under this [GitHub organization]
 
 The OWASP Secure Headers Project was migrated from the [old website](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project) to the [GitHub OWASP organization](https://github.com/OWASP/www-project-secure-headers).
 
+The following projects are now **archived**, they are initiatives that are now replaced by new projects:
+
+* [headers](https://github.com/oshp/headers).
+* [headers-ui-container](https://github.com/oshp/headers-ui-container).
+
 ## Security headers usage statistics
 
 We provide statistics, updated every month, about HTTP response security headers usage mentioned by the OWASP Secure Headers Project.
