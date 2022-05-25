@@ -71,7 +71,7 @@ Strict-Transport-Security: max-age=31536000 ; includeSubDomains
 
 The `X-Frame-Options` response header (also named **XFO**) improves the protection of web applications against [clickjacking](https://portswigger.net/web-security/clickjacking). It instructs the browser whether the content can be displayed within frames.
 
-The CSP **frame-ancestors** directive obsoletes the X-Frame-Options header. If a resource has both policies, the CSP frame-ancestors policy will be enforced and the X-Frame-Options policy will be ignored.
+The Content-Security-Policy (CSP) [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) directive obsoletes the X-Frame-Options header. If a resource has both policies, the CSP frame-ancestors policy will be enforced and the X-Frame-Options policy will be ignored.
 
 ### Values
 
@@ -79,7 +79,7 @@ The CSP **frame-ancestors** directive obsoletes the X-Frame-Options header. If a
 |----------------------|-------------|
 | `deny`               | No rendering within a frame. |
 | `sameorigin`         | No rendering if origin mismatch. |
-| `allow-from: DOMAIN` | Allows rendering if framed by frame loaded from DOMAIN (**not supported by modern browser**). |
+| `allow-from: DOMAIN` | Allows rendering if framed by frame loaded from *DOMAIN* (**not supported by modern browsers**). |
 
 ### Example
 
@@ -95,6 +95,7 @@ X-Frame-Options: deny
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options>
 * <https://portswigger.net/web-security/clickjacking>
 * <https://blogs.msdn.microsoft.com/ieinternals/2010/03/30/combating-clickjacking-with-x-frame-options/>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors>
 
 ## X-Content-Type-Options
 
@@ -146,7 +147,7 @@ A Content Security Policy (also named CSP) requires careful tuning and precise d
 | `reflected-xss`             | Instruct the user agent to activate or deactivate any heuristics used to filter or block reflected cross-site scripting attacks, equivalent to the effects of the non-standard `X-XSS-Protection` header. |
 | `block-all-mixed-content`   | Prevent the user agent from loading mixed content. |
 | `upgrade-insecure-requests` | Instruct the user agent to download insecure HTTP resources using HTTPS. |
-| `referrer`                  | _(Deprecated)_ Define information the user agent can send in the `Referer` header. |
+| `referrer`                  | *(Deprecated)* Define information the user agent can send in the `Referer` header. |
 | `report-uri`                | _(Deprecated and replaced by `report-to`)_ Specifies a URI to which the user agent sends reports about policy violation. |
 | `report-to`                 | Specifies a group (defined in the `Report-To` header) to which the user agent sends reports about policy violation. |
 
@@ -335,7 +336,7 @@ Cross-Origin-Resource-Policy: same-origin
 
 This header holds directives (instructions) for caching in both **requests** and **responses**. If a given directive is in a request, it does not mean this directive is in the response (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)). Specify the capability of a resource to be cached is important to prevent [exposure of information via the cache](https://cwe.mitre.org/data/definitions/525.html).
 
-The headers named [Expires](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires) and [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) can be used in addition to the [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) header. [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) header can be used for backwards compatibility with the HTTP/1.0 caches. However, _Cache-Control_ is the recommanded way to define the caching policy.
+The headers named [Expires](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires) and [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) can be used in addition to the [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) header. [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) header can be used for backwards compatibility with the HTTP/1.0 caches. However, *Cache-Control* is the recommanded way to define the caching policy.
 
 ### Values applicable for HTTP responses
 
@@ -438,7 +439,7 @@ Permissions-Policy: accelerometer=(),autoplay=(),camera=(),display-capture=(),do
 
 ### Remarks
 
-Usage of all possible values from the table above raised the following error on _Chrome 90.0.4430.212_ and _Edge 90.0.818.62_:
+Usage of all possible values from the table above raised the following error on *Chrome 90.0.4430.212* and *Edge 90.0.818.62*:
 
 ```
 Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.
@@ -497,7 +498,7 @@ The two most well supported values are `microphone` and `camera`. For all the ot
 | `vibrate`              | (**deprecated**) Controls access to the `vibrate()` method. |
 | `vr`                   | (**deprecated**) Controls access to VR displays. |
 
-_Some experimental features are not present in this list, please check the references below for a complete list._
+*Some experimental features are not present in this list, please check the references below for a complete list.*
 
 ### Example
 
@@ -528,8 +529,8 @@ This header comes from the (now expired) internet draft [Expect-CT Extension for
 
 | Value         | Description |
 |---------------|-------------|
-| `report-uri`  | _(Optional)_ Indicates the URL to which the browser should report Expect-CT failures. |
-| `enforce`     | _(Optional)_ A valueless directive that, if present, signals to the browser that compliance to the CT Policy should be enforced (rather than report-only) and that the browser should refuse future connections that violate its CT Policy. When both the `enforce` and `report-uri` directives are present, the configuration is referred to as an "enforce-and-report" configuration, signalling to the browser both that compliance to the CT Policy should be enforced and that violations should be reported. |
+| `report-uri`  | *(Optional)* Indicates the URL to which the browser should report Expect-CT failures. |
+| `enforce`     | *(Optional)* A valueless directive that, if present, signals to the browser that compliance to the CT Policy should be enforced (rather than report-only) and that the browser should refuse future connections that violate its CT Policy. When both the `enforce` and `report-uri` directives are present, the configuration is referred to as an "enforce-and-report" configuration, signalling to the browser both that compliance to the CT Policy should be enforced and that violations should be reported. |
 | `max-age`     | Specifies the number of seconds after the response is received the browser should remember and enforce certificate transparency compliance. |
 
 ### Example
