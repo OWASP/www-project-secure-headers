@@ -69,8 +69,9 @@ Strict-Transport-Security: max-age=31536000 ; includeSubDomains
 
 ## X-Frame-Options
 
-The `X-Frame-Options` response header (also named XFO) improves the protection of web applications against clickjacking. It instructs the browser whether the content can be displayed within frames.
-The CSP frame-ancestors directive obsoletes the X-Frame-Options header. If a resource has both policies, the CSP frame-ancestors policy will be enforced and the X-Frame-Options policy will be ignored.
+The `X-Frame-Options` response header (also named **XFO**) improves the protection of web applications against [clickjacking](https://portswigger.net/web-security/clickjacking). It instructs the browser whether the content can be displayed within frames.
+
+The CSP **frame-ancestors** directive obsoletes the X-Frame-Options header. If a resource has both policies, the CSP frame-ancestors policy will be enforced and the X-Frame-Options policy will be ignored.
 
 ### Values
 
@@ -78,7 +79,7 @@ The CSP frame-ancestors directive obsoletes the X-Frame-Options header. If a res
 |----------------------|-------------|
 | `deny`               | No rendering within a frame. |
 | `sameorigin`         | No rendering if origin mismatch. |
-| `allow-from: DOMAIN` | Allows rendering if framed by frame loaded from DOMAIN. |
+| `allow-from: DOMAIN` | Allows rendering if framed by frame loaded from DOMAIN (**not supported by modern browser**). |
 
 ### Example
 
@@ -92,7 +93,7 @@ X-Frame-Options: deny
 * <https://tools.ietf.org/html/draft-ietf-websec-x-frame-options-01>
 * <https://tools.ietf.org/html/draft-ietf-websec-frame-options-00>
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options>
-* <https://owasp.org/www-community/attacks/Clickjacking>
+* <https://portswigger.net/web-security/clickjacking>
 * <https://blogs.msdn.microsoft.com/ieinternals/2010/03/30/combating-clickjacking-with-x-frame-options/>
 
 ## X-Content-Type-Options
@@ -334,7 +335,7 @@ Cross-Origin-Resource-Policy: same-origin
 
 This header holds directives (instructions) for caching in both **requests** and **responses**. If a given directive is in a request, it does not mean this directive is in the response (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)). Specify the capability of a resource to be cached is important to prevent [exposure of information via the cache](https://cwe.mitre.org/data/definitions/525.html).
 
-The headers named [Expires](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires) and [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) can be used in addition to the [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) header. [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) header can be used for backwards compatibility with the HTTP/1.0 caches. However, *Cache-Control* is the recommanded way to define the caching policy.
+The headers named [Expires](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires) and [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) can be used in addition to the [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) header. [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) header can be used for backwards compatibility with the HTTP/1.0 caches. However, _Cache-Control_ is the recommanded way to define the caching policy.
 
 ### Values applicable for HTTP responses
 
@@ -437,7 +438,7 @@ Permissions-Policy: accelerometer=(),autoplay=(),camera=(),display-capture=(),do
 
 ### Remarks
 
-Usage of all possible values from the table above raised the following error on *Chrome 90.0.4430.212* and *Edge 90.0.818.62*:
+Usage of all possible values from the table above raised the following error on _Chrome 90.0.4430.212_ and _Edge 90.0.818.62_:
 
 ```
 Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.
