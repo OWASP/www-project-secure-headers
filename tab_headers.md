@@ -69,8 +69,9 @@ Strict-Transport-Security: max-age=31536000 ; includeSubDomains
 
 ## X-Frame-Options
 
-The `X-Frame-Options` response header (also named XFO) improves the protection of web applications against clickjacking. It instructs the browser whether the content can be displayed within frames.
-The CSP frame-ancestors directive obsoletes the X-Frame-Options header. If a resource has both policies, the CSP frame-ancestors policy will be enforced and the X-Frame-Options policy will be ignored.
+The `X-Frame-Options` response header (also named **XFO**) improves the protection of web applications against [clickjacking](https://portswigger.net/web-security/clickjacking). It instructs the browser whether the content can be displayed within frames.
+
+The Content-Security-Policy (CSP) [frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) directive obsoletes the X-Frame-Options header. If a resource has both policies, the CSP frame-ancestors policy will be enforced and the X-Frame-Options policy will be ignored.
 
 ### Values
 
@@ -78,7 +79,7 @@ The CSP frame-ancestors directive obsoletes the X-Frame-Options header. If a res
 |----------------------|-------------|
 | `deny`               | No rendering within a frame. |
 | `sameorigin`         | No rendering if origin mismatch. |
-| `allow-from: DOMAIN` | Allows rendering if framed by frame loaded from DOMAIN. |
+| `allow-from: DOMAIN` | Allows rendering if framed by frame loaded from *DOMAIN* (**not supported by modern browsers**). |
 
 ### Example
 
@@ -92,8 +93,9 @@ X-Frame-Options: deny
 * <https://tools.ietf.org/html/draft-ietf-websec-x-frame-options-01>
 * <https://tools.ietf.org/html/draft-ietf-websec-frame-options-00>
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options>
-* <https://owasp.org/www-community/attacks/Clickjacking>
+* <https://portswigger.net/web-security/clickjacking>
 * <https://blogs.msdn.microsoft.com/ieinternals/2010/03/30/combating-clickjacking-with-x-frame-options/>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors>
 
 ## X-Content-Type-Options
 
@@ -145,7 +147,7 @@ A Content Security Policy (also named CSP) requires careful tuning and precise d
 | `reflected-xss`             | Instruct the user agent to activate or deactivate any heuristics used to filter or block reflected cross-site scripting attacks, equivalent to the effects of the non-standard `X-XSS-Protection` header. |
 | `block-all-mixed-content`   | Prevent the user agent from loading mixed content. |
 | `upgrade-insecure-requests` | Instruct the user agent to download insecure HTTP resources using HTTPS. |
-| `referrer`                  | _(Deprecated)_ Define information the user agent can send in the `Referer` header. |
+| `referrer`                  | *(Deprecated)* Define information the user agent can send in the `Referer` header. |
 | `report-uri`                | _(Deprecated and replaced by `report-to`)_ Specifies a URI to which the user agent sends reports about policy violation. |
 | `report-to`                 | Specifies a group (defined in the `Report-To` header) to which the user agent sends reports about policy violation. |
 
@@ -496,7 +498,7 @@ The two most well supported values are `microphone` and `camera`. For all the ot
 | `vibrate`              | (**deprecated**) Controls access to the `vibrate()` method. |
 | `vr`                   | (**deprecated**) Controls access to VR displays. |
 
-_Some experimental features are not present in this list, please check the references below for a complete list._
+*Some experimental features are not present in this list, please check the references below for a complete list.*
 
 ### Example
 
@@ -527,8 +529,8 @@ This header comes from the (now expired) internet draft [Expect-CT Extension for
 
 | Value         | Description |
 |---------------|-------------|
-| `report-uri`  | _(Optional)_ Indicates the URL to which the browser should report Expect-CT failures. |
-| `enforce`     | _(Optional)_ A valueless directive that, if present, signals to the browser that compliance to the CT Policy should be enforced (rather than report-only) and that the browser should refuse future connections that violate its CT Policy. When both the `enforce` and `report-uri` directives are present, the configuration is referred to as an "enforce-and-report" configuration, signalling to the browser both that compliance to the CT Policy should be enforced and that violations should be reported. |
+| `report-uri`  | *(Optional)* Indicates the URL to which the browser should report Expect-CT failures. |
+| `enforce`     | *(Optional)* A valueless directive that, if present, signals to the browser that compliance to the CT Policy should be enforced (rather than report-only) and that the browser should refuse future connections that violate its CT Policy. When both the `enforce` and `report-uri` directives are present, the configuration is referred to as an "enforce-and-report" configuration, signalling to the browser both that compliance to the CT Policy should be enforced and that violations should be reported. |
 | `max-age`     | Specifies the number of seconds after the response is received the browser should remember and enforce certificate transparency compliance. |
 
 ### Example
