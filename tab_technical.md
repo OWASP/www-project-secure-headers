@@ -19,6 +19,12 @@ A security scanner for HTTP response headers.
 
 **Github:** <https://github.com/riramar/hsecscan>
 
+### humble
+
+A humble, and fast, security-oriented HTTP headers analyzer.
+
+**Github:** <https://github.com/rfc-st/humble>
+
 ### headers
 
 Python script to get some response headers from Alexa top sites file and store in a MySQL database.
