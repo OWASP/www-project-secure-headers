@@ -54,10 +54,6 @@ It is available through [this GitHub project](https://github.com/oshp/oshp-valid
 
 We use the GitHub [discussions](https://github.com/OWASP/www-project-secure-headers/discussions) area for discussions about the project as well as spreading global information about it.
 
-## Presentations about the project
-
-* [Trap bad guys in your browser with HTTP security headers](https://speakerdeck.com/righettod/trap-bad-guys-in-your-browser-with-http-security-headers).
-
 ## Contributors
 
 * [Adam Averay](https://github.com/adamaveray)
