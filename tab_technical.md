@@ -9,7 +9,11 @@ tags: headers
 
 # Technical Resources
 
-This section covers a list of tools to analyze, develop and administrate HTTP secure headers to help achieve more secure and trustworthy web systems.
+This section provides a list of tools as well as documents to understand, analyze, develop and administrate HTTP secure headers to help achieving more secure and trustworthy web systems.
+
+## Presentations
+
+* [Trap bad guys in your browser with HTTP security headers](https://speakerdeck.com/righettod/trap-bad-guys-in-your-browser-with-http-security-headers).
 
 ## Analysis Tools
 
@@ -187,9 +191,9 @@ Puppet module to enable, configure and manage secure http headers on web servers
 
 **Supported Web Servers:**
 
-- Apache HTTP Server
-- NGINX
-- Lighttpd
+* Apache HTTP Server
+* NGINX
+* Lighttpd
 
 **Github:** <https://github.com/amenezes/http_hardening>  
 

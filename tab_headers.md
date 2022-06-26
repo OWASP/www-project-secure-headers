@@ -523,7 +523,7 @@ Feature-Policy: vibrate 'none'; geolocation 'none'
 The `Expect-CT` header is used by a server to indicate that browsers should evaluate connections to the host for Certificate Transparency compliance.  
 In Chrome 61 (Aug 2017) Chrome enabled its enforcement via SCT by default ([source](https://www.chromestatus.com/feature/5677171733430272)). You can still use this header to specify an `report-uri`.  
   
-This header comes from the (now expired) internet draft [Expect-CT Extension for HTTP](https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-08).
+This header comes from the (now expired) internet draft [Expect-CT Extension for HTTP](https://datatracker.ietf.org/doc/html/rfc9163).
 
 ### Values
 
@@ -541,8 +541,7 @@ Expect-CT: max-age=86400, enforce, report-uri="https://foo.example/report"
 
 ### References
 
-* <https://tools.ietf.org/html/draft-ietf-httpbis-expect-ct-02>
-* <https://httpwg.org/http-extensions/draft-ietf-httpbis-expect-ct.html>
+* <https://datatracker.ietf.org/doc/html/rfc9163>
 * <https://scotthelme.co.uk/a-new-security-header-expect-ct/>
 * <https://www.chromestatus.com/feature/5677171733430272>
 
