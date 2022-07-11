@@ -336,7 +336,7 @@ Cross-Origin-Resource-Policy: same-origin
 
 This header holds directives (instructions) for caching in both **requests** and **responses**. If a given directive is in a request, it does not mean this directive is in the response (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)). Specify the capability of a resource to be cached is important to prevent [exposure of information via the cache](https://cwe.mitre.org/data/definitions/525.html).
 
-The headers named [Expires](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires) and [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) can be used in addition to the [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) header. [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) header can be used for backwards compatibility with the HTTP/1.0 caches. However, *Cache-Control* is the recommanded way to define the caching policy.
+The headers named [Expires](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires) and [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) can be used in addition to the [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) header. [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) header can be used for backwards compatibility with the HTTP/1.0 caches. However, *Cache-Control* is the recommended way to define the caching policy.
 
 ### Values applicable for HTTP responses
 
