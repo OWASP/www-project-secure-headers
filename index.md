@@ -29,6 +29,8 @@ The OWASP Secure Headers Project aim to provide elements about the following asp
 
 All the tools provided by the OSHP are gathered under this [GitHub organization](https://github.com/oshp/).
 
+A presentation of the project is available on the [OWASP Spotlight Youtube playlist](https://www.youtube.com/watch?v=N4F3VWQYU9E).
+
 ## Migration
 
 The OWASP Secure Headers Project was migrated from the [old website](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project) to the [GitHub OWASP organization](https://github.com/OWASP/www-project-secure-headers).
