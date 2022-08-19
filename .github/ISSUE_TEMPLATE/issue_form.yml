@@ -3,7 +3,6 @@ description: Used to create new issue about the OSHP content.
 title: "[ISSUE SUMMARY]"
 labels: ["bug"]
 body:
-  - type: markdown
-      attributes:
-        value: |
-          Thanks for taking the time to fill out this bug report, please kindly open your issue [here](https://github.com/oshp/oshp-tracking/issues/new/choose).
+- type: markdown
+  attributes:
+   value: Thanks for taking the time to fill out this bug report, please kindly open your issue [here](https://github.com/oshp/oshp-tracking/issues/new/choose).
