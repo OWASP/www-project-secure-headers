@@ -25,11 +25,11 @@ The OWASP Secure Headers Project aim to provide elements about the following asp
 * [Tools](https://owasp.org/www-project-secure-headers/#div-technical) to validate an HTTP security header configuration.
 * [Code](https://owasp.org/www-project-secure-headers/#div-technical) libraries that can be leveraged to configure recommended HTTP security headers.
 * [Statistics](https://github.com/oshp/oshp-stats) about usage of the recommended HTTP security headers.
-* [REST API](https://github.com/OWASP/www-project-secure-headers/discussions/58) allowing to obtain the recommended configuration for different web server.
+* [REST API](https://github.com/oshp/oshp-tracking/issues/2) allowing to obtain the recommended configuration for different web server.
 
 All the tools provided by the OSHP are gathered under this [GitHub organization](https://github.com/oshp/).
 
-A presentation of the project is available on the [OWASP Spotlight Youtube playlist](https://www.youtube.com/watch?v=N4F3VWQYU9E).
+A presentation of the project is available on the [OWASP Spotlight Youtube playlist](https://www.youtube.com/watch?v=N4F3VWQYU9E) as well as on the [Application Security Podcast Youtube playlist](https://www.youtube.com/watch?v=0SNU9clVhKU).
 
 ## Migration
 
@@ -52,9 +52,11 @@ We provide a [venom](https://github.com/ovh/venom) tests suite to validate an HT
 
 It is available through [this GitHub project](https://github.com/oshp/oshp-validator).
 
-## Discussions and information
+## Discussions, information and roadmap
 
-We use the GitHub [discussions](https://github.com/OWASP/www-project-secure-headers/discussions) area for discussions about the project as well as spreading global information about it.
+We use the GitHub [discussions feature](https://github.com/oshp/oshp-tracking/discussions) for discussions about the project as well as spreading global information about it.
+
+The work on the OSHP projects and associated components is tracked using the GitHub [project feature](https://github.com/orgs/oshp/projects/2).
 
 ## Contributors
 
