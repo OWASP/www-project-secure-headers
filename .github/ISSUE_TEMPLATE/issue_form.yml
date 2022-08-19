@@ -10,6 +10,6 @@ body:
   attributes:
     label: Thanks for taking the time to fill out this bug report.
     description: Please kindly open your issue https://github.com/oshp/oshp-tracking/issues/new/choose
-    placeholder: :)
+    placeholder: ...
   validations:
     required: false   
