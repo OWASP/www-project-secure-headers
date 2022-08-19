@@ -6,3 +6,9 @@ body:
 - type: markdown
   attributes:
    value: Thanks for taking the time to fill out this bug report, please kindly open your issue [here](https://github.com/oshp/oshp-tracking/issues/new/choose).
+- type: textarea
+  attributes:
+    label: Thanks for taking the time to fill out this bug report
+    description: Please kindly open your issue https://github.com/oshp/oshp-tracking/issues/new/choose
+  validations:
+    required: false   
