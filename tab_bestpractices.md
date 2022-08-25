@@ -84,16 +84,16 @@ $ echo eyJzY29yZSI6IkEiLCAiY29sb3VyIjoiZ3JlZW4ifQ== | base64 -d
 
 ## Quickly check security HTTP headers for applications exposed internally
 
-The portable cross-platform tool [Venom](https://github.com/ovh/venom) with the dedicated [test suites aligned with the OWASP Secure Headers Project](https://gist.github.com/righettod/f63548ebd96bed82269dcc3dfea27056) can be used to achieve that objective.
+The portable cross-platform tool [Venom](https://github.com/ovh/venom) with the dedicated [OSHP Validator test suites aligned with the OWASP Secure Headers Project](https://github.com/oshp/oshp-validator).
 
-Use the following set of commands:
+Use the following example set of commands:
 
 ```shell
 # Get Venom binary file from 
 # https://github.com/ovh/venom/releases
 # Get the YAML test suites from
-# https://gist.github.com/righettod/f63548ebd96bed82269dcc3dfea27056
-# Demonstration about usage available on
+# check out project https://github.com/oshp/oshp-validator
+# Read the README.md, additional demonstration about usage available on
 # https://gist.github.com/righettod/f63548ebd96bed82269dcc3dfea27056#gistcomment-3630811
 $ venom run --var="target_site=https://mozilla.org" --var="logout_url=/logout" venom_security_headers_tests_suite.yml
 • HTTP security response headers test suites (venom_security_headers_tests_suite.yml)
