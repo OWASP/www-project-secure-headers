@@ -190,7 +190,9 @@ X-Permitted-Cross-Domain-Policies: none
 
 ### References
 
+<!-- markdown-link-check-disable -->
 * <https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html>
+<!-- markdown-link-check-disable -->
 * <https://danielnixon.org/http-security-headers/>
 * <https://rorsecurity.info/portfolio/new-http-headers-for-more-security>
 * <https://github.com/twitter/secureheaders/issues/88>
