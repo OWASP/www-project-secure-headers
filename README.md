@@ -30,6 +30,12 @@ Content editing is done with [Visual Studio Code](https://code.visualstudio.com/
 
 A [workspace file](project.code-workspace) is provided with [recommended extensions](.vscode/extensions.json).
 
+## Generated content
+
+The folder [ci](ci) contains materials to generate the both JSON files containing the header recommended to add and remove.
+
+Generation is made by this GitHub action workflow.
+
 ## Contributors
 
 * [Adam Averay](https://github.com/adamaveray)

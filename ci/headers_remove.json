@@ -1,0 +1,20 @@
+{
+  "last_update_utc": "2022-08-27 15:40:52",
+  "headers": [
+    "Liferay-Portal",
+    "Server",
+    "SourceMap",
+    "X-AspNet-Version",
+    "X-AspNetMvc-Version",
+    "X-CMS",
+    "X-Generated-By",
+    "X-Generator",
+    "X-Powered-By",
+    "X-Powered-CMS",
+    "X-Redirect-By",
+    "X-Server-Powered-By",
+    "X-SourceFiles",
+    "X-SourceMap",
+    "X-Turbo-Charged-By"
+  ]
+}
