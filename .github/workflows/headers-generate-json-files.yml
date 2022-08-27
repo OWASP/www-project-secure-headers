@@ -1,4 +1,4 @@
-name: Update headers reference JSON files
+name: update_headers_reference_json_files
 on:
   workflow_dispatch:
   push:
