@@ -2,6 +2,7 @@
 
 [![OWASP Lab](https://img.shields.io/badge/owasp-lab-yellow.svg)](https://owasp.org/projects)
 [![External Links Validity Check](https://github.com/OWASP/www-project-secure-headers/actions/workflows/check-external-links.yml/badge.svg?branch=master)](https://github.com/OWASP/www-project-secure-headers/actions/workflows/check-external-links.yml)
+[![Update headers reference JSON files](https://github.com/OWASP/www-project-secure-headers/actions/workflows/headers-generate-json-files.yml/badge.svg?branch=master)](https://github.com/OWASP/www-project-secure-headers/actions/workflows/headers-generate-json-files.yml)
 
 The OWASP Secure Headers Project (also named OSHP) describes HTTP response headers that your application can use to increase the security of your application. Once set, these HTTP response headers can restrict modern browsers from running into easily preventable vulnerabilities. The OWASP Secure Headers Project intends to raise awareness and use of these headers.
 
@@ -34,7 +35,7 @@ A [workspace file](project.code-workspace) is provided with [recommended extensi
 
 The folder [ci](ci) contains materials to generate the both JSON files containing the header recommended to add and remove.
 
-Generation is made by this GitHub action workflow.
+Generation is performed by this GitHub action [workflow](.github/workflows/headers-generate-json-files.yml) everytime the file [tab_bestpractices.md](tab_bestpractices.md) is modified.
 
 ## Contributors
 

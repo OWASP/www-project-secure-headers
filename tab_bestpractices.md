@@ -25,6 +25,8 @@ The following section propose a configuration for the [actively supported and wo
 
 ⚠️ The `Pragma` header is only specified for backwards compatibility with the HTTP/1.0 caches.
 
+💡 Content of the table below is also provided, as JSON, via this [file](ci/headers_add.json) (automatically updated).
+
 <!--HEADERS_ADD_TABLE_START-->
 | Header name                                  | Proposed value  |
 | ---------------------------------------------|------------|
@@ -125,6 +127,8 @@ $ venom run --var="target_site=https://mozilla.org" --var="logout_url=/logout" t
 ## Prevent information disclosure via HTTP headers
 
 This section provides a collection of HTTP response headers to remove, when possible, from any HTTP response to prevent any [disclosure of technical information](https://cwe.mitre.org/data/definitions/200.html) about environment. The following list of headers can be used to configure a [reverse proxy](https://www.nginx.com/resources/glossary/reverse-proxy-server/) or a [web application firewall](https://en.wikipedia.org/wiki/Web_application_firewall) to handle removal operation of the mentioned headers.
+
+💡 Content of the table below is also provided, as JSON, via this [file](ci/headers_remove.json) (automatically updated).
 
 <!--HEADERS_REMOVE_TABLE_START-->
 | Header name         | Header value example | Description |
