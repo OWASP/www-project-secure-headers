@@ -41,7 +41,7 @@ def extract_table_md(headers_category="add"):
     if start == -1 or end == -1:
         raise Exception(f"No table was identified with markers {markers} for headers category '{headers_category}'!")
     md_table = md_content[start + len(markers[0]):end]
-    md_table = md_table.strip("\t\n\r")
+    md_table = md_table.strip("\t\n\r ")
     return md_table
 
 
