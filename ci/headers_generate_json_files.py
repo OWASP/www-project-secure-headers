@@ -23,8 +23,8 @@ from datetime import datetime
 SOURCE_MD_FILE = "../tab_bestpractices.md"
 HEADERS_TO_ADD_JSON_FILE = "headers_add.json"
 HEADERS_TO_REMOVE_JSON_FILE = "headers_remove.json"
-HEADERS_TO_ADD_TABLE_EXTRACTION_MARKERS = ("<!--HEADERS_ADD_TABLE_START-->", "<!--HEADERS_ADD_TABLE_END-->")
-HEADERS_TO_REMOVE_TABLE_EXTRACTION_MARKERS = ("<!--HEADERS_REMOVE_TABLE_START-->", "<!--HEADERS_REMOVE_TABLE_END-->")
+HEADERS_TO_ADD_TABLE_EXTRACTION_MARKERS = ("<!-- HEADERS_ADD_TABLE_START -->", "<!-- HEADERS_ADD_TABLE_END -->")
+HEADERS_TO_REMOVE_TABLE_EXTRACTION_MARKERS = ("<!-- HEADERS_REMOVE_TABLE_START -->", "<!-- HEADERS_REMOVE_TABLE_END -->")
 EXECUTION_DATETIME_UTC = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
 LAST_UPDATE_ATTRIBUTE_NAME = "last_update_utc"
 JSON_IDENT = 2
@@ -41,7 +41,7 @@ def extract_table_md(headers_category="add"):
     if start == -1 or end == -1:
         raise Exception(f"No table was identified with markers {markers} for headers category '{headers_category}'!")
     md_table = md_content[start + len(markers[0]):end]
-    md_table = md_table.strip("\t\n\r")
+    md_table = md_table.strip("\t\n\r ")
     return md_table
 
 

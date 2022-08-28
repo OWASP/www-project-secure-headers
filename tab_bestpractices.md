@@ -27,7 +27,8 @@ The following section propose a configuration for the [actively supported and wo
 
 💡 Content of the table below is also provided, as JSON, via this [file](ci/headers_add.json) (automatically updated).
 
-<!--HEADERS_ADD_TABLE_START-->
+<!-- HEADERS_ADD_TABLE_START -->
+
 | Header name                                  | Proposed value  |
 | ---------------------------------------------|------------|
 | Strict-Transport-Security                    | `max-age=31536000 ; includeSubDomains` |
@@ -43,7 +44,8 @@ The following section propose a configuration for the [actively supported and wo
 | Permissions-Policy                           | `accelerometer=(),autoplay=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),geolocation=(),gyroscope=(),magnetometer=(),microphone=(),midi=(),payment=(),picture-in-picture=(),publickey-credentials-get=(),screen-wake-lock=(),sync-xhr=(self),usb=(),web-share=(),xr-spatial-tracking=()` |
 | Cache-Control         | `no-store, max-age=0`  |
 | Pragma         | `no-cache`  |
-<!--HEADERS_ADD_TABLE_END-->
+
+<!-- HEADERS_ADD_TABLE_END -->
 
 ### Web server syntax
 
@@ -130,7 +132,8 @@ This section provides a collection of HTTP response headers to remove, when poss
 
 💡 Content of the table below is also provided, as JSON, via this [file](ci/headers_remove.json) (automatically updated).
 
-<!--HEADERS_REMOVE_TABLE_START-->
+<!-- HEADERS_REMOVE_TABLE_START -->
+
 | Header name         | Header value example | Description |
 | --------------------|----------------------|-------------|
 | [Server](https://webtechsurvey.com/response-header/server) | `Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips` | Contain information about the server handling the request. |
@@ -148,7 +151,8 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-Generator](https://webtechsurvey.com/response-header/x-generator) | `Drupal 8` | Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response. |
 | [X-Generated-By](https://webtechsurvey.com/response-header/x-generated-by) | `Smartsite version 7.11.1.3` | Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response. |
 | [X-CMS](https://webtechsurvey.com/response-header/x-cms) | `Thinq CMS 1.7.0.0` | Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response. |
-<!--HEADERS_REMOVE_TABLE_END-->
+
+<!-- HEADERS_REMOVE_TABLE_END -->
 
 ## Prevent exposure to cross-site scripting when hosting uploaded files
 
