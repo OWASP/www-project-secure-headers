@@ -1,7 +1,6 @@
 {
   "last_update_utc": "2022-08-28 16:31:10",
-  "headers": [
-    {
+  "headers": [{
       "name": "Cache-Control",
       "value": "no-store, max-age=0"
     },
