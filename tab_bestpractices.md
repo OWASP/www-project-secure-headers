@@ -25,21 +25,25 @@ The following section propose a configuration for the [actively supported and wo
 
 ⚠️ The `Pragma` header is only specified for backwards compatibility with the HTTP/1.0 caches.
 
+💡 Content of the table below is also provided, as JSON, via this [file](ci/headers_add.json) (automatically updated).
+
+<!--HEADERS_ADD_TABLE_START-->
 | Header name                                  | Proposed value  |
 | ---------------------------------------------|------------|
-| HTTP Strict Transport Security (HSTS)        | `max-age=31536000 ; includeSubDomains` |
+| Strict-Transport-Security                    | `max-age=31536000 ; includeSubDomains` |
 | X-Frame-Options                              | `deny` |
 | X-Content-Type-Options                       | `nosniff` |
 | Content-Security-Policy                      | `default-src 'self'; object-src 'none'; child-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content` |
 | X-Permitted-Cross-Domain-Policies            | `none` |
 | Referrer-Policy                              | `no-referrer`  |
 | Clear-Site-Data                              | `"cache","cookies","storage"` |
-| Cross-Origin-Embedder-Policy (COEP)          | `require-corp`   |
-| Cross-Origin-Opener-Policy (COOP)            | `same-origin`   |
-| Cross-Origin-Resource-Policy (CORP)          | `same-origin`  |
+| Cross-Origin-Embedder-Policy                 | `require-corp`   |
+| Cross-Origin-Opener-Policy                   | `same-origin`   |
+| Cross-Origin-Resource-Policy                 | `same-origin`  |
 | Permissions-Policy                           | `accelerometer=(),autoplay=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),geolocation=(),gyroscope=(),magnetometer=(),microphone=(),midi=(),payment=(),picture-in-picture=(),publickey-credentials-get=(),screen-wake-lock=(),sync-xhr=(self),usb=(),web-share=(),xr-spatial-tracking=()` |
 | Cache-Control         | `no-store, max-age=0`  |
 | Pragma         | `no-cache`  |
+<!--HEADERS_ADD_TABLE_END-->
 
 ### Web server syntax
 
@@ -95,8 +99,8 @@ Use the following example set of commands:
 # check out project https://github.com/oshp/oshp-validator
 # Read the README.md, additional demonstration about usage available on
 # https://gist.github.com/righettod/f63548ebd96bed82269dcc3dfea27056#gistcomment-3630811
-$ venom run --var="target_site=https://mozilla.org" --var="logout_url=/logout" venom_security_headers_tests_suite.yml
-• HTTP security response headers test suites (venom_security_headers_tests_suite.yml)
+$ venom run --var="target_site=https://mozilla.org" --var="logout_url=/logout" tests_suite.yml
+• HTTP security response headers test suites
     • Strict-Transport-Security SUCCESS
     • X-Frame-Options SUCCESS
     • X-Content-Type-Options SUCCESS
@@ -110,13 +114,13 @@ $ venom run --var="target_site=https://mozilla.org" --var="logout_url=/logout" v
     • Permissions-Policy SUCCESS    
     • Cache-Control SUCCESS    
     • Feature-Policy SUCCESS
-        [info] This header was split into Permissions-Policy and Document-Policy and will be considered deprecated once all impacted features are moved off of feature policy. (venom_security_headers_tests_suite.yml:152)
+        [info] This header was split into Permissions-Policy and Document-Policy and will be considered deprecated once all impacted features are moved off of feature policy.
     • Public-Key-Pins SUCCESS
-        [info] This header has been deprecated by all major browsers and is no longer recommended. Avoid using it, and update existing code if possible! (venom_security_headers_tests_suite.yml:164)
+        [info] This header has been deprecated by all major browsers and is no longer recommended. Avoid using it, and update existing code if possible!
     • Expect-CT SUCCESS
-        [info] This header will likely become obsolete in June 2021. Since May 2018 new certificates are expected to support SCTs by default. Certificates before March 2018 were allowed to have a lifetime of 39 months, those will all be expired in June 2021. (venom_security_headers_tests_suite.yml:175)
+        [info] This header will likely become obsolete in June 2021. Since May 2018 new certificates are expected to support SCTs by default. Certificates before March 2018 were allowed to have a lifetime of 39 months, those will all be expired in June 2021.
     • X-Xss-Protection SUCCESS
-        [info] The X-XSS-Protection header has been deprecated by modern browsers and its use can introduce additional security issues on the client side. (venom_security_headers_tests_suite.yml:189)
+        [info] The X-XSS-Protection header has been deprecated by modern browsers and its use can introduce additional security issues on the client side.
     • SecurityHeaders-Rating SKIPPED
 ```
 
@@ -124,6 +128,9 @@ $ venom run --var="target_site=https://mozilla.org" --var="logout_url=/logout" v
 
 This section provides a collection of HTTP response headers to remove, when possible, from any HTTP response to prevent any [disclosure of technical information](https://cwe.mitre.org/data/definitions/200.html) about environment. The following list of headers can be used to configure a [reverse proxy](https://www.nginx.com/resources/glossary/reverse-proxy-server/) or a [web application firewall](https://en.wikipedia.org/wiki/Web_application_firewall) to handle removal operation of the mentioned headers.
 
+💡 Content of the table below is also provided, as JSON, via this [file](ci/headers_remove.json) (automatically updated).
+
+<!--HEADERS_REMOVE_TABLE_START-->
 | Header name         | Header value example | Description |
 | --------------------|----------------------|-------------|
 | [Server](https://webtechsurvey.com/response-header/server) | `Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips` | Contain information about the server handling the request. |
@@ -132,7 +139,8 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-Powered-By](https://webtechsurvey.com/response-header/x-powered-by) | `PHP/5.3.3` | Contain information about hosting environments or other frameworks in use. |
 | [X-Server-Powered-By](https://webtechsurvey.com/response-header/x-server-powered-by) | `Engintron` | Contain information about hosting environments or other frameworks in use. |
 | [X-Powered-CMS](https://webtechsurvey.com/response-header/x-powered-cms) | `Bitrix Site Manager (DEMO)` | Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response. |
-| [SourceMap or X-SourceMap](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/SourceMap) | `https://mysite.com/js/mylib.js.map`| Links generated code to a [source map](https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map) file, enabling the browser to reconstruct the original source and present the reconstructed original in the debugger. |
+| [SourceMap](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/SourceMap) | `https://mysite.com/js/mylib.js.map`| Links generated code to a [source map](https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map) file, enabling the browser to reconstruct the original source and present the reconstructed original in the debugger. |
+| [X-SourceMap](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/SourceMap) | `https://mysite.com/js/mylib.js.map`| Links generated code to a [source map](https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map) file, enabling the browser to reconstruct the original source and present the reconstructed original in the debugger. |
 | [X-AspNetMvc-Version](https://webtechsurvey.com/response-header/x-aspnetmvc-version) | `5.2` | Contain the version of the ASP .Net MVC framework in use. |
 | [X-AspNet-Version](https://webtechsurvey.com/response-header/x-aspnet-version) | `4.0.30319` | Contain the version of the ASP .Net framework in use. |
 | [X-SourceFiles](https://webtechsurvey.com/response-header/x-sourcefiles)  | `=?UTF-8?B?QzpcVXNlcnN?=` | Contain information needed by the .Net SDK debugger during debugging operation on a project. |
@@ -140,6 +148,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-Generator](https://webtechsurvey.com/response-header/x-generator) | `Drupal 8` | Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response. |
 | [X-Generated-By](https://webtechsurvey.com/response-header/x-generated-by) | `Smartsite version 7.11.1.3` | Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response. |
 | [X-CMS](https://webtechsurvey.com/response-header/x-cms) | `Thinq CMS 1.7.0.0` | Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response. |
+<!--HEADERS_REMOVE_TABLE_END-->
 
 ## Prevent exposure to cross-site scripting when hosting uploaded files
 

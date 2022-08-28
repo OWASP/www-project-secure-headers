@@ -1,0 +1,57 @@
+{
+  "last_update_utc": "2022-08-27 16:05:16",
+  "headers": [
+    {
+      "name": "Cache-Control",
+      "value": "no-store, max-age=0"
+    },
+    {
+      "name": "Clear-Site-Data",
+      "value": "\"cache\",\"cookies\",\"storage\""
+    },
+    {
+      "name": "Content-Security-Policy",
+      "value": "default-src 'self'; object-src 'none'; child-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content"
+    },
+    {
+      "name": "Cross-Origin-Embedder-Policy",
+      "value": "require-corp"
+    },
+    {
+      "name": "Cross-Origin-Opener-Policy",
+      "value": "same-origin"
+    },
+    {
+      "name": "Cross-Origin-Resource-Policy",
+      "value": "same-origin"
+    },
+    {
+      "name": "Permissions-Policy",
+      "value": "accelerometer=(),autoplay=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),geolocation=(),gyroscope=(),magnetometer=(),microphone=(),midi=(),payment=(),picture-in-picture=(),publickey-credentials-get=(),screen-wake-lock=(),sync-xhr=(self),usb=(),web-share=(),xr-spatial-tracking=()"
+    },
+    {
+      "name": "Pragma",
+      "value": "no-cache"
+    },
+    {
+      "name": "Referrer-Policy",
+      "value": "no-referrer"
+    },
+    {
+      "name": "Strict-Transport-Security",
+      "value": "max-age=31536000 ; includeSubDomains"
+    },
+    {
+      "name": "X-Content-Type-Options",
+      "value": "nosniff"
+    },
+    {
+      "name": "X-Frame-Options",
+      "value": "deny"
+    },
+    {
+      "name": "X-Permitted-Cross-Domain-Policies",
+      "value": "none"
+    }
+  ]
+}

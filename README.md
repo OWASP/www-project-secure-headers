@@ -2,6 +2,7 @@
 
 [![OWASP Lab](https://img.shields.io/badge/owasp-lab-yellow.svg)](https://owasp.org/projects)
 [![External Links Validity Check](https://github.com/OWASP/www-project-secure-headers/actions/workflows/check-external-links.yml/badge.svg?branch=master)](https://github.com/OWASP/www-project-secure-headers/actions/workflows/check-external-links.yml)
+[![Update headers reference JSON files](https://github.com/OWASP/www-project-secure-headers/actions/workflows/headers-generate-json-files.yml/badge.svg?branch=master)](https://github.com/OWASP/www-project-secure-headers/actions/workflows/headers-generate-json-files.yml)
 
 The OWASP Secure Headers Project (also named OSHP) describes HTTP response headers that your application can use to increase the security of your application. Once set, these HTTP response headers can restrict modern browsers from running into easily preventable vulnerabilities. The OWASP Secure Headers Project intends to raise awareness and use of these headers.
 
@@ -13,7 +14,28 @@ HTTP headers are well-known and also despised. Seeking a balance between usabili
 
 We aim to publish reports on header usage stats, developments and changes, code libraries that make these headers easily accessible to developers on a range of platforms, and data sets concerning the general usage of these headers.
 
-The OWASP Secure Headers Project is migrating to this new OWASP website. For now you can still access the old website here [https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project).
+🌐 The OWASP Secure Headers Project was migrated to a [new OWASP website](https://owasp.org/www-project-secure-headers/).
+
+📁 You can still access the old website [here](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project).
+
+## Issue and discussions
+
+Both are handled with this dedicated [project](https://github.com/oshp/oshp-tracking):
+
+* [Issues](https://github.com/oshp/oshp-tracking/issues).
+* [Discussions](https://github.com/oshp/oshp-tracking/discussions).
+
+## Content editor
+
+Content editing is done with [Visual Studio Code](https://code.visualstudio.com/).
+
+A [workspace file](project.code-workspace) is provided with [recommended extensions](.vscode/extensions.json).
+
+## Generated content
+
+The folder [ci](ci) contains materials to generate the both JSON files containing the header recommended to add and remove.
+
+Generation is performed by this GitHub action [workflow](.github/workflows/headers-generate-json-files.yml) everytime the file [tab_bestpractices.md](tab_bestpractices.md) is modified.
 
 ## Contributors
 
@@ -22,4 +44,4 @@ The OWASP Secure Headers Project is migrating to this new OWASP website. For now
 
 ## Licensing
 
-OWASP Secure Headers is free to use. It is licensed under the Apache 2.0 License.
+OWASP Secure Headers Project is free to use. It is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).

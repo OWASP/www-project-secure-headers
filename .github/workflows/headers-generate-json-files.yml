@@ -1,0 +1,33 @@
+name: update_headers_reference_json_files
+on:
+  workflow_dispatch:
+  push:
+    paths:
+    - 'tab_bestpractices.md' 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Run generation of both files
+      run: |
+        cd ci; python headers_generate_json_files.py
+    - name: Set up Git user
+      run: git config --global user.email "gha@github.com"; git config --global user.name "GHActionBot"
+    - name: Commit update
+      run: git commit -am "Sync reference headers json files"; git push
+    - name: Attach generated artefacts      
+      uses: actions/upload-artifact@v3
+      with:
+        name: data
+        path: |
+          ci/headers_add.json
+          ci/headers_remove.json
