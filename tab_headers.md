@@ -9,15 +9,15 @@ tags: headers
 
 # Response Headers
 
-> Header lifecycle flow: `Working draft -> Active -> Almost deprecated -> Deprecated`.
+> 📐 Header lifecycle flow: `Working draft -> Active -> Almost deprecated -> Deprecated`.
 
-**Working draft**
+⚒ **Working draft**
 
 * [Permissions Policy](#permissions-policy)
 
-**Active**
+✔ **Active**
 
-* [HTTP Strict Transport Security](#http-strict-transport-security)
+* [Strict-Transport-Security](#strict-transport-security)
 * [X-Frame-Options](#x-frame-options)
 * [X-Content-Type-Options](#x-content-type-options)
 * [Content-Security-Policy](#content-security-policy)
@@ -29,19 +29,20 @@ tags: headers
 * [Cross-Origin-Resource-Policy](#cross-origin-resource-policy)
 * [Cache-Control](#cache-control)
 
-**Almost deprecated**
+🧭 **Almost deprecated**
+
+None
+
+❌ **Deprecated**
 
 * [Feature-Policy](#feature-policy)
-
-**Deprecated**
-
 * [Expect-CT](#expect-ct)
 * [Public-Key-Pins](#public-key-pins)
 * [X-XSS-Protection](#x-xss-protection)
 
-## HTTP Strict Transport Security
+## Strict-Transport-Security
 
-HTTP Strict Transport Security (also named HSTS) is a web security policy mechanism which helps to protect websites against protocol downgrade attacks and cookie hijacking. It allows web servers to declare that web browsers (or other complying user agents) should only interact with it using secure HTTPS connections, and never via the insecure HTTP protocol. HSTS is an IETF standards track protocol and is specified in RFC 6797. A server implements an HSTS policy by supplying a header (`Strict-Transport-Security`) over an HTTPS connection (HSTS headers over HTTP are ignored).
+HTTP Strict Transport Security (also named *HSTS*) is a web security policy mechanism which helps to protect websites against protocol downgrade attacks and cookie hijacking. It allows web servers to declare that web browsers (or other complying user agents) should only interact with it using secure HTTPS connections, and never via the insecure HTTP protocol. HSTS is an IETF standards track protocol and is specified in [RFC 6797](https://www.rfc-editor.org/rfc/rfc6797). A server implements an HSTS policy by supplying a header (`Strict-Transport-Security`) over an HTTPS connection (HSTS headers over HTTP are ignored).
 
 ### Values
 
@@ -394,66 +395,31 @@ Cache-Control: public, max-age=604800
 
 ## Permissions Policy
 
-> **Working draft.**
+> ⚒ **Working draft.**
 
 The Permissions-Policy header replaces the existing **Feature-Policy** header for controlling delegation of permissions and powerful features. The header uses a structured syntax, and allows sites to more tightly restrict which origins can be granted access to features (source [Chrome platform status](https://www.chromestatus.com/feature/5745992911552512)).
 
 ### Values
 
-|     Value    | Description |
-|:------------:|:----------:|
-|`accelerometer`|Controls whether the current document is allowed to gather information about the acceleration of the device through the Accelerometer interface.
-|`ambient-light-sensor`|Controls whether the current document is allowed to gather information about the amount of light in the environment around the device through the AmbientLightSensor interface.|
-|`autoplay`|Controls whether the current document is allowed to autoplay media requested through the HTMLMediaElement interface.|
-|`battery`|Controls whether the use of the Battery Status API is allowed.|
-|`camera`|Controls whether the current document is allowed to use video input devices.|
-|`display-capture`|Controls whether or not the current document is permitted to use the `getDisplayMedia()` method to capture screen contents.|
-|`document-domain`|Controls whether the current document is allowed to set document.domain.|
-|`encrypted-media`|Controls whether the current document is allowed to use the Encrypted Media Extensions API (EME).|
-|`execution-while-not-rendered`|Controls whether tasks should execute in frames while they're not being rendered (e.g. if an iframe is hidden or `display: none`).|
-|`execution-while-out-of-viewport`|Controls whether tasks should execute in frames while they're outside of the visible viewport.|
-|`fullscreen`|Controls whether the current document is allowed to use `Element.requestFullScreen()`.|
-|`geolocation`|Controls whether the current document is allowed to use the Geolocation Interface.|
-|`gyroscope`|Controls whether the current document is allowed to gather information about the orientation of the device through the Gyroscope interface.|
-|`layout-animations`|Controls whether the current document is allowed to show layout animations.|
-|`legacy-image-formats`|Controls whether the current document is allowed to display images in legacy formats.|
-|`magnetometer`|Controls whether the current document is allowed to gather information about the orientation of the device through the Magnetometer interface.|
-|`microphone`|Controls whether the current document is allowed to use audio input devices.|
-|`midi`|Controls whether the current document is allowed to use the Web MIDI API.|
-|`navigation-override`|Controls the availability of mechanisms that enables the page author to take control over the behavior of spatial navigation, or to cancel it outright.|
-|`oversized-images`|Controls whether the current document is allowed to download and display large images.|
-|`payment`|Controls whether the current document is allowed to use the Payment Request API.|
-|`picture-in-picture`|Controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.|
-|`publickey-credentials-get`|Controls whether the current document is allowed to use the Web Authentication API to retrieve already stored public-key credentials, i.e. via `navigator.credentials.get({publicKey: ..., ...})`.|
-|`sync-xhr`|Controls whether the current document is allowed to make synchronous XMLHttpRequest requests.|
-|`usb`|Controls whether the current document is allowed to use the WebUSB API.|
-|`vr`|Controls whether the current document is allowed to use the WebVR API.|
-|`wake-lock`|Controls whether the current document is allowed to use Wake Lock API to indicate that device should not enter power-saving mode.|
-|`screen-wake-lock`|Controls whether the current document is allowed to use Screen Wake Lock API to indicate that device should not turn off or dim the screen.|
-|`web-share`|Controls whether or not the current document is allowed to use the `Navigator.share()` of Web Share API to share text, links, images, and other content to arbitrary destinations of user's choice, e.g. mobile apps.|
-|`xr-spatial-tracking`|Controls whether or not the current document is allowed to use the WebXR Device API to interact with a WebXR session.|
+🧭 As the specification is still under development, it is better to consult this [page](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy#directives) to obtain the current list of supported directives.
 
 ### Example
 
 ```
-Permissions-Policy: accelerometer=(),autoplay=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),geolocation=(),gyroscope=(),magnetometer=(),microphone=(),midi=(),payment=(),picture-in-picture=(),publickey-credentials-get=(),screen-wake-lock=(),sync-xhr=(self),usb=(),web-share=(),xr-spatial-tracking=()
+Permissions-Policy: accelerometer=(),autoplay=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),screen-wake-lock=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),web-share=(),xr-spatial-tracking=()
 ```
 
 ### Remarks
 
-Usage of all possible values from the table above raised the following error on *Chrome 90.0.4430.212* and *Edge 90.0.818.62*:
+Usage of the header value example above raised the following error on *Chrome 105.0.5195.102* and *Edge 105.0.1343.27*:
 
 ```
-Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.
-Error with Permissions-Policy header: Unrecognized feature: 'battery'.
-Error with Permissions-Policy header: Unrecognized feature: 'execution-while-not-rendered'.
-Error with Permissions-Policy header: Unrecognized feature: 'execution-while-out-of-viewport'.
 Error with Permissions-Policy header: Unrecognized feature: 'layout-animations'.
 Error with Permissions-Policy header: Unrecognized feature: 'legacy-image-formats'.
-Error with Permissions-Policy header: Unrecognized feature: 'navigation-override'.
 Error with Permissions-Policy header: Unrecognized feature: 'oversized-images'.
-Error with Permissions-Policy header: Unrecognized feature: 'vr'.
-Error with Permissions-Policy header: Unrecognized feature: 'wake-lock'.
+Error with Permissions-Policy header: Unrecognized feature: 'speaker-selection'.
+Error with Permissions-Policy header: Unrecognized feature: 'unoptimized-images'.
+Error with Permissions-Policy header: Unrecognized feature: 'unsized-media'.
 ```
 
 ### References
@@ -467,40 +433,13 @@ Error with Permissions-Policy header: Unrecognized feature: 'wake-lock'.
 
 ## Feature-Policy
 
-> **Almost deprecated.**
+> **Deprecated**: Replaced by the header *[Permissions-Policy](#permissions-policy)*.
 
-> **⚠️ Warning:** This header was split into [Permissions-Policy](https://w3c.github.io/webappsec-feature-policy/#permissions-policy-http-header-field) and [Document-Policy](https://w3c.github.io/webappsec-feature-policy/document-policy#document-policy-http-header) and will be considered deprecated once all impacted features are moved off of feature policy.
-
-The Feature-Policy header is an **experimental** feature that allows developers to selectively enable and disable use of various browser features and APIs.  
-The two most well supported values are `microphone` and `camera`. For all the other ones, please consult [this](https://caniuse.com/#search=Feature-Policy) page.
+Feature Policy allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to [Content Security Policy](#content-security-policy) but controls features instead of security behavior (Source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Feature_Policy)).
 
 ### Values
 
-| Value                  | Description |
-|------------------------|-------------|
-| `accelerometer`        | Controls access to accelerometer sensors on the device. |
-| `ambient-light-sensor` | Controls access to ambient light sensors on the device. |
-| `autoplay`             | Controls access to autoplay through `play()` and the `autoplay` attribute. |
-| `battery`              | Controls access to the BatteryManager API. |
-| `camera`               | Controls access to video input devices. |
-| `display-capture`      | Controls access to capturing the display output. |
-| `document-domain`      | Controls access to setting `document.domain`. |
-| `encrypted-media`      | Controls whether `requestMediaKeySystemAccess()` is allowed. |
-| `fullscreen`           | Controls whether `requestFullscreen()` is allowed. |
-| `geolocation`          | Controls access to the `Geolocation` interface. |
-| `gyroscope`            | Controls access to gyroscope sensors on the device. |
-| `magnetometer`         | Controls access to magnetometer sensors on the device. |
-| `microphone`           | Controls access to audio input devices. |
-| `midi`                 | Controls access to `requestMIDIAccess()` method. |
-| `navigation-override`  | Controls access to override of the spatial navigation API. |
-| `payment`              | Controls access to the `PaymentRequest` interface. |
-| `picture-in-picture`   | Controls access to picture-in-picture. |
-| `speaker`              | Controls access to audio output devices. |
-| `usb`                  | Controls access to USB devices. |
-| `vibrate`              | (**deprecated**) Controls access to the `vibrate()` method. |
-| `vr`                   | (**deprecated**) Controls access to VR displays. |
-
-*Some experimental features are not present in this list, please check the references below for a complete list.*
+Refer to this [page](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy#directives) to obtains the list of supported directives.
 
 ### Example
 
@@ -514,7 +453,7 @@ Feature-Policy: vibrate 'none'; geolocation 'none'
 * <https://scotthelme.co.uk/a-new-security-header-feature-policy/>
 * <https://github.com/w3c/webappsec-feature-policy/blob/master/features.md>
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy>
-* <https://caniuse.com/permissions-policy>
+* <https://caniuse.com/feature-policy>
 
 ## Expect-CT
 
