@@ -401,7 +401,7 @@ The Permissions-Policy header replaces the existing **Feature-Policy** header fo
 
 ### Values
 
-🧭 As the specification is still under developmement, it is better to consult this [page](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy#directives) to obtains the current list of supported directives.
+🧭 As the specification is still under development, it is better to consult this [page](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy#directives) to obtain the current list of supported directives.
 
 ### Example
 
