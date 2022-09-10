@@ -11,11 +11,11 @@ tags: headers
 
 > 📐 Header lifecycle flow: `Working draft -> Active -> Almost deprecated -> Deprecated`.
 
-⚒ **Working draft**
+💻 **Working draft**
 
 * [Permissions Policy](#permissions-policy)
 
-✔ **Active**
+✅ **Active**
 
 * [Strict-Transport-Security](#strict-transport-security)
 * [X-Frame-Options](#x-frame-options)
@@ -395,13 +395,13 @@ Cache-Control: public, max-age=604800
 
 ## Permissions Policy
 
-> ⚒ **Working draft.**
+> 💻 **Working draft.**
 
 The Permissions-Policy header replaces the existing **Feature-Policy** header for controlling delegation of permissions and powerful features. The header uses a structured syntax, and allows sites to more tightly restrict which origins can be granted access to features (source [Chrome platform status](https://www.chromestatus.com/feature/5745992911552512)).
 
 ### Values
 
-🧭 As the specification is still under development, it is better to consult this [page](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy#directives) to obtain the current list of supported directives.
+🧭 As the specification is still under development, it is better to consult this [page](https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md) to obtain the current list of supported directives.
 
 ### Example
 
@@ -432,6 +432,7 @@ Error with Permissions-Policy header: Unrecognized feature: 'unsized-media'.
 * <https://www.w3.org/TR/permissions-policy-1/>
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy>
 * <https://www.chromestatus.com/feature/5745992911552512>
+* <https://www.permissionspolicy.com/>
 
 ## Feature-Policy
 
