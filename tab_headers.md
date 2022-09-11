@@ -11,11 +11,11 @@ tags: headers
 
 > 📐 Header lifecycle flow: `Working draft -> Active -> Almost deprecated -> Deprecated`.
 
-⚒ **Working draft**
+💻 **Working draft**
 
 * [Permissions Policy](#permissions-policy)
 
-✔ **Active**
+✅ **Active**
 
 * [Strict-Transport-Security](#strict-transport-security)
 * [X-Frame-Options](#x-frame-options)
@@ -395,18 +395,18 @@ Cache-Control: public, max-age=604800
 
 ## Permissions Policy
 
-> ⚒ **Working draft.**
+> 💻 **Working draft.**
 
 The Permissions-Policy header replaces the existing **Feature-Policy** header for controlling delegation of permissions and powerful features. The header uses a structured syntax, and allows sites to more tightly restrict which origins can be granted access to features (source [Chrome platform status](https://www.chromestatus.com/feature/5745992911552512)).
 
 ### Values
 
-🧭 As the specification is still under development, it is better to consult this [page](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy#directives) to obtain the current list of supported directives.
+🧭 As the specification is still under development, it is better to consult this [page](https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md) to obtain the current list of supported directives.
 
 ### Example
 
 ```
-Permissions-Policy: accelerometer=(),autoplay=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),screen-wake-lock=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),web-share=(),xr-spatial-tracking=()
+Permissions-Policy: accelerometer=(),ambient-light-sensor=(),autoplay=(),battery=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),screen-wake-lock=(),web-share=(),xr-spatial-tracking=()
 ```
 
 ### Remarks
@@ -414,6 +414,8 @@ Permissions-Policy: accelerometer=(),autoplay=(),camera=(),display-capture=(),do
 Usage of the header value example above raised the following error on *Chrome 105.0.5195.102* and *Edge 105.0.1343.27*:
 
 ```
+Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.
+Error with Permissions-Policy header: Unrecognized feature: 'battery'.
 Error with Permissions-Policy header: Unrecognized feature: 'layout-animations'.
 Error with Permissions-Policy header: Unrecognized feature: 'legacy-image-formats'.
 Error with Permissions-Policy header: Unrecognized feature: 'oversized-images'.
@@ -430,6 +432,7 @@ Error with Permissions-Policy header: Unrecognized feature: 'unsized-media'.
 * <https://www.w3.org/TR/permissions-policy-1/>
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy>
 * <https://www.chromestatus.com/feature/5745992911552512>
+* <https://www.permissionspolicy.com/>
 
 ## Feature-Policy
 

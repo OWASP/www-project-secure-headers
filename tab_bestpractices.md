@@ -41,7 +41,7 @@ The following section propose a configuration for the [actively supported and wo
 | Cross-Origin-Embedder-Policy                 | `require-corp`   |
 | Cross-Origin-Opener-Policy                   | `same-origin`   |
 | Cross-Origin-Resource-Policy                 | `same-origin`  |
-| Permissions-Policy                           | `accelerometer=(),autoplay=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),screen-wake-lock=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),web-share=(),xr-spatial-tracking=()` |
+| Permissions-Policy                           | `accelerometer=(),ambient-light-sensor=(),autoplay=(),battery=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),screen-wake-lock=(),web-share=(),xr-spatial-tracking=()` |
 | Cache-Control         | `no-store, max-age=0`  |
 | Pragma         | `no-cache`  |
 
@@ -49,7 +49,7 @@ The following section propose a configuration for the [actively supported and wo
 
 ### Web server syntax
 
-This section indicate the syntax to use to set a HTTP header according to the web server targeted.
+This section indicates the syntax to use to set an HTTP header according to the web server targeted.
 
 | Web server name | Syntax  |
 | ----------------|---------|
@@ -151,6 +151,13 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-Generator](https://webtechsurvey.com/response-header/x-generator) | `Drupal 8` | Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response. |
 | [X-Generated-By](https://webtechsurvey.com/response-header/x-generated-by) | `Smartsite version 7.11.1.3` | Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response. |
 | [X-CMS](https://webtechsurvey.com/response-header/x-cms) | `Thinq CMS 1.7.0.0` | Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response. |
+| [X-Powered-By-Plesk](https://webtechsurvey.com/response-header/x-powered-by-plesk) | `PleskLin` or `PleskWin` | Indicate that the platform is based on the [Plesk](https://www.plesk.com) software in addition to the underlying operating system. |
+| [X-Php-Version](https://webtechsurvey.com/response-header/x-php-version) | `7.4` | Indicate the version of [PHP](https://www.php.net) technology used. |
+| [Powered-By](https://webtechsurvey.com/response-header/powered-by) | `PrestaShop` | Indicate the name of the framework or platform used. |
+| [X-Content-Encoded-By](https://webtechsurvey.com/response-header/x-content-encoded-by) | `Joomla! 2.5` | Indicate the name of the framework or platform used. |
+| [Product](https://webtechsurvey.com/response-header/product) | `Z-BlogPHP 1.7.2` | Indicate the name of the framework or platform used. |
+| [X-CF-Powered-By](https://webtechsurvey.com/response-header/x-cf-powered-by) | `CF-Joomla 0.1.5` | Indicate the name of the framework or platform used. |
+| [X-Framework](https://webtechsurvey.com/response-header/x-framework) | `JP/4.01` | Indicate the name of the framework or platform used. |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
