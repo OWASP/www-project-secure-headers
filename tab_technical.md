@@ -9,12 +9,13 @@ tags: headers
 
 # Technical Resources
 
-This section provides a list of tools as well as documents to understand, analyze, develop and administrate HTTP secure headers to help achieving more secure and trustworthy web systems.
+This section provides a list of tools as well as documents to understand, analyze, develop and administer HTTP secure headers to help achieving more secure and trustworthy web systems.
 
 * [Presentations](#presentations)
 * [Analysis Tools](#analysis-tools)
 * [Development Libraries](#development-libraries)
 * [Operation Tools](#operation-tools)
+* [Miscellaneous Hints](#miscellaneous-hints)
 
 ## Presentations
 
@@ -36,13 +37,13 @@ A humble, and fast, security-oriented HTTP headers analyzer.
 
 ### headers
 
-Python script to get some response headers from Alexa top sites file and store in a MySQL database.
+Python script to get some response headers from Alexa top sites files and store in a MySQL database.
 
 **Github:** <https://github.com/oshp/headers/>
 
 ### SecurityHeaders.com
 
-There are services out there that will analyse the HTTP response headers of other sites but I also wanted to add a rating system to the results. The HTTP response headers that this site analyses provide huge levels of protection and it's important that sites deploy them. Hopefully, by providing an easy mechanism to assess them, and further information on how to deploy missing headers, we can drive up the usage of security based headers across the web.
+There are services out there that will analyze the HTTP response headers of other sites but I also wanted to add a rating system to the results. The HTTP response headers that this site analysis provides huge levels of protection and it's important that sites deploy them. Hopefully, by providing an easy mechanism to assess them, and further information on how to deploy missing headers, we can drive up the usage of security based headers across the web.
 
 **Site:** <https://securityheaders.com/>
 
@@ -76,7 +77,7 @@ DrHEADer helps with the audit of security headers received in response to a sing
 
 ### API-Security
 
-This is a Python based API-Security framework containing ApiSecurityHeader.py script which will check the above mentioned Security response headers are present and contains the required value.
+This is a Python based API-Security framework containing ApiSecurityHeader.py script which will check the above-mentioned Security response headers are present and contains the required value.
 
 **Github:** <https://github.com/AmitKulkarni9/API-Security>
 
@@ -192,7 +193,7 @@ Best-practice OWASP HTTP response headers for Rust.
 
 ### http_hardening
 
-Puppet module to enable, configure and manage secure http headers on web servers.
+Puppet module to enable, configure and manage secure HTTP headers on web servers.
 
 **Supported Web Servers:**
 
@@ -203,3 +204,48 @@ Puppet module to enable, configure and manage secure http headers on web servers
 **Github:** <https://github.com/amenezes/http_hardening>  
 
 **Puppet Forge:** <https://forge.puppet.com/amenezes/http_hardening>
+
+## Miscellaneous Hints
+
+### Convert a Permissions-Policy back to Feature-Policy
+
+As the [Permissions-Policy](https://github.com/w3c/webappsec-permissions-policy/blob/main/permissions-policy-explainer.md) header is still in development and is [not yet well supported](https://caniuse.com/permissions-policy), it can be interesting to use the two formats to increase the coverage of browsers according to their support level for **Permissions-Policy** and **[Feature-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)** policy headers.
+
+The following _python3_ code snippet can be useful to achieve such conversion.
+
+📑 Source for the conversion rules was this [one](https://github.com/w3c/webappsec-permissions-policy/blob/main/permissions-policy-explainer.md#appendix-big-changes-since-this-was-called-feature-policy).
+
+💻 Code snippet:
+
+```python
+permissions_policy = 'fullscreen=(), geolocation=(self "https://game.com" "https://map.example.com"), gyroscope=(self), usb=*'
+feature_policy_directives = []
+# Collect directives
+permissions_policy_directives = permissions_policy.split(",")
+# Process each directive
+for permissions_policy_directive in permissions_policy_directives:
+    # Remove leading and trailing spaces
+    directive = permissions_policy_directive.strip(" ")
+    # Remove all double quotes
+    directive = directive.replace("\"", "")
+    # Replace disabling expression () by the corresponding one in Feature-Policy
+    directive = directive.replace("()", "'none'")
+    # Quote keywords: self
+    directive = directive.replace("self", "'self'")
+    # Replace the equals affectation character by a space
+    directive = directive.replace("=", " ")
+    # Remove parenthesis
+    directive = directive.replace("(", "").replace(")", "")
+    # Add the current directive to the collection
+    feature_policy_directives.append(directive)
+# Convert the collection of directives to a string with ; as directives separator
+feature_policy = "; ".join(feature_policy_directives)
+print(feature_policy)
+```
+
+💻 Execution example:
+
+```shell
+$ python code.py
+fullscreen 'none'; geolocation 'self' https://game.com https://map.example.com; gyroscope 'self'; usb *
+```
