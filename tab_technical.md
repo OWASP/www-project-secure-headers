@@ -14,7 +14,6 @@ This section provides a list of tools as well as documents to understand, analyz
 * [Presentations](#presentations)
 * [Analysis Tools](#analysis-tools)
 * [Development Libraries](#development-libraries)
-* [Operation Tools](#operation-tools)
 * [Miscellaneous Hints](#miscellaneous-hints)
 
 ## Presentations
@@ -27,19 +26,19 @@ This section provides a list of tools as well as documents to understand, analyz
 
 A security scanner for HTTP response headers.
 
-**Github:** <https://github.com/riramar/hsecscan>
+**GitHub:** <https://github.com/riramar/hsecscan>
 
 ### humble
 
 A humble, and fast, security-oriented HTTP headers analyzer.
 
-**Github:** <https://github.com/rfc-st/humble>
+**GitHub:** <https://github.com/rfc-st/humble>
 
 ### headers
 
 Python script to get some response headers from Alexa top sites files and store in a MySQL database.
 
-**Github:** <https://github.com/oshp/headers/>
+**GitHub:** <https://github.com/oshp/headers/>
 
 ### SecurityHeaders.com
 
@@ -53,9 +52,9 @@ A Mozilla project designed to help developers, system administrators, and securi
 
 **Site:** <https://observatory.mozilla.org/>
 
-**Github:** <https://github.com/mozilla/http-observatory/>
+**GitHub:** <https://github.com/mozilla/http-observatory/>
 
-**Github:** <https://github.com/mozilla/http-observatory-website/>
+**GitHub:** <https://github.com/mozilla/http-observatory-website/>
 
 ### Recx Security Analyser
 
@@ -67,19 +66,25 @@ Chrome extension that allows the inspection of security aspects of a site's HTTP
 
 Easy to use shell script which tests not only SSL/TLS encryption but also checks common headers and analyzes those. Output is screen, JSON, CSV and HTML.
 
-**Github:** <https://github.com/drwetter/testssl.sh>
+**GitHub:** <https://github.com/drwetter/testssl.sh>
 
 ### DrHEADer
 
 DrHEADer helps with the audit of security headers received in response to a single request or a list of requests.
 
-**Github:** <https://github.com/Santandersecurityresearch/DrHeader>
+**GitHub:** <https://github.com/Santandersecurityresearch/DrHeader>
 
 ### API-Security
 
 This is a Python based API-Security framework containing ApiSecurityHeader.py script which will check the above-mentioned Security response headers are present and contains the required value.
 
-**Github:** <https://github.com/AmitKulkarni9/API-Security>
+**GitHub:** <https://github.com/AmitKulkarni9/API-Security>
+
+### csp-evaluator
+
+NPM module allowing developers and security experts to check if a Content Security Policy serves as a strong mitigation against XSS attacks.
+
+**GitHub:** <https://github.com/google/csp-evaluator>
 
 ## Development Libraries
 
@@ -103,7 +108,7 @@ NWebsec consists of several security libraries for ASP.NET applications.
 
 Small package to allow adding security headers to ASP.NET Core websites.
 
-**Github**: <https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders>
+**GitHub**: <https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders>
 
 ### Ruby
 
@@ -111,7 +116,7 @@ Small package to allow adding security headers to ASP.NET Core websites.
 
 Security related headers all in one gem.
 
-**Github:** <https://github.com/github/secure_headers>
+**GitHub:** <https://github.com/github/secure_headers>
 
 ### PHP
 
@@ -119,13 +124,13 @@ Security related headers all in one gem.
 
 A PHP class aiming to make the use of browser security features more accessible.
 
-**Github:** <https://github.com/aidantwoods/SecureHeaders>
+**GitHub:** <https://github.com/aidantwoods/SecureHeaders>
 
 #### secure-headers
 
 PHP Secure Headers for Laravel and non-Laravel projects.
 
-**Github**: <https://github.com/bepsvpt/secure-headers>
+**GitHub**: <https://github.com/bepsvpt/secure-headers>
 
 ### RACK
 
@@ -133,7 +138,7 @@ PHP Secure Headers for Laravel and non-Laravel projects.
 
 Security related HTTP headers for Rack applications.
 
-**Github:** <https://github.com/frodsan/rack-secure_headers>
+**GitHub:** <https://github.com/frodsan/rack-secure_headers>
 
 ### NodeJS
 
@@ -141,13 +146,13 @@ Security related HTTP headers for Rack applications.
 
 Module to help secure Express apps with various HTTP headers.
 
-**Github:** <https://github.com/helmetjs/helmet>
+**GitHub:** <https://github.com/helmetjs/helmet>
 
 #### ember-cli-content-security-policy
 
 This addon makes it easy to use Content Security Policy (CSP) in your project. It can be deployed either via a Content-Security-Policy header sent from the Ember CLI Express server, or as a meta tag in the index.html file.
 
-**Github:** <https://github.com/rwjblue/ember-cli-content-security-policy/>
+**GitHub:** <https://github.com/rwjblue/ember-cli-content-security-policy/>
 
 ### HAPI
 
@@ -155,7 +160,7 @@ This addon makes it easy to use Content Security Policy (CSP) in your project. I
 
 A CSP plugin for hapi.
 
-**Github:** <https://github.com/nlf/blankie>
+**GitHub:** <https://github.com/nlf/blankie>
 
 ### Python
 
@@ -163,17 +168,17 @@ A CSP plugin for hapi.
 
 Content Security Policy for Django.
 
-**Github:** <https://github.com/mozilla/django-csp>
+**GitHub:** <https://github.com/mozilla/django-csp>
 
 A collection of models, views, middlewares, and forms to help secure a Django project.
 
-**Github:** <https://github.com/sdelements/django-security>
+**GitHub:** <https://github.com/sdelements/django-security>
 
 #### Secure
 
 Secure headers for Python web frameworks.
 
-**Github:** <https://github.com/TypeError/secure>
+**GitHub:** <https://github.com/TypeError/secure>
 
 ### Go
 
@@ -181,29 +186,13 @@ Secure headers for Python web frameworks.
 
 HTTP security middleware for Go(lang) inspired by HelmetJS.
 
-**Github:** <https://github.com/goddtriffin/helmet>
+**GitHub:** <https://github.com/goddtriffin/helmet>
 
 ### Rust
 
 Best-practice OWASP HTTP response headers for Rust.
 
 **Site:** <https://docs.rs/crate/owasp-headers/latest>
-
-## Operation Tools
-
-### http_hardening
-
-Puppet module to enable, configure and manage secure HTTP headers on web servers.
-
-**Supported Web Servers:**
-
-* Apache HTTP Server
-* NGINX
-* Lighttpd
-
-**Github:** <https://github.com/amenezes/http_hardening>  
-
-**Puppet Forge:** <https://forge.puppet.com/amenezes/http_hardening>
 
 ## Miscellaneous Hints
 
@@ -248,4 +237,42 @@ print(feature_policy)
 ```shell
 $ python code.py
 fullscreen 'none'; geolocation 'self' https://game.com https://map.example.com; gyroscope 'self'; usb *
+```
+
+### Test locally a Content-Security-Policy for weaknesses
+
+It can be interesting to validate locally a **Content-Security-Policy** for presence of weaknesses prior to apply it on deployed web applications.
+
+The following _JavaScript_ code snippet can be useful to achieve such validation by leveraging the [csp-evaluator](https://github.com/google/csp-evaluator) NPM module provided by Google.
+
+💻 Code snippet:
+
+```javascript
+import {CspEvaluator} from "csp_evaluator/dist/evaluator.js";
+import {CspParser} from "csp_evaluator/dist/parser.js";
+
+const args = process.argv.slice(2)
+if(args.length == 0){
+    console.error("[!] Missing CSP!");
+}else{
+    const csp = args[0]
+    console.info(`[+] CSP to evaluate:\n${csp}`);
+    const parsed = new CspParser(csp).csp;
+    console.info(`[+] Evaluation results:`);
+    const results = new CspEvaluator(parsed).evaluate();
+    results.forEach(elt => {
+        let info = `[Directive '${elt.directive}' - Severity ${elt.severity}]: ${elt.description}`;
+        console.info(info);
+    });
+}
+```
+
+💻 Execution example:
+
+```shell
+$ node code.js "default-src 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content"
+[+] CSP to evaluate:
+default-src 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content
+[+] Evaluation results:
+[Directive 'default-src' - Severity 50]: 'self' can be problematic if you host JSONP, Angular or user uploaded files.
 ```
