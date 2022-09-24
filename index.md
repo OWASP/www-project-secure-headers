@@ -53,6 +53,17 @@ We provide a [venom](https://github.com/ovh/venom) tests suite to validate an HT
 
 It is available through [this GitHub project](https://github.com/oshp/oshp-validator).
 
+## Headers reference files
+
+As mentioned in previous sections, we provide the collection of HTTP response security headers to add as well as HTTP response headers to remove, both in table form.
+
+💡 Additionally, we provide this information as two JSON files to enable automation in the context of a provisioning workflow:
+
+* Collection of [HTTP response security headers to add](ci/headers_add.json).
+* Collection of [HTTP response headers to remove](ci/headers_remove.json).
+
+📡 These json files are automatically updated.
+
 ## Discussions, information and roadmap
 
 We use the GitHub [discussions feature](https://github.com/oshp/oshp-tracking/discussions) for discussions about the project as well as spreading global information about it.
