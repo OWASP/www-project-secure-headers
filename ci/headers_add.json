@@ -1,5 +1,5 @@
 {
-  "last_update_utc": "2022-09-11 14:32:08",
+  "last_update_utc": "2022-09-24 15:15:51",
   "headers": [
     {
       "name": "Cache-Control",
@@ -11,7 +11,7 @@
     },
     {
       "name": "Content-Security-Policy",
-      "value": "default-src 'self'; object-src 'none'; child-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content"
+      "value": "default-src 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content"
     },
     {
       "name": "Cross-Origin-Embedder-Policy",
