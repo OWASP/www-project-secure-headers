@@ -14,7 +14,6 @@ This section provides a list of tools as well as documents to understand, analyz
 * [Presentations](#presentations)
 * [Analysis Tools](#analysis-tools)
 * [Development Libraries](#development-libraries)
-* [Operation Tools](#operation-tools)
 * [Miscellaneous Hints](#miscellaneous-hints)
 
 ## Presentations
@@ -194,22 +193,6 @@ HTTP security middleware for Go(lang) inspired by HelmetJS.
 Best-practice OWASP HTTP response headers for Rust.
 
 **Site:** <https://docs.rs/crate/owasp-headers/latest>
-
-## Operation Tools
-
-### http_hardening
-
-Puppet module to enable, configure and manage secure HTTP headers on web servers.
-
-**Supported Web Servers:**
-
-* Apache HTTP Server
-* NGINX
-* Lighttpd
-
-**GitHub:** <https://github.com/amenezes/http_hardening>  
-
-**Puppet Forge:** <https://forge.puppet.com/amenezes/http_hardening>
 
 ## Miscellaneous Hints
 
