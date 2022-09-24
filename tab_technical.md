@@ -34,12 +34,6 @@ A humble, and fast, security-oriented HTTP headers analyzer.
 
 **GitHub:** <https://github.com/rfc-st/humble>
 
-### headers
-
-Python script to get some response headers from Alexa top sites files and store in a MySQL database.
-
-**GitHub:** <https://github.com/oshp/headers/>
-
 ### SecurityHeaders.com
 
 There are services out there that will analyze the HTTP response headers of other sites but I also wanted to add a rating system to the results. The HTTP response headers that this site analysis provides huge levels of protection and it's important that sites deploy them. Hopefully, by providing an easy mechanism to assess them, and further information on how to deploy missing headers, we can drive up the usage of security based headers across the web.
