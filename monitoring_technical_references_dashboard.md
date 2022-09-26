@@ -1,9 +1,11 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2022-09-24 15:28:25
+> :timer_clock: Last verification (UTC): 2022-09-26 12:56:50
 
 ## GitHub repositories health status
+
+Provides a quick visual status on the health status (whether they are updated or not) of the referenced GitHub projects in the tab named **Technical**.
 
 :speech_balloon: **Status icon legends:**
 
@@ -23,14 +25,14 @@
 | `2022-09-08T01:23:13Z` (0 months ago) | :green_circle: | [mozilla/django-csp](https://github.com/mozilla/django-csp) |
 | `2022-09-13T16:32:14Z` (0 months ago) | :green_circle: | [Santandersecurityresearch/DrHeader](https://github.com/Santandersecurityresearch/DrHeader) |
 | `2022-09-14T13:40:24Z` (0 months ago) | :green_circle: | [riramar/hsecscan](https://github.com/riramar/hsecscan) |
-| `2022-09-14T14:48:26Z` (0 months ago) | :green_circle: | [mozilla/http-observatory-website/](https://github.com/mozilla/http-observatory-website/) |
 | `2022-09-15T19:54:43Z` (0 months ago) | :green_circle: | [google/csp-evaluator](https://github.com/google/csp-evaluator) |
 | `2022-09-17T07:45:57Z` (0 months ago) | :green_circle: | [bepsvpt/secure-headers](https://github.com/bepsvpt/secure-headers) |
 | `2022-09-21T23:10:41Z` (0 months ago) | :green_circle: | [aidantwoods/SecureHeaders](https://github.com/aidantwoods/SecureHeaders) |
 | `2022-09-21T23:29:53Z` (0 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
-| `2022-09-23T00:07:17Z` (0 months ago) | :green_circle: | [mozilla/http-observatory/](https://github.com/mozilla/http-observatory/) |
-| `2022-09-24T09:13:53Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
 | `2022-09-24T09:21:37Z` (0 months ago) | :green_circle: | [TypeError/secure](https://github.com/TypeError/secure) |
 | `2022-09-24T12:13:30Z` (0 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
-| `2022-09-24T14:55:15Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
+| `2022-09-24T16:53:14Z` (0 months ago) | :green_circle: | [mozilla/http-observatory/](https://github.com/mozilla/http-observatory/) |
+| `2022-09-24T16:53:22Z` (0 months ago) | :green_circle: | [mozilla/http-observatory-website/](https://github.com/mozilla/http-observatory-website/) |
+| `2022-09-25T15:26:24Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2022-09-26T12:45:49Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
 
