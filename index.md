@@ -31,7 +31,7 @@ HTTP headers are well known and also despised. Seeking a balance between usabili
 
 🏭 All the tools provided by the OSHP are gathered under this [GitHub organization](https://github.com/oshp/).
 
-📡 A presentation of the project is available on the [OWASP Spotlight Youtube playlist](https://www.youtube.com/watch?v=N4F3VWQYU9E) as well as on the [Application Security Podcast Youtube playlist](https://www.youtube.com/watch?v=0SNU9clVhKU).
+📺 A presentation of the project is available on the [OWASP Spotlight Youtube playlist](https://www.youtube.com/watch?v=N4F3VWQYU9E) as well as on the [Application Security Podcast Youtube playlist](https://www.youtube.com/watch?v=0SNU9clVhKU).
 
 ## Migration
 
@@ -56,7 +56,7 @@ It is available through [this GitHub project](https://github.com/oshp/oshp-valid
 
 ## Headers reference files
 
-📝 As mentioned in previous sections, we provide the collection of HTTP response security headers to add as well as HTTP response headers to remove, both in table form.
+📖 As mentioned in previous sections, we provide the collection of HTTP response security headers to add as well as HTTP response headers to remove, both in table form.
 
 💡 Additionally, we provide this information as two JSON files to enable automation in the context of a provisioning workflow:
 
