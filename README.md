@@ -31,11 +31,17 @@ Content editing is done with [Visual Studio Code](https://code.visualstudio.com/
 
 A [workspace file](project.code-workspace) is provided with [recommended extensions](.vscode/extensions.json).
 
-## Generated content
+## Automatically generated content
 
-The folder [ci](ci) contains materials to generate the both JSON files containing the header recommended to add and remove.
+The folder [ci](ci) (**CI** for **C**ontinuous **I**ntegration) contains materials to generate the following content.
 
-Generation is performed by this GitHub action [workflow](.github/workflows/headers-generate-json-files.yml) everytime the file [tab_bestpractices.md](tab_bestpractices.md) is modified.
+📝 Generate the both JSON files containing the header recommended to add and remove:
+
+* Generation is performed by this GitHub action [workflow](.github/workflows/headers-generate-json-files.yml) everytime the file [tab_bestpractices.md](tab_bestpractices.md) is modified.
+
+📝  Generate the [markdown file](monitoring_technical_references_dashboard.md) with the update health state of all GitHub repositories mentioned in the tab named **[Technical](tab_technical.md)**:
+
+* Generation is performed by this GitHub action [workflow](.github/workflows/monitoring-technical-references-generate-dashboard.yml) everytime the file [tab_technical.md](tab_technical.md) is modified.
 
 ## Contributors
 
@@ -44,4 +50,4 @@ Generation is performed by this GitHub action [workflow](.github/workflows/heade
 
 ## Licensing
 
-OWASP Secure Headers Project is free to use. It is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
+**OWASP Secure Headers Project** is free to use. It is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
