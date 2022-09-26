@@ -56,7 +56,7 @@ It is available through [this GitHub project](https://github.com/oshp/oshp-valid
 
 ## Headers reference files
 
-As mentioned in previous sections, we provide the collection of HTTP response security headers to add as well as HTTP response headers to remove, both in table form.
+📝 As mentioned in previous sections, we provide the collection of HTTP response security headers to add as well as HTTP response headers to remove, both in table form.
 
 💡 Additionally, we provide this information as two JSON files to enable automation in the context of a provisioning workflow:
 
