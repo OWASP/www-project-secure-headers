@@ -67,7 +67,7 @@ It is available through [this GitHub project](https://github.com/oshp/oshp-valid
 
 ## Technical references health dashboard
 
-👁‍🗨 We automatically generate and monitor this **[dashboard](https://github.com/OWASP/www-project-secure-headers/blob/master/monitoring_technical_references_dashboard.md)** to identify any dead project referenced in the **[Technical Resources](https://owasp.org/www-project-secure-headers/#div-technical)** tab.
+👁‍ We automatically generate and monitor this **[dashboard](https://github.com/OWASP/www-project-secure-headers/blob/master/monitoring_technical_references_dashboard.md)** to identify any dead project referenced in the **[Technical Resources](https://owasp.org/www-project-secure-headers/#div-technical)** tab.
 
 ## Discussions, information and roadmap
 
