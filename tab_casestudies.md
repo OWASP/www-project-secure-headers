@@ -9,7 +9,7 @@ tags: headers
 
 # Entity referencing the OWASP Secure Headers Project
 
-> Feel free to contact project leaders if your company or software (open source or not) was using the project.
+📡 Feel free to contact project leaders if your company or software (open source or not) was using the OSHP project.
 
 ## Company
 
