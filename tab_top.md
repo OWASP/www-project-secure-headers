@@ -9,7 +9,7 @@ tags: headers
 
 # Top Websites Examples
 
-HTTP response headers from the top websites in the world.
+🌎 HTTP response headers from the top websites in the world.
 
 Command used to extract the headers:
 

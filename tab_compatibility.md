@@ -9,7 +9,7 @@ tags: headers
 
 # Browser Support
 
-> A reference is provided, for each header, to a site always providing up-to-date information.
+📚 A reference is provided, for each header, to a site always providing up-to-date information.
 
 | Feature                                      | Reference  |
 | ---------------------------------------------|------------|
