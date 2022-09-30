@@ -13,7 +13,7 @@ tags: headers
 
 💻 **Working draft**
 
-* [Permissions Policy](#permissions-policy)
+* [Permissions-Policy](#permissions-policy)
 
 ✅ **Active**
 
