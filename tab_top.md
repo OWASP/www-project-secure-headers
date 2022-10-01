@@ -9,7 +9,7 @@ tags: headers
 
 # Top Websites Examples
 
-HTTP response headers from the top websites in the world.
+🌎 HTTP response headers from the top websites in the world.
 
 Command used to extract the headers:
 
@@ -88,7 +88,7 @@ x-response-time: 141
 x-connection-hash: d29168d08eb4439a1e87f5d5234656e361f15325b079c5aaa156ea87b583d000
 ```
 
-## Github
+## GitHub
 
 ```
 $ curl -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36" -s -D - https://www.github.com -o /dev/null

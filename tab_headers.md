@@ -9,11 +9,11 @@ tags: headers
 
 # Response Headers
 
-> 📐 Header lifecycle flow: `Working draft -> Active -> Almost deprecated -> Deprecated`.
+📐 Header lifecycle flow: `Working draft -> Active -> Almost deprecated -> Deprecated`.
 
 💻 **Working draft**
 
-* [Permissions Policy](#permissions-policy)
+* [Permissions-Policy](#permissions-policy)
 
 ✅ **Active**
 
@@ -29,7 +29,7 @@ tags: headers
 * [Cross-Origin-Resource-Policy](#cross-origin-resource-policy)
 * [Cache-Control](#cache-control)
 
-🧭 **Almost deprecated**
+⏰ **Almost deprecated**
 
 None
 

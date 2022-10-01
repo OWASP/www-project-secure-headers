@@ -11,10 +11,10 @@ tags: headers
 
 This section provides a list of tools as well as documents to understand, analyze, develop and administer HTTP secure headers to help achieving more secure and trustworthy web systems.
 
-* [Presentations](#presentations)
-* [Analysis Tools](#analysis-tools)
-* [Development Libraries](#development-libraries)
-* [Miscellaneous Hints](#miscellaneous-hints)
+* 📺 [Presentations](#presentations)
+* 🏭 [Analysis Tools](#analysis-tools)
+* 👩‍💻 [Development Libraries](#development-libraries)
+* 💡 [Miscellaneous Hints](#miscellaneous-hints)
 
 ## Presentations
 

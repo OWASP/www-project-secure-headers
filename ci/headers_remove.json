@@ -1,6 +1,7 @@
 {
-  "last_update_utc": "2022-09-24 15:23:18",
+  "last_update_utc": "2022-09-30 14:41:37",
   "headers": [
+    "Host-Header",
     "Liferay-Portal",
     "Powered-By",
     "Product",
