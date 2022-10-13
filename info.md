@@ -4,12 +4,12 @@
 
 #### Classification
 
-* <i class="fas fa-file-alt fa-3x" style="color:#233e81;"></i> Documentation
+* <i class="fas fa-file-alt fa-2x" style="color:#233e81;"></i> Documentation
 
 #### Audience
 
-* <i class="fas fa-toolbox fa-3x" style="color:#233e81;"></i> Builder
-* <i class="fas fa-shield-alt fa-3x" style="color:#233e81;"></i> Defender
+* <i class="fas fa-toolbox fa-2x" style="color:#233e81;"></i> Builder
+* <i class="fas fa-shield-alt fa-2x" style="color:#233e81;"></i> Defender
 
 ### Project GitHub Organization
 
