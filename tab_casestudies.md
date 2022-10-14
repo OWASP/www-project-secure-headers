@@ -24,3 +24,4 @@ tags: headers
 ## Software
 
 * [Nmap](https://github.com/nmap/nmap/blob/master/scripts/http-security-headers.nse).
+* [Spring Security](https://docs.spring.io/spring-security/reference/features/exploits/headers.html).
