@@ -159,6 +159,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-CF-Powered-By](https://webtechsurvey.com/response-header/x-cf-powered-by) | `CF-Joomla 0.1.5` | Indicate the name of the framework or platform used. |
 | [X-Framework](https://webtechsurvey.com/response-header/x-framework) | `JP/4.01` | Indicate the name of the framework or platform used. |
 | [Host-Header](https://webtechsurvey.com/response-header/host-header) | `CorpAxe.com` | Indicate which virtual host of the web server the response is coming from. |
+| [X-Envoy-Upstream-Service-Time](https://webtechsurvey.com/response-header/x-envoy-upstream-service-time) | `42` | Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow. |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
