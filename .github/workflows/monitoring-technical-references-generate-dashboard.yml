@@ -3,7 +3,9 @@ on:
   workflow_dispatch:
   push:
     paths:
-    - 'tab_technical.md' 
+    - 'tab_technical.md'
+  schedule:
+    - cron: '0 0 * * 0'
 jobs:
   build:
     runs-on: ubuntu-latest
