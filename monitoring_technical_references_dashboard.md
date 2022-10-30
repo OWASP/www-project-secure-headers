@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2022-10-23 07:18:52
+> :timer_clock: Last verification (UTC): 2022-10-30 00:07:34
 
 ## GitHub repositories health status
 
@@ -25,14 +25,14 @@ Provides a quick visual status on the health status (whether they are updated or
 | `2022-10-11T23:08:59Z` (0 months ago) | :green_circle: | [bepsvpt/secure-headers](https://github.com/bepsvpt/secure-headers) |
 | `2022-10-17T14:14:42Z` (0 months ago) | :green_circle: | [google/csp-evaluator](https://github.com/google/csp-evaluator) |
 | `2022-10-20T04:29:36Z` (0 months ago) | :green_circle: | [mozilla/django-csp](https://github.com/mozilla/django-csp) |
-| `2022-10-20T12:24:01Z` (0 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
 | `2022-10-20T14:07:17Z` (0 months ago) | :green_circle: | [Santandersecurityresearch/DrHeader](https://github.com/Santandersecurityresearch/DrHeader) |
-| `2022-10-21T07:59:47Z` (0 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
-| `2022-10-22T01:08:52Z` (0 months ago) | :green_circle: | [TypeError/secure](https://github.com/TypeError/secure) |
 | `2022-10-22T07:25:52Z` (0 months ago) | :green_circle: | [riramar/hsecscan](https://github.com/riramar/hsecscan) |
-| `2022-10-22T08:00:41Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
-| `2022-10-22T12:53:59Z` (0 months ago) | :green_circle: | [mozilla/http-observatory-website/](https://github.com/mozilla/http-observatory-website/) |
 | `2022-10-22T12:54:11Z` (0 months ago) | :green_circle: | [mozilla/http-observatory/](https://github.com/mozilla/http-observatory/) |
 | `2022-10-22T16:16:50Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
-| `2022-10-22T19:45:06Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
+| `2022-10-26T20:49:45Z` (0 months ago) | :green_circle: | [mozilla/http-observatory-website/](https://github.com/mozilla/http-observatory-website/) |
+| `2022-10-27T08:42:14Z` (0 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
+| `2022-10-29T00:39:29Z` (0 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
+| `2022-10-29T00:39:55Z` (0 months ago) | :green_circle: | [TypeError/secure](https://github.com/TypeError/secure) |
+| `2022-10-29T15:24:15Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2022-10-29T23:42:59Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
 
