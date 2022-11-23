@@ -9,7 +9,7 @@
 
 ## Introduction
 
-📚 HTTP headers are well-known and also despised. Seeking a balance between usability and security, developers implement functionality through the headers that can make applications more versatile or secure. But in practice how are the headers being implemented? What sites follow the best implementation practices? Big companies, small, all or none?
+📚 HTTP headers are well known and also despised. Seeking a balance between usability and security, developers implement functionality through the headers that can make applications more versatile or secure. But in practice how are the headers being implemented? What sites follow the best implementation practices? Big companies, small, all or none?
 
 ## Description
 
@@ -18,6 +18,10 @@
 🌐 The OWASP Secure Headers Project was migrated to a [new OWASP website](https://owasp.org/www-project-secure-headers/).
 
 📁 You can still access the old website [here](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project).
+
+## Logo
+
+🎨 The project official logo is stored into the folder [logo](logo) as well as into the [OWASP Swag](https://github.com/OWASP/owasp-swag) GitHub repository.
 
 ## Issue and discussions
 
@@ -38,11 +42,11 @@ A [workspace file](project.code-workspace) is provided with [recommended extensi
 
 📝 Generate the both JSON files containing the header recommended to add and remove:
 
-* Generation is performed by this GitHub action [workflow](.github/workflows/headers-generate-json-files.yml) everytime the file [tab_bestpractices.md](tab_bestpractices.md) is modified.
+* Generation is performed by this GitHub action [workflow](.github/workflows/headers-generate-json-files.yml) every time the file [tab_bestpractices.md](tab_bestpractices.md) is modified.
 
 📝  Generate the [markdown file](monitoring_technical_references_dashboard.md) with the update health state of all GitHub repositories mentioned in the tab named **[Technical](tab_technical.md)**:
 
-* Generation is performed by this GitHub action [workflow](.github/workflows/monitoring-technical-references-generate-dashboard.yml) everytime the file [tab_technical.md](tab_technical.md) is modified.
+* Generation is performed by this GitHub action [workflow](.github/workflows/monitoring-technical-references-generate-dashboard.yml) every time the file [tab_technical.md](tab_technical.md) is modified.
 
 ## Contributors
 
