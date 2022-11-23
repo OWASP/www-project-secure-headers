@@ -2,6 +2,8 @@
 
 > **Note**: OWASP Secure Headers Project logo is free to use. It is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
 
+<!-- markdown-link-check-disable -->
+
 🎨 Designed by **[weperfectionist](https://www.fiverr.com/weperfectionist)** using `Adobe Illustrator`.
 
 🧾 Source files are **[logo-source.ai](logo-source.ai)** and **[logo-source.eps](logo-source.eps)**.
@@ -23,3 +25,5 @@ Non-transparent background ([JPEG](https://www.adobe.com/creativecloud/file-type
 * [White foreground on black background](logo-white-on-black.jpg).
 
 The file [logo-all.pdf](logo-all.pdf) gathers the three non-transparent logo.
+
+<!-- markdown-link-check-disable -->
