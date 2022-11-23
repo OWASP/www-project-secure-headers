@@ -1,6 +1,6 @@
 # OWASP Secure Headers Project official logo
 
-> **Note**: **OWASP Secure Headers Project** logo is free to use. It is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
+> **Note**: OWASP Secure Headers Project logo is free to use. It is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
 
 🎨 Designed by **[weperfectionist](https://www.fiverr.com/weperfectionist)** using `Adobe Illustrator`.
 
