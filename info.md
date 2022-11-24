@@ -17,5 +17,5 @@
 
 ### Project official logo
 
-* 🎨 [Logo](https://github.com/OWASP/www-project-secure-headers/tree/master/logo)
+* 🎨 [Logo](logo)
 * 🎨 [OWASP Swag repository](https://github.com/OWASP/owasp-swag/tree/master/projects/secure-headers-project)
