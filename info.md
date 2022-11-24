@@ -14,3 +14,8 @@
 ### Project GitHub Organization
 
 * 💻 [OSHP](https://github.com/oshp/)
+
+### Project official logo
+
+* 🎨 [Logo](logo)
+* 🎨 [OWASP Swag repository](https://github.com/OWASP/owasp-swag/tree/master/projects/secure-headers-project)
