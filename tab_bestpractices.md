@@ -160,6 +160,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-Framework](https://webtechsurvey.com/response-header/x-framework) | `JP/4.01` | Indicate the name of the framework or platform used. |
 | [Host-Header](https://webtechsurvey.com/response-header/host-header) | `CorpAxe.com` | Indicate which virtual host of the web server the response is coming from. |
 | [X-Envoy-Upstream-Service-Time](https://webtechsurvey.com/response-header/x-envoy-upstream-service-time) | `42` | Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow. |
+| [Pega-Host](https://webtechsurvey.com/response-header/pega-host) | `srv-pega11` | Indicate the internal host name of the server that handled the request in the context of usage of a software from the [PEGA](https://www.pega.com/) company. |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
