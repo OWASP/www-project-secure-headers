@@ -1,8 +1,9 @@
 {
-  "last_update_utc": "2022-10-15 15:44:27",
+  "last_update_utc": "2022-12-03 19:30:24",
   "headers": [
     "Host-Header",
     "Liferay-Portal",
+    "Pega-Host",
     "Powered-By",
     "Product",
     "Server",
