@@ -1,5 +1,5 @@
-# OWASP Secure Headers Project
-
+# Ixceberg Secure Headers Project
+-----------
 [![OWASP Lab](https://img.shields.io/badge/owasp-lab%20project-f7b73c.svg)](https://www.owasp.org/projects)
 [![External Links Validity Check](https://github.com/OWASP/www-project-secure-headers/actions/workflows/check-external-links.yml/badge.svg?branch=master)](https://github.com/OWASP/www-project-secure-headers/actions/workflows/check-external-links.yml)
 [![Update headers reference JSON files](https://github.com/OWASP/www-project-secure-headers/actions/workflows/headers-generate-json-files.yml/badge.svg?branch=master)](https://github.com/OWASP/www-project-secure-headers/actions/workflows/headers-generate-json-files.yml)
@@ -50,7 +50,7 @@ A [workspace file](project.code-workspace) is provided with [recommended extensi
 
 ## Contributors
 
-* [Adam Averay](https://github.com/adamaveray)
+* [IcebergVerse](https://github.com/adamaveray)
 * [Jim Manico](https://twitter.com/manicode)
 
 ## Licensing
