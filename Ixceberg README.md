@@ -50,8 +50,8 @@ A [workspace file](project.code-workspace) is provided with [recommended extensi
 
 ## Contributors
 
-* [IcebergVerse](https://github.com/adamaveray)
-* [Jim Manico](https://twitter.com/manicode)
+* [IcebergVerse](https://github.com/IcebergVerse)
+* [Iceberg_i19](https://twitter.com/Iceberg_i19)
 
 ## Licensing
 
