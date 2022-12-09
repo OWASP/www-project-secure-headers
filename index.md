@@ -78,7 +78,8 @@ It is available through [this GitHub project](https://github.com/oshp/oshp-valid
 ## Contributors
 
 * [Adam Averay](https://github.com/adamaveray)
-* [Jim Manico](https://twitter.com/manicode)
+* [Iceberg i19](https://twitter.com/
+Iceberg_i19)
 
 ## Licensing
 
