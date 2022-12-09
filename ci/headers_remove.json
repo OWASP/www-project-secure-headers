@@ -1,5 +1,5 @@
 {
-  "last_update_utc": "2022-12-03 19:30:24",
+  "last_update_utc": "2022-12-08 13:12:00",
   "headers": [
     "Host-Header",
     "Liferay-Portal",
@@ -10,6 +10,9 @@
     "SourceMap",
     "X-AspNet-Version",
     "X-AspNetMvc-Version",
+    "X-Atmosphere-error",
+    "X-Atmosphere-first-request",
+    "X-Atmosphere-tracking-id",
     "X-CF-Powered-By",
     "X-CMS",
     "X-Content-Encoded-By",
