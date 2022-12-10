@@ -9,7 +9,9 @@ tags: headers
 
 # Entity referencing the OWASP Secure Headers Project
 
-📡 Feel free to contact project leaders if your company or software (open source or not) was using the OSHP project.
+📩 Feel free to contact project leaders if your company or software (open source or not) was using the OSHP project.
+
+🔎 **Google dork** used to identity references was `allintext:"OWASP Secure Headers Project" -site:owasp.org -site:github.com -site:youtube.com -site:twitter.com -site:linkedin.com`.
 
 ## Company
 
@@ -20,6 +22,12 @@ tags: headers
 * [Progress](https://www.progress.com/documentation/sitefinity-cms/110/predefined-security-headers-in-http-response).
 * [Bloomreach](https://documentation.bloomreach.com/14/library/concepts/security/configure-security-response-headers.html).
 * [CrashTest Security](https://crashtest-security.com/enable-security-headers/).
+* [Zoom](https://marketplace.zoom.us/docs/zoom-apps/publishing-an-app/owasp/).
+* [Tableau](https://help.tableau.com/current/server-linux/en-us/security_http_headers.htm).
+* [42Crunch](https://docs.42crunch.com/latest/content/extras/protection_security_headers.htm).
+* [SAP](https://help.sap.com/docs/SAP_UPSCALE_COMMERCE/4620dd88ff9047c89ffb7fa897207a46/30af09ca9e394505a85661fa530d1263.html).
+* [SecureAuth](https://docs.secureauth.com/2104/en/identity-platform-http-security-header-best-practices.html).
+* [Detectify](https://support.detectify.com/support/solutions/articles/48001048949-https-stripping).
 
 ## Software
 
