@@ -28,6 +28,7 @@ tags: headers
 * [SAP](https://help.sap.com/docs/SAP_UPSCALE_COMMERCE/4620dd88ff9047c89ffb7fa897207a46/30af09ca9e394505a85661fa530d1263.html).
 * [SecureAuth](https://docs.secureauth.com/2104/en/identity-platform-http-security-header-best-practices.html).
 * [Detectify](https://support.detectify.com/support/solutions/articles/48001048949-https-stripping).
+* [ImmuniWeb](https://www.immuniweb.com/websec/about).
 
 ## Software
 
