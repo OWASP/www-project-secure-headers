@@ -1,5 +1,5 @@
 {
-  "last_update_utc": "2022-12-08 13:12:00",
+  "last_update_utc": "2022-12-14 19:46:21",
   "headers": [
     "Host-Header",
     "Liferay-Portal",
@@ -20,6 +20,8 @@
     "X-Framework",
     "X-Generated-By",
     "X-Generator",
+    "X-Mod-Pagespeed",
+    "X-Page-Speed",
     "X-Php-Version",
     "X-Powered-By",
     "X-Powered-By-Plesk",
