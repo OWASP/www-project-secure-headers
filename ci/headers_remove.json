@@ -1,5 +1,5 @@
 {
-  "last_update_utc": "2022-12-15 12:30:23",
+  "last_update_utc": "2022-12-24 20:16:04",
   "headers": [
     "Host-Header",
     "Liferay-Portal",
@@ -30,6 +30,8 @@
     "X-Server-Powered-By",
     "X-SourceFiles",
     "X-SourceMap",
-    "X-Turbo-Charged-By"
+    "X-Turbo-Charged-By",
+    "X-Varnish-Backend",
+    "X-Varnish-Server"
   ]
 }
