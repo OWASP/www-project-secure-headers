@@ -166,6 +166,8 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-Atmosphere-error](https://github.com/Atmosphere/atmosphere) | `Websocket protocol not supported` | Indicate that the java framework [Atmosphere](https://github.com/Atmosphere/atmosphere) is used. |
 | [X-Mod-Pagespeed](https://webtechsurvey.com/response-header/x-mod-pagespeed) | `1.13.35.2-0` | Indicate the presence of the Apache module [mod_pagespeed](https://github.com/apache/incubator-pagespeed-mod) in the call flow. |
 | [X-Page-Speed](https://webtechsurvey.com/response-header/x-page-speed) | `1.13.35.2-0` | Indicate the presence of the Nginx module [mod_pagespeed](https://github.com/apache/incubator-pagespeed-ngx) in the call flow. |
+| [X-Varnish-Backend](https://webtechsurvey.com/response-header/x-varnish-backend) | `pb01` | Indicate the name of the backend server from which the [Varnish](https://varnish-cache.org) instance will accelerate the content. |
+| [X-Varnish-Server](https://webtechsurvey.com/response-header/x-varnish-server) | `proxy01` | Indicate the name of the [Varnish](https://varnish-cache.org) server instance that provided the accelerated content. |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
