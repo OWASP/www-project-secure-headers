@@ -27,7 +27,6 @@ HTTP headers are well known and also despised. Seeking a balance between usabili
 * [Tools](https://owasp.org/www-project-secure-headers/#div-technical) to validate an HTTP security header configuration.
 * [Code](https://owasp.org/www-project-secure-headers/#div-technical) libraries that can be leveraged to configure recommended HTTP security headers.
 * [Statistics](https://github.com/oshp/oshp-stats) about usage of the recommended HTTP security headers.
-* [REST API](https://github.com/oshp/oshp-tracking/issues/2) allowing to obtain the recommended configuration for different web server.
 
 🏭 All the tools provided by the OSHP are gathered under this [GitHub organization](https://github.com/oshp/).
 
