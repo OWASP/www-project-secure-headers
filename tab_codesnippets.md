@@ -13,6 +13,7 @@ tags: headers
 
 * [Convert a Permissions-Policy back to Feature-Policy](#convert-a-permissions-policy-back-to-feature-policy)
 * [Test locally a Content-Security-Policy for weaknesses](#test-locally-a-content-security-policy-for-weaknesses)
+* [Generate configuration code using the OSHP headers reference files](#generate-configuration-code-using-the-oshp-headers-reference-files)
 
 ## Convert a Permissions-Policy back to Feature-Policy
 
@@ -93,4 +94,19 @@ $ node code.js "default-src 'self'; object-src 'none'; frame-ancestors 'none'; u
 default-src 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content
 [+] Evaluation results:
 [Directive 'default-src' - Severity 50]: 'self' can be problematic if you host JSONP, Angular or user uploaded files.
+```
+
+## Generate configuration code using the OSHP headers reference files
+
+The following _bash_ code snippet, leveraging [jq](https://stedolan.github.io/jq/), can be used to generate configuration code using the OSHP headers reference files.
+
+💻 Code snippet and execution example:
+
+```shell
+# Generate the Nginx collection of instructions to add the recommanded HTTP response headers
+$ curl -sk https://owasp.org/www-project-secure-headers/ci/headers_add.json | jq -r '.headers[] | "add_header \(.name) \(.value);"'
+add_header Cache-Control no-store, max-age=0;
+add_header Clear-Site-Data "cache","cookies","storage";
+add_header Cross-Origin-Embedder-Policy require-corp;
+...
 ```
