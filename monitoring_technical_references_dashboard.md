@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2023-01-08 00:05:56
+> :timer_clock: Last verification (UTC): 2023-01-08 16:46:29
 
 ## GitHub repositories health status
 
@@ -26,13 +26,13 @@ Provides a quick visual status on the health status (whether they are updated or
 | `2022-12-25T01:48:56Z` (1 months ago) | :green_circle: | [google/csp-evaluator](https://github.com/google/csp-evaluator) |
 | `2022-12-26T00:10:49Z` (1 months ago) | :green_circle: | [bepsvpt/secure-headers](https://github.com/bepsvpt/secure-headers) |
 | `2022-12-31T23:20:55Z` (1 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
-| `2023-01-01T06:47:00Z` (0 months ago) | :green_circle: | [mozilla/http-observatory/](https://github.com/mozilla/http-observatory/) |
 | `2023-01-01T10:42:06Z` (0 months ago) | :green_circle: | [riramar/hsecscan](https://github.com/riramar/hsecscan) |
 | `2023-01-02T05:49:40Z` (0 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
 | `2023-01-03T03:09:21Z` (0 months ago) | :green_circle: | [AmitKulkarni9/API-Security](https://github.com/AmitKulkarni9/API-Security) |
 | `2023-01-03T21:32:22Z` (0 months ago) | :green_circle: | [sdelements/django-security](https://github.com/sdelements/django-security) |
 | `2023-01-05T08:24:46Z` (0 months ago) | :green_circle: | [TypeError/secure](https://github.com/TypeError/secure) |
-| `2023-01-05T15:22:00Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
 | `2023-01-06T09:41:02Z` (0 months ago) | :green_circle: | [mozilla/django-csp](https://github.com/mozilla/django-csp) |
-| `2023-01-07T20:12:58Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2023-01-08T13:30:00Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2023-01-08T15:46:32Z` (0 months ago) | :green_circle: | [mozilla/http-observatory/](https://github.com/mozilla/http-observatory/) |
+| `2023-01-08T16:15:47Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
 
