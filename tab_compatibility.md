@@ -1,6 +1,6 @@
 ---
-title: Compatibility
-displaytext: Compatibility Matrix
+title: BrowserSupport
+displaytext: Browser Support
 layout: null
 tab: true
 order: 2
