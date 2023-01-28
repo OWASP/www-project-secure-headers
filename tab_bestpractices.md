@@ -15,9 +15,7 @@ tags: headers
 
 ## Configuration proposal
 
-<a name=configuration-proposal-anchor></a>
-
-<div id=configuration-proposal-anchor class="ruletitle"></div>
+<!-- <div id=configuration-proposal-anchor class="ruletitle"></div> -->
 
 Please note the best practices below suggest methods to change web server configuration to add headers. Security headers can also be successfully added to your application at the software level as well in almost every web language. Many web frameworks add some of these headers automatically.
 
@@ -64,9 +62,7 @@ This section indicates the syntax to use to set an HTTP header according to the 
 
 ## Prevent information disclosure via HTTP headers
 
-<a name=prevent-information-disclosure-via-http-headers-anchor></a>
-
-<div id=prevent-information-disclosure-via-http-headers-anchor class="ruletitle"></div>
+<!-- <div id=prevent-information-disclosure-via-http-headers-anchor class="ruletitle"></div> -->
 
 This section provides a collection of HTTP response headers to remove, when possible, from any HTTP response to prevent any [disclosure of technical information](https://cwe.mitre.org/data/definitions/200.html) about environment. The following list of headers can be used to configure a [reverse proxy](https://www.nginx.com/resources/glossary/reverse-proxy-server/) or a [web application firewall](https://en.wikipedia.org/wiki/Web_application_firewall) to handle removal operation of the mentioned headers.
 
