@@ -15,6 +15,18 @@ tags: headers
 
 🔎 **Google dork** used to identity references was `allintext:"OWASP Secure Headers Project" -site:owasp.org -site:github.com -site:youtube.com -site:twitter.com -site:linkedin.com`.
 
+🌎 Use the following absolute URL to create a reference to one of the tabs of the OSHP site. The presence of the `index.html` file is mandatory otherwise any anchor specified is not effective:
+
+```text
+https://owasp.org/www-project-secure-headers/index.html
+```
+
+Example of reference link to the **Code Snippets** tab:
+
+```text
+https://owasp.org/www-project-secure-headers/index.html#div-codesnippets
+```
+
 ## Company
 
 * [Cloud.gov](https://cloud.gov/docs/management/headers/).
