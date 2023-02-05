@@ -68,6 +68,8 @@ This section provides a collection of HTTP response headers to remove, when poss
 
 💡 Additional information about technical information disclosure in HTTP header on [OpenCRE](https://www.opencre.org/cre/403-005).
 
+💡 When an HTTP response header is known by the analytics site [WebTechSurvey](https://webtechsurvey.com/), then, a reference link is added to its usage statistics page. Otherwise, a reference link regarding the documentation of the header is provided.
+
 💡 Content of the table below is also provided, as JSON, via this [file](ci/headers_remove.json) (automatically updated).
 
 <!-- HEADERS_REMOVE_TABLE_START -->
@@ -97,7 +99,6 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-CF-Powered-By](https://webtechsurvey.com/response-header/x-cf-powered-by) | `CF-Joomla 0.1.5` | Indicate the name of the framework or platform used. |
 | [X-Framework](https://webtechsurvey.com/response-header/x-framework) | `JP/4.01` | Indicate the name of the framework or platform used. |
 | [Host-Header](https://webtechsurvey.com/response-header/host-header) | `CorpAxe.com` | Indicate which virtual host of the web server the response is coming from. |
-| [X-Envoy-Upstream-Service-Time](https://webtechsurvey.com/response-header/x-envoy-upstream-service-time) | `42` | Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow. |
 | [Pega-Host](https://webtechsurvey.com/response-header/pega-host) | `srv-pega11` | Indicate the internal host name of the server that handled the request in the context of usage of a software from the [PEGA](https://www.pega.com/) company. |
 | [X-Atmosphere-first-request](https://github.com/Atmosphere/atmosphere) | `true` | Indicate that the java framework [Atmosphere](https://github.com/Atmosphere/atmosphere) is used. |
 | [X-Atmosphere-tracking-id](https://github.com/Atmosphere/atmosphere) | `7852fcbf-f8a9-4667-9dcc-a0b5b162499c` | Indicate that the java framework [Atmosphere](https://github.com/Atmosphere/atmosphere) is used. |
@@ -106,6 +107,16 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-Page-Speed](https://webtechsurvey.com/response-header/x-page-speed) | `1.13.35.2-0` | Indicate the presence of the Nginx module [mod_pagespeed](https://github.com/apache/incubator-pagespeed-ngx) in the call flow. |
 | [X-Varnish-Backend](https://webtechsurvey.com/response-header/x-varnish-backend) | `pb01` | Indicate the name of the backend server from which the [Varnish](https://varnish-cache.org) instance will accelerate the content. |
 | [X-Varnish-Server](https://webtechsurvey.com/response-header/x-varnish-server) | `proxy01` | Indicate the name of the [Varnish](https://varnish-cache.org) server instance that provided the accelerated content. |
+| [X-Envoy-Upstream-Service-Time](https://webtechsurvey.com/response-header/x-envoy-upstream-service-time) | `42` | Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow. |
+| [X-Envoy-Attempt-Count](https://webtechsurvey.com/response-header/x-envoy-attempt-count) | `1` | Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow. |
+| [X-Envoy-External-Address](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers) | `124.128.159.165` | Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow. |
+| [X-Envoy-Internal](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers) | `true` | Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow. |
+| [X-Envoy-Original-Dst-Host](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers) | `10.195.16.237:8888` | Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow. |
+| [X-B3-ParentSpanId](https://webtechsurvey.com/response-header/x-b3-parentspanid) | `dea3f6d0324583db` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
+| [X-B3-Sampled](https://webtechsurvey.com/response-header/x-b3-sampled) | `0` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
+| [X-B3-SpanId](https://webtechsurvey.com/response-header/x-b3-spanid) | `244753d494e83353` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
+| [X-B3-TraceId](https://webtechsurvey.com/response-header/x-b3-traceid) | `11bef07b0f5c0468` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
+| [K-Proxy-Request](https://knative.dev/docs/serving/istio-authorization/) | `activator` | Indicate the presence of the software [Knative](https://knative.dev) that is an Open-Source Enterprise-level solution to build Serverless and Event Driven Applications in Kubernetes environments. |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
