@@ -69,7 +69,7 @@ def extract_updated_datetime(github_repo_url, github_access_token):
         repo_info = json.loads(f.read().decode(DEFAULT_ENCODING))
     # Return the updated date attribute
     # Format: 2022-09-14T13:40:24Z
-    return repo_info["updated_at"]
+    return repo_info["pushed_at"]
 
 
 def extract_github_repositories_url():
