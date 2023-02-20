@@ -117,7 +117,8 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-B3-SpanId](https://webtechsurvey.com/response-header/x-b3-spanid) | `244753d494e83353` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
 | [X-B3-TraceId](https://webtechsurvey.com/response-header/x-b3-traceid) | `11bef07b0f5c0468` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
 | [K-Proxy-Request](https://knative.dev/docs/serving/istio-authorization/) | `activator` | Indicate the presence of the software [Knative](https://knative.dev) that is an Open-Source Enterprise-level solution to build Serverless and Event Driven Applications in Kubernetes environments. |
-| [X-Old-Content-Length](https://webtechsurvey.com/response-header/x-old-content-length) | `135` | Indicate the presence of the software [WebSEAL](https://www.ibm.com/docs/en/sva/8.0.1?topic=responses-filtering-changes-content-length-header) that is a high performance, multi-threaded beb server by IBM. |
+| [X-Old-Content-Length](https://webtechsurvey.com/response-header/x-old-content-length) | `135` | Indicate the presence of the software [WebSEAL](https://www.ibm.com/docs/en/sva/8.0.1?topic=responses-filtering-changes-content-length-header) that is a high performance, multi-threaded web server by IBM. |
+| [$wsep](https://www.ibm.com/docs/en/was/8.5.5?topic=SSEQTP_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rweb_custom_props.htm) | `empty value` | Indicate the presence of the software [WebSphere Application Server](https://www.ibm.com/products/websphere-application-server) that is a JavaEE application server by IBM. |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
