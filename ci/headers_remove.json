@@ -1,6 +1,7 @@
 {
-  "last_update_utc": "2023-02-05 19:51:17",
+  "last_update_utc": "2023-02-21 18:58:05",
   "headers": [
+    "$wsep",
     "Host-Header",
     "K-Proxy-Request",
     "Liferay-Portal",
@@ -30,6 +31,7 @@
     "X-Generated-By",
     "X-Generator",
     "X-Mod-Pagespeed",
+    "X-Old-Content-Length",
     "X-Page-Speed",
     "X-Php-Version",
     "X-Powered-By",
