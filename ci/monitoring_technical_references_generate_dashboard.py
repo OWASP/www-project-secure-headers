@@ -74,7 +74,7 @@ def extract_updated_datetime(github_repo_url, github_access_token):
 
 def extract_github_repositories_url():
     github_repositories_url_collection = []
-    expr = r'<https://github.com/.*>'
+    expr = r'https://github\.com/[a-zA-Z0-9.\-_/]+'
     with open(SOURCE_MD_FILE, mode="r", encoding=DEFAULT_ENCODING) as f:
         content = f.read()
     repos = re.findall(expr, content)
