@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2023-03-05 00:07:27
+> :timer_clock: Last verification (UTC): 2023-03-07 18:41:40
 
 ## GitHub repositories health status
 
@@ -31,8 +31,8 @@ Provides a quick visual status on the health status (whether they are updated or
 | `2023-02-16T09:33:40Z` (1 months ago) | :green_circle: | [mozilla/django-csp](https://github.com/mozilla/django-csp) |
 | `2023-02-21T06:02:21Z` (1 months ago) | :green_circle: | [sdelements/django-security](https://github.com/sdelements/django-security) |
 | `2023-02-28T08:20:01Z` (1 months ago) | :green_circle: | [mozilla/http-observatory-website/](https://github.com/mozilla/http-observatory-website/) |
-| `2023-02-28T10:56:45Z` (1 months ago) | :green_circle: | [Santandersecurityresearch/DrHeader](https://github.com/Santandersecurityresearch/DrHeader) |
 | `2023-03-03T13:06:29Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
 | `2023-03-04T03:40:24Z` (0 months ago) | :green_circle: | [rwjblue/ember-cli-content-security-policy/](https://github.com/rwjblue/ember-cli-content-security-policy/) |
 | `2023-03-04T20:01:14Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2023-03-06T10:56:57Z` (0 months ago) | :green_circle: | [Santandersecurityresearch/DrHeader](https://github.com/Santandersecurityresearch/DrHeader) |
 
