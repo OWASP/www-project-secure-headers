@@ -29,6 +29,8 @@ DASHBOARD_MD_FILE_TEMPLATE = f"""
 
 Provides a quick visual status on the health status (whether they are updated or not) of the referenced GitHub projects in the tab named **Technical**.
 
+Project reaching the :red_circle: status **are removed**.
+
 :speech_balloon: **Status icon legends:**
 
 * :green_circle: Updated within the last **12 months** from the date of verification.
