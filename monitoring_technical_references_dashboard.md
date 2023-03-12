@@ -1,11 +1,13 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2023-03-12 00:06:22
+> :timer_clock: Last verification (UTC): 2023-03-12 21:01:20
 
 ## GitHub repositories health status
 
 Provides a quick visual status on the health status (whether they are updated or not) of the referenced GitHub projects in the tab named **Technical**.
+
+Project reaching the :red_circle: status **are removed**.
 
 :speech_balloon: **Status icon legends:**
 
@@ -15,7 +17,6 @@ Provides a quick visual status on the health status (whether they are updated or
 
 | Last update | Status | Repository |
 | --- | --- | --- |
-| `2020-10-20T16:10:48Z` (29 months ago) | :red_circle: | [AmitKulkarni9/API-Security](https://github.com/AmitKulkarni9/API-Security) |
 | `2021-06-16T07:16:40Z` (21 months ago) | :orange_circle: | [frodsan/rack-secure_headers](https://github.com/frodsan/rack-secure_headers) |
 | `2021-11-20T00:12:05Z` (16 months ago) | :orange_circle: | [TypeError/secure](https://github.com/TypeError/secure) |
 | `2021-12-13T20:59:20Z` (15 months ago) | :orange_circle: | [aidantwoods/SecureHeaders](https://github.com/aidantwoods/SecureHeaders) |
@@ -33,6 +34,6 @@ Provides a quick visual status on the health status (whether they are updated or
 | `2023-02-28T08:20:01Z` (1 months ago) | :green_circle: | [mozilla/http-observatory-website/](https://github.com/mozilla/http-observatory-website/) |
 | `2023-03-04T03:40:24Z` (0 months ago) | :green_circle: | [rwjblue/ember-cli-content-security-policy/](https://github.com/rwjblue/ember-cli-content-security-policy/) |
 | `2023-03-06T10:56:57Z` (0 months ago) | :green_circle: | [Santandersecurityresearch/DrHeader](https://github.com/Santandersecurityresearch/DrHeader) |
-| `2023-03-11T13:07:18Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
 | `2023-03-11T20:24:04Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2023-03-12T17:41:45Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
 
