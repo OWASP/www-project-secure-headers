@@ -1,0 +1,7 @@
+/*
+Set table first column width
+See https://github.com/oshp/oshp-tracking/issues/16#issuecomment-1463299928
+*/
+th:first-child {
+    width: 30%;
+}
