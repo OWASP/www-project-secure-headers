@@ -40,7 +40,6 @@ tags: headers
 | **Recx Security Analyser** | Chrome extension that allows the inspection of security aspects of a site's HTTP headers, cookies and other key security settings. | [🌎](https://chrome.google.com/webstore/detail/recx-security-analyser/ljafjhbjenhgcgnikniijchkngljgjda) |
 | **testssl.sh** | Easy to use shell script which tests not only SSL/TLS encryption but also checks common headers and analyzes those. Output is screen, JSON, CSV and HTML. | [👩‍💻](https://github.com/drwetter/testssl.sh) |
 | **DrHEADer** | DrHEADer helps with the audit of security headers received in response to a single request or a list of requests. | [👩‍💻](https://github.com/Santandersecurityresearch/DrHeader) |
-| **API-Security** | This is a Python based API-Security framework containing ApiSecurityHeader.py script which will check the above-mentioned Security response headers are present and contains the required value. | [👩‍💻](https://github.com/AmitKulkarni9/API-Security) |
 | **csp-evaluator** | NPM module allowing developers and security experts to check if a Content Security Policy serves as a strong mitigation against XSS attacks. | [👩‍💻](https://github.com/google/csp-evaluator) |
 
 ## Development Libraries
