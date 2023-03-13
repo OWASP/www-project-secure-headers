@@ -7,6 +7,8 @@ layout: col-sidebar
 tags: headers
 ---
 
+<link rel="stylesheet" href="{{site.base_url}}/assets/css/styles.css">
+
 ## Introduction
 
 [![OWASP Lab](https://img.shields.io/badge/owasp-lab%20project-f7b73c.svg)](https://www.owasp.org/projects)
