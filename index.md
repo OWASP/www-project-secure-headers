@@ -7,7 +7,7 @@ layout: col-sidebar
 tags: headers
 ---
 
-<link rel="stylesheet" href="{{site.base_url}}/assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/styles.css">
 
 ## Introduction
 
