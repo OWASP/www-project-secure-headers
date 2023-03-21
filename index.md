@@ -7,6 +7,7 @@ layout: col-sidebar
 tags: headers
 ---
 
+<script crossorigin="anonymous" type="application/javascript" src="assets/js/direct-link-handler.js"></script>
 <link rel="stylesheet" href="assets/css/styles.css">
 
 ## Introduction
