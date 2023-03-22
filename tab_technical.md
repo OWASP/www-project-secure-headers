@@ -31,7 +31,7 @@ tags: headers
 
 ## Analysis Tools
 
-| Tool | Description | Link |
+| Tool | Description | Ref |
 | --- | --- | --- |
 | **hsecscan** | A security scanner for HTTP response headers. | [👩‍💻](https://github.com/riramar/hsecscan) |
 | **humble** | A humble, and fast, security-oriented HTTP headers analyzer. | [👩‍💻](https://github.com/rfc-st/humble) |
@@ -46,64 +46,64 @@ tags: headers
 
 ### Java
 
-| Library | Description | Link |
+| Library | Description | Ref |
 | --- | --- | --- |
 | **Spring Security** | Spring Security's support for adding various security headers to the response. | [🌎](https://docs.spring.io/spring-security/reference/features/exploits/headers.html) |
 
 ### DotNet
 
-| Library | Description | Link |
+| Library | Description | Ref |
 | --- | --- | --- |
 | **NWebsec** | NWebsec consists of several security libraries for ASP.NET applications. | [🌎](https://docs.nwebsec.com) |
 | **NetEscapades.AspNetCore.SecurityHeaders** | Small package to allow adding security headers to ASP.NET Core websites. | [👩‍💻](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
 
 ### Ruby
 
-| Library | Description | Link |
+| Library | Description | Ref |
 | --- | --- | --- |
 | **secure_headers** | Security related headers all in one gem. | [👩‍💻](https://github.com/github/secure_headers) |
 
 ### PHP
 
-| Library | Description | Link |
+| Library | Description | Ref |
 | --- | --- | --- |
 | **SecureHeaders** | A PHP class aiming to make the use of browser security features more accessible. | [👩‍💻](https://github.com/aidantwoods/SecureHeaders) |
 | **secure-headers** | PHP Secure Headers for Laravel and non-Laravel projects. | [👩‍💻](https://github.com/bepsvpt/secure-headers) |
 
 ### RACK
 
-| Library | Description | Link |
+| Library | Description | Ref |
 | --- | --- | --- |
 | **rack-secure_headers** | Security related HTTP headers for Rack applications. | [👩‍💻](https://github.com/frodsan/rack-secure_headers) |
 
 ### NodeJS
 
-| Library | Description | Link |
+| Library | Description | Ref |
 | --- | --- | --- |
 | **helmet** | Module to help secure Express apps with various HTTP headers. | [👩‍💻](https://github.com/helmetjs/helmet) |
 | **ember-cli-content-security-policy** | This addon makes it easy to use Content Security Policy (CSP) in your project. It can be deployed either via a Content-Security-Policy header sent from the Ember CLI Express server, or as a meta tag in the index.html file. | [👩‍💻](https://github.com/rwjblue/ember-cli-content-security-policy/) |
 
 ### HAPI
 
-| Library | Description | Link |
+| Library | Description | Ref |
 | --- | --- | --- |
 | **blankie** | A CSP plugin for hapi. | [👩‍💻](https://github.com/nlf/blankie) |
 
 ### Python
 
-| Library | Description | Link |
+| Library | Description | Ref |
 | --- | --- | --- |
 | **django-csp and django-security** | Content Security Policy for Django. A collection of models, views, middlewares, and forms to help secure a Django project. | [👩‍💻](https://github.com/mozilla/django-csp) / [👩‍💻](https://github.com/sdelements/django-security) |
 | **Secure** | Secure headers for Python web frameworks. | [👩‍💻](https://github.com/TypeError/secure) |
 
 ### Go
 
-| Library | Description | Link |
+| Library | Description | Ref |
 | --- | --- | --- |
 | **helmet** | HTTP security middleware for Go(lang) inspired by HelmetJS. | [👩‍💻](https://github.com/goddtriffin/helmet) |
 
 ### Rust
 
-| Library | Description | Link |
+| Library | Description | Ref |
 | --- | --- | --- |
 | **owasp-headers** | Best-practice OWASP HTTP response headers for Rust. | [🌎](https://docs.rs/crate/owasp-headers/latest) |
