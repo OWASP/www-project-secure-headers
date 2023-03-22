@@ -15,16 +15,29 @@ tags: headers
 
 🔎 **Google dork** used to identity references was `allintext:"OWASP Secure Headers Project" -site:owasp.org -site:github.com -site:youtube.com -site:twitter.com -site:linkedin.com`.
 
-🌎 Use the following absolute URL to create a reference to one of the tabs of the OSHP site. The presence of the `index.html` file is mandatory otherwise any anchor specified is not effective:
+## How to create a link to the OSHP site?
+
+🌎 Use the following absolute URL syntax to create a reference link to a specific location of the OSHP site. The presence of the `index.html` file is mandatory otherwise any anchor specified is not effective:
 
 ```text
-https://owasp.org/www-project-secure-headers/index.html
+https://owasp.org/www-project-secure-headers/index.html#[TAB-ID]_[HEADER-ID-INSIDE-TAB]
 ```
 
-Example of reference link to the **Code Snippets** tab:
+💡 Where:
+
+* `[TAB-ID]`: ID of the tab that can be obtained with the link to it.
+* `[HEADER-ID-INSIDE-TAB]`: Href value of the link to the section inside the tab.
+
+👀 Example of reference link to the section about the header **Clear-Site-Data** in the **Response Headers** tab:
 
 ```text
-https://owasp.org/www-project-secure-headers/index.html#div-codesnippets
+https://owasp.org/www-project-secure-headers/index.html#div-headers_clear-site-data
+```
+
+👀 Example of reference link to the section **PHP** in the **Technical Resources** tab:
+
+```text
+https://owasp.org/www-project-secure-headers/index.html#div-technical_php
 ```
 
 ## Company
