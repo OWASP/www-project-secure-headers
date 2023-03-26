@@ -21,7 +21,7 @@ Please note the best practices below suggest methods to change web server config
 
 The following section proposes a configuration for the [actively supported and working draft security headers](https://owasp.org/www-project-secure-headers/#div-headers).
 
-💡 Additional information about HTTP security headers on [OpenCRE](https://opencre.org/cre/636-347?name=OWASP+Secure+Headers+Project&section=configuration&link=https://owasp.org/www-project-secure-headers/#div-bestpractices).
+💡 Additional information about HTTP security headers on [OpenCRE](https://opencre.org/cre/636-347?name=OWASP+Secure+Headers+Project&section=configuration&link=https%3A%2F%2Fowasp.org%2Fwww-project-secure-headers%2F%23div-bestpractices).
 
 ### Proposed values
 
@@ -66,7 +66,7 @@ This section indicates the syntax to use to set an HTTP header according to the 
 
 This section provides a collection of HTTP response headers to remove, when possible, from any HTTP response to prevent any [disclosure of technical information](https://cwe.mitre.org/data/definitions/200.html) about environment. The following list of headers can be used to configure a [reverse proxy](https://www.nginx.com/resources/glossary/reverse-proxy-server/) or a [web application firewall](https://en.wikipedia.org/wiki/Web_application_firewall) to handle removal operation of the mentioned headers.
 
-💡 Additional information about technical information disclosure in HTTP header on [OpenCRE](https://www.opencre.org/cre/403-005?name=OWASP+Secure+Headers+Project&section=Prevent+information+disclosure+via+HTTP+headers&link=https://owasp.org/www-project-secure-headers/#div-bestpractices_prevent-information-disclosure-via-http-headers).
+💡 Additional information about technical information disclosure in HTTP header on [OpenCRE](https://www.opencre.org/cre/403-005?name=OWASP+Secure+Headers+Project&section=Prevent+information+disclosure+via+HTTP+headers&link=https%3A%2F%2Fowasp.org%2Fwww-project-secure-headers%2F%23div-bestpractices_prevent-information-disclosure-via-http-headers).
 
 💡 When an HTTP response header is known by the analytics site [WebTechSurvey](https://webtechsurvey.com/), then, a reference link is added to its usage statistics page. Otherwise, a reference link regarding the documentation of the header is provided.
 
