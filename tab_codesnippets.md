@@ -117,32 +117,17 @@ add_header Cross-Origin-Embedder-Policy require-corp;
 
 The online tool [securityheaders.com](https://securityheaders.com) can be used to achieve that objective.
 
-It returns the grade in the following HTTP response headers:
+Even if the API is not free, it is possible to leverage it in a free way. Indeed, the following **DIV** with the class **score**, contains the rating letter and its associated rating color:
 
-* **x-score**: Contains a Base64 encoded JSON object with the grade letter and its associated color name.
-* **x-grade**: Contains the grade letter.
+```html
+<div class="score"><div class="score_green"><span>A</span></div></div>
+```
 
 💻 Code snippet and execution example:
 
 ```shell
-$ curl -v "https://securityheaders.com/?hide=on&followRedirects=on&q=https://mozilla.org"
-> Trying 104.21.70.128:443...
-> Connected to securityheaders.com (104.21.70.128) port 443
-> ...
-< HTTP/2 200
-< date: Tue, 02 Mar 2021 17:29:23 GMT
-< content-type: text/html; charset=UTF-8
-< vary: Accept-Encoding
-< x-score: eyJzY29yZSI6IkEiLCAiY29sb3VyIjoiZ3JlZW4ifQ==
-< x-grade: A
-< ...
-```
-
-Content of the **x-score** header value:
-
-```shell
-$ echo eyJzY29yZSI6IkEiLCAiY29sb3VyIjoiZ3JlZW4ifQ== | base64 -d
-{"score":"A", "colour":"green"}
+$ curl -s "https://securityheaders.com/?hide=on&followRedirects=on&q=https://mozilla.org" | grep -E '<div\s+class="score_[a-z]+">.*</div>'
+<div class="score_green"><span>A</span></div>
 ```
 
 ## Quickly check security HTTP headers for applications exposed internally
