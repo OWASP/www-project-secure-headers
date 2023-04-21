@@ -128,6 +128,9 @@ Even if the API is not free, it is possible to leverage it in a free way. Indeed
 ```shell
 $ curl -s "https://securityheaders.com/?hide=on&followRedirects=on&q=https://mozilla.org" | grep -E '<div\s+class="score_[a-z]+">.*</div>'
 <div class="score_green"><span>A</span></div>
+# Parse the HTML of the DIV of the score to get the rating code directly
+$ curl -s "https://securityheaders.com/?hide=on&followRedirects=on&q=https://mozilla.org" | grep -E '<div\s+class="score_[a-z]+">.*</div>' | sed -e 's/.*<span>\(.\+\)<\/span.*/\1/'
+A
 ```
 
 ## Quickly check security HTTP headers for applications exposed internally
