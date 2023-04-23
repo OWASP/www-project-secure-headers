@@ -44,15 +44,19 @@ A [workspace file](project.code-workspace) is provided with [recommended extensi
 
 * Generation is performed by this GitHub action [workflow](.github/workflows/headers-generate-json-files.yml) every time the file [tab_bestpractices.md](tab_bestpractices.md) is modified.
 
-📝  Generate the [markdown file](monitoring_technical_references_dashboard.md) with the update health state of all GitHub repositories mentioned in the tab named **[Technical](tab_technical.md)**:
+📝 Generate the [markdown file](monitoring_technical_references_dashboard.md) with the update health state of all GitHub repositories mentioned in the tab named **[Technical](tab_technical.md)**:
 
 * Generation is performed by this GitHub action [workflow](.github/workflows/monitoring-technical-references-generate-dashboard.yml) every time the file [tab_technical.md](tab_technical.md) is modified.
 
 ## Contributors
 
+💌 Contributors to OSHP, before the migration of the project to [GitHub](https://github.com/OWASP/www-project-secure-headers):
+
 * [Adam Averay](https://github.com/adamaveray)
 * [Jim Manico](https://twitter.com/manicode)
 
+💌 Visit this [page](https://github.com/OWASP/www-project-secure-headers/graphs/contributors) for updated information about the contributors since the migration of the project to GitHub.
+
 ## Licensing
 
-📑 **OWASP Secure Headers Project** is free to use. It is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
+📑 This project content is free to use. It is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
