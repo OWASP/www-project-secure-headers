@@ -19,21 +19,21 @@ tags: headers
 
 🎯 The **OWASP Secure Headers Project** (also called **OSHP**) describes HTTP response headers that your application can use to increase the security of your application. Once set, these HTTP response headers can restrict modern browsers from running into easily preventable vulnerabilities. The OWASP Secure Headers Project intends to raise awareness and use of these headers.
 
-HTTP headers are well known and also despised. Seeking a balance between usability and security, developers implement functionality through the headers that can make applications more versatile or secure. But in practice how are the headers being implemented? What sites follow the best implementation practices? Big companies, small, all or none?
+🤔 HTTP headers are well known and also despised. Seeking a balance between usability and security, developers implement functionality through the headers that can make applications more versatile or secure. But in practice how are the headers being implemented? What sites follow the best implementation practices? Big companies, small, all or none?
 
 ## Description
 
 📚 The OWASP Secure Headers Project aim to provide elements about the following aspects regarding HTTP security headers:
 
-* [Guidance](https://owasp.org/www-project-secure-headers/#div-headers) about the recommended HTTP security headers that can be leveraged.
-* [Guidance](https://owasp.org/www-project-secure-headers/#div-bestpractices) about the HTTP headers that should be removed.
-* [Tools](https://owasp.org/www-project-secure-headers/#div-technical) to validate an HTTP security header configuration.
-* [Code](https://owasp.org/www-project-secure-headers/#div-technical) libraries that can be leveraged to configure recommended HTTP security headers.
+* [Guidance](https://owasp.org/www-project-secure-headers/index.html#div-bestpractices_configuration-proposal) about the recommended HTTP security headers that can be leveraged.
+* [Guidance](https://owasp.org/www-project-secure-headers/index.html#div-bestpractices_prevent-information-disclosure-via-http-headers) about the HTTP headers that should be removed.
+* [Tools](https://github.com/oshp/oshp-validator) to validate an HTTP security header configuration.
+* [Code](https://owasp.org/www-project-secure-headers/index.html#div-technical) libraries that can be leveraged to configure recommended HTTP security headers.
 * [Statistics](https://github.com/oshp/oshp-stats) about usage of the recommended HTTP security headers.
 
 🏭 All the tools provided by the OSHP are gathered under this [GitHub organization](https://github.com/oshp/).
 
-📺 A presentation of the project is available on the [OWASP Spotlight Youtube playlist](https://www.youtube.com/watch?v=N4F3VWQYU9E) as well as on the [Application Security Podcast Youtube playlist](https://www.youtube.com/watch?v=0SNU9clVhKU).
+📺 A presentation of the project is available on the [OWASP Spotlight Youtube playlists](https://www.youtube.com/watch?v=N4F3VWQYU9E) as well as on the [Application Security Podcast Youtube playlists](https://www.youtube.com/watch?v=0SNU9clVhKU).
 
 ## Migration
 
@@ -46,15 +46,20 @@ HTTP headers are well known and also despised. Seeking a balance between usabili
 
 ## Security headers usage statistics
 
-📈 We provide statistics, updated every month, about HTTP response security headers usage mentioned by the OWASP Secure Headers Project.
+📈 We provide statistics, updated every month, about HTTP response security headers usage mentioned by the OWASP Secure Headers Project:
 
-They are available through [this GitHub project](https://github.com/oshp/oshp-stats).
+* They are available through [this GitHub project](https://github.com/oshp/oshp-stats).
 
 ## Security headers usage validator
 
-✅ We provide a [venom](https://github.com/ovh/venom) tests suite to validate an HTTP security response header configuration against OWASP Secure Headers Project recommendation.
+✅ We provide a [venom](https://github.com/ovh/venom) tests suite to validate an HTTP security response header configuration against OWASP Secure Headers Project recommendation:
 
-It is available through [this GitHub project](https://github.com/oshp/oshp-validator).
+* It is available through [this GitHub project](https://github.com/oshp/oshp-validator).
+
+🧪 We also provide a *online mock endpoint* returning an HTTP response, for which, all HTTP response headers recommended by the OSHP will be set:
+
+* It is automatically deployed on `https://oshp-validator-mock.onrender.com`
+* Technical details about this endpoint are [here](https://github.com/oshp/oshp-validator#tests-suite-mock-service).
 
 ## Headers reference files
 
@@ -69,7 +74,7 @@ It is available through [this GitHub project](https://github.com/oshp/oshp-valid
 
 ## Technical references health dashboard
 
-👁‍ We automatically generate and monitor this **[dashboard](https://github.com/OWASP/www-project-secure-headers/blob/master/monitoring_technical_references_dashboard.md)** to identify any dead project referenced in the **[Technical Resources](https://owasp.org/www-project-secure-headers/#div-technical)** tab.
+📍 We automatically generate and monitor this **[dashboard](https://github.com/OWASP/www-project-secure-headers/blob/master/monitoring_technical_references_dashboard.md)** to identify any dead project referenced in the **[Technical Resources](https://owasp.org/www-project-secure-headers/#div-technical)** tab.
 
 ## Discussions, information and roadmap
 
@@ -79,8 +84,12 @@ It is available through [this GitHub project](https://github.com/oshp/oshp-valid
 
 ## Contributors
 
+💌 Contributors to OSHP, before the migration of the project to [GitHub](https://github.com/OWASP/www-project-secure-headers):
+
 * [Adam Averay](https://github.com/adamaveray)
 * [Jim Manico](https://twitter.com/manicode)
+
+💌 Visit this [page](https://github.com/OWASP/www-project-secure-headers/graphs/contributors) for updated information about the contributors since the migration of the project to GitHub.
 
 ## Licensing
 
