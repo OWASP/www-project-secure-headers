@@ -59,4 +59,4 @@ A [workspace file](project.code-workspace) is provided with [recommended extensi
 
 ## Licensing
 
-📑 OWASP Secure Headers is free to use. It is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
+📑 This project content is free to use. It is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
