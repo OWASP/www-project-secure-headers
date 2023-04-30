@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2023-04-23 00:06:18
+> :timer_clock: Last verification (UTC): 2023-04-30 00:05:52
 
 ## GitHub repositories health status
 
@@ -27,7 +27,6 @@ Project reaching the :red_circle: status **are removed**.
 | `2023-02-21T06:02:21Z` (2 months ago) | :green_circle: | [sdelements/django-security](https://github.com/sdelements/django-security) |
 | `2023-03-04T03:40:24Z` (1 months ago) | :green_circle: | [rwjblue/ember-cli-content-security-policy/](https://github.com/rwjblue/ember-cli-content-security-policy/) |
 | `2023-03-17T10:57:04Z` (1 months ago) | :green_circle: | [Santandersecurityresearch/DrHeader](https://github.com/Santandersecurityresearch/DrHeader) |
-| `2023-04-03T14:16:57Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
 | `2023-04-09T14:12:33Z` (0 months ago) | :green_circle: | [bepsvpt/secure-headers](https://github.com/bepsvpt/secure-headers) |
 | `2023-04-10T00:25:56Z` (0 months ago) | :green_circle: | [google/csp-evaluator](https://github.com/google/csp-evaluator) |
 | `2023-04-10T07:50:48Z` (0 months ago) | :green_circle: | [mozilla/http-observatory/](https://github.com/mozilla/http-observatory/) |
@@ -35,5 +34,6 @@ Project reaching the :red_circle: status **are removed**.
 | `2023-04-11T14:53:56Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
 | `2023-04-17T04:17:48Z` (0 months ago) | :green_circle: | [mozilla/http-observatory-website/](https://github.com/mozilla/http-observatory-website/) |
 | `2023-04-20T23:00:16Z` (0 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
-| `2023-04-22T18:57:38Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2023-04-29T13:59:17Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2023-04-29T20:36:58Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
