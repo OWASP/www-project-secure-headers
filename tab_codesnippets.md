@@ -3,7 +3,7 @@ title: codesnippets
 displaytext: Code Snippets
 layout: null
 tab: true
-order: 7
+order: 5
 tags: headers
 ---
 
