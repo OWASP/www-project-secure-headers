@@ -3,7 +3,7 @@ title: bestpractices
 displaytext: Best Practices
 layout: null
 tab: true
-order: 5
+order: 3
 tags: headers
 ---
 
