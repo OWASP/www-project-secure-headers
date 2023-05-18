@@ -53,7 +53,7 @@ A [workspace file](project.code-workspace) is provided with [recommended extensi
 💌 Contributors to OSHP, before the migration of the project to [GitHub](https://github.com/OWASP/www-project-secure-headers):
 
 * [Adam Averay](https://github.com/adamaveray)
-* [Jim Manico](https://twitter.com/manicode)
+* [Jim Manico](https://github.com/jmanico)
 
 💌 Visit this [page](https://github.com/OWASP/www-project-secure-headers/graphs/contributors) for updated information about the contributors since the migration of the project to GitHub.
 
