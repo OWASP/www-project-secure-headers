@@ -42,7 +42,12 @@ None
 
 ## Strict-Transport-Security
 
-HTTP Strict Transport Security (also named *HSTS*) is a web security policy mechanism which helps to protect websites against protocol downgrade attacks and cookie hijacking. It allows web servers to declare that web browsers (or other complying user agents) should only interact with it using secure HTTPS connections, and never via the insecure HTTP protocol. HSTS is an IETF standards track protocol and is specified in [RFC 6797](https://www.rfc-editor.org/rfc/rfc6797). A server implements an HSTS policy by supplying a header (`Strict-Transport-Security`) over an HTTPS connection (HSTS headers over HTTP are ignored).
+HTTP Strict Transport Security (also named *HSTS*) is a web security policy mechanism which helps to protect websites against protocol downgrade attacks and cookie hijacking. It allows web servers to declare that web browsers (or other complying user agents) should only interact with it using secure HTTPS connections, and never via the insecure HTTP protocol. HSTS is an IETF standard track protocol and is specified in [RFC 6797](https://www.rfc-editor.org/rfc/rfc6797). A server implements an HSTS policy by supplying a header (`Strict-Transport-Security`) over an HTTPS connection (HSTS headers over HTTP are ignored).
+
+📍 Important note about the behavior of the header over a **HTTP connection** (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security#description)):
+
+* The `Strict-Transport-Security` header **is ignored by the browser when your site has only been accessed using HTTP**.
+* Once your site is accessed over HTTPS **with no certificate errors**, the browser knows your site is HTTPS capable and will honor the `Strict-Transport-Security` header.
 
 ### Values
 
