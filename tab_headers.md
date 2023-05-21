@@ -49,17 +49,28 @@ HTTP Strict Transport Security (also named *HSTS*) is a web security policy mech
 * The `Strict-Transport-Security` header **is ignored by the browser when your site has only been accessed using HTTP**.
 * Once your site is accessed over HTTPS **with no certificate errors**, the browser knows your site is HTTPS capable and will honor the `Strict-Transport-Security` header.
 
+💡 If you need to let the access open, via HTTP, to the web server but want to ensure that `Strict-Transport-Security` header is taken into account for your site then you can use the **[preload](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security#preloading_strict_transport_security)** directive.
+
 ### Values
 
 | Value               | Description |
 |---------------------|-------------|
 | `max-age=SECONDS`   | The time, in seconds, that the browser should remember that this site is only to be accessed using HTTPS. |
 | `includeSubDomains` | If this optional parameter is specified, this rule applies to all of the site's subdomains as well. |
+| `preload` | If this optional parameter is specified, its instruct the browser to always access the site using HTTPS because the site is included into `Strict-Transport-Security` [preload list](https://www.chromium.org/hsts/). |
 
 ### Example
 
 ```
+Strict-Transport-Security: max-age=31536000
+```
+
+```
 Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+```
+
+```
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains ; preload
 ```
 
 ### References
@@ -69,6 +80,7 @@ Strict-Transport-Security: max-age=31536000 ; includeSubDomains
 * <https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/07-Test_HTTP_Strict_Transport_Security.html>
 * <https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security>
 * <https://www.chromium.org/hsts>
+* <https://hstspreload.org/>
 * <https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security>
 * <https://raymii.org/s/tutorials/HTTP_Strict_Transport_Security_for_Apache_NGINX_and_Lighttpd.html>
 * <https://blogs.windows.com/msedgedev/2015/06/09/http-strict-transport-security-comes-to-internet-explorer-11-on-windows-8-1-and-windows-7/>
