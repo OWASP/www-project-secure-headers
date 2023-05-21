@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2023-05-14 00:05:57
+> :timer_clock: Last verification (UTC): 2023-05-21 00:05:59
 
 ## GitHub repositories health status
 
@@ -31,9 +31,9 @@ Project reaching the :red_circle: status **are removed**.
 | `2023-04-17T04:17:48Z` (1 months ago) | :green_circle: | [mozilla/http-observatory-website/](https://github.com/mozilla/http-observatory-website/) |
 | `2023-04-20T23:00:16Z` (1 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
 | `2023-05-01T16:05:36Z` (0 months ago) | :green_circle: | [nlf/blankie](https://github.com/nlf/blankie) |
-| `2023-05-01T20:53:22Z` (0 months ago) | :green_circle: | [mozilla/http-observatory/](https://github.com/mozilla/http-observatory/) |
 | `2023-05-06T22:36:46Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
 | `2023-05-12T11:15:57Z` (0 months ago) | :green_circle: | [google/csp-evaluator](https://github.com/google/csp-evaluator) |
-| `2023-05-12T12:31:22Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
-| `2023-05-13T20:24:46Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2023-05-15T16:28:00Z` (0 months ago) | :green_circle: | [mozilla/http-observatory/](https://github.com/mozilla/http-observatory/) |
+| `2023-05-16T13:04:16Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2023-05-20T19:22:17Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
