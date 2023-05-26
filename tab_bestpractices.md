@@ -49,17 +49,6 @@ The following section proposes a configuration for the [actively supported and w
 
 <!-- HEADERS_ADD_TABLE_END -->
 
-### Web server syntax
-
-This section indicates the syntax to use to set an HTTP header according to the web server targeted.
-
-| Web server name | Syntax  |
-| ----------------|---------|
-| Apache          | `Header always set [HEADER_NAME] [PROPOSED_VALUE]` |
-| Nginx           | `add_header [HEADER_NAME] [PROPOSED_VALUE] always;` |
-| Lighttpd        | `setenv.add-response-header = ("[HEADER_NAME]" => "[PROPOSED_VALUE]")` |
-| IIS             | Refer to this [documentation](https://docs.microsoft.com/en-us/iis/configuration/system.webserver/httpprotocol/customheaders/). |
-
 ## Prevent information disclosure via HTTP headers
 
 <!-- <div id=div-bestpractices class="ruletitle"></div> -->

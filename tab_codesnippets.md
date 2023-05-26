@@ -16,6 +16,7 @@ tags: headers
 * [Generate configuration code using the OSHP headers reference files](#generate-configuration-code-using-the-oshp-headers-reference-files)
 * [Quickly check security HTTP headers for applications exposed on the Internet](#quickly-check-security-http-headers-for-applications-exposed-on-the-internet)
 * [Quickly check security HTTP headers for applications exposed internally](#quickly-check-security-http-headers-for-applications-exposed-internally)
+* [Syntax for adding HTTP response headers on different web servers](#syntax-for-adding-http-response-headers-on-different-web-servers)
 
 ## Convert a Permissions-Policy back to Feature-Policy
 
@@ -105,7 +106,7 @@ The following _bash_ code snippet, leveraging [jq](https://stedolan.github.io/jq
 💻 Code snippet and execution example:
 
 ```shell
-# Generate the Nginx collection of instructions to add the recommanded HTTP response headers
+# Generate the Nginx collection of instructions to add the recommended HTTP response headers
 $ curl -sk https://owasp.org/www-project-secure-headers/ci/headers_add.json | jq -r '.headers[] | "add_header \(.name) \(.value);"'
 add_header Cache-Control no-store, max-age=0;
 add_header Clear-Site-Data "cache","cookies","storage";
@@ -164,3 +165,45 @@ $ venom run --var="target_site=https://mozilla.org" --var="logout_url=/logout" t
         [info] The X-XSS-Protection header has been deprecated by modern browsers and its use can introduce additional security issues on the client side.
     • SecurityHeaders-Rating SKIPPED
 ```
+
+## Syntax for adding HTTP response headers on different web servers
+
+### Apache
+
+💻 Directive:
+
+`Header always set [HEADER_NAME] [PROPOSED_VALUE]`
+
+🌎 References:
+
+* <https://httpd.apache.org/docs/current/mod/mod_headers.html>
+
+### Nginx
+
+💻 Directive:
+
+`add_header [HEADER_NAME] [PROPOSED_VALUE] always;`
+
+🌎 References:
+
+* <https://nginx.org/en/docs/http/ngx_http_headers_module.html>
+
+### Lighttpd
+
+💻 Directive:
+
+`setenv.add-response-header = ("[HEADER_NAME]" => "[PROPOSED_VALUE]")`
+
+🌎 References:
+
+* <https://redmine.lighttpd.net/projects/lighttpd/wiki/Mod_setenv>
+
+### IIS
+
+💻 Directive:
+
+`<add name="[HEADER_NAME]" value="[PROPOSED_VALUE]" />`
+
+🌎 References:
+
+* <https://docs.microsoft.com/en-us/iis/configuration/system.webserver/httpprotocol/customheaders>
