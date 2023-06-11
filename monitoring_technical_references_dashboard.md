@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2023-06-04 00:06:23
+> :timer_clock: Last verification (UTC): 2023-06-11 00:06:28
 
 ## GitHub repositories health status
 
@@ -34,6 +34,6 @@ Project reaching the :red_circle: status **are removed**.
 | `2023-05-12T11:15:57Z` (1 months ago) | :green_circle: | [google/csp-evaluator](https://github.com/google/csp-evaluator) |
 | `2023-05-22T21:11:40Z` (1 months ago) | :green_circle: | [nlf/blankie](https://github.com/nlf/blankie) |
 | `2023-05-23T03:29:20Z` (1 months ago) | :green_circle: | [mozilla/http-observatory/](https://github.com/mozilla/http-observatory/) |
-| `2023-06-02T14:58:25Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
-| `2023-06-03T19:07:53Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2023-06-08T00:58:15Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2023-06-10T19:32:02Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
