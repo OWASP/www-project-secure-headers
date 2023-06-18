@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2023-06-11 00:06:28
+> :timer_clock: Last verification (UTC): 2023-06-18 00:06:30
 
 ## GitHub repositories health status
 
@@ -22,7 +22,6 @@ Project reaching the :red_circle: status **are removed**.
 | `2021-12-13T20:59:20Z` (18 months ago) | :orange_circle: | [aidantwoods/SecureHeaders](https://github.com/aidantwoods/SecureHeaders) |
 | `2022-07-23T15:36:10Z` (11 months ago) | :green_circle: | [goddtriffin/helmet](https://github.com/goddtriffin/helmet) |
 | `2022-12-24T20:18:32Z` (6 months ago) | :green_circle: | [riramar/hsecscan](https://github.com/riramar/hsecscan) |
-| `2023-01-01T23:59:12Z` (5 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
 | `2023-02-21T06:02:21Z` (4 months ago) | :green_circle: | [sdelements/django-security](https://github.com/sdelements/django-security) |
 | `2023-03-04T03:40:24Z` (3 months ago) | :green_circle: | [rwjblue/ember-cli-content-security-policy/](https://github.com/rwjblue/ember-cli-content-security-policy/) |
 | `2023-03-17T10:57:04Z` (3 months ago) | :green_circle: | [Santandersecurityresearch/DrHeader](https://github.com/Santandersecurityresearch/DrHeader) |
@@ -34,6 +33,7 @@ Project reaching the :red_circle: status **are removed**.
 | `2023-05-12T11:15:57Z` (1 months ago) | :green_circle: | [google/csp-evaluator](https://github.com/google/csp-evaluator) |
 | `2023-05-22T21:11:40Z` (1 months ago) | :green_circle: | [nlf/blankie](https://github.com/nlf/blankie) |
 | `2023-05-23T03:29:20Z` (1 months ago) | :green_circle: | [mozilla/http-observatory/](https://github.com/mozilla/http-observatory/) |
-| `2023-06-08T00:58:15Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
-| `2023-06-10T19:32:02Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2023-06-12T19:03:15Z` (0 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
+| `2023-06-15T11:27:47Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2023-06-17T18:03:56Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
