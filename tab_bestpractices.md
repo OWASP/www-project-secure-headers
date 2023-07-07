@@ -108,6 +108,10 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [K-Proxy-Request](https://knative.dev/docs/serving/istio-authorization/) | `activator` | Indicate the presence of the software [Knative](https://knative.dev) that is an Open-Source Enterprise-level solution to build Serverless and Event Driven Applications in Kubernetes environments. |
 | [X-Old-Content-Length](https://webtechsurvey.com/response-header/x-old-content-length) | `135` | Indicate the presence of the software [WebSEAL](https://www.ibm.com/docs/en/sva/8.0.1?topic=responses-filtering-changes-content-length-header) that is a high performance, multi-threaded web server by IBM. |
 | [$wsep](https://www.ibm.com/docs/en/was/8.5.5?topic=SSEQTP_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rweb_custom_props.htm) | `empty value` | Indicate the presence of the software [WebSphere Application Server](https://www.ibm.com/products/websphere-application-server) that is a JavaEE application server by IBM. |
+| [X-Nextjs-Matched-Path](https://webtechsurvey.com/response-header/x-nextjs-matched-path) | `/blog` | Indicate that the web framework [Next.js](https://nextjs.org/) is used. |
+| [X-Nextjs-Page](https://webtechsurvey.com/response-header/x-nextjs-page) | `/articles` | Indicate that the web framework [Next.js](https://nextjs.org/) is used. |
+| [X-Nextjs-Cache](https://webtechsurvey.com/response-header/x-nextjs-cache) | `REVALIDATED` | Indicate that the web framework [Next.js](https://nextjs.org/) is used. |
+| [X-Nextjs-Redirect](https://github.com/search?q=repo%3Avercel%2Fnext.js%20X-Nextjs-Redirect&type=code) | `/home` | Indicate that the web framework [Next.js](https://nextjs.org/) is used. |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
