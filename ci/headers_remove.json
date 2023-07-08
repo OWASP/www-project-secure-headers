@@ -1,5 +1,5 @@
 {
-  "last_update_utc": "2023-05-26 12:22:30",
+  "last_update_utc": "2023-07-08 15:01:20",
   "headers": [
     "$wsep",
     "Host-Header",
@@ -31,6 +31,10 @@
     "X-Generated-By",
     "X-Generator",
     "X-Mod-Pagespeed",
+    "X-Nextjs-Cache",
+    "X-Nextjs-Matched-Path",
+    "X-Nextjs-Page",
+    "X-Nextjs-Redirect",
     "X-Old-Content-Length",
     "X-Page-Speed",
     "X-Php-Version",
