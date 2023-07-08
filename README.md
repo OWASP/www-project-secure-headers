@@ -48,6 +48,20 @@ A [workspace file](project.code-workspace) is provided with [recommended extensi
 
 * Generation is performed by this GitHub action [workflow](.github/workflows/monitoring-technical-references-generate-dashboard.yml) every time the file [tab_technical.md](tab_technical.md) is modified.
 
+## Social media communication
+
+📩 This template is used to announce news on social media about OSHP update:
+
+```text
+OWASP Secure Headers Project: [MESSAGE].
+
+#appsec #appsecurity #http
+
+[PRINT_SCREEN_IN_PNG_FORMAT_WHEN_APPLICABLE]
+
+[LINK_TO_OSHP_SECTION]
+```
+
 ## Contributors
 
 💌 Contributors to OSHP, before the migration of the project to [GitHub](https://github.com/OWASP/www-project-secure-headers):
