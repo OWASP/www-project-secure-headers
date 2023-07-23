@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2023-07-16 00:07:34
+> :timer_clock: Last verification (UTC): 2023-07-23 00:07:09
 
 ## GitHub repositories health status
 
@@ -33,7 +33,7 @@ Project reaching the :red_circle: status **are removed**.
 | `2023-07-04T14:28:58Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
 | `2023-07-04T15:55:01Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
 | `2023-07-10T19:52:51Z` (0 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
-| `2023-07-10T20:21:26Z` (0 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
 | `2023-07-13T21:40:48Z` (0 months ago) | :green_circle: | [mozilla/http-observatory-website/](https://github.com/mozilla/http-observatory-website/) |
-| `2023-07-15T18:41:23Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2023-07-19T12:05:07Z` (0 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
+| `2023-07-20T19:28:15Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
