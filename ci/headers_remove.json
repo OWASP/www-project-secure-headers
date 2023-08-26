@@ -1,5 +1,5 @@
 {
-  "last_update_utc": "2023-07-31 12:45:08",
+  "last_update_utc": "2023-08-26 22:08:35",
   "headers": [
     "$wsep",
     "Host-Header",
@@ -36,6 +36,7 @@
     "X-Nextjs-Page",
     "X-Nextjs-Redirect",
     "X-Old-Content-Length",
+    "X-OneAgent-JS-Injection",
     "X-Page-Speed",
     "X-Php-Version",
     "X-Powered-By",
@@ -47,6 +48,10 @@
     "X-SourceMap",
     "X-Turbo-Charged-By",
     "X-Varnish-Backend",
-    "X-Varnish-Server"
+    "X-Varnish-Server",
+    "X-dtAgentId",
+    "X-dtHealthCheck",
+    "X-dtInjectedServlet",
+    "X-ruxit-JS-Agent"
   ]
 }
