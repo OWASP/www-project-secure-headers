@@ -112,6 +112,11 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-Nextjs-Page](https://webtechsurvey.com/response-header/x-nextjs-page) | `/articles` | Indicate that the web framework [Next.js](https://nextjs.org/) is used. |
 | [X-Nextjs-Cache](https://webtechsurvey.com/response-header/x-nextjs-cache) | `REVALIDATED` | Indicate that the web framework [Next.js](https://nextjs.org/) is used. |
 | [X-Nextjs-Redirect](https://github.com/search?q=repo%3Avercel%2Fnext.js%20X-Nextjs-Redirect&type=code) | `/home` | Indicate that the web framework [Next.js](https://nextjs.org/) is used. |
+| [X-OneAgent-JS-Injection](https://webtechsurvey.com/response-header/x-oneagent-js-injection) | `true` | Indicate that the [Dynatrace](https://www.dynatrace.com) analytics and automation platform is used. |
+| [X-ruxit-JS-Agent](https://webtechsurvey.com/response-header/X-ruxit-JS-Agent) | `true` | Indicate that the [Dynatrace](https://www.dynatrace.com) analytics and automation platform is used. |
+| [X-dtHealthCheck](https://www.dynatrace.com/support/help/platform-modules/digital-experience/web-applications/initial-setup/firewall-constraints-for-rum) | `Technical diagnostic data` | Indicate that the [Dynatrace](https://www.dynatrace.com) analytics and automation platform is used. |
+| [X-dtAgentId](https://www.dynatrace.com/support/help/platform-modules/digital-experience/web-applications/initial-setup/firewall-constraints-for-rum) | `95b3121c36` | Indicate that the [Dynatrace](https://www.dynatrace.com) analytics and automation platform is used. |
+| [X-dtInjectedServlet](https://www.dynatrace.com/support/help/platform-modules/digital-experience/web-applications/initial-setup/firewall-constraints-for-rum) | `com.company.ReportServlet` | Indicate that the [Dynatrace](https://www.dynatrace.com) analytics and automation platform is used. |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
