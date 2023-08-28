@@ -53,13 +53,17 @@ A [workspace file](project.code-workspace) is provided with [recommended extensi
 📩 This template is used to announce news on social media about OSHP update:
 
 ```text
-OWASP Secure Headers Project: [MESSAGE].
+📡 OWASP Secure Headers Project: [MESSAGE].
 
 #appsec #appsecurity #http
 
 [PRINT_SCREEN_IN_PNG_FORMAT_WHEN_APPLICABLE]
 
-[LINK_TO_OSHP_SECTION]
+📖 [LINK_TO_OSHP_SECTION]
+
+💡 Source used:
+
+[LINK_TO_SOURCE_USED]
 ```
 
 ## Contributors
