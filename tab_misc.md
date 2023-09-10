@@ -48,7 +48,7 @@ The [Private Network Access](https://wicg.github.io/private-network-access/) spe
 </html>
 ```
 
-💻 Request sent by the browser when the page is loaded (tested on `Chrome 116`):
+💻 Request sent by the browser when the page is loaded (tested on `Chrome 116.x`):
 
 ```html
 OPTIONS /icon.svg HTTP/1.1
