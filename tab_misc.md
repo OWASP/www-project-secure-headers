@@ -24,7 +24,7 @@ The [Private Network Access](https://wicg.github.io/private-network-access/) spe
 
 🎯 The objective is to prevent attack, in which, a page hosted on a public network like, the Internet network, try to send a request to an application hosted on a private network:
 
-![PNA schema](https://wd.imgix.net/image/YLflGBAPWecgtKJLqCJHSzHqe2J2/nSGfU9xMJxIy6lMjJiMx.png?auto=format&w=845)
+![PNA schema](assets/images/miscellaneous_pna_request_header_schema.png)
 
 📑 [Source](https://developer.chrome.com/blog/private-network-access-update/#what-is-private-network-access) of the schema.
 
