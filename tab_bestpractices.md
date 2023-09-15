@@ -117,6 +117,11 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-dtHealthCheck](https://www.dynatrace.com/support/help/platform-modules/digital-experience/web-applications/initial-setup/firewall-constraints-for-rum) | `Technical diagnostic data` | Indicate that the [Dynatrace](https://www.dynatrace.com) analytics and automation platform is used. |
 | [X-dtAgentId](https://www.dynatrace.com/support/help/platform-modules/digital-experience/web-applications/initial-setup/firewall-constraints-for-rum) | `95b3121c36` | Indicate that the [Dynatrace](https://www.dynatrace.com) analytics and automation platform is used. |
 | [X-dtInjectedServlet](https://www.dynatrace.com/support/help/platform-modules/digital-experience/web-applications/initial-setup/firewall-constraints-for-rum) | `com.company.ReportServlet` | Indicate that the [Dynatrace](https://www.dynatrace.com) analytics and automation platform is used. |
+| [X-Litespeed-Cache-Control](https://webtechsurvey.com/response-header/X-Litespeed-Cache-Control) | `no-cache` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
+| [X-LiteSpeed-Purge](https://webtechsurvey.com/response-header/X-LiteSpeed-Purge) | `/phpinfo.php` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
+| [X-LiteSpeed-Tag](https://webtechsurvey.com/response-header/X-LiteSpeed-Tag) | `pubtag1,pubtag2` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
+| [X-LiteSpeed-Vary](https://webtechsurvey.com/response-header/X-LiteSpeed-Vary) | `value=ismobile` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
+| [X-LiteSpeed-Cache](https://webtechsurvey.com/response-header/X-LiteSpeed-Cache) | `hit,litemage` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
