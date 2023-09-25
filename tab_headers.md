@@ -9,9 +9,11 @@ tags: headers
 
 # Response Headers
 
-📐 Header lifecycle flow: `Working draft -> Active -> Almost deprecated -> Deprecated`.
+🚦 Header lifecycle flow:
 
-💻 **Working draft**
+![Header lifecycle flow](assets/images/response_headers_header_lifecycle_flow.png)
+
+📐 **Working draft**
 
 * [Permissions-Policy](#permissions-policy)
 
@@ -152,7 +154,7 @@ A Content Security Policy (also named CSP) requires careful tuning and precise d
 | `style-src`                 | Define which styles (CSS) can be applied to the protected resource. |
 | `img-src`                   | Define from where the protected resource can load images. |
 | `media-src`                 | Define from where the protected resource can load video and audio. |
-| `frame-src`                 | _(Deprecated and replaced by `child-src`)_ Define from where the protected resource can embed frames. |
+| `frame-src`                 | *(Deprecated and replaced by `child-src`)* Define from where the protected resource can embed frames. |
 | `child-src`                 | Define from where the protected resource can embed frames. |
 | `frame-ancestors`           | Define from where the protected resource can be embedded in frames. |
 | `font-src`                  | Define from where the protected resource can load fonts. |
@@ -166,7 +168,7 @@ A Content Security Policy (also named CSP) requires careful tuning and precise d
 | `block-all-mixed-content`   | Prevent the user agent from loading mixed content. |
 | `upgrade-insecure-requests` | Instruct the user agent to download insecure HTTP resources using HTTPS. |
 | `referrer`                  | *(Deprecated)* Define information the user agent can send in the `Referer` header. |
-| `report-uri`                | _(Deprecated and replaced by `report-to`)_ Specifies a URI to which the user agent sends reports about policy violation. |
+| `report-uri`                | *(Deprecated and replaced by `report-to`)* Specifies a URI to which the user agent sends reports about policy violation. |
 | `report-to`                 | Specifies a group (defined in the `Report-To` header) to which the user agent sends reports about policy violation. |
 
 ### Example
