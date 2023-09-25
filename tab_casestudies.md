@@ -55,6 +55,9 @@ https://owasp.org/www-project-secure-headers/index.html#div-technical_php
 * [SecureAuth](https://docs.secureauth.com/2104/en/identity-platform-http-security-header-best-practices.html).
 * [Detectify](https://support.detectify.com/support/solutions/articles/48001048949-https-stripping).
 * [ImmuniWeb](https://www.immuniweb.com/websec/about).
+* [Zoom](https://developers.zoom.us/docs/zoom-apps/security/owasp/).
+* [NexusGuard](https://blog.nexusguard.com/hardening-web-applications-using-secure-http-headers).
+* [VeraCode](https://docs.veracode.com/r/enable-security-headers).
 
 ## Software
 
