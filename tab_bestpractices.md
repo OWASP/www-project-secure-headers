@@ -122,6 +122,8 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-LiteSpeed-Tag](https://webtechsurvey.com/response-header/X-LiteSpeed-Tag) | `pubtag1,pubtag2` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
 | [X-LiteSpeed-Vary](https://webtechsurvey.com/response-header/X-LiteSpeed-Vary) | `value=ismobile` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
 | [X-LiteSpeed-Cache](https://webtechsurvey.com/response-header/X-LiteSpeed-Cache) | `hit,litemage` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
+| [X-Umbraco-Version](https://webtechsurvey.com/response-header/X-Umbraco-Version) | `4.7` | Indicate the usage of the [Umbraco CMS](https://umbraco.com/products/umbraco-cms/) software as well as its version. |
+| [OracleCommerceCloud-Version](https://webtechsurvey.com/response-header/OracleCommerceCloud-Version) | `23.08.01` | Indicate the usage of the [Oracle Commerce](https://www.oracle.com/cx/ecommerce/) software as well as its version. |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
