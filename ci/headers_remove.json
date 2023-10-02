@@ -1,10 +1,11 @@
 {
-  "last_update_utc": "2023-09-15 18:32:51",
+  "last_update_utc": "2023-10-02 12:55:27",
   "headers": [
     "$wsep",
     "Host-Header",
     "K-Proxy-Request",
     "Liferay-Portal",
+    "OracleCommerceCloud-Version",
     "Pega-Host",
     "Powered-By",
     "Product",
@@ -52,6 +53,7 @@
     "X-SourceFiles",
     "X-SourceMap",
     "X-Turbo-Charged-By",
+    "X-Umbraco-Version",
     "X-Varnish-Backend",
     "X-Varnish-Server",
     "X-dtAgentId",
