@@ -240,3 +240,4 @@ Access-Control-Allow-Credentials: true
 * <https://developer.mozilla.org/en-US/docs/Glossary/Origin>
 * <https://cwe.mitre.org/data/definitions/942.html>
 * <https://cwe.mitre.org/data/definitions/346.html>
+* [OWASP WSTG - Testing Cross Origin Resource Sharing](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/11-Client-side_Testing/07-Testing_Cross_Origin_Resource_Sharing)
