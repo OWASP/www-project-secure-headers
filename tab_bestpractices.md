@@ -234,7 +234,7 @@ Access-Control-Allow-Credentials: true
 
 ### Test CORS configuration
 
-The tools [nuclei](https://github.com/projectdiscovery/nuclei) can be used, via the template named [cors-misconfig](https://github.com/projectdiscovery/nuclei-templates/blob/main/http/vulnerabilities/generic/cors-misconfig.yaml), to test a CORS configuration:
+The tools [nuclei](https://github.com/projectdiscovery/nuclei) can be used, via the template named [cors-misconfig](https://github.com/projectdiscovery/nuclei-templates/blob/main/http/vulnerabilities/generic/cors-misconfig.yaml), to test a CORS configuration.
 
 💻 Command to use:
 
