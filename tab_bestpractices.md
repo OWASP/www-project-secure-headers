@@ -12,6 +12,7 @@ tags: headers
 * [Configuration proposal](#configuration-proposal)
 * [Prevent information disclosure via HTTP headers](#prevent-information-disclosure-via-http-headers)
 * [Prevent exposure to cross-site scripting when hosting uploaded files](#prevent-exposure-to-cross-site-scripting-when-hosting-uploaded-files)
+* [Prevent CORS misconfiguration issues](#prevent-cors-misconfiguration-issues)
 
 ## Configuration proposal
 
@@ -135,6 +136,107 @@ It can happen a case in which an application allows a user to upload a file and 
 
 To prevent this exposure, the HTTP response header named [Content-Disposition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition), can be used with the following value to instruct browsers to download the file instead of open it in the same web browsing context than the application:
 
-```
+```text
 Content-Disposition: attachment; filename="myfile.html"
 ```
+
+## Prevent CORS misconfiguration issues
+
+> 📖 An excellent tutorial about [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (called **CORS**) is provided on the [Mozilla MDN](https://developer.mozilla.org/en-US/).
+
+This section proposes an approach to help preventing [CORS misconfiguration issues](https://portswigger.net/research/exploiting-cors-misconfigurations-for-bitcoins-and-bounties) using a simple idea: _Provide the collection of [CORS related HTTP response headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers) to use according to different contexts._
+
+### Key points to consider
+
+* If the [web framework you are using provides CORS features](https://enable-cors.org/server.html) then always leverage them instead of implements it manually.
+* Whatever the context, when the request is a **HTTP OPTIONS** ([preflight request](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#preflighted_requests)) then the value provided by the following headers must be validated against expected values. If the validation failed then return an HTTP 403 **without any [CORS related HTTP response headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers)**:
+
+  * [Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#origin)
+  * [Access-Control-Request-Method](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#access-control-request-method)
+  * [Access-Control-Request-Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#access-control-request-headers)
+
+* Validation of the **Origin**, against a list of allowed ones, must be performed using **case sensitive string comparison** to prevent, as much as possible, the [presence of bypasses into the validation logic](https://portswigger.net/web-security/cors#errors-parsing-origin-headers).
+* CORS scope is the access control aspect, from a browser perspective (client side), regarding [cross origins](https://developer.mozilla.org/en-US/docs/Glossary/Origin) access to a resource. Thus, it **does NOT replace** the requirement to implements access control on the server side too. CORS and server-side access control are complementary.
+
+### Contexts
+
+#### Public without authentication
+
+💬 Context:
+
+Your endpoints are expected to be consumed, by a browser, from any origins without any authentication.
+
+💻 Configuration proposal:
+
+```text
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: false
+```
+
+#### Public with authentication
+
+💬 Context:
+
+Your endpoints are expected to be consumed, by a browser, from any origins with authentication.
+
+🚩 The value `*`, for the response header `Access-Control-Allow-Origin`, cannot be used when the response header `Access-Control-Allow-Credentials` is allowed (`true`). Indeed, the browser raises the following error (tested on Chrome 118.x):
+
+```text
+The value of the 'Access-Control-Allow-Origin' header in the response must not be 
+the wildcard '*' when the request's credentials mode is 'include'.
+```
+
+📖 It is explicitly mentioned, into the [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#simple_requests) documentation, as the following:
+
+```text
+When responding to a credentialed requests request, the server must specify an origin in the value 
+of the Access-Control-Allow-Origin header, instead of specifying the "*" wildcard.
+```
+
+Therefore, refer to the [restricted with authentication](#restricted-with-authentication) case for the configuration to use.
+
+#### Restricted without authentication
+
+💬 Context:
+
+Your endpoints are expected to be consumed, by a browser, from a specific collection of origins without any authentication.
+
+💻 Configuration proposal:
+
+* If the value of the request header [Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#origin) is present into the **list of allowed Origins** then:
+
+```text
+Access-Control-Allow-Origin: [Value_Taken_From_The_List_Of_Allowed_Origins]
+Access-Control-Max-Age: 10
+Access-Control-Allow-Credentials: false
+```
+
+* Otherwise return an HTTP 403 **without any [CORS related HTTP response headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers)**.
+
+#### Restricted with authentication
+
+💬 Context:
+
+Your endpoints are expected to be consumed, by a browser, from a specific collection of origins with authentication.
+
+💻 Configuration proposal:
+
+* If the value of the request header [Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#origin) is present into the **list of allowed Origins** then:
+
+```text
+Access-Control-Allow-Origin: [Value_Taken_From_The_List_Of_Allowed_Origins]
+Access-Control-Max-Age: 10
+Access-Control-Allow-Credentials: true
+```
+
+* Otherwise return an HTTP 403 **without any [CORS related HTTP response headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers)**.
+
+### References
+
+* <https://portswigger.net/web-security/cors>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS>
+* <https://enable-cors.org/>
+* <https://developer.mozilla.org/en-US/docs/Glossary/Origin>
+* <https://cwe.mitre.org/data/definitions/942.html>
+* <https://cwe.mitre.org/data/definitions/346.html>
