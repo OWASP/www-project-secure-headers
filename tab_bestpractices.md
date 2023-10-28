@@ -232,6 +232,17 @@ Access-Control-Allow-Credentials: true
 
 * Otherwise return an HTTP 403 **without any [CORS related HTTP response headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers)**.
 
+### Test CORS configuration
+
+The tools [nuclei](https://github.com/projectdiscovery/nuclei) can be used, via the template named [cors-misconfig](https://github.com/projectdiscovery/nuclei-templates/blob/main/http/vulnerabilities/generic/cors-misconfig.yaml), to test a CORS configuration:
+
+💻 Command to use:
+
+```bash
+$ nuclei -silent -template-id cors-misconfig -u https://domain.com
+[cors-misconfig:arbitrary-origin] [http] [info] https://domain.com [...]
+```
+
 ### References
 
 * <https://portswigger.net/web-security/cors>
