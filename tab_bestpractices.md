@@ -155,7 +155,7 @@ This section proposes an approach to help preventing [CORS misconfiguration issu
   * [Access-Control-Request-Method](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#access-control-request-method)
   * [Access-Control-Request-Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#access-control-request-headers)
 
-* Validation of the **Origin**, against a list of allowed ones, must be performed using **case sensitive string comparison** to prevent, as much as possible, the [presence of bypasses into the validation logic](https://portswigger.net/web-security/cors#errors-parsing-origin-headers).
+* Validation of the **Origin**, against a list of allowed ones, must be performed using **strict case sensitive string comparison** to prevent, as much as possible, the [presence of bypasses into the validation logic](https://portswigger.net/web-security/cors#errors-parsing-origin-headers). If possible, does not use regular expression for the implementation of the validation, see [here](https://jub0bs.com/posts/2023-02-08-fearless-cors/#disallow-dangerous-origin-patterns) for an explanation of this recommendation.
 * CORS scope is the access control aspect, from a browser perspective (client side), regarding [cross origins](https://developer.mozilla.org/en-US/docs/Glossary/Origin) access to a resource. Thus, it **does NOT replace** the requirement to implements access control on the server side too. CORS and server-side access control are complementary.
 
 ### Contexts
