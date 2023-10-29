@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2023-10-22 00:06:52
+> :timer_clock: Last verification (UTC): 2023-10-29 00:06:19
 
 ## GitHub repositories health status
 
@@ -30,11 +30,11 @@ Project reaching the :red_circle: status **are removed**.
 | `2023-08-12T06:41:29Z` (2 months ago) | :green_circle: | [bepsvpt/secure-headers](https://github.com/bepsvpt/secure-headers) |
 | `2023-09-04T15:09:28Z` (1 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
 | `2023-09-05T23:33:05Z` (1 months ago) | :green_circle: | [mozilla/django-csp](https://github.com/mozilla/django-csp) |
-| `2023-09-27T09:34:08Z` (1 months ago) | :green_circle: | [Santandersecurityresearch/DrHeader](https://github.com/Santandersecurityresearch/DrHeader) |
 | `2023-09-29T21:16:36Z` (1 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
 | `2023-10-13T15:52:31Z` (0 months ago) | :green_circle: | [mozilla/http-observatory/](https://github.com/mozilla/http-observatory/) |
-| `2023-10-17T16:45:36Z` (0 months ago) | :green_circle: | [mozilla/http-observatory-website/](https://github.com/mozilla/http-observatory-website/) |
-| `2023-10-19T09:37:51Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
-| `2023-10-19T14:00:57Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
-| `2023-10-20T15:43:32Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2023-10-22T22:02:43Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2023-10-25T16:08:49Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
+| `2023-10-25T16:42:00Z` (0 months ago) | :green_circle: | [mozilla/http-observatory-website/](https://github.com/mozilla/http-observatory-website/) |
+| `2023-10-27T12:21:13Z` (0 months ago) | :green_circle: | [Santandersecurityresearch/DrHeader](https://github.com/Santandersecurityresearch/DrHeader) |
+| `2023-10-28T16:43:45Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
