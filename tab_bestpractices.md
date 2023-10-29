@@ -107,7 +107,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-B3-SpanId](https://webtechsurvey.com/response-header/x-b3-spanid) | `244753d494e83353` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
 | [X-B3-TraceId](https://webtechsurvey.com/response-header/x-b3-traceid) | `11bef07b0f5c0468` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
 | [K-Proxy-Request](https://knative.dev/docs/serving/istio-authorization/) | `activator` | Indicate the presence of the software [Knative](https://knative.dev) that is an Open-Source Enterprise-level solution to build Serverless and Event Driven Applications in Kubernetes environments. |
-| [X-Old-Content-Length](https://webtechsurvey.com/response-header/x-old-content-length) | `135` | Indicate the presence of the software [WebSEAL](https://www.ibm.com/docs/en/sva/8.0.1?topic=responses-filtering-changes-content-length-header) that is a high performance, multi-threaded web server by IBM. |
+| [X-Old-Content-Length](https://webtechsurvey.com/response-header/x-old-content-length) | `135` | Indicate the presence of the software [WebSEAL](https://www.ibm.com/docs/en/sva/8.0.1?topic=responses-filtering-changes-content-length-header) that is a high performance, multithreaded web server by IBM. |
 | [$wsep](https://www.ibm.com/docs/en/was/8.5.5?topic=SSEQTP_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rweb_custom_props.htm) | `empty value` | Indicate the presence of the software [WebSphere Application Server](https://www.ibm.com/products/websphere-application-server) that is a JavaEE application server by IBM. |
 | [X-Nextjs-Matched-Path](https://webtechsurvey.com/response-header/x-nextjs-matched-path) | `/blog` | Indicate that the web framework [Next.js](https://nextjs.org/) is used. |
 | [X-Nextjs-Page](https://webtechsurvey.com/response-header/x-nextjs-page) | `/articles` | Indicate that the web framework [Next.js](https://nextjs.org/) is used. |
@@ -142,21 +142,27 @@ Content-Disposition: attachment; filename="myfile.html"
 
 ## Prevent CORS misconfiguration issues
 
-> 📖 An excellent tutorial about [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (called **CORS**) is provided on the [Mozilla MDN](https://developer.mozilla.org/en-US/). [Julien Cretel](https://jub0bs.com/about/) also provided a great [blog post](https://jub0bs.com/posts/2023-02-08-fearless-cors/) about CORS.
+> 📖 An excellent tutorial about [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (called **CORS**) is provided on the [Mozilla MDN](https://developer.mozilla.org/en-US/). In addition, [Julien Cretel](https://jub0bs.com/about/) provided a great [blog post](https://jub0bs.com/posts/2023-02-08-fearless-cors/) about CORS pitfalls.
 
 This section proposes an approach to help preventing [CORS misconfiguration issues](https://portswigger.net/research/exploiting-cors-misconfigurations-for-bitcoins-and-bounties) using a simple idea: _Provide the collection of [CORS related HTTP response headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers) to use according to different contexts._
 
 ### Key points to consider
 
-* If the [web framework you are using provides CORS features](https://enable-cors.org/server.html) then always leverage them instead of implements it manually.
-* Whatever the context, when the request is a **HTTP OPTIONS** ([preflight request](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#preflighted_requests)) then the value provided by the following headers must be validated against expected values. If the validation failed then return an HTTP 403 **without any [CORS related HTTP response headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers)**:
+* 💡 If the web framework/web server you are using provides CORS features then always leverage them instead of implements it manually:
+  * [List of web framework/web server](https://enable-cors.org/server.html) supporting CORS.
+  * [CORS middleware for Go](https://pkg.go.dev/github.com/jub0bs/fcors) by Julien Cretel.
+
+* 🚩 Whatever the context, when the request is a **HTTP OPTIONS** ([preflight request](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#preflighted_requests)) then the value provided by the following headers must be validated against expected values. If the validation failed then return an HTTP 403 **without any [CORS related HTTP response headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers)**:
 
   * [Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#origin)
   * [Access-Control-Request-Method](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#access-control-request-method)
   * [Access-Control-Request-Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#access-control-request-headers)
 
-* Validation of the **Origin**, against a list of allowed ones, must be performed using **strict case sensitive string comparison** to prevent, as much as possible, the [presence of bypasses into the validation logic](https://portswigger.net/web-security/cors#errors-parsing-origin-headers). If possible, does not use regular expression for the implementation of the validation, see [here](https://jub0bs.com/posts/2023-02-08-fearless-cors/#disallow-dangerous-origin-patterns) for an explanation of this recommendation.
-* CORS scope is the access control aspect, from a browser perspective (client side), regarding [cross origins](https://developer.mozilla.org/en-US/docs/Glossary/Origin) access to a resource. Thus, it **does NOT replace** the requirement to implements access control on the server side too. CORS and server-side access control are complementary.
+* 🚩 Validation of the `Origin` / `Access-Control-Request-Method` / `Access-Control-Request-Headers` request header value, against a list of allowed ones, must be performed using [strict case sensitive string comparison](https://jub0bs.com/posts/2023-02-08-fearless-cors/#violation-of-the-case-sensitivity-of-method-names) to prevent, as much as possible, the [presence of bypasses into the validation logic](https://portswigger.net/web-security/cors#errors-parsing-origin-headers). If possible, does not use regular expression for the implementation of the validation, see [here](https://jub0bs.com/posts/2023-02-08-fearless-cors/#disallow-dangerous-origin-patterns) for an explanation of the source of this recommendation.
+
+* 🚩 CORS scope is the access control aspect, from a browser perspective (client side), regarding [cross origins](https://developer.mozilla.org/en-US/docs/Glossary/Origin) access to a resource. Thus, it **does NOT replace** the requirement to implements access control on the server side too. CORS and server-side access controls are complementary.
+
+* 🚩 Never take the value of the request header [Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#origin) to add it into the response header [Access-Control-Allow-Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#access-control-allow-origin) (mirroring), see [here](https://portswigger.net/web-security/cors#server-generated-acao-header-from-client-specified-origin-header) for an explanation of the source of this recommendation. Indeed, always use a list of allowed origins when only a restricted collection of origins is expected to call your endpoints.
 
 ### Contexts
 
@@ -190,7 +196,7 @@ the wildcard '*' when the request's credentials mode is 'include'.
 📖 It is explicitly mentioned, into the [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#simple_requests) documentation, as the following:
 
 ```text
-When responding to a "credentialed requests" request, the server must specify an origin in the value 
+When responding to a "credentialed request" request, the server must specify an origin in the value 
 of the Access-Control-Allow-Origin header, instead of specifying the "*" wildcard.
 ```
 
@@ -253,4 +259,4 @@ $ nuclei -silent -template-id cors-misconfig -u https://domain.com
 * <https://cwe.mitre.org/data/definitions/942.html>
 * <https://cwe.mitre.org/data/definitions/346.html>
 * [OWASP WSTG - Testing Cross Origin Resource Sharing](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/11-Client-side_Testing/07-Testing_Cross_Origin_Resource_Sharing)
-* [CORS Go middleware](https://pkg.go.dev/github.com/jub0bs/fcors) by [Julien Cretel](https://jub0bs.com/about/)
+* <https://pkg.go.dev/github.com/jub0bs/fcors>
