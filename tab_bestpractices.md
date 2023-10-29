@@ -142,7 +142,7 @@ Content-Disposition: attachment; filename="myfile.html"
 
 ## Prevent CORS misconfiguration issues
 
-> 📖 An excellent tutorial about [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (called **CORS**) is provided on the [Mozilla MDN](https://developer.mozilla.org/en-US/).
+> 📖 An excellent tutorial about [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (called **CORS**) is provided on the [Mozilla MDN](https://developer.mozilla.org/en-US/). [Julien Cretel](https://jub0bs.com/about/) also provided a great [blog post](https://jub0bs.com/posts/2023-02-08-fearless-cors/) about CORS.
 
 This section proposes an approach to help preventing [CORS misconfiguration issues](https://portswigger.net/research/exploiting-cors-misconfigurations-for-bitcoins-and-bounties) using a simple idea: _Provide the collection of [CORS related HTTP response headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers) to use according to different contexts._
 
@@ -190,7 +190,7 @@ the wildcard '*' when the request's credentials mode is 'include'.
 📖 It is explicitly mentioned, into the [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#simple_requests) documentation, as the following:
 
 ```text
-When responding to a credentialed requests request, the server must specify an origin in the value 
+When responding to a "credentialed requests" request, the server must specify an origin in the value 
 of the Access-Control-Allow-Origin header, instead of specifying the "*" wildcard.
 ```
 
@@ -247,8 +247,10 @@ $ nuclei -silent -template-id cors-misconfig -u https://domain.com
 
 * <https://portswigger.net/web-security/cors>
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS>
+* <https://jub0bs.com/posts/2023-02-08-fearless-cors/>
 * <https://enable-cors.org/>
 * <https://developer.mozilla.org/en-US/docs/Glossary/Origin>
 * <https://cwe.mitre.org/data/definitions/942.html>
 * <https://cwe.mitre.org/data/definitions/346.html>
 * [OWASP WSTG - Testing Cross Origin Resource Sharing](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/11-Client-side_Testing/07-Testing_Cross_Origin_Resource_Sharing)
+* [CORS Go middleware](https://pkg.go.dev/github.com/jub0bs/fcors) by [Julien Cretel](https://jub0bs.com/about/)
