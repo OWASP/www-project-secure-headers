@@ -129,7 +129,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-DiagInfo](https://webtechsurvey.com/response-header/x-diaginfo) | `EXSRV01` | Indicate the internal host name of the server that handled the request in the context of usage of the [Microsoft Exchange](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/08ad30b6-5b73-41bc-890b-1cab2cf49827) software. |
 | [X-FEServer](https://webtechsurvey.com/response-header/x-feserver) | `EXSRV01` | Indicate the internal host name of the server that handled the request in the context of usage of the [Microsoft Exchange](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/08ad30b6-5b73-41bc-890b-1cab2cf49827) software. |
 | [X-CalculatedBETarget](https://webtechsurvey.com/response-header/x-calculatedbetarget) | `exsrv01.mydomain.com` | Indicate the internal host name of the server that handled the request in the context of usage of the [Microsoft Exchange](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/08ad30b6-5b73-41bc-890b-1cab2cf49827) software. |
-| [X-OWA-Version](https://webtechsurvey.com/response-header/x-owa-version) | `15.2.1258.27` | Indicate the version of the [Microsoft Exchange](https://www.microsoft.com/en-us/microsoft-365/exchange/email) software in use. |
+| [X-OWA-Version](https://webtechsurvey.com/response-header/x-owa-version) | `15.2.1258.27` | Indicate the version of the Microsoft Exchange software in use. |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
