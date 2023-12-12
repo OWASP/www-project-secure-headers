@@ -34,7 +34,7 @@ The following section proposes a configuration for the [actively supported and w
 
 | Header name                                  | Proposed value  |
 | ---------------------------------------------|------------|
-| Strict-Transport-Security                    | `max-age=31536000 ; includeSubDomains` |
+| Strict-Transport-Security                    | `max-age=31536000; includeSubDomains` |
 | X-Frame-Options                              | `deny` |
 | X-Content-Type-Options                       | `nosniff` |
 | Content-Security-Policy                      | `default-src 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content` |
