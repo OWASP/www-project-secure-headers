@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2023-12-24 00:06:56
+> :timer_clock: Last verification (UTC): 2023-12-31 00:07:14
 
 ## GitHub repositories health status
 
@@ -31,10 +31,10 @@ Project reaching the :red_circle: status **are removed**.
 | `2023-11-17T09:59:27Z` (1 months ago) | :green_circle: | [aidantwoods/SecureHeaders](https://github.com/aidantwoods/SecureHeaders) |
 | `2023-11-29T02:00:17Z` (1 months ago) | :green_circle: | [sdelements/django-security](https://github.com/sdelements/django-security) |
 | `2023-12-03T00:29:58Z` (0 months ago) | :green_circle: | [GaProgMan/OwaspHeaders.Core](https://github.com/GaProgMan/OwaspHeaders.Core) |
-| `2023-12-04T01:38:24Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
 | `2023-12-10T08:39:42Z` (0 months ago) | :green_circle: | [google/csp-evaluator](https://github.com/google/csp-evaluator) |
 | `2023-12-18T10:07:47Z` (0 months ago) | :green_circle: | [Santandersecurityresearch/DrHeader](https://github.com/Santandersecurityresearch/DrHeader) |
 | `2023-12-21T21:52:15Z` (0 months ago) | :green_circle: | [mozilla/django-csp](https://github.com/mozilla/django-csp) |
-| `2023-12-23T14:02:25Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
-| `2023-12-23T19:42:33Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2023-12-24T14:34:00Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2023-12-28T12:48:03Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
+| `2023-12-30T17:52:43Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
