@@ -21,7 +21,6 @@ tags: headers
   * [NodeJS](#nodejs)
   * [PHP](#php)
   * [Python](#python)
-  * [RACK](#rack)
   * [Ruby](#ruby)
   * [Rust](#rust)
 
@@ -71,12 +70,6 @@ tags: headers
 | **SecureHeaders** | A PHP class aiming to make the use of browser security features more accessible. | [👩‍💻](https://github.com/aidantwoods/SecureHeaders) |
 | **secure-headers** | PHP Secure Headers for Laravel and non-Laravel projects. | [👩‍💻](https://github.com/bepsvpt/secure-headers) |
 
-### RACK
-
-| Library | Description | Ref |
-| --- | --- | --- |
-| **rack-secure_headers** | Security related HTTP headers for Rack applications. | [👩‍💻](https://github.com/frodsan/rack-secure_headers) |
-
 ### NodeJS
 
 | Library | Description | Ref |
@@ -95,7 +88,7 @@ tags: headers
 | Library | Description | Ref |
 | --- | --- | --- |
 | **django-csp and django-security** | Content Security Policy for Django. A collection of models, views, middlewares, and forms to help secure a Django project. | [👩‍💻](https://github.com/mozilla/django-csp) / [👩‍💻](https://github.com/sdelements/django-security) |
-| **Secure** | Secure headers for Python web frameworks. | [👩‍💻](https://github.com/TypeError/secure) |
+| **Secweb** | Secweb is a pack of security middlewares for fastApi and starlette server it includes CSP, HSTS, and many more. | [👩‍💻](https://github.com/tmotagam/Secweb) |
 
 ### Go
 
