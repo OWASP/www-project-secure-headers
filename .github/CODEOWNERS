@@ -1,0 +1,7 @@
+# Define the mapping for PR opened
+# Doc:  https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+# Info: Order is important; the last matching pattern takes the most precedence.
+# By default is Dominique
+*  @righettod
+# For markdowns file is Ricardo and Dominique
+*.md  @riramar @righettod
