@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2024-01-21 00:07:07
+> :timer_clock: Last verification (UTC): 2024-01-28 00:07:02
 
 ## GitHub repositories health status
 
@@ -23,17 +23,17 @@ Project reaching the :red_circle: status **are removed**.
 | `2023-05-22T21:11:40Z` (8 months ago) | :green_circle: | [nlf/blankie](https://github.com/nlf/blankie) |
 | `2023-09-04T15:09:28Z` (4 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
 | `2023-09-29T21:16:36Z` (4 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
-| `2023-10-25T16:42:00Z` (3 months ago) | :green_circle: | [mozilla/http-observatory-website/](https://github.com/mozilla/http-observatory-website/) |
 | `2023-11-14T12:52:07Z` (2 months ago) | :green_circle: | [bepsvpt/secure-headers](https://github.com/bepsvpt/secure-headers) |
 | `2023-11-17T09:59:27Z` (2 months ago) | :green_circle: | [aidantwoods/SecureHeaders](https://github.com/aidantwoods/SecureHeaders) |
 | `2023-11-29T02:00:17Z` (2 months ago) | :green_circle: | [sdelements/django-security](https://github.com/sdelements/django-security) |
 | `2023-12-03T00:29:58Z` (1 months ago) | :green_circle: | [GaProgMan/OwaspHeaders.Core](https://github.com/GaProgMan/OwaspHeaders.Core) |
 | `2023-12-07T06:47:50Z` (1 months ago) | :green_circle: | [tmotagam/Secweb](https://github.com/tmotagam/Secweb) |
-| `2023-12-21T21:52:15Z` (1 months ago) | :green_circle: | [mozilla/django-csp](https://github.com/mozilla/django-csp) |
 | `2024-01-08T21:47:38Z` (0 months ago) | :green_circle: | [google/csp-evaluator](https://github.com/google/csp-evaluator) |
-| `2024-01-17T10:14:17Z` (0 months ago) | :green_circle: | [Santandersecurityresearch/DrHeader](https://github.com/Santandersecurityresearch/DrHeader) |
-| `2024-01-18T09:58:25Z` (0 months ago) | :green_circle: | [mozilla/http-observatory/](https://github.com/mozilla/http-observatory/) |
-| `2024-01-18T13:18:32Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
-| `2024-01-20T11:01:40Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
-| `2024-01-20T20:13:12Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2024-01-22T08:51:12Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2024-01-22T10:09:59Z` (0 months ago) | :green_circle: | [Santandersecurityresearch/DrHeader](https://github.com/Santandersecurityresearch/DrHeader) |
+| `2024-01-22T13:57:23Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
+| `2024-01-25T16:38:12Z` (0 months ago) | :green_circle: | [mozilla/http-observatory/](https://github.com/mozilla/http-observatory/) |
+| `2024-01-25T17:56:51Z` (0 months ago) | :green_circle: | [mozilla/http-observatory-website/](https://github.com/mozilla/http-observatory-website/) |
+| `2024-01-27T17:35:07Z` (0 months ago) | :green_circle: | [mozilla/django-csp](https://github.com/mozilla/django-csp) |
+| `2024-01-27T18:11:44Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
