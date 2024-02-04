@@ -1,6 +1,8 @@
-> 🚧 @righettod : Take a first look at the PR.
+> [!NOTE]
+> @righettod : Take a first look at the PR.
 
-> 💬 Describe the changes performed by the PR.
+> [!IMPORTANT]
+> Describe the changes performed by the PR.
 
 Hi,
 
