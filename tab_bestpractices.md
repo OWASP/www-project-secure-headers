@@ -130,6 +130,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-FEServer](https://webtechsurvey.com/response-header/x-feserver) | `EXSRV01` | Indicate the internal host name of the server that handled the request in the context of usage of the [Microsoft Exchange](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/08ad30b6-5b73-41bc-890b-1cab2cf49827) software. |
 | [X-CalculatedBETarget](https://webtechsurvey.com/response-header/x-calculatedbetarget) | `exsrv01.mydomain.com` | Indicate the internal host name of the server that handled the request in the context of usage of the [Microsoft Exchange](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/08ad30b6-5b73-41bc-890b-1cab2cf49827) software. |
 | [X-OWA-Version](https://webtechsurvey.com/response-header/x-owa-version) | `15.2.1258.27` | Indicate the version of the Microsoft Exchange software in use. |
+| [X-Cocoon-Version](https://webtechsurvey.com/response-header/x-cocoon-version) | `2.1.13` | Indicate that the web framework [Apache Cocoon](https://cocoon.apache.org/) is used as well as the version used. |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
