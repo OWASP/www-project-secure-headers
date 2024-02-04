@@ -1,4 +1,4 @@
-> [!NOTE]
+> [!WARNING]
 > @righettod : Take a first look at the PR.
 
 > [!IMPORTANT]
