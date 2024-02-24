@@ -28,6 +28,8 @@ The following section proposes a configuration for the [actively supported and w
 
 ⚠️ The `Pragma` header is only specified for backwards compatibility with the HTTP/1.0 caches.
 
+📖 The headers proposed below can be applied both in the context of a *classic web application* and in that of a *web API*.
+
 💡 Content of the table below is also provided, as JSON, via this [file](ci/headers_add.json) (automatically updated).
 
 <!-- HEADERS_ADD_TABLE_START -->
@@ -150,7 +152,7 @@ Content-Disposition: attachment; filename="myfile.html"
 
 > 📖 An excellent tutorial about [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (called **CORS**) is provided on the [Mozilla MDN](https://developer.mozilla.org/en-US/). In addition, [Julien Cretel](https://jub0bs.com/about/) provided a great [blog post](https://jub0bs.com/posts/2023-02-08-fearless-cors/) about CORS pitfalls.
 
-This section proposes an approach to help preventing [CORS misconfiguration issues](https://portswigger.net/research/exploiting-cors-misconfigurations-for-bitcoins-and-bounties) using a simple idea: _Provide the collection of [CORS related HTTP response headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers) to use according to different contexts._
+This section proposes an approach to help preventing [CORS misconfiguration issues](https://portswigger.net/research/exploiting-cors-misconfigurations-for-bitcoins-and-bounties) using a simple idea: *Provide the collection of [CORS related HTTP response headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers) to use according to different contexts.*
 
 ### Key points to consider
 
