@@ -61,7 +61,7 @@ tags: headers
 * It is automatically deployed on `https://oshp-validator-mock.onrender.com`
 * Technical details about this endpoint are [here](https://github.com/oshp/oshp-validator#tests-suite-mock-service).
 
-## Headers reference files
+## Security headers reference files
 
 📖 As mentioned in previous sections, we provide the collection of HTTP response security headers to add as well as HTTP response headers to remove, both in table form.
 
@@ -85,6 +85,10 @@ tags: headers
 ## Notification of update
 
 📡 This [atom web feed](https://github.com/OWASP/www-project-secure-headers/commits/master.atom) can be used to be notified when an update is pushed on the OSHP website's repository.
+
+## Create a link to the OSHP site
+
+📖 This is documented into the **[Case Studies](https://owasp.org/www-project-secure-headers/index.html#div-casestudies)** tab.
 
 ## Contributors
 
