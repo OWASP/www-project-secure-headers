@@ -274,9 +274,46 @@ Clear-Site-Data: "cache","cookies","storage"
 * <https://github.com/w3c/webappsec-clear-site-data>
 * <https://github.com/w3c/webappsec-clear-site-data/tree/master/demo>
 
+## Cross-Origin-Resource-Policy
+
+This response header (also named CORP) allows to define a policy that lets web sites and applications opt in to protection against certain requests from other origins (such as those issued with elements like `<script>` and `<img>`), to mitigate speculative [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack), like [Spectre](https://spectreattack.com/), as well as [Cross-Site Script Inclusion (XSSI)](https://www.scip.ch/en/?labs.20160414) attacks (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy)).
+
+💡 To fully understand where **CORP** and **COEP** work:
+
+* CORP applies on the loaded resource side (resource owner).
+* COEP applies on the "loader" of the resource side (consumer of the resource).
+
+### Values
+
+| Value               | Description |
+|---------------------|-------------|
+| `same-site`   | Only requests from the same [Site](https://developer.mozilla.org/en-US/docs/Glossary/Site) can read the resource. |
+| `same-origin` | Only requests from the same [Origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) (i.e. scheme + host + port) can read the resource. |
+| `cross-origin` | Requests from any [Origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) (both `same-site` and `cross-site`) can read the resource. Browsers are using this policy when an [CORP header is not specified](https://resourcepolicy.fyi/#corp-and-isolation). |
+
+### Example
+
+```
+Cross-Origin-Resource-Policy: same-origin
+```
+
+### References
+
+* <https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy>
+* <https://caniuse.com/mdn-http_headers_cross-origin-resource-policy>
+* <https://web.dev/articles/why-coop-coep#corp>
+* <https://web.dev/articles/cross-origin-isolation-guide>
+* <https://resourcepolicy.fyi/>
+
 ## Cross-Origin-Embedder-Policy
 
 This response header (also named COEP) prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy)).
+
+💡 To fully understand where **CORP** and **COEP** work:
+
+* CORP applies on the loaded resource side (resource owner).
+* COEP applies on the "loader" of the resource side (consumer of the resource).
 
 ### Values
 
@@ -295,10 +332,9 @@ Cross-Origin-Embedder-Policy: require-corp
 
 * <https://html.spec.whatwg.org/multipage/origin.html#coep>
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy>
-* <https://caniuse.com/?search=Cross-Origin-Embedder-Policy>
-* <https://web.dev/coop-coep/>
-* <https://web.dev/why-coop-coep/>
-* <https://web.dev/cross-origin-isolation-guide/>
+* <https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy>
+* <https://web.dev/articles/why-coop-coep#coep>
+* <https://web.dev/articles/cross-origin-isolation-guide>
 
 ## Cross-Origin-Opener-Policy
 
@@ -322,37 +358,12 @@ Cross-Origin-Opener-Policy: same-origin
 
 * <https://html.spec.whatwg.org/multipage/origin.html#cross-origin-opener-policies>
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy>
-* <https://web.dev/coop-coep/>
-* <https://web.dev/why-coop-coep/>
+* <https://caniuse.com/mdn-http_headers_cross-origin-opener-policy>
+* <https://web.dev/articles/why-coop-coep#coop>
+* <https://web.dev/articles/cross-origin-isolation-guide>
 * <https://github.com/xsleaks/xsleaks>
 * <https://portswigger.net/daily-swig/xs-leak>
 * <https://portswigger.net/research/xs-leak-detecting-ids-using-portal>
-* <https://web.dev/cross-origin-isolation-guide/>
-
-## Cross-Origin-Resource-Policy
-
-This response header (also named CORP) allows to define a policy that lets web sites and applications opt in to protection against certain requests from other origins (such as those issued with elements like `<script>` and `<img>`), to mitigate speculative [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack), like [Spectre](https://spectreattack.com/), as well as [Cross-Site Script Inclusion (XSSI)](https://www.scip.ch/en/?labs.20160414) attacks (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy)).
-
-### Values
-
-| Value               | Description |
-|---------------------|-------------|
-| `same-site`   | Only requests from the same [Site](https://developer.mozilla.org/en-US/docs/Glossary/Site) can read the resource. |
-| `same-origin` | Only requests from the same [Origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) (i.e. scheme + host + port) can read the resource. |
-| `cross-origin` | Requests from any [Origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) (both `same-site` and `cross-site`) can read the resource. Browsers are using this policy when an [CORP header is not specified](https://resourcepolicy.fyi/#corp-and-isolation). |
-
-### Example
-
-```
-Cross-Origin-Resource-Policy: same-origin
-```
-
-### References
-
-* <https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header>
-* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy>
-* <https://resourcepolicy.fyi/>
-* <https://web.dev/cross-origin-isolation-guide/>
 
 ## Cache-Control
 
