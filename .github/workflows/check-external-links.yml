@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Action
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Run check
         uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
