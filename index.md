@@ -33,7 +33,11 @@ tags: headers
 
 🏭 All the tools provided by the OSHP are gathered under this [GitHub organization](https://github.com/oshp/).
 
-📺 A presentation of the project is available on the [OWASP Spotlight Youtube playlists](https://www.youtube.com/watch?v=N4F3VWQYU9E) as well as on the [Application Security Podcast Youtube playlists](https://www.youtube.com/watch?v=0SNU9clVhKU).
+📺 A presentation of the project is available on the following locations:
+
+* [OWASP Spotlight Youtube playlists](https://www.youtube.com/watch?v=N4F3VWQYU9E).
+* [Application Security Podcast Youtube playlists](https://www.youtube.com/watch?v=0SNU9clVhKU).
+* [NoLimitSecu Podcast](https://www.nolimitsecu.fr/owasp-secure-headers-project/) (*French*).
 
 ## Migration
 
