@@ -1,5 +1,5 @@
 {
-  "last_update_utc": "2024-02-24 14:46:53",
+  "last_update_utc": "2024-03-30 09:15:03",
   "headers": [
     {
       "name": "Cache-Control",
@@ -28,10 +28,6 @@
     {
       "name": "Permissions-Policy",
       "value": "accelerometer=(),ambient-light-sensor=(),autoplay=(),battery=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),screen-wake-lock=(),web-share=(),xr-spatial-tracking=()"
-    },
-    {
-      "name": "Pragma",
-      "value": "no-cache"
     },
     {
       "name": "Referrer-Policy",

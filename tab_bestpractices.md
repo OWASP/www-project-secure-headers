@@ -26,8 +26,6 @@ The following section proposes a configuration for the [actively supported and w
 
 ### Proposed values
 
-⚠️ The `Pragma` header is only specified for backwards compatibility with the HTTP/1.0 caches.
-
 📖 The headers proposed below can be applied both in the context of a *classic web application* and in that of a *web API*.
 
 💡 Content of the table below is also provided, as JSON, via this [file](ci/headers_add.json) (automatically updated).
@@ -48,7 +46,6 @@ The following section proposes a configuration for the [actively supported and w
 | Cross-Origin-Resource-Policy                 | `same-origin`  |
 | Permissions-Policy                           | `accelerometer=(),ambient-light-sensor=(),autoplay=(),battery=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),screen-wake-lock=(),web-share=(),xr-spatial-tracking=()` |
 | Cache-Control         | `no-store, max-age=0`  |
-| Pragma         | `no-cache`  |
 
 <!-- HEADERS_ADD_TABLE_END -->
 
