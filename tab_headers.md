@@ -41,6 +41,7 @@ None
 * [Expect-CT](#expect-ct)
 * [Public-Key-Pins](#public-key-pins)
 * [X-XSS-Protection](#x-xss-protection)
+* [Pragma](#pragma)
 
 ## Strict-Transport-Security
 
@@ -596,3 +597,29 @@ X-XSS-Protection: 0
 * <https://www.virtuesecurity.com/blog/understanding-xss-auditor/>
 * <https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers>
 * <http://zinoui.com/blog/security-http-headers#x-xss-protection>
+
+## Pragma
+
+> **Deprecated.**
+
+The `Pragma` **HTTP/1.0** general header is an implementation-specific header that may have various effects along the request-response chain.
+
+This header serves for backwards compatibility with the **HTTP/1.0** caches that do not have a [Cache-Control](#cache-control) **HTTP/1.1** header (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma)).
+
+### Values
+
+| Value       | Description                                                                                                                                 |
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| `no-cache`  | Same as `Cache-Control: no-cache`. Forces caches to submit the request to the origin server for validation before a cached copy is released.|
+
+### Example
+
+```
+Pragma: no-cache
+```
+
+### References
+
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma>
+* <https://http.dev/pragma>
+* <https://caniuse.com/mdn-http_headers_pragma>
