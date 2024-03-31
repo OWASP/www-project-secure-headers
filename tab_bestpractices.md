@@ -265,3 +265,58 @@ $ nuclei -silent -template-id cors-misconfig -u https://domain.com
 * <https://cwe.mitre.org/data/definitions/346.html>
 * [OWASP WSTG - Testing Cross Origin Resource Sharing](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/11-Client-side_Testing/07-Testing_Cross_Origin_Resource_Sharing)
 * <https://pkg.go.dev/github.com/jub0bs/fcors>
+
+## Prevent information disclosure via the browser local cached files
+
+This section describes why it is important to specify a **caching policy**, via the [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) HTTP response header, when sensitive information is managed by a web-based application.
+
+### Context
+
+💬 The application allows a user to access to documents containing information, considered sensitive, from a confidentiality perspective.
+
+Let's assume that the application returns the following HTTP response to a request, in which, no caching policy is defined:
+
+```text
+HTTP/1.1 200 OK
+accept-ranges: bytes
+content-length: 433994
+content-type: application/pdf
+date: Sat, 30 Mar 2024 10:06:34 GMT
+server: LiteSpeed
+```
+
+So, the browser will store a copy of the file (here a PDF one) into its cache storage for a certain amount of time.
+
+🚩 **Consequence:** Any application running on the user's computer, will be able to access to the file (at least if executed as the user identity or an administrator one) causing an exposure of the resource to non-expected entities.
+
+📺 This [demonstration video](assets/misc/demo_information_disclosure_via_browser_file_caching.mp4) show an example, of such information disclosure, via a file cached by the browser.
+
+### Configuration proposal
+
+💻 To prevent such issue, the following **caching policy** can be specified:
+
+```text
+Cache-Control: no-store, max-age=0
+```
+
+👀 Where:
+
+* `no-store`: Is used to indicate that the response may not be stored in any cache.
+* `max-age=0`: Is used to force the expiration of any cached version of the resources associated to the response.
+
+💡 The HTTP response header [Clear-Site-Data](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) can also be leveraged, in addition, to instruct the browser to remove any cached data related to the application.
+
+### Other vulnerabilities related to caching
+
+📖 An excellent research and course content, about [web cache poisoning](https://portswigger.net/web-security/web-cache-poisoning), is provided by the [PortSwigger team](https://portswigger.net/).
+
+### References
+
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching>
+* <https://caniuse.com/mdn-http_headers_cache-control>
+* <https://cwe.mitre.org/data/definitions/525.html>
+* <https://cwe.mitre.org/data/definitions/524.html>
+* [OWASP WSTG - Testing for Browser Cache Weaknesses](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/04-Authentication_Testing/06-Testing_for_Browser_Cache_Weaknesses)
+* <https://portswigger.net/kb/issues/00700100_cacheable-https-response>
+* <https://portswigger.net/web-security/web-cache-poisoning>

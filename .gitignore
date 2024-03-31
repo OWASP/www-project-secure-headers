@@ -2,3 +2,5 @@ __pycache__
 *.pyc
 env
 _site/
+# File used as temporary workspace
+scratchpad.md
