@@ -13,6 +13,7 @@ tags: headers
 * [Prevent information disclosure via HTTP headers](#prevent-information-disclosure-via-http-headers)
 * [Prevent exposure to cross-site scripting when hosting uploaded files](#prevent-exposure-to-cross-site-scripting-when-hosting-uploaded-files)
 * [Prevent CORS misconfiguration issues](#prevent-cors-misconfiguration-issues)
+* [Prevent information disclosure via the browser local cached files](#prevent-information-disclosure-via-the-browser-local-cached-files)
 
 ## Configuration proposal
 
