@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2024-04-14 00:10:47
+> :timer_clock: Last verification (UTC): 2024-04-21 00:06:45
 
 ## GitHub repositories health status
 
@@ -19,7 +19,6 @@ Project reaching the :red_circle: status **are removed**.
 | --- | --- | --- |
 | `2022-07-23T15:36:10Z` (21 months ago) | :orange_circle: | [goddtriffin/helmet](https://github.com/goddtriffin/helmet) |
 | `2022-12-24T20:18:32Z` (16 months ago) | :orange_circle: | [riramar/hsecscan](https://github.com/riramar/hsecscan) |
-| `2023-03-04T03:40:24Z` (13 months ago) | :orange_circle: | [rwjblue/ember-cli-content-security-policy/](https://github.com/rwjblue/ember-cli-content-security-policy/) |
 | `2023-05-22T21:11:40Z` (11 months ago) | :green_circle: | [nlf/blankie](https://github.com/nlf/blankie) |
 | `2023-09-04T15:09:28Z` (7 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
 | `2023-11-17T09:59:27Z` (5 months ago) | :green_circle: | [aidantwoods/SecureHeaders](https://github.com/aidantwoods/SecureHeaders) |
@@ -34,6 +33,7 @@ Project reaching the :red_circle: status **are removed**.
 | `2024-03-19T20:41:11Z` (1 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
 | `2024-03-28T09:10:05Z` (1 months ago) | :green_circle: | [bepsvpt/secure-headers](https://github.com/bepsvpt/secure-headers) |
 | `2024-04-12T04:31:55Z` (0 months ago) | :green_circle: | [mozilla/http-observatory/](https://github.com/mozilla/http-observatory/) |
-| `2024-04-12T09:30:48Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
-| `2024-04-13T17:19:56Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2024-04-16T09:42:47Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2024-04-16T18:10:52Z` (0 months ago) | :green_circle: | [rwjblue/ember-cli-content-security-policy/](https://github.com/rwjblue/ember-cli-content-security-policy/) |
+| `2024-04-20T17:21:29Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
