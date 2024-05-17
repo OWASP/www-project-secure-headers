@@ -413,6 +413,7 @@ Cache-Control: public, max-age=604800
 
 ### References
 
+* <https://redbot.org>
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control>
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma>
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires>
