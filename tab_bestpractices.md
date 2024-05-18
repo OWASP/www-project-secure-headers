@@ -14,6 +14,7 @@ tags: headers
 * [Prevent exposure to cross-site scripting when hosting uploaded files](#prevent-exposure-to-cross-site-scripting-when-hosting-uploaded-files)
 * [Prevent CORS misconfiguration issues](#prevent-cors-misconfiguration-issues)
 * [Prevent information disclosure via the browser local cached files](#prevent-information-disclosure-via-the-browser-local-cached-files)
+* [Prevent CSP bypasses](#prevent-csp-bypasses)
 
 ## Configuration proposal
 
@@ -324,3 +325,17 @@ Cache-Control: no-store, max-age=0
 * [OWASP WSTG - Testing for Browser Cache Weaknesses](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/04-Authentication_Testing/06-Testing_for_Browser_Cache_Weaknesses)
 * <https://portswigger.net/kb/issues/00700100_cacheable-https-response>
 * <https://portswigger.net/web-security/web-cache-poisoning>
+
+## Prevent CSP bypasses
+
+This section describes some points, to keep in mind, during the creation of a [Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) (called **CSP**) policy to prevent introducing bypasses.
+
+🚩 Not every **[directives](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#directives)** fallback to the **[default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src)** directive when it is not specified in the CSP policy.
+
+## Directive form-action
+
+👀 It is the case of the **[form-action](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action)** directive. Therefore, an html form can be used to bypass the CSP in place when the `form-action` is not defined.
+
+📺 This [demonstration video](assets/misc/demo_csp_bypass_due_to_no_form_action_directive.mp4) show an example.
+
+💡 Therefore, ensure to always specify the `form-action` directive in a CSP policy to at least, the `'self'` value, to allow forms only on the current domain.
