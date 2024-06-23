@@ -27,6 +27,7 @@ tags: headers
 ## Presentations
 
 * [Trap bad guys in your browser with HTTP security headers](https://speakerdeck.com/righettod/trap-bad-guys-in-your-browser-with-http-security-headers).
+* [How the Content-Security-Policy HTTP response header can save your romantic evening?](https://speakerdeck.com/righettod/how-the-content-security-policy-http-response-header-can-save-your-romantic-evening)
 
 ## Analysis Tools
 
