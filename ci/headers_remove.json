@@ -1,5 +1,5 @@
 {
-  "last_update_utc": "2024-05-19 14:06:22",
+  "last_update_utc": "2024-06-26 04:27:39",
   "headers": [
     "$wsep",
     "Host-Header",
@@ -36,6 +36,7 @@
     "X-Framework",
     "X-Generated-By",
     "X-Generator",
+    "X-Jitsi-Release",
     "X-Kubernetes-PF-FlowSchema-UI",
     "X-Kubernetes-PF-PriorityLevel-UID",
     "X-LiteSpeed-Cache",
