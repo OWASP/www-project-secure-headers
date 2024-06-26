@@ -108,7 +108,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-B3-SpanId](https://webtechsurvey.com/response-header/x-b3-spanid) | `244753d494e83353` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
 | [X-B3-TraceId](https://webtechsurvey.com/response-header/x-b3-traceid) | `11bef07b0f5c0468` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
 | [K-Proxy-Request](https://knative.dev/docs/serving/istio-authorization/) | `activator` | Indicate the presence of the software [Knative](https://knative.dev) that is an Open-Source Enterprise-level solution to build Serverless and Event Driven Applications in Kubernetes environments. |
-| [X-Old-Content-Length](https://webtechsurvey.com/response-header/x-old-content-length) | `135` | Indicate the presence of the software [WebSEAL](https://www.ibm.com/docs/en/sva/8.0.1?topic=responses-filtering-changes-content-length-header) that is a high performance, multithreaded web server by IBM. |
+| [X-Old-Content-Length](https://webtechsurvey.com/response-header/x-old-content-length) | `135` | Indicate the presence of the software [WebSEAL](https://www.ibm.com/docs/en/samfm/8.0.1.2?topic=overview-webseal-introduction) that is a high performance, multithreaded web server by IBM. |
 | [$wsep](https://www.ibm.com/docs/en/was/8.5.5?topic=SSEQTP_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rweb_custom_props.htm) | `empty value` | Indicate the presence of the software [WebSphere Application Server](https://www.ibm.com/products/websphere-application-server) that is a JavaEE application server by IBM. |
 | [X-Nextjs-Matched-Path](https://webtechsurvey.com/response-header/x-nextjs-matched-path) | `/blog` | Indicate that the web framework [Next.js](https://nextjs.org/) is used. |
 | [X-Nextjs-Page](https://webtechsurvey.com/response-header/x-nextjs-page) | `/articles` | Indicate that the web framework [Next.js](https://nextjs.org/) is used. |
@@ -134,6 +134,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-Cocoon-Version](https://webtechsurvey.com/response-header/x-cocoon-version) | `2.1.13` | Indicate that the web framework [Apache Cocoon](https://cocoon.apache.org/) is used as well as the version used. |
 | [X-Kubernetes-PF-FlowSchema-UI](https://kubernetes.io/docs/reference/debug-cluster/flow-control) | `cf931e2d-5a5e-4c12-892c-9bafa71f30dc` | Indicate that the web application issuing the HTTP response is deployed on a [Kubernetes](https://kubernetes.io/) cluster. |
 | [X-Kubernetes-PF-PriorityLevel-UID](https://kubernetes.io/docs/reference/debug-cluster/flow-control) | `78b3face-e1cf-4fc6-a27e-08eb7f0f5b23` | Indicate that the web application issuing the HTTP response is deployed on a [Kubernetes](https://kubernetes.io/) cluster. |
+| [X-Jitsi-Release](https://webtechsurvey.com/response-header/x-jitsi-release) | `5082` | Indicate the version of [Jitsi](https://github.com/jitsi/jitsi) software in use. |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
