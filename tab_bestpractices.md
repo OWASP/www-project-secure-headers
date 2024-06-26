@@ -134,6 +134,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-Cocoon-Version](https://webtechsurvey.com/response-header/x-cocoon-version) | `2.1.13` | Indicate that the web framework [Apache Cocoon](https://cocoon.apache.org/) is used as well as the version used. |
 | [X-Kubernetes-PF-FlowSchema-UI](https://kubernetes.io/docs/reference/debug-cluster/flow-control) | `cf931e2d-5a5e-4c12-892c-9bafa71f30dc` | Indicate that the web application issuing the HTTP response is deployed on a [Kubernetes](https://kubernetes.io/) cluster. |
 | [X-Kubernetes-PF-PriorityLevel-UID](https://kubernetes.io/docs/reference/debug-cluster/flow-control) | `78b3face-e1cf-4fc6-a27e-08eb7f0f5b23` | Indicate that the web application issuing the HTTP response is deployed on a [Kubernetes](https://kubernetes.io/) cluster. |
+| [X-Jitsi-Release](https://webtechsurvey.com/response-header/x-jitsi-release) | `5082` | Indicate the version of [Jitsi](https://github.com/jitsi/jitsi) software in use. |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
