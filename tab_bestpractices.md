@@ -30,6 +30,8 @@ The following section proposes a configuration for the [actively supported and w
 
 📖 The headers proposed below can be applied both in the context of a *classic web application* and in that of a *web API*.
 
+🚩 The header `Clear-Site-Data` will cause the browser to take additional processing time for the HTTP response, so, set it to the logout function when possible.
+
 💡 Content of the table below is also provided, as JSON, via this [file](ci/headers_add.json) (automatically updated).
 
 <!-- HEADERS_ADD_TABLE_START -->
