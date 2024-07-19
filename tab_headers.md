@@ -441,21 +441,6 @@ The Permissions-Policy header replaces the existing **Feature-Policy** header fo
 Permissions-Policy: accelerometer=(),ambient-light-sensor=(),autoplay=(),battery=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),screen-wake-lock=(),web-share=(),xr-spatial-tracking=()
 ```
 
-### Remarks
-
-Usage of the header value example above raised the following error on *Chrome 105.0.5195.102* and *Edge 105.0.1343.27*:
-
-```
-Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.
-Error with Permissions-Policy header: Unrecognized feature: 'battery'.
-Error with Permissions-Policy header: Unrecognized feature: 'layout-animations'.
-Error with Permissions-Policy header: Unrecognized feature: 'legacy-image-formats'.
-Error with Permissions-Policy header: Unrecognized feature: 'oversized-images'.
-Error with Permissions-Policy header: Unrecognized feature: 'speaker-selection'.
-Error with Permissions-Policy header: Unrecognized feature: 'unoptimized-images'.
-Error with Permissions-Policy header: Unrecognized feature: 'unsized-media'.
-```
-
 ### References
 
 * <https://github.com/w3c/webappsec-permissions-policy/blob/main/permissions-policy-explainer.md>
