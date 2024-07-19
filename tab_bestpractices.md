@@ -32,6 +32,8 @@ The following section proposes a configuration for the [actively supported and w
 
 🚩 The header `Clear-Site-Data` will cause the browser to take additional processing time for the HTTP response, so, set it to the logout function when possible.
 
+🔬 For the header `Permissions-Policy`, as it is currently only supported by [Chromium based browsers](https://caniuse.com/permissions-policy), the proposed value was generated with this [site](https://www.permissionspolicy.com/) and tested against the version `128.0.6606.0` of [Chromium](https://chromium.woolyss.com/download/en/) to only specify supported features.
+
 💡 Content of the table below is also provided, as JSON, via this [file](ci/headers_add.json) (automatically updated).
 
 <!-- HEADERS_ADD_TABLE_START -->
@@ -48,7 +50,7 @@ The following section proposes a configuration for the [actively supported and w
 | Cross-Origin-Embedder-Policy                 | `require-corp`   |
 | Cross-Origin-Opener-Policy                   | `same-origin`   |
 | Cross-Origin-Resource-Policy                 | `same-origin`  |
-| Permissions-Policy                           | `accelerometer=(),ambient-light-sensor=(),autoplay=(),battery=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),screen-wake-lock=(),web-share=(),xr-spatial-tracking=()` |
+| Permissions-Policy                           | `accelerometer=(), autoplay=(), camera=(), cross-origin-isolated=(), display-capture=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(self), usb=(), web-share=(), xr-spatial-tracking=(), clipboard-read=(), clipboard-write=(), gamepad=(), hid=(), idle-detection=(), interest-cohort=(), serial=(), unload=()` |
 | Cache-Control         | `no-store, max-age=0`  |
 
 <!-- HEADERS_ADD_TABLE_END -->
