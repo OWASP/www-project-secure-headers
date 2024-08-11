@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2024-08-04 00:07:44
+> :timer_clock: Last verification (UTC): 2024-08-11 00:09:56
 
 ## GitHub repositories health status
 
@@ -30,10 +30,10 @@ Project reaching the :red_circle: status **are removed**.
 | `2024-07-08T14:27:50Z` (1 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
 | `2024-07-11T16:47:01Z` (1 months ago) | :green_circle: | [google/csp-evaluator](https://github.com/google/csp-evaluator) |
 | `2024-07-15T16:21:17Z` (1 months ago) | :green_circle: | [mozilla/django-csp](https://github.com/mozilla/django-csp) |
-| `2024-07-16T08:43:09Z` (1 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
-| `2024-07-24T07:28:43Z` (1 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
-| `2024-07-24T10:36:04Z` (1 months ago) | :green_circle: | [Santandersecurityresearch/DrHeader](https://github.com/Santandersecurityresearch/DrHeader) |
 | `2024-07-24T19:01:20Z` (1 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
-| `2024-07-26T18:54:57Z` (1 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
-| `2024-08-01T19:37:58Z` (0 months ago) | :green_circle: | [sdelements/django-security](https://github.com/sdelements/django-security) |
+| `2024-08-05T01:36:11Z` (0 months ago) | :green_circle: | [sdelements/django-security](https://github.com/sdelements/django-security) |
+| `2024-08-08T00:38:31Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2024-08-08T10:43:23Z` (0 months ago) | :green_circle: | [Santandersecurityresearch/DrHeader](https://github.com/Santandersecurityresearch/DrHeader) |
+| `2024-08-09T16:39:06Z` (0 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
+| `2024-08-10T23:35:52Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
