@@ -16,7 +16,6 @@ tags: headers
 * 👩‍💻 [Development Libraries](#development-libraries)
   * [DotNet](#dotnet)
   * [Go](#go)
-  * [HAPI](#hapi)
   * [Java](#java)
   * [NodeJS](#nodejs)
   * [PHP](#php)
@@ -37,7 +36,6 @@ tags: headers
 | **humble** | A humble, and fast, security-oriented HTTP headers analyzer. | [👩‍💻](https://github.com/rfc-st/humble) |
 | **SecurityHeaders.com** | There are services out there that will analyze the HTTP response headers of other sites but I also wanted to add a rating system to the results. The HTTP response headers that this site analysis provides huge levels of protection and it's important that sites deploy them. Hopefully, by providing an easy mechanism to assess them, and further information on how to deploy missing headers, we can drive up the usage of security based headers across the web. | [🌎](https://securityheaders.com/) |
 | **Mozilla Observatory** | A Mozilla project designed to help developers, system administrators, and security professionals configure their sites safely and securely. | [🌎](https://observatory.mozilla.org/) / [👩‍💻](https://github.com/mozilla/http-observatory/) / [👩‍💻](https://github.com/mozilla/http-observatory-website/) |
-| **Recx Security Analyser** | Chrome extension that allows the inspection of security aspects of a site's HTTP headers, cookies and other key security settings. | [🌎](https://chrome.google.com/webstore/detail/recx-security-analyser/ljafjhbjenhgcgnikniijchkngljgjda) |
 | **testssl.sh** | Easy to use shell script which tests not only SSL/TLS encryption but also checks common headers and analyzes those. Output is screen, JSON, CSV and HTML. | [👩‍💻](https://github.com/drwetter/testssl.sh) |
 | **DrHEADer** | DrHEADer helps with the audit of security headers received in response to a single request or a list of requests. | [👩‍💻](https://github.com/Santandersecurityresearch/DrHeader) |
 | **csp-evaluator** | NPM module allowing developers and security experts to check if a Content Security Policy serves as a strong mitigation against XSS attacks. | [👩‍💻](https://github.com/google/csp-evaluator) |
@@ -77,12 +75,7 @@ tags: headers
 | --- | --- | --- |
 | **helmet** | Module to help secure Express apps with various HTTP headers. | [👩‍💻](https://github.com/helmetjs/helmet) |
 | **ember-cli-content-security-policy** | This addon makes it easy to use Content Security Policy (CSP) in your project. It can be deployed either via a Content-Security-Policy header sent from the Ember CLI Express server, or as a meta tag in the index.html file. | [👩‍💻](https://github.com/rwjblue/ember-cli-content-security-policy/) |
-
-### HAPI
-
-| Library | Description | Ref |
-| --- | --- | --- |
-| **blankie** | A CSP plugin for hapi. | [👩‍💻](https://github.com/nlf/blankie) |
+| **blankie** | A CSP plugin for [hapi](https://github.com/hapijs/hapi). | [👩‍💻](https://github.com/nlf/blankie) |
 
 ### Python
 
@@ -95,7 +88,7 @@ tags: headers
 
 | Library | Description | Ref |
 | --- | --- | --- |
-| **helmet** | HTTP security middleware for Go(lang) inspired by HelmetJS. | [👩‍💻](https://github.com/goddtriffin/helmet) |
+| **secure** | HTTP middleware for Go that facilitates some quick security wins. | [👩‍💻](https://github.com/unrolled/secure) |
 
 ### Rust
 

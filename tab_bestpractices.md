@@ -146,7 +146,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 
 This section describes, how the HTTP response header named [Content-Disposition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition), can be used to prevent exposure to cross-site scripting when hosting uploaded files and opening them in the same web browsing context than the application.
 
-It can happen a case in which an application allows a user to upload a file and then allow this file to be accessed by other users. If such feature allows uploading of HTML files (also apply for [SVG file](http://ghostlulz.com/xss-svg/)) then it can be used, as a vector, to store an HTML file containing JavaScript code. Therefore, the feature become prone to [stored cross-site scripting](https://portswigger.net/web-security/cross-site-scripting/stored) vulnerability.
+It can happen a case in which an application allows a user to upload a file and then allow this file to be accessed by other users. If such feature allows uploading of HTML files (also apply for [SVG file](https://hackerone.com/reports/1276742)) then it can be used, as a vector, to store an HTML file containing JavaScript code. Therefore, the feature become prone to [stored cross-site scripting](https://portswigger.net/web-security/cross-site-scripting/stored) vulnerability.
 
 To prevent this exposure, the HTTP response header named [Content-Disposition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition), can be used with the following value to instruct browsers to download the file instead of open it in the same web browsing context than the application:
 
@@ -330,6 +330,8 @@ Cache-Control: no-store, max-age=0
 * [OWASP WSTG - Testing for Browser Cache Weaknesses](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/04-Authentication_Testing/06-Testing_for_Browser_Cache_Weaknesses)
 * <https://portswigger.net/kb/issues/00700100_cacheable-https-response>
 * <https://portswigger.net/web-security/web-cache-poisoning>
+* <https://portswigger.net/web-security/web-cache-deception>
+* <https://portswigger.net/research/gotta-cache-em-all>
 
 ## Prevent CSP bypasses
 

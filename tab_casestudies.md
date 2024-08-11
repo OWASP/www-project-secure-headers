@@ -40,7 +40,7 @@ https://owasp.org/www-project-secure-headers/index.html#div-headers_clear-site-d
 https://owasp.org/www-project-secure-headers/index.html#div-technical_php
 ```
 
-## Company
+## Companies and other legal entities
 
 * [Cloud.gov](https://cloud.gov/docs/management/headers/).
 * [Amazon AWS](https://docs.aws.amazon.com/whitepapers/latest/secure-content-delivery-amazon-cloudfront/improving-security-by-enabling-security-specific-headers.html).
@@ -58,6 +58,11 @@ https://owasp.org/www-project-secure-headers/index.html#div-technical_php
 * [NexusGuard](https://blog.nexusguard.com/hardening-web-applications-using-secure-http-headers).
 * [VeraCode](https://docs.veracode.com/r/enable-security-headers).
 * [Ivanti](https://forums.ivanti.com/s/article/HTTP-Security-Headers-X-Frame-Options-X-XSS-Protection-X-Content-Type-Options).
+* [Government Technology Agency of Singapore GovTech](https://info.standards.tech.gov.sg/control-catalog/as/).
+* [HCL Volt MX](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/voltmx_Foundry_deployment_guide/Content/Hardening_Guide.html).
+* [Missouri State Website](https://assets.mo.gov/samples/security/security-headers.html).
+* [SAS](https://documentation.sas.com/doc/en/sasadmincdc/v_054/viyaov/p0i3vcgjpciz45n1of1v4vkffwbn.htm).
+* [RedHat](https://www.redhat.com/en/blog/creating-web-application-firewall-red-hat-openshift).
 
 ## Software
 
