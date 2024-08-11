@@ -330,6 +330,8 @@ Cache-Control: no-store, max-age=0
 * [OWASP WSTG - Testing for Browser Cache Weaknesses](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/04-Authentication_Testing/06-Testing_for_Browser_Cache_Weaknesses)
 * <https://portswigger.net/kb/issues/00700100_cacheable-https-response>
 * <https://portswigger.net/web-security/web-cache-poisoning>
+* <https://portswigger.net/web-security/web-cache-deception>
+* <https://portswigger.net/research/gotta-cache-em-all>
 
 ## Prevent CSP bypasses
 

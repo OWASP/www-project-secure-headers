@@ -424,6 +424,8 @@ Cache-Control: public, max-age=604800
 * <https://portswigger.net/web-security/web-cache-poisoning>
 * <https://portswigger.net/research/practical-web-cache-poisoning>
 * <https://portswigger.net/research/web-cache-entanglement>
+* <https://portswigger.net/web-security/web-cache-deception>
+* <https://portswigger.net/research/gotta-cache-em-all>
 
 ## Permissions Policy
 
