@@ -59,6 +59,7 @@ https://owasp.org/www-project-secure-headers/index.html#div-technical_php
 * [VeraCode](https://docs.veracode.com/r/enable-security-headers).
 * [Ivanti](https://forums.ivanti.com/s/article/HTTP-Security-Headers-X-Frame-Options-X-XSS-Protection-X-Content-Type-Options).
 * [Government Technology Agency of Singapore GovTech](https://info.standards.tech.gov.sg/control-catalog/as/).
+* [HCL Volt MX](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/voltmx_Foundry_deployment_guide/Content/Hardening_Guide.html).
 
 ## Software
 
