@@ -95,7 +95,7 @@ tags: headers
 
 | Library | Description | Ref |
 | --- | --- | --- |
-| **helmet** | HTTP security middleware for Go(lang) inspired by HelmetJS. | [👩‍💻](https://github.com/goddtriffin/helmet) |
+| **secure** | HTTP middleware for Go that facilitates some quick security wins. | [👩‍💻](https://github.com/unrolled/secure) |
 
 ### Rust
 
