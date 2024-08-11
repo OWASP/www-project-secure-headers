@@ -40,7 +40,7 @@ https://owasp.org/www-project-secure-headers/index.html#div-headers_clear-site-d
 https://owasp.org/www-project-secure-headers/index.html#div-technical_php
 ```
 
-## Company
+## Companies and other legal entities
 
 * [Cloud.gov](https://cloud.gov/docs/management/headers/).
 * [Amazon AWS](https://docs.aws.amazon.com/whitepapers/latest/secure-content-delivery-amazon-cloudfront/improving-security-by-enabling-security-specific-headers.html).
