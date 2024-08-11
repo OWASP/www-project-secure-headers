@@ -62,6 +62,7 @@ https://owasp.org/www-project-secure-headers/index.html#div-technical_php
 * [HCL Volt MX](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/voltmx_Foundry_deployment_guide/Content/Hardening_Guide.html).
 * [Missouri State Website](https://assets.mo.gov/samples/security/security-headers.html).
 * [SAS](https://documentation.sas.com/doc/en/sasadmincdc/v_054/viyaov/p0i3vcgjpciz45n1of1v4vkffwbn.htm).
+* [RedHat](https://www.redhat.com/en/blog/creating-web-application-firewall-red-hat-openshift).
 
 ## Software
 
