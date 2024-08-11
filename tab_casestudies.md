@@ -58,7 +58,7 @@ https://owasp.org/www-project-secure-headers/index.html#div-technical_php
 * [NexusGuard](https://blog.nexusguard.com/hardening-web-applications-using-secure-http-headers).
 * [VeraCode](https://docs.veracode.com/r/enable-security-headers).
 * [Ivanti](https://forums.ivanti.com/s/article/HTTP-Security-Headers-X-Frame-Options-X-XSS-Protection-X-Content-Type-Options).
-* [Singapore Government ICT&SS](https://info.standards.tech.gov.sg/control-catalog/as/).
+* [Government Technology Agency of Singapore GovTech](https://info.standards.tech.gov.sg/control-catalog/as/).
 
 ## Software
 
