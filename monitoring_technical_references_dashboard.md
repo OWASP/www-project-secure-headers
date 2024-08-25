@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2024-08-18 00:07:54
+> :timer_clock: Last verification (UTC): 2024-08-25 00:08:01
 
 ## GitHub repositories health status
 
@@ -23,7 +23,6 @@ Project reaching the :red_circle: status **are removed**.
 | `2024-03-28T09:10:05Z` (5 months ago) | :green_circle: | [bepsvpt/secure-headers](https://github.com/bepsvpt/secure-headers) |
 | `2024-04-25T17:26:48Z` (4 months ago) | :green_circle: | [rwjblue/ember-cli-content-security-policy/](https://github.com/rwjblue/ember-cli-content-security-policy/) |
 | `2024-05-30T19:02:49Z` (3 months ago) | :green_circle: | [GaProgMan/OwaspHeaders.Core](https://github.com/GaProgMan/OwaspHeaders.Core) |
-| `2024-06-18T07:34:07Z` (2 months ago) | :green_circle: | [tmotagam/Secweb](https://github.com/tmotagam/Secweb) |
 | `2024-06-25T16:39:34Z` (2 months ago) | :green_circle: | [unrolled/secure](https://github.com/unrolled/secure) |
 | `2024-07-01T14:14:50Z` (1 months ago) | :green_circle: | [mozilla/http-observatory/](https://github.com/mozilla/http-observatory/) |
 | `2024-07-02T15:38:10Z` (1 months ago) | :green_circle: | [mozilla/http-observatory-website/](https://github.com/mozilla/http-observatory-website/) |
@@ -34,7 +33,8 @@ Project reaching the :red_circle: status **are removed**.
 | `2024-08-13T15:52:44Z` (0 months ago) | :green_circle: | [hapijs/hapi](https://github.com/hapijs/hapi) |
 | `2024-08-14T10:14:24Z` (0 months ago) | :green_circle: | [Santandersecurityresearch/DrHeader](https://github.com/Santandersecurityresearch/DrHeader) |
 | `2024-08-14T14:30:00Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
-| `2024-08-14T22:12:04Z` (0 months ago) | :green_circle: | [sdelements/django-security](https://github.com/sdelements/django-security) |
-| `2024-08-16T19:41:39Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 | `2024-08-17T20:28:50Z` (0 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
+| `2024-08-21T01:15:35Z` (0 months ago) | :green_circle: | [sdelements/django-security](https://github.com/sdelements/django-security) |
+| `2024-08-21T07:30:17Z` (0 months ago) | :green_circle: | [tmotagam/Secweb](https://github.com/tmotagam/Secweb) |
+| `2024-08-24T18:25:31Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
