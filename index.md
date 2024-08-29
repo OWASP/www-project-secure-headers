@@ -5,6 +5,7 @@ url: https://owasp.org/www-project-secure-headers
 type: documentation
 layout: col-sidebar
 tags: headers
+pitch: Provides technical information about HTTP security headers.
 ---
 
 <script crossorigin="anonymous" type="application/javascript" src="assets/js/direct-link-handler.js"></script>
