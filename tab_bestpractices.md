@@ -26,8 +26,6 @@ The following section proposes a configuration for the [actively supported and w
 
 💡 Additional information about HTTP security headers on [OpenCRE](https://opencre.org/cre/636-347?name=OWASP+Secure+Headers+Project&section=configuration&link=https%3A%2F%2Fowasp.org%2Fwww-project-secure-headers%2F%23div-bestpractices).
 
-### Proposed values
-
 📖 The headers proposed below can be applied both in the context of a *classic web application* and in that of a *web API*.
 
 🚩 The header `Clear-Site-Data` will cause the browser to take additional processing time for the HTTP response, so, set it to the logout function when possible.
@@ -64,6 +62,10 @@ This section provides a collection of HTTP response headers to remove, when poss
 💡 Additional information about technical information disclosure in HTTP header on [OpenCRE](https://www.opencre.org/cre/403-005?name=OWASP+Secure+Headers+Project&section=Prevent+information+disclosure+via+HTTP+headers&link=https%3A%2F%2Fowasp.org%2Fwww-project-secure-headers%2F%23div-bestpractices_prevent-information-disclosure-via-http-headers).
 
 💡 When an HTTP response header is known by the analytics site [WebTechSurvey](https://webtechsurvey.com/), then, a reference link is added to its usage statistics page. Otherwise, a reference link regarding the documentation of the header is provided.
+
+🚩 The response header `Content-Type` can sometimes discloses the web framework used. It is the case for the following ones:
+
+* [Spring Boot Actuator REST API](https://docs.spring.io/spring-boot/api/rest/actuator/auditevents.html): `Content-Type: application/vnd.spring-boot.actuator.v3+json`.
 
 💡 Content of the table below is also provided, as JSON, via this [file](ci/headers_remove.json) (automatically updated).
 
