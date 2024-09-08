@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2024-09-01 00:08:56
+> :timer_clock: Last verification (UTC): 2024-09-08 00:08:03
 
 ## GitHub repositories health status
 
@@ -34,7 +34,7 @@ Project reaching the :red_circle: status **are removed**.
 | `2024-08-14T10:14:24Z` (1 months ago) | :green_circle: | [Santandersecurityresearch/DrHeader](https://github.com/Santandersecurityresearch/DrHeader) |
 | `2024-08-21T01:15:35Z` (1 months ago) | :green_circle: | [sdelements/django-security](https://github.com/sdelements/django-security) |
 | `2024-08-21T07:30:17Z` (1 months ago) | :green_circle: | [tmotagam/Secweb](https://github.com/tmotagam/Secweb) |
-| `2024-08-26T16:14:23Z` (1 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
-| `2024-08-31T14:22:12Z` (1 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
-| `2024-08-31T17:38:12Z` (1 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2024-09-06T21:07:01Z` (0 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
+| `2024-09-07T15:08:54Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2024-09-07T19:11:55Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
