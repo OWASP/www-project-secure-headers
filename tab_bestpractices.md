@@ -167,7 +167,7 @@ This section proposes an approach to help preventing [CORS misconfiguration issu
 
 * 💡 If the web framework/web server you are using provides CORS features then always leverage them instead of implements it manually:
   * [List of web framework/web server](https://enable-cors.org/server.html) supporting CORS.
-  * [CORS middleware for Go](https://pkg.go.dev/github.com/jub0bs/fcors) by Julien Cretel.
+  * [CORS middleware for Go](https://pkg.go.dev/github.com/jub0bs/cors) by Julien Cretel.
 
 * 🚩 Whatever the context, when the request is a **HTTP OPTIONS** ([preflight request](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#preflighted_requests)) then the value provided by the following headers must be validated against expected values. If the validation failed then return an HTTP 403 **without any [CORS related HTTP response headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers)**:
 
@@ -276,7 +276,7 @@ $ nuclei -silent -template-id cors-misconfig -u https://domain.com
 * <https://cwe.mitre.org/data/definitions/942.html>
 * <https://cwe.mitre.org/data/definitions/346.html>
 * [OWASP WSTG - Testing Cross Origin Resource Sharing](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/11-Client-side_Testing/07-Testing_Cross_Origin_Resource_Sharing)
-* <https://pkg.go.dev/github.com/jub0bs/fcors>
+* <https://pkg.go.dev/github.com/jub0bs/cors>
 
 ## Prevent information disclosure via the browser local cached files
 
