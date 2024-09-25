@@ -83,6 +83,7 @@ tags: headers
 | --- | --- | --- |
 | **django-csp and django-security** | Content Security Policy for Django. A collection of models, views, middlewares, and forms to help secure a Django project. | [👩‍💻](https://github.com/mozilla/django-csp) / [👩‍💻](https://github.com/sdelements/django-security) |
 | **Secweb** | Secweb is a pack of security middlewares for fastApi and starlette server it includes CSP, HSTS, and many more. | [👩‍💻](https://github.com/tmotagam/Secweb) |
+| **secure** | Lightweight library to add security headers to Django, Flask, FastAPI, and more. | [👩‍💻](https://github.com/TypeError/secure) |
 
 ### Go
 
