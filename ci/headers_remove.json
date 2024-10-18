@@ -1,5 +1,5 @@
 {
-  "last_update_utc": "2024-09-19 21:29:28",
+  "last_update_utc": "2024-10-18 18:07:18",
   "headers": [
     "$wsep",
     "Host-Header",
@@ -21,6 +21,7 @@
     "X-B3-SpanId",
     "X-B3-TraceId",
     "X-BEServer",
+    "X-Backside-Transport",
     "X-CF-Powered-By",
     "X-CMS",
     "X-CalculatedBETarget",
