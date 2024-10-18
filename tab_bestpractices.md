@@ -142,6 +142,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-Kubernetes-PF-PriorityLevel-UID](https://kubernetes.io/docs/reference/debug-cluster/flow-control) | `78b3face-e1cf-4fc6-a27e-08eb7f0f5b23` | Indicate that the web application issuing the HTTP response is deployed on a [Kubernetes](https://kubernetes.io/) cluster. |
 | [X-Jitsi-Release](https://webtechsurvey.com/response-header/x-jitsi-release) | `5082` | Indicate the version of [Jitsi](https://github.com/jitsi/jitsi) software in use. |
 | [X-Joomla-Version](https://webtechsurvey.com/response-header/x-joomla-version) | `3.9.25` |Indicate that the CMS [Joomla](https://www.joomla.org/) is used as well as the version used. |
+| [X-Backside-Transport](https://webtechsurvey.com/response-header/x-backside-transport) | `OK OK` |Indicate the presence of the products [IBM WebSphere DataPower](https://www.ibm.com/products/datapower-gateway) in the call flow.|
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
