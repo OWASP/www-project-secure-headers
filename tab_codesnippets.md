@@ -14,8 +14,7 @@ tags: headers
 * [Convert a Permissions-Policy back to Feature-Policy](#convert-a-permissions-policy-back-to-feature-policy)
 * [Test locally a Content-Security-Policy for weaknesses](#test-locally-a-content-security-policy-for-weaknesses)
 * [Generate configuration code using the OSHP headers reference files](#generate-configuration-code-using-the-oshp-headers-reference-files)
-* [Quickly check security HTTP headers for applications exposed on the Internet](#quickly-check-security-http-headers-for-applications-exposed-on-the-internet)
-* [Quickly check security HTTP headers for applications exposed internally](#quickly-check-security-http-headers-for-applications-exposed-internally)
+* [Quickly check security HTTP headers](#quickly-check-security-http-headers)
 * [Syntax for adding HTTP response headers on different web servers](#syntax-for-adding-http-response-headers-on-different-web-servers)
 
 ## Convert a Permissions-Policy back to Feature-Policy
@@ -114,29 +113,9 @@ add_header Cross-Origin-Embedder-Policy require-corp;
 ...
 ```
 
-## Quickly check security HTTP headers for applications exposed on the Internet
+## Quickly check security HTTP headers
 
-The online tool [securityheaders.com](https://securityheaders.com) can be used to achieve that objective.
-
-Even if the API is not free, it is possible to leverage it in a free way. Indeed, the following **DIV** with the class **score**, contains the rating letter and its associated rating color:
-
-```html
-<div class="score"><div class="score_green"><span>A</span></div></div>
-```
-
-💻 Code snippet and execution example:
-
-```shell
-$ curl -s "https://securityheaders.com/?hide=on&followRedirects=on&q=https://mozilla.org" | grep -E '<div\s+class="score_[a-z]+">.*</div>'
-<div class="score_green"><span>A</span></div>
-# Parse the HTML of the DIV of the score to get the rating code directly
-$ curl -s "https://securityheaders.com/?hide=on&followRedirects=on&q=https://mozilla.org" | grep -E '<div\s+class="score_[a-z]+">.*</div>' | sed -e 's/.*<span>\(.\+\)<\/span.*/\1/'
-A
-```
-
-## Quickly check security HTTP headers for applications exposed internally
-
-The portable cross-platform tool [Venom](https://github.com/ovh/venom) with the dedicated [OSHP Validator test suites aligned with the OWASP Secure Headers Project](https://github.com/oshp/oshp-validator).
+The portable cross-platform tool [Venom](https://github.com/ovh/venom) with the dedicated [OSHP Validator test suites aligned with the OWASP Secure Headers Project](https://github.com/oshp/oshp-validator) can be used.
 
 💻 Use the following example set of commands:
 
@@ -163,7 +142,6 @@ $ venom run --var="target_site=https://mozilla.org" --var="logout_url=/logout" t
         [info] This header will likely become obsolete in June 2021. Since May 2018 new certificates are expected to support SCTs by default. Certificates before March 2018 were allowed to have a lifetime of 39 months, those will all be expired in June 2021.
     • X-Xss-Protection SUCCESS
         [info] The X-XSS-Protection header has been deprecated by modern browsers and its use can introduce additional security issues on the client side.
-    • SecurityHeaders-Rating SKIPPED
 ```
 
 ## Syntax for adding HTTP response headers on different web servers
