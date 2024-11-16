@@ -55,7 +55,7 @@ A [workspace file](project.code-workspace) is provided with [recommended extensi
 ```text
 📡 OWASP Secure Headers Project: [MESSAGE].
 
-#appsec #appsecurity #http
+#appsec #appsecurity #oshp
 
 [PRINT_SCREEN_IN_PNG_FORMAT_WHEN_APPLICABLE]
 
