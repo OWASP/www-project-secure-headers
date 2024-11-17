@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2024-11-10 00:08:28
+> :timer_clock: Last verification (UTC): 2024-11-17 00:09:05
 
 ## GitHub repositories health status
 
@@ -36,6 +36,6 @@ Project reaching the :red_circle: status **are removed**.
 | `2024-10-29T12:24:45Z` (1 months ago) | :green_circle: | [google/csp-evaluator](https://github.com/google/csp-evaluator) |
 | `2024-11-01T07:54:10Z` (0 months ago) | :green_circle: | [rwjblue/ember-cli-content-security-policy/](https://github.com/rwjblue/ember-cli-content-security-policy/) |
 | `2024-11-01T18:48:06Z` (0 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
-| `2024-11-04T15:07:20Z` (0 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
-| `2024-11-08T18:55:20Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2024-11-11T15:10:10Z` (0 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
+| `2024-11-16T19:51:18Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
