@@ -15,6 +15,7 @@ tags: headers
 * [Prevent CORS misconfiguration issues](#prevent-cors-misconfiguration-issues)
 * [Prevent information disclosure via the browser local cached files](#prevent-information-disclosure-via-the-browser-local-cached-files)
 * [Prevent CSP bypasses](#prevent-csp-bypasses)
+* [Support for a large CSP policy](#support-for-a-large-csp-policy)
 
 ## Configuration proposal
 
@@ -358,3 +359,15 @@ This section describes some points, to keep in mind, during the creation of a [C
 📺 This [demonstration video](assets/misc/demo_csp_bypass_due_to_no_frame_ancestors_directive.mp4) show an example.
 
 💡 Therefore, ensure to always specify the `frame-ancestors` directive in a CSP policy to at least, the `'none'` value, to deny the current domain to be "framed".
+
+## Support for a large CSP policy
+
+Tests were performed to identify if any limitation was in place, regarding the definition and usage of a large CSP policy. Tests were performed against the following browsers:
+
+* Firefox `132.0.2`.
+* Chromium `131.0.6755.0`.
+* Edge `131.0.2903.51`.
+
+💡 Based on tests performed, modern browsers supports a sufficient size to specify a large CSP policy in case of need.
+
+📊 Technical details can be found [here](https://github.com/oshp/oshp-tracking/discussions/29) ([backup copy](assets/misc/backup_discussions_29.pdf)).
