@@ -364,6 +364,7 @@ Cross-Origin-Opener-Policy: same-origin
 * <https://caniuse.com/mdn-http_headers_cross-origin-opener-policy>
 * <https://web.dev/articles/why-coop-coep#coop>
 * <https://web.dev/articles/cross-origin-isolation-guide>
+* <https://xsleaks.dev/>
 * <https://github.com/xsleaks/xsleaks>
 * <https://portswigger.net/daily-swig/xs-leak>
 * <https://portswigger.net/research/xs-leak-detecting-ids-using-portal>
