@@ -306,6 +306,7 @@ Cross-Origin-Resource-Policy: same-origin
 * <https://web.dev/articles/why-coop-coep#corp>
 * <https://web.dev/articles/cross-origin-isolation-guide>
 * <https://resourcepolicy.fyi/>
+* <https://andrewlock.net/understanding-security-headers-part-2-cross-origin-resource-policy-preventing-hotlinking/>
 
 ## Cross-Origin-Embedder-Policy
 
@@ -336,6 +337,7 @@ Cross-Origin-Embedder-Policy: require-corp
 * <https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy>
 * <https://web.dev/articles/why-coop-coep#coep>
 * <https://web.dev/articles/cross-origin-isolation-guide>
+* <https://andrewlock.net/understanding-security-headers-part-3-cross-origin-embedder-policy/>
 
 ## Cross-Origin-Opener-Policy
 
@@ -365,6 +367,7 @@ Cross-Origin-Opener-Policy: same-origin
 * <https://github.com/xsleaks/xsleaks>
 * <https://portswigger.net/daily-swig/xs-leak>
 * <https://portswigger.net/research/xs-leak-detecting-ids-using-portal>
+* <https://andrewlock.net/understanding-security-headers-part-1-cross-origin-opener-policy-preventing-attacks-from-popups/>
 
 ## Cache-Control
 
