@@ -45,7 +45,7 @@ None
 
 ## Strict-Transport-Security
 
-HTTP Strict Transport Security (also named *HSTS*) is a web security policy mechanism which helps to protect websites against protocol downgrade attacks and cookie hijacking. It allows web servers to declare that web browsers (or other complying user agents) should only interact with it using secure HTTPS connections, and never via the insecure HTTP protocol. HSTS is an IETF standard track protocol and is specified in [RFC 6797](https://www.rfc-editor.org/rfc/rfc6797). A server implements an HSTS policy by supplying a header (`Strict-Transport-Security`) over an HTTPS connection (HSTS headers over HTTP are ignored).
+HTTP Strict Transport Security (also named *HSTS*) is a browser security policy mechanism which helps to protect websites against protocol downgrade attacks and cookie hijacking. It allows web servers to declare that web browsers (or other complying user agents) should only interact with it using secure HTTPS connections, and within a defined timespan (max-age) not via the clear text HTTP protocol. HSTS is an IETF standard track protocol and is specified in [RFC 6797](https://www.rfc-editor.org/rfc/rfc6797). A server implements an HSTS policy by supplying a header (`Strict-Transport-Security`) over an HTTPS connection (HSTS headers over HTTP are ignored).
 
 📍 Important note about the behavior of the header over a **HTTP connection** (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security#description)):
 
@@ -142,7 +142,7 @@ X-Content-Type-Options: nosniff
 
 ## Content-Security-Policy
 
-A Content Security Policy (also named CSP) requires careful tuning and precise definition of the policy. If enabled, CSP has significant impact on the way browsers render pages (e.g., inline JavaScript is disabled by default and must be explicitly allowed in the policy). CSP prevents a wide range of attacks, including cross-site scripting and other cross-site injections.
+A Content Security Policy (also named CSP) requires careful tuning and testing after definition of the policy. A content security policy can have significant impact on the way browsers render pages (e.g., inline JavaScript or CSS can disabled). A proper CSP can prevents a wide range of attacks, including cross-site scripting, other cross-site injections and click jacking.
 
 ### Values
 
@@ -157,7 +157,7 @@ A Content Security Policy (also named CSP) requires careful tuning and precise d
 | `media-src`                 | Define from where the protected resource can load video and audio. |
 | `frame-src`                 | *(Deprecated and replaced by `child-src`)* Define from where the protected resource can embed frames. |
 | `child-src`                 | Define from where the protected resource can embed frames. |
-| `frame-ancestors`           | Define from where the protected resource can be embedded in frames. |
+| `frame-ancestors`           | Define from where the protected resource can be embedded in frames. Useful against [click jacking](https://owasp.org/www-community/attacks/Clickjacking) |
 | `font-src`                  | Define from where the protected resource can load fonts. |
 | `connect-src`               | Define which URIs the protected resource can load using script interfaces. |
 | `manifest-src`              | Define from where the protected resource can load manifests. |
@@ -167,7 +167,7 @@ A Content Security Policy (also named CSP) requires careful tuning and precise d
 | `plugin-types`              | Define the set of plugins that can be invoked by the protected resource by limiting the types of resources that can be embedded. |
 | `reflected-xss`             | Instruct the user agent to activate or deactivate any heuristics used to filter or block reflected cross-site scripting attacks, equivalent to the effects of the non-standard `X-XSS-Protection` header. |
 | `block-all-mixed-content`   | Prevent the user agent from loading mixed content. |
-| `upgrade-insecure-requests` | Instruct the user agent to download insecure HTTP resources using HTTPS. |
+| `upgrade-insecure-requests` | Instruct the user agent to using HTTPS when trying to download insecure HTTP resources |
 | `referrer`                  | *(Deprecated)* Define information the user agent can send in the `Referer` header. |
 | `report-uri`                | *(Deprecated and replaced by `report-to`)* Specifies a URI to which the user agent sends reports about policy violation. |
 | `report-to`                 | Specifies a group (defined in the `Report-To` header) to which the user agent sends reports about policy violation. |
