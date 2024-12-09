@@ -9,6 +9,8 @@ tags: headers
 
 # Response Headers
 
+💡 The collection of HTTP response security headers mentioned in this section is applicable when the [user agent](https://developer.mozilla.org/en-US/docs/Glossary/User_agent) processing the HTTP response is a browser. The support for these headers by non-browser API clients (user agent), like for example an HTTP client in a programming language, **is not standardized**. So, it requires specific testing to identify if an HTTP response security header is supported or not by such HTTP client.
+
 🚦 Header lifecycle flow:
 
 ![Header lifecycle flow](assets/images/response_headers_header_lifecycle_flow.png)
