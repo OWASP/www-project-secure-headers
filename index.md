@@ -83,9 +83,9 @@ pitch: Provides technical information about HTTP security headers.
 
 ## Discussions, information and roadmap
 
-💬 We use the GitHub [discussions feature](https://github.com/oshp/oshp-tracking/discussions) for discussions about the project as well as spreading global information about it.
+💬 We use the GitHub [discussions feature](https://github.com/OWASP/www-project-secure-headers/discussions) for discussions about the project as well as spreading global information about it.
 
-👩‍💻 The work on the OSHP projects and associated components is tracked using the GitHub [project feature](https://github.com/orgs/oshp/projects/2).
+👩‍💻 The work on the OSHP projects and associated components is tracked using the GitHub [project feature](https://github.com/orgs/OWASP/projects/44).
 
 ## Notification of update
 
