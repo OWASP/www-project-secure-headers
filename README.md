@@ -25,10 +25,10 @@
 
 ## Issue and discussions
 
-💬 Both are handled with this dedicated [project](https://github.com/oshp/oshp-tracking):
+💬 Both are handled using the following GitHub features:
 
-* [Issues](https://github.com/oshp/oshp-tracking/issues).
-* [Discussions](https://github.com/oshp/oshp-tracking/discussions).
+* [Issues](https://github.com/OWASP/www-project-secure-headers/issues).
+* [Discussions](https://github.com/OWASP/www-project-secure-headers/discussions).
 
 ## Content editor
 
