@@ -43,11 +43,18 @@ tags: headers
 
 ## Set 2
 
-🎨 The folder [generated-via-ai](logo/generated-via-ai) contains several base images that were generated via the following AI systems:
+📦 The folder [generated-via-ai](https://github.com/OWASP/www-project-secure-headers/tree/master/logo/generated-via-ai) contains several base images that were generated via the following AI systems:
 
 * [ChatGPT](https://chatgpt.com/).
 * [Microsoft Copilot](https://copilot.microsoft.com/).
 
-💬 To be transparent about its source, each image include the name of the AI systems used in its filename. They were all edited with [Paint.net](https://www.getpaint.net/) and saved into the [PNG](https://www.adobe.com/creativecloud/file-types/image/raster/png-file.html) format.
+🎨 To be transparent about its source, each image include the name of the AI systems used in its filename. They were all edited with [Paint.net](https://www.getpaint.net/) and saved into the [PNG](https://www.adobe.com/creativecloud/file-types/image/raster/png-file.html) format:
+
+* [logo01-chatgpt](logo/generated-via-ai/logo01-chatgpt.png).
+* [logo02-microsoft-copilot](logo/generated-via-ai/logo02-microsoft-copilot.png).
+* [logo03-microsoft-copilot](logo/generated-via-ai/logo03-microsoft-copilot.png).
+* [logo04-microsoft-copilot](logo/generated-via-ai/logo04-microsoft-copilot.png).
+* [logo05-microsoft-copilot](logo/generated-via-ai/logo05-microsoft-copilot.png).
+* [logo06-microsoft-copilot](logo/generated-via-ai/logo06-microsoft-copilot.png).
 
 <!-- markdown-link-check-disable -->
