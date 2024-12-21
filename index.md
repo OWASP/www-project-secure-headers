@@ -87,10 +87,6 @@ pitch: Provides technical information about HTTP security headers.
 
 👩‍💻 The work on the OSHP projects and associated components is tracked using the GitHub [project feature](https://github.com/orgs/OWASP/projects/44).
 
-## Notification of update
-
-📡 This [atom web feed](https://github.com/OWASP/www-project-secure-headers/commits/master.atom) can be used to be notified when an update is pushed on the OSHP website's repository.
-
 ## Create a link to the OSHP site
 
 📖 This is documented into the **[Case Studies](https://owasp.org/www-project-secure-headers/index.html#div-casestudies)** tab.
