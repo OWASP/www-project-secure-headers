@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): 2024-12-15 00:09:41
+> :timer_clock: Last verification (UTC): 2024-12-22 00:08:44
 
 ## GitHub repositories health status
 
@@ -23,8 +23,6 @@ Project reaching the :red_circle: status **are removed**.
 | `2024-08-21T07:30:17Z` (4 months ago) | :green_circle: | [tmotagam/Secweb](https://github.com/tmotagam/Secweb) |
 | `2024-09-09T02:03:58Z` (3 months ago) | :green_circle: | [sdelements/django-security](https://github.com/sdelements/django-security) |
 | `2024-09-28T22:35:40Z` (3 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
-| `2024-10-08T21:29:01Z` (2 months ago) | :green_circle: | [mozilla/django-csp](https://github.com/mozilla/django-csp) |
-| `2024-10-14T00:08:04Z` (2 months ago) | :green_circle: | [bepsvpt/secure-headers](https://github.com/bepsvpt/secure-headers) |
 | `2024-10-18T09:29:34Z` (2 months ago) | :green_circle: | [TypeError/secure](https://github.com/TypeError/secure) |
 | `2024-10-21T16:49:49Z` (2 months ago) | :green_circle: | [mozilla/http-observatory-website/](https://github.com/mozilla/http-observatory-website/) |
 | `2024-10-22T09:18:12Z` (2 months ago) | :green_circle: | [mozilla/http-observatory/](https://github.com/mozilla/http-observatory/) |
@@ -36,6 +34,8 @@ Project reaching the :red_circle: status **are removed**.
 | `2024-12-02T11:41:14Z` (0 months ago) | :green_circle: | [Santandersecurityresearch/DrHeader](https://github.com/Santandersecurityresearch/DrHeader) |
 | `2024-12-06T14:03:54Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
 | `2024-12-11T07:36:54Z` (0 months ago) | :green_circle: | [GaProgMan/OwaspHeaders.Core](https://github.com/GaProgMan/OwaspHeaders.Core) |
-| `2024-12-11T20:12:33Z` (0 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
-| `2024-12-14T20:22:08Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2024-12-15T22:36:27Z` (0 months ago) | :green_circle: | [mozilla/django-csp](https://github.com/mozilla/django-csp) |
+| `2024-12-16T15:48:28Z` (0 months ago) | :green_circle: | [bepsvpt/secure-headers](https://github.com/bepsvpt/secure-headers) |
+| `2024-12-16T19:22:21Z` (0 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
+| `2024-12-21T20:40:02Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
