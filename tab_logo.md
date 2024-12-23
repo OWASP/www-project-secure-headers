@@ -56,5 +56,8 @@ tags: headers
 * [logo04-microsoft-copilot](logo/generated-via-ai/logo04-microsoft-copilot.png).
 * [logo05-microsoft-copilot](logo/generated-via-ai/logo05-microsoft-copilot.png).
 * [logo06-microsoft-copilot](logo/generated-via-ai/logo06-microsoft-copilot.png).
+* [logo07-chatgpt](logo/generated-via-ai/logo07-chatgpt.png).
+* [logo08-microsoft-copilot](logo/generated-via-ai/logo08-microsoft-copilot.png).
+* [logo09-microsoft-copilot](logo/generated-via-ai/logo09-microsoft-copilot.png).
 
 <!-- markdown-link-check-disable -->
