@@ -42,7 +42,7 @@ The following section proposes a configuration for the [actively supported and w
 | Strict-Transport-Security                    | `max-age=31536000; includeSubDomains` |
 | X-Frame-Options                              | `deny` |
 | X-Content-Type-Options                       | `nosniff` |
-| Content-Security-Policy                      | `default-src 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content` |
+| Content-Security-Policy                      | `default-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content` |
 | X-Permitted-Cross-Domain-Policies            | `none` |
 | Referrer-Policy                              | `no-referrer`  |
 | Clear-Site-Data                              | `"cache","cookies","storage"` |
@@ -344,7 +344,7 @@ This section describes some points, to keep in mind, during the creation of a [C
 
 🚩 Not every **[directives](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#directives)** fallback to the **[default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src)** directive when it is not specified in the CSP policy.
 
-## Directive form-action
+### Directive form-action
 
 👀 It is the case for the **[form-action](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action)** directive. Therefore, an html form can be used to bypass the CSP in place when the `form-action` is not defined.
 
@@ -352,13 +352,21 @@ This section describes some points, to keep in mind, during the creation of a [C
 
 💡 Therefore, ensure to always specify the `form-action` directive in a CSP policy to at least, the `'self'` value, to allow forms only on the current domain.
 
-## Directive frame-ancestors
+### Directive frame-ancestors
 
 👀 It is the case for the **[frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)** directive. Therefore, IF it is not defined **AND** IF the header [X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options) is not/incorrectly specified then the current domain can be embedded into a frame.
 
 📺 This [demonstration video](assets/misc/demo_csp_bypass_due_to_no_frame_ancestors_directive.mp4) show an example.
 
 💡 Therefore, ensure to always specify the `frame-ancestors` directive in a CSP policy to at least, the `'none'` value, to deny the current domain to be "framed".
+
+### Directive base-uri
+
+👀 It is the case for the **[base-uri](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/base-uri)** directive.
+
+📺 This [demonstration video](assets/misc/demo_csp_bypass_due_to_no_base_uri_directive.mp4) show an example.
+
+💡 Therefore, ensure to always specify the `base-uri` directive in a CSP policy to at least, the `'self'` value, to only allow the current domain to be specified as the document's base URI via a `<base href="..." />` html tag.
 
 ## Support for a large CSP policy
 
