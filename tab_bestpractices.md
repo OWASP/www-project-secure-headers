@@ -29,6 +29,8 @@ The following section proposes a configuration for the [actively supported and w
 
 📖 The headers proposed below can be applied both in the context of a *classic web application* and in that of a *web API*.
 
+🚩 Regarding the header `Content-Security-Policy`, keep in mind that the policy applicability depends on the execution context. Technical details are available [here](https://www.w3.org/TR/CSP2/#which-policy-applies). Therefore, CSP usage in a web API application implies to **define the CSP in the document consuming the content of the web API**.
+
 🚩 The header `Clear-Site-Data` will cause the browser to take additional processing time for the HTTP response, so, set it to the logout function when possible.
 
 🔬 For the header `Permissions-Policy`, as it is currently only supported by [Chromium based browsers](https://caniuse.com/permissions-policy), the proposed value was generated with this [site](https://www.permissionspolicy.com/) and tested against the version `128.0.6606.0` of [Chromium](https://chromium.woolyss.com/download/en/) to only specify supported features.
