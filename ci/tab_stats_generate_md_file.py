@@ -36,6 +36,8 @@ tags: headers
 
 # Statistic about HTTP security response headers usage
 
+<!-- markdown-link-check-disable -->
+
 """
 SECTION_TEMPLATE = f"""
 ## %s
