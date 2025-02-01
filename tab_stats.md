@@ -13,9 +13,11 @@ tags: headers
 
 # Statistic about HTTP security response headers usage
 
+<!-- markdown-link-check-disable -->
 
 
-⏲️ Last update: 02/01/2025 at 20:05:12 - Domains analyzed count: 150000.
+
+⏲️ Last update: 02/01/2025 at 20:10:16 - Domains analyzed count: 150000.
 
 ## Global usage of secure headers
 
