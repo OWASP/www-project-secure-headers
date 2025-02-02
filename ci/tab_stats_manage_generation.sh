@@ -11,7 +11,7 @@ wget -q -O $DATA_DB_FILE $DATA_DB_FILE_LOCATION
 file $DATA_DB_FILE
 sqlite3 $DATA_DB_FILE ".tables"
 echo "[+] Set correct access rights for the scripts as well as UNIX CRLF settings..."
-dos2unix tab_stats_generate_*
+dos2unix *.sh
 chmod +x tab_stats_generate_*
 echo "[+] Generate the MD file of the TAB and all the MMD files for every pie chart image..."
 python tab_stats_generate_md_file.py
