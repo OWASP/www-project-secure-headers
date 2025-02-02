@@ -100,6 +100,7 @@ def execute_query_against_data_db(sql_query):
 
 
 def add_stats_section(title, description, chart_mermaid_code):
+    trace(f"Call add_stats_section() => '{title}'")
     with open(MD_FILE, mode="a", encoding="utf-8") as f:
         if chart_mermaid_code is not None and len(chart_mermaid_code.strip()) > 0:
             base_image_filename = hashlib.sha1(title.encode("utf8")).hexdigest()
@@ -108,14 +109,17 @@ def add_stats_section(title, description, chart_mermaid_code):
         else:
             md_code = SECTION_TEMPLATE_NO_MERMAID_CODE % (title, description)
         f.write(f"{md_code}\n")
+    trace("Call end.")
 
 
 def init_stats_file():
+    trace("Call init_stats_file()")
     with open(MD_FILE, mode="w", encoding="utf-8") as f:
         cdate = datetime.now().strftime("%m/%d/%Y at %H:%M:%S")
         f.write(TAB_MD_TEMPLATE)
         f.write("\n\n")
         f.write(f"⏲️ Last update: {cdate} - Domains analyzed count: {get_domains_count()}.\n")
+    trace("Call end.")
 
 
 def get_domains_count():
