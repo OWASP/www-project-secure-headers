@@ -16,6 +16,7 @@ from datetime import datetime
 from pathlib import Path
 
 # Constants
+DEBUG = True
 HTTP_REQUEST_TIMEOUT = 60
 DATA_DB_FILE = "/tmp/data.db"
 OSHP_SECURITY_HEADERS_FILE_lOCATION = "https://raw.githubusercontent.com/OWASP/www-project-secure-headers/refs/heads/master/ci/headers_add.json"
@@ -56,12 +57,20 @@ SECTION_TEMPLATE_NO_MERMAID_CODE = """
 # Utility functions
 
 
+def trace(msg):
+    if DEBUG:
+        print(f"[DEBUG] {msg}")
+
+
 def prepare_generation_of_image_from_mermaid(mermaid_code, filename):
+    trace(f"Call prepare_generation_of_image_from_mermaid() => '{filename}'")
     with open(f"{IMAGE_FOLDER_LOCATION}/{filename}.mmd", "w", encoding="utf-8") as f:
         f.write(mermaid_code + "\n")
+    trace("Call end.")
 
 
 def load_oshp_headers():
+    trace("Call load_oshp_headers()")
     header_names = []
     resp = requests.get(OSHP_SECURITY_HEADERS_FILE_lOCATION, timeout=HTTP_REQUEST_TIMEOUT)
     if resp.status_code != 200:
@@ -76,14 +85,17 @@ def load_oshp_headers():
         header_names.append(http_header.lower().strip(" \n\r\t"))
     header_names = list(dict.fromkeys(header_names))
     header_names.sort()
+    trace("Call end.")
     return header_names
 
 
 def execute_query_against_data_db(sql_query):
+    trace(f"Call execute_query_against_data_db() => '{sql_query}'")
     with sqlite3.connect(DATA_DB_FILE) as connection:
         curs = connection.cursor()
         curs.execute(sql_query)
         records = curs.fetchall()
+        trace("Call end.")
         return records
 
 
