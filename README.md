@@ -59,7 +59,7 @@
 
 📝 Generation of the file [tab_statistics.md](tab_statistics.md) as well as [all related PNG files](assets/tab_stats_generated_images):
 
-* Processing is performed by this GitHub action [workflow](.github/workflows/tab-stats-headers-generate-related-files.yml) every month with a cron expression indicating `At 00:00 on day-of-month 3` or every time any of the following files is modified:
+* Processing is performed by this GitHub action [workflow](.github/workflows/tab-stats-headers-generate-related-files.yml) every month with a cron expression indicating `At 00:00 on day-of-month 5` or every time any of the following files is modified:
   * [ci/tab_stats_manage_generation.sh](ci/tab_stats_manage_generation.sh).
   * [ci/tab_stats_generate_md_file.py](ci/tab_stats_generate_md_file.py).
   * [ci/tab_stats_generate_png_files.sh](ci/tab_stats_generate_png_files.sh).
