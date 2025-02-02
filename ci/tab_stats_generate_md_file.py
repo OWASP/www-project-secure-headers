@@ -9,7 +9,7 @@ Source:
 """
 import sqlite3
 import re
-import requests
+import json
 import hashlib
 from collections import Counter
 from datetime import datetime
@@ -19,7 +19,7 @@ from pathlib import Path
 DEBUG = True
 HTTP_REQUEST_TIMEOUT = 60
 DATA_DB_FILE = "/tmp/data.db"
-OSHP_SECURITY_HEADERS_FILE_lOCATION = "https://owasp.org/www-project-secure-headers/ci/headers_add.json"
+OSHP_SECURITY_HEADERS_FILE_lOCATION = "headers_add.json"
 OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION = "/tmp/oshp_headers_extra_to_include.txt"
 MD_FILE = "../tab_statistics.md"
 IMAGE_FOLDER_LOCATION = "../assets/tab_stats_generated_images"
@@ -72,11 +72,11 @@ def prepare_generation_of_image_from_mermaid(mermaid_code, filename):
 def load_oshp_headers():
     trace("Call load_oshp_headers()")
     header_names = []
-    trace(f"Call load_oshp_headers() :: HTTP Request to {OSHP_SECURITY_HEADERS_FILE_lOCATION}")
-    resp = requests.get(OSHP_SECURITY_HEADERS_FILE_lOCATION, timeout=HTTP_REQUEST_TIMEOUT)
-    if resp.status_code != 200:
-        raise Exception(f"Status code {resp.status_code} received for {OSHP_SECURITY_HEADERS_FILE_lOCATION}!")
-    for http_header in resp.json()["headers"]:
+    trace(f"Call load_oshp_headers() :: Load and parse file {OSHP_SECURITY_HEADERS_FILE_lOCATION}")
+    with open(OSHP_SECURITY_HEADERS_FILE_lOCATION, mode="r", encoding="utf-8") as f:
+        data = json.load(f)
+        http_headers = data["headers"]
+    for http_header in http_headers:
         header_names.append(http_header["name"].lower())
     trace(f"Call load_oshp_headers() :: Load file {OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION}")
     with open(OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION, mode="r", encoding="utf-8") as f:
