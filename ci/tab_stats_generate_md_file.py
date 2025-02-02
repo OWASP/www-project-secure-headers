@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Script using the gathered data from the OSHP project "oshp-stats" to generate/update the 
-markdown file "tab_stats.md" with mermaid pie charts with differents statistics about HTTP security headers usage.
+markdown file "tab_statistics.md" with mermaid pie charts with differents statistics about HTTP security headers usage.
 
 Source:
     https://mermaid-js.github.io/mermaid/#/pie
@@ -19,14 +19,14 @@ from pathlib import Path
 HTTP_REQUEST_TIMEOUT = 60
 DATA_DB_FILE = "/tmp/data.db"
 OSHP_SECURITY_HEADERS_FILE_lOCATION = "https://owasp.org/www-project-secure-headers/ci/headers_add.json"
-MD_FILE = "../tab_stats.md"
+MD_FILE = "../tab_statistics.md"
 IMAGE_FOLDER_LOCATION = "../assets/tab_stats_generated_images"
 TAB_MD_TEMPLATE = """---
 title: statistics
 displaytext: Statistics
 layout: null
 tab: true
-order: 10
+order: 7
 tags: headers
 ---
 

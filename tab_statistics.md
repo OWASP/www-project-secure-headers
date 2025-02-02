@@ -3,7 +3,7 @@ title: statistics
 displaytext: Statistics
 layout: null
 tab: true
-order: 10
+order: 7
 tags: headers
 ---
 
@@ -17,7 +17,7 @@ tags: headers
 
 
 
-⏲️ Last update: 02/01/2025 at 23:36:52 - Domains analyzed count: 150000.
+⏲️ Last update: 02/02/2025 at 08:26:37 - Domains analyzed count: 150000.
 
 ## Global usage of secure headers
 
