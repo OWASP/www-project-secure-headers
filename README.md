@@ -24,7 +24,7 @@
 
 📚 We aim to publish reports on header usage stats, developments and changes, code libraries that make these headers easily accessible to developers on a range of platforms, and data sets concerning the general usage of these headers.
 
-🌐 The OWASP Secure Headers Project was migrated to a [new OWASP website](https://owasp.org/www-project-secure-headers/).
+🌍 The OWASP Secure Headers Project was migrated to a [new OWASP website](https://owasp.org/www-project-secure-headers/).
 
 📁 You can still access the old website [here](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project).
 
@@ -43,19 +43,28 @@
 
 👩‍💻 Content editing is done with [Visual Studio Code](https://code.visualstudio.com/).
 
-A [workspace file](project.code-workspace) is provided with [recommended extensions](.vscode/extensions.json).
+📦 A [workspace file](project.code-workspace) is provided with [recommended extensions](.vscode/extensions.json).
 
 ## Automatically generated content
 
 🏭 The folder [ci](ci) (**CI** for **C**ontinuous **I**ntegration) contains materials to generate the following content.
 
-📝 Generate the both JSON files containing the header recommended to add and remove:
+📝 Generation of the both JSON files containing the header recommended to add and remove:
 
-* Generation is performed by this GitHub action [workflow](.github/workflows/headers-generate-json-files.yml) every time the file [tab_bestpractices.md](tab_bestpractices.md) is modified.
+* Processing is performed by this GitHub action [workflow](.github/workflows/headers-generate-json-files.yml) every time the file [tab_bestpractices.md](tab_bestpractices.md) is modified.
 
-📝 Generate the [markdown file](monitoring_technical_references_dashboard.md) with the update health state of all GitHub repositories mentioned in the tab named **[Technical](tab_technical.md)**:
+📝 Generation of the [markdown file](monitoring_technical_references_dashboard.md) with the update health state of all GitHub repositories mentioned in the tab named **[Technical](tab_technical.md)**:
 
-* Generation is performed by this GitHub action [workflow](.github/workflows/monitoring-technical-references-generate-dashboard.yml) every time the file [tab_technical.md](tab_technical.md) is modified.
+* Processing is performed by this GitHub action [workflow](.github/workflows/monitoring-technical-references-generate-dashboard.yml) every week with a cron expression indicating `At 00:00 on Sunday` or every time the file [tab_technical.md](tab_technical.md) is modified.
+
+📝 Generation of the file [tab_statistics.md](tab_statistics.md) as well as [all related PNG files](assets/tab_stats_generated_images):
+
+* Processing is performed by this GitHub action [workflow](.github/workflows/tab-stats-headers-generate-related-files.yml) every month with a cron expression indicating `At 00:00 on day-of-month 3` or every time any of the following files is modified:
+  * [ci/tab_stats_manage_generation.sh](ci/tab_stats_manage_generation.sh).
+  * [ci/tab_stats_generate_md_file.py](ci/tab_stats_generate_md_file.py).
+  * [ci/tab_stats_generate_png_files.sh](ci/tab_stats_generate_png_files.sh).
+* The specified cron expression was selected because the database containing the data used by the script [tab_stats_generate_md_file.py](ci/tab_stats_generate_md_file.py) is updated on the first day of each month by the project [oshp-stats](https://github.com/oshp/oshp-stats/):
+  * See [here](https://github.com/oshp/oshp-stats/blob/main/.github/workflows/update-datasource.yml) for technical details.
 
 ## Social media communication
 
