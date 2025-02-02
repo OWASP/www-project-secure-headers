@@ -17,7 +17,6 @@ from pathlib import Path
 
 # Constants
 DEBUG = True
-HTTP_REQUEST_TIMEOUT = 60
 DATA_DB_FILE = "/tmp/data.db"
 OSHP_SECURITY_HEADERS_FILE_lOCATION = "headers_add.json"
 OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION = "/tmp/oshp_headers_extra_to_include.txt"
