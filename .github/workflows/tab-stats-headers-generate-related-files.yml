@@ -1,13 +1,13 @@
 name: update_tab_stats_related_files
 on:
   workflow_dispatch:
-  push:
   schedule:
-    - cron: '0 0 3 * *'
+    - cron: '0 0 3 * *'  
+  push:
     paths:
-    - 'ci/tab_stats_generate_md_file.py'     
-    - 'ci/tab_stats_generate_png_files.sh'     
-    - 'ci/tab_stats_manage_generation.sh'         
+      - 'ci/tab_stats_generate_md_file.py'     
+      - 'ci/tab_stats_generate_png_files.sh'     
+      - 'ci/tab_stats_manage_generation.sh'         
 jobs:
   build:
     runs-on: ubuntu-latest
