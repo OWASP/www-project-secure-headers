@@ -10,7 +10,7 @@ DATA_DB_FILE="/tmp/data.db"
 IMAGE_FOLDER_LOCATION="../assets/tab_stats_generated_images"
 echo "[+] Download the database of headers analysis anc validate the database file..."
 wget -q -O $DATA_DB_FILE $DATA_DB_FILE_LOCATION
-wget -q -O $OSHP_SECURITY_HEADERS_EXTRA_FILE $OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATIO
+wget -q -O $OSHP_SECURITY_HEADERS_EXTRA_FILE $OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION
 file $DATA_DB_FILE
 sqlite3 $DATA_DB_FILE ".tables"
 echo "[+] Set correct access rights for the scripts as well as UNIX CRLF settings..."
