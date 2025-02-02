@@ -63,7 +63,7 @@ def trace(msg):
 
 
 def prepare_generation_of_image_from_mermaid(mermaid_code, filename):
-    trace(f"Call prepare_generation_of_image_from_mermaid() => '{filename}'")
+    trace(f"Call prepare_generation_of_image_from_mermaid() => {filename}")
     with open(f"{IMAGE_FOLDER_LOCATION}/{filename}.mmd", "w", encoding="utf-8") as f:
         f.write(mermaid_code + "\n")
     trace("Call end.")
@@ -80,8 +80,9 @@ def load_oshp_headers():
         header_names.append(http_header["name"].lower())
     trace(f"Call load_oshp_headers() :: Load file {OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION}")
     with open(OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION, mode="r", encoding="utf-8") as f:
-        header_names = f.read().splitlines()
-    for http_header in header_names:
+        http_headers = f.read()
+    trace(f"Call load_oshp_headers() :: Parse file {OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION}")
+    for http_header in http_headers .split("\n"):
         header_names.append(http_header.lower().strip(" \n\r\t"))
     header_names = list(dict.fromkeys(header_names))
     header_names.sort()
@@ -90,7 +91,7 @@ def load_oshp_headers():
 
 
 def execute_query_against_data_db(sql_query):
-    trace(f"Call execute_query_against_data_db() => '{sql_query}'")
+    trace(f"Call execute_query_against_data_db() => {sql_query}")
     with sqlite3.connect(DATA_DB_FILE) as connection:
         curs = connection.cursor()
         curs.execute(sql_query)
