@@ -9,16 +9,17 @@ Source:
 """
 import sqlite3
 import re
-import requests
+import json
 import hashlib
 from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
 # Constants
-HTTP_REQUEST_TIMEOUT = 60
+DEBUG = True
 DATA_DB_FILE = "/tmp/data.db"
-OSHP_SECURITY_HEADERS_FILE_lOCATION = "https://owasp.org/www-project-secure-headers/ci/headers_add.json"
+OSHP_SECURITY_HEADERS_FILE_lOCATION = "headers_add.json"
+OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION = "/tmp/oshp_headers_extra_to_include.txt"
 MD_FILE = "../tab_statistics.md"
 IMAGE_FOLDER_LOCATION = "../assets/tab_stats_generated_images"
 TAB_MD_TEMPLATE = """---
@@ -55,31 +56,51 @@ SECTION_TEMPLATE_NO_MERMAID_CODE = """
 # Utility functions
 
 
+def trace(msg):
+    if DEBUG:
+        print(f"[DEBUG] {msg}")
+
+
 def prepare_generation_of_image_from_mermaid(mermaid_code, filename):
+    trace(f"Call prepare_generation_of_image_from_mermaid() => {filename}")
     with open(f"{IMAGE_FOLDER_LOCATION}/{filename}.mmd", "w", encoding="utf-8") as f:
         f.write(mermaid_code + "\n")
+    trace("Call end.")
 
 
 def load_oshp_headers():
+    trace("Call load_oshp_headers()")
     header_names = []
-    resp = requests.get(OSHP_SECURITY_HEADERS_FILE_lOCATION, timeout=HTTP_REQUEST_TIMEOUT)
-    if resp.status_code != 200:
-        raise Exception(f"Status code {resp.status_code} received!")
-    for http_header in resp.json()["headers"]:
-        header_names.append(http_header["name"])
+    trace(f"Call load_oshp_headers() :: Load and parse file {OSHP_SECURITY_HEADERS_FILE_lOCATION}")
+    with open(OSHP_SECURITY_HEADERS_FILE_lOCATION, mode="r", encoding="utf-8") as f:
+        data = json.load(f)
+        http_headers = data["headers"]
+    for http_header in http_headers:
+        header_names.append(http_header["name"].lower())
+    trace(f"Call load_oshp_headers() :: Load file {OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION}")
+    with open(OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION, mode="r", encoding="utf-8") as f:
+        http_headers = f.read()
+    trace(f"Call load_oshp_headers() :: Parse file {OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION}")
+    for http_header in http_headers .split("\n"):
+        header_names.append(http_header.lower().strip(" \n\r\t"))
+    header_names = list(dict.fromkeys(header_names))
     header_names.sort()
+    trace("Call end.")
     return header_names
 
 
 def execute_query_against_data_db(sql_query):
+    trace(f"Call execute_query_against_data_db() => {sql_query}")
     with sqlite3.connect(DATA_DB_FILE) as connection:
         curs = connection.cursor()
         curs.execute(sql_query)
         records = curs.fetchall()
+        trace("Call end.")
         return records
 
 
 def add_stats_section(title, description, chart_mermaid_code):
+    trace(f"Call add_stats_section() => '{title}'")
     with open(MD_FILE, mode="a", encoding="utf-8") as f:
         if chart_mermaid_code is not None and len(chart_mermaid_code.strip()) > 0:
             base_image_filename = hashlib.sha1(title.encode("utf8")).hexdigest()
@@ -88,14 +109,17 @@ def add_stats_section(title, description, chart_mermaid_code):
         else:
             md_code = SECTION_TEMPLATE_NO_MERMAID_CODE % (title, description)
         f.write(f"{md_code}\n")
+    trace("Call end.")
 
 
 def init_stats_file():
+    trace("Call init_stats_file()")
     with open(MD_FILE, mode="w", encoding="utf-8") as f:
         cdate = datetime.now().strftime("%m/%d/%Y at %H:%M:%S")
         f.write(TAB_MD_TEMPLATE)
         f.write("\n\n")
         f.write(f"⏲️ Last update: {cdate} - Domains analyzed count: {get_domains_count()}.\n")
+    trace("Call end.")
 
 
 def get_domains_count():
@@ -248,8 +272,10 @@ def compute_csp_using_directives_with_unsafe_expressions_configuration_global_us
 
 
 if __name__ == "__main__":
+    trace("Clear PNG files")
     for path in Path(IMAGE_FOLDER_LOCATION).glob("*.png"):
         path.unlink()
+    trace("Clear MMD files")
     for path in Path(IMAGE_FOLDER_LOCATION).glob("*.mmd"):
         path.unlink()
     oshp_headers = load_oshp_headers()

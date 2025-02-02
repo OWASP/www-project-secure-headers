@@ -17,7 +17,7 @@ tags: headers
 
 
 
-⏲️ Last update: 02/02/2025 at 15:29:30 - Domains analyzed count: 150000.
+⏲️ Last update: 02/02/2025 at 18:10:17 - Domains analyzed count: 150000.
 
 ## Global usage of secure headers
 
@@ -26,88 +26,116 @@ Provide the distribution of usage of secure headers across all domains analyzed.
 ![be611e71c615c27471d766612bfb7e8b05d743c7](assets/tab_stats_generated_images/be611e71c615c27471d766612bfb7e8b05d743c7.png)
 
 
-## Global usage of header 'Cache-Control'
+## Global usage of header 'cache-control'
 
-Provide the distribution of usage of the header 'Cache-Control' across all domains analyzed.
+Provide the distribution of usage of the header 'cache-control' across all domains analyzed.
 
-![5b54b09f5f5c815a014d71b3b07495a69e3a4509](assets/tab_stats_generated_images/5b54b09f5f5c815a014d71b3b07495a69e3a4509.png)
-
-
-## Global usage of header 'Clear-Site-Data'
-
-Provide the distribution of usage of the header 'Clear-Site-Data' across all domains analyzed.
-
-![2e12376a6c60ad301b25193c11517ea0cd6aba2f](assets/tab_stats_generated_images/2e12376a6c60ad301b25193c11517ea0cd6aba2f.png)
+![577d76c6092c4da6347e1d2c89523dd13a1925f7](assets/tab_stats_generated_images/577d76c6092c4da6347e1d2c89523dd13a1925f7.png)
 
 
-## Global usage of header 'Content-Security-Policy'
+## Global usage of header 'clear-site-data'
 
-Provide the distribution of usage of the header 'Content-Security-Policy' across all domains analyzed.
+Provide the distribution of usage of the header 'clear-site-data' across all domains analyzed.
 
-![5e74150e7d98f861bf3fa632ca32e2d7f3e59632](assets/tab_stats_generated_images/5e74150e7d98f861bf3fa632ca32e2d7f3e59632.png)
-
-
-## Global usage of header 'Cross-Origin-Embedder-Policy'
-
-Provide the distribution of usage of the header 'Cross-Origin-Embedder-Policy' across all domains analyzed.
-
-![00334f25a22543fb684dbe10861afee71c5263e0](assets/tab_stats_generated_images/00334f25a22543fb684dbe10861afee71c5263e0.png)
+![49f6a7d15e9a2e3fd4cad94360d37e83ef05fa00](assets/tab_stats_generated_images/49f6a7d15e9a2e3fd4cad94360d37e83ef05fa00.png)
 
 
-## Global usage of header 'Cross-Origin-Opener-Policy'
+## Global usage of header 'content-security-policy'
 
-Provide the distribution of usage of the header 'Cross-Origin-Opener-Policy' across all domains analyzed.
+Provide the distribution of usage of the header 'content-security-policy' across all domains analyzed.
 
-![f700c02d30083cf617bdeca51e7eec3d49fe4a08](assets/tab_stats_generated_images/f700c02d30083cf617bdeca51e7eec3d49fe4a08.png)
-
-
-## Global usage of header 'Cross-Origin-Resource-Policy'
-
-Provide the distribution of usage of the header 'Cross-Origin-Resource-Policy' across all domains analyzed.
-
-![fa069b07281496f391d957d8936337da1a601614](assets/tab_stats_generated_images/fa069b07281496f391d957d8936337da1a601614.png)
+![2da94599d03c73073ac60b0d8864152f8609cc5b](assets/tab_stats_generated_images/2da94599d03c73073ac60b0d8864152f8609cc5b.png)
 
 
-## Global usage of header 'Permissions-Policy'
+## Global usage of header 'content-security-policy-report-only'
 
-Provide the distribution of usage of the header 'Permissions-Policy' across all domains analyzed.
+Provide the distribution of usage of the header 'content-security-policy-report-only' across all domains analyzed.
 
-![0792b92709f42a7962c27c64b74b94a4dfbffda1](assets/tab_stats_generated_images/0792b92709f42a7962c27c64b74b94a4dfbffda1.png)
-
-
-## Global usage of header 'Referrer-Policy'
-
-Provide the distribution of usage of the header 'Referrer-Policy' across all domains analyzed.
-
-![d5e855464d800d7b27eb3e430c5ae378497ddf50](assets/tab_stats_generated_images/d5e855464d800d7b27eb3e430c5ae378497ddf50.png)
+![c0b5a705e7e94af3f71ef579bb01b45c2a80ca6b](assets/tab_stats_generated_images/c0b5a705e7e94af3f71ef579bb01b45c2a80ca6b.png)
 
 
-## Global usage of header 'Strict-Transport-Security'
+## Global usage of header 'cross-origin-embedder-policy'
 
-Provide the distribution of usage of the header 'Strict-Transport-Security' across all domains analyzed.
+Provide the distribution of usage of the header 'cross-origin-embedder-policy' across all domains analyzed.
 
-![dbeb94ebb1ed7763f390b7be97a292f3c66920c7](assets/tab_stats_generated_images/dbeb94ebb1ed7763f390b7be97a292f3c66920c7.png)
-
-
-## Global usage of header 'X-Content-Type-Options'
-
-Provide the distribution of usage of the header 'X-Content-Type-Options' across all domains analyzed.
-
-![0259a15512c639e10df724dc019babf03534b303](assets/tab_stats_generated_images/0259a15512c639e10df724dc019babf03534b303.png)
+![0753b0c4fecc8c56d81e31f36bc8c397cea5032b](assets/tab_stats_generated_images/0753b0c4fecc8c56d81e31f36bc8c397cea5032b.png)
 
 
-## Global usage of header 'X-Frame-Options'
+## Global usage of header 'cross-origin-opener-policy'
 
-Provide the distribution of usage of the header 'X-Frame-Options' across all domains analyzed.
+Provide the distribution of usage of the header 'cross-origin-opener-policy' across all domains analyzed.
 
-![6ddd8e89eb34224bf460f672999c7dd447baef79](assets/tab_stats_generated_images/6ddd8e89eb34224bf460f672999c7dd447baef79.png)
+![e7e550d9cbff786153f7f13f664361e41efee57c](assets/tab_stats_generated_images/e7e550d9cbff786153f7f13f664361e41efee57c.png)
 
 
-## Global usage of header 'X-Permitted-Cross-Domain-Policies'
+## Global usage of header 'cross-origin-resource-policy'
 
-Provide the distribution of usage of the header 'X-Permitted-Cross-Domain-Policies' across all domains analyzed.
+Provide the distribution of usage of the header 'cross-origin-resource-policy' across all domains analyzed.
 
-![364a633adcd63d315ec3df781fed6008c57ad00d](assets/tab_stats_generated_images/364a633adcd63d315ec3df781fed6008c57ad00d.png)
+![9cf15b18b743939cbe01342ed5461bc7af6c4d36](assets/tab_stats_generated_images/9cf15b18b743939cbe01342ed5461bc7af6c4d36.png)
+
+
+## Global usage of header 'expect-ct'
+
+Provide the distribution of usage of the header 'expect-ct' across all domains analyzed.
+
+![78fc7e8d03077546e27c016ee80b2143dc4ebb08](assets/tab_stats_generated_images/78fc7e8d03077546e27c016ee80b2143dc4ebb08.png)
+
+
+## Global usage of header 'permissions-policy'
+
+Provide the distribution of usage of the header 'permissions-policy' across all domains analyzed.
+
+![87eabe1fe075f9034dc4db8f76be07da0d08afe3](assets/tab_stats_generated_images/87eabe1fe075f9034dc4db8f76be07da0d08afe3.png)
+
+
+## Global usage of header 'public-key-pins'
+
+Provide the distribution of usage of the header 'public-key-pins' across all domains analyzed.
+
+![e58d592c018472a09777c3fd5440f556bd176dd5](assets/tab_stats_generated_images/e58d592c018472a09777c3fd5440f556bd176dd5.png)
+
+
+## Global usage of header 'referrer-policy'
+
+Provide the distribution of usage of the header 'referrer-policy' across all domains analyzed.
+
+![15d82f7cac9021b254fdf8fed98bb870acc436fb](assets/tab_stats_generated_images/15d82f7cac9021b254fdf8fed98bb870acc436fb.png)
+
+
+## Global usage of header 'strict-transport-security'
+
+Provide the distribution of usage of the header 'strict-transport-security' across all domains analyzed.
+
+![c313c0ceef6eb3116547426b41bdf278df2cc0c6](assets/tab_stats_generated_images/c313c0ceef6eb3116547426b41bdf278df2cc0c6.png)
+
+
+## Global usage of header 'x-content-type-options'
+
+Provide the distribution of usage of the header 'x-content-type-options' across all domains analyzed.
+
+![5808d16f90388bd6309eb12d74010d1c4a8518cf](assets/tab_stats_generated_images/5808d16f90388bd6309eb12d74010d1c4a8518cf.png)
+
+
+## Global usage of header 'x-frame-options'
+
+Provide the distribution of usage of the header 'x-frame-options' across all domains analyzed.
+
+![cfaf56ab8ec6588aa6ee9297b4f93638640d1048](assets/tab_stats_generated_images/cfaf56ab8ec6588aa6ee9297b4f93638640d1048.png)
+
+
+## Global usage of header 'x-permitted-cross-domain-policies'
+
+Provide the distribution of usage of the header 'x-permitted-cross-domain-policies' across all domains analyzed.
+
+![2ec5e9a684938a169c757a7a631595c53fccc769](assets/tab_stats_generated_images/2ec5e9a684938a169c757a7a631595c53fccc769.png)
+
+
+## Global usage of header 'x-xss-protection'
+
+Provide the distribution of usage of the header 'x-xss-protection' across all domains analyzed.
+
+![7b2906800d5eb94d25d0f5cf18322155e8f2192d](assets/tab_stats_generated_images/7b2906800d5eb94d25d0f5cf18322155e8f2192d.png)
 
 
 ## Global usage of insecure framing configuration via the header 'x-frame-options'
