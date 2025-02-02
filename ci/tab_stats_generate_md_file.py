@@ -71,9 +71,9 @@ def load_oshp_headers():
     resp = requests.get(OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION, timeout=HTTP_REQUEST_TIMEOUT)
     if resp.status_code != 200:
         raise Exception(f"Status code {resp.status_code} received for {OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION}!")
-    header_names = resp.content.splitlines()
+    header_names = resp.text.splitlines()
     for http_header in header_names:
-        header_names.append(http_header.decode("utf-8").lower().strip(" \n\r\t"))
+        header_names.append(http_header.lower().strip(" \n\r\t"))
     header_names = list(dict.fromkeys(header_names))
     header_names.sort()
     return header_names
