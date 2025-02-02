@@ -2,7 +2,7 @@ name: update_tab_stats_related_files
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 3 * *'  
+    - cron: '0 0 5 * *'  
   push:
     paths:
       - 'ci/tab_stats_generate_md_file.py'     
