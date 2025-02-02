@@ -17,7 +17,7 @@ tags: headers
 
 
 
-⏲️ Last update: 02/01/2025 at 23:36:52 - Domains analyzed count: 150000.
+⏲️ Last update: 02/02/2025 at 07:17:47 - Domains analyzed count: 150000.
 
 ## Global usage of secure headers
 
