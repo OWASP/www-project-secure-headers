@@ -1,9 +1,13 @@
 name: update_tab_stats_related_files
 on:
   workflow_dispatch:
-  push:
   schedule:
-    - cron: '0 0 3 * *'
+    - cron: '0 0 3 * *'  
+  push:
+    paths:
+      - 'ci/tab_stats_generate_md_file.py'     
+      - 'ci/tab_stats_generate_png_files.sh'     
+      - 'ci/tab_stats_manage_generation.sh'         
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,7 +23,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-        sudo apt install wget
+        sudo apt install -y wget dos2unix
     - name: Run update of the tab related files
       run: |
         cd ci; bash tab_stats_manage_generation.sh
