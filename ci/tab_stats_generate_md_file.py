@@ -268,8 +268,10 @@ def compute_csp_using_directives_with_unsafe_expressions_configuration_global_us
 
 
 if __name__ == "__main__":
+    trace("Clear PNG files")
     for path in Path(IMAGE_FOLDER_LOCATION).glob("*.png"):
         path.unlink()
+    trace("Clear MMD files")
     for path in Path(IMAGE_FOLDER_LOCATION).glob("*.mmd"):
         path.unlink()
     oshp_headers = load_oshp_headers()
