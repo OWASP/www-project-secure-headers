@@ -15,7 +15,9 @@ tags: headers
 
 <!-- markdown-link-check-disable -->
 
-⏲️ Last update: 02/02/2025 at 08:26:37 - Domains analyzed count: 150000.
+
+
+⏲️ Last update: 02/02/2025 at 15:29:30 - Domains analyzed count: 150000.
 
 ## Global usage of secure headers
 
@@ -23,11 +25,13 @@ Provide the distribution of usage of secure headers across all domains analyzed.
 
 ![be611e71c615c27471d766612bfb7e8b05d743c7](assets/tab_stats_generated_images/be611e71c615c27471d766612bfb7e8b05d743c7.png)
 
+
 ## Global usage of header 'Cache-Control'
 
 Provide the distribution of usage of the header 'Cache-Control' across all domains analyzed.
 
 ![5b54b09f5f5c815a014d71b3b07495a69e3a4509](assets/tab_stats_generated_images/5b54b09f5f5c815a014d71b3b07495a69e3a4509.png)
+
 
 ## Global usage of header 'Clear-Site-Data'
 
@@ -35,11 +39,13 @@ Provide the distribution of usage of the header 'Clear-Site-Data' across all dom
 
 ![2e12376a6c60ad301b25193c11517ea0cd6aba2f](assets/tab_stats_generated_images/2e12376a6c60ad301b25193c11517ea0cd6aba2f.png)
 
+
 ## Global usage of header 'Content-Security-Policy'
 
 Provide the distribution of usage of the header 'Content-Security-Policy' across all domains analyzed.
 
 ![5e74150e7d98f861bf3fa632ca32e2d7f3e59632](assets/tab_stats_generated_images/5e74150e7d98f861bf3fa632ca32e2d7f3e59632.png)
+
 
 ## Global usage of header 'Cross-Origin-Embedder-Policy'
 
@@ -47,11 +53,13 @@ Provide the distribution of usage of the header 'Cross-Origin-Embedder-Policy' a
 
 ![00334f25a22543fb684dbe10861afee71c5263e0](assets/tab_stats_generated_images/00334f25a22543fb684dbe10861afee71c5263e0.png)
 
+
 ## Global usage of header 'Cross-Origin-Opener-Policy'
 
 Provide the distribution of usage of the header 'Cross-Origin-Opener-Policy' across all domains analyzed.
 
 ![f700c02d30083cf617bdeca51e7eec3d49fe4a08](assets/tab_stats_generated_images/f700c02d30083cf617bdeca51e7eec3d49fe4a08.png)
+
 
 ## Global usage of header 'Cross-Origin-Resource-Policy'
 
@@ -59,11 +67,13 @@ Provide the distribution of usage of the header 'Cross-Origin-Resource-Policy' a
 
 ![fa069b07281496f391d957d8936337da1a601614](assets/tab_stats_generated_images/fa069b07281496f391d957d8936337da1a601614.png)
 
+
 ## Global usage of header 'Permissions-Policy'
 
 Provide the distribution of usage of the header 'Permissions-Policy' across all domains analyzed.
 
 ![0792b92709f42a7962c27c64b74b94a4dfbffda1](assets/tab_stats_generated_images/0792b92709f42a7962c27c64b74b94a4dfbffda1.png)
+
 
 ## Global usage of header 'Referrer-Policy'
 
@@ -71,11 +81,13 @@ Provide the distribution of usage of the header 'Referrer-Policy' across all dom
 
 ![d5e855464d800d7b27eb3e430c5ae378497ddf50](assets/tab_stats_generated_images/d5e855464d800d7b27eb3e430c5ae378497ddf50.png)
 
+
 ## Global usage of header 'Strict-Transport-Security'
 
 Provide the distribution of usage of the header 'Strict-Transport-Security' across all domains analyzed.
 
 ![dbeb94ebb1ed7763f390b7be97a292f3c66920c7](assets/tab_stats_generated_images/dbeb94ebb1ed7763f390b7be97a292f3c66920c7.png)
+
 
 ## Global usage of header 'X-Content-Type-Options'
 
@@ -83,11 +95,13 @@ Provide the distribution of usage of the header 'X-Content-Type-Options' across 
 
 ![0259a15512c639e10df724dc019babf03534b303](assets/tab_stats_generated_images/0259a15512c639e10df724dc019babf03534b303.png)
 
+
 ## Global usage of header 'X-Frame-Options'
 
 Provide the distribution of usage of the header 'X-Frame-Options' across all domains analyzed.
 
 ![6ddd8e89eb34224bf460f672999c7dd447baef79](assets/tab_stats_generated_images/6ddd8e89eb34224bf460f672999c7dd447baef79.png)
+
 
 ## Global usage of header 'X-Permitted-Cross-Domain-Policies'
 
@@ -95,11 +109,13 @@ Provide the distribution of usage of the header 'X-Permitted-Cross-Domain-Polici
 
 ![364a633adcd63d315ec3df781fed6008c57ad00d](assets/tab_stats_generated_images/364a633adcd63d315ec3df781fed6008c57ad00d.png)
 
+
 ## Global usage of insecure framing configuration via the header 'x-frame-options'
 
 Provide the distribution of usage of the header 'x-frame-options' across all domains analyzed with a insecure framing configuration: value different from `DENY` or `SAMEORIGIN` including unsupported values.
 
 ![ccc438a754b6d9324c9c1ea62662969c6114bfdf](assets/tab_stats_generated_images/ccc438a754b6d9324c9c1ea62662969c6114bfdf.png)
+
 
 ## Global usage of insecure referrer configuration via the header 'referrer-policy'
 
@@ -109,17 +125,20 @@ Provide the distribution of usage of the header 'referrer-policy' across all dom
 
 ![e90a8350bb77972b086599b65efc8fcd02036a11](assets/tab_stats_generated_images/e90a8350bb77972b086599b65efc8fcd02036a11.png)
 
+
 ## Global usage of the Strict Transport Security 'preload' feature
 
 Provide the distribution of usage of the '[preload](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security#preloading_strict_transport_security)' feature for the header 'strict-transport-security' across all domains analyzed.
 
 ![8dd898e970a4cc540e0394ace9c9cedd425bc1c5](assets/tab_stats_generated_images/8dd898e970a4cc540e0394ace9c9cedd425bc1c5.png)
 
+
 ## Global common 'max-age' values of the Strict Transport Security header
 
 * Most common value used is 31536000 seconds (525600 minutes) across all domains analyzed.
 * Maximum value used is 1234513412313 seconds (20575223539 minutes) across all domains analyzed.
 * Minimum value used is -5375190 seconds (-89586 minutes) across all domains analyzed.
+
 
 ## Global usage of content security policy with directives allowing unsafe expressions
 
@@ -130,3 +149,4 @@ Determine if a CSP policy contains `(default-src|script-src|script-src-elem|scri
 Based on [Report-URI CSP](https://report-uri.com/home/generate) generator allowed instructions for CSP directives.
 
 ![c7ef83055cf836a48ed9dd26b3a8d55103645022](assets/tab_stats_generated_images/c7ef83055cf836a48ed9dd26b3a8d55103645022.png)
+
