@@ -13,6 +13,8 @@ wget -q -O $DATA_DB_FILE $DATA_DB_FILE_LOCATION
 wget -q -O $OSHP_SECURITY_HEADERS_EXTRA_FILE $OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION
 file $DATA_DB_FILE
 sqlite3 $DATA_DB_FILE ".tables"
+file $OSHP_SECURITY_HEADERS_EXTRA_FILE
+wc -l $OSHP_SECURITY_HEADERS_EXTRA_FILE
 echo "[+] Set correct access rights for the scripts as well as UNIX CRLF settings..."
 dos2unix *.sh
 chmod +x tab_stats_generate_*
