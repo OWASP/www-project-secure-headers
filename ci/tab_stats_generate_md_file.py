@@ -19,8 +19,8 @@ from pathlib import Path
 DEBUG = True
 HTTP_REQUEST_TIMEOUT = 60
 DATA_DB_FILE = "/tmp/data.db"
-OSHP_SECURITY_HEADERS_FILE_lOCATION = "https://raw.githubusercontent.com/OWASP/www-project-secure-headers/refs/heads/master/ci/headers_add.json"
-OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION = "https://raw.githubusercontent.com/oshp/oshp-stats/refs/heads/main/scripts/oshp_headers_extra_to_include.txt"
+OSHP_SECURITY_HEADERS_FILE_lOCATION = "https://owasp.org/www-project-secure-headers/ci/headers_add.json"
+OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION = "/tmp/oshp_headers_extra_to_include.txt"
 MD_FILE = "../tab_statistics.md"
 IMAGE_FOLDER_LOCATION = "../assets/tab_stats_generated_images"
 TAB_MD_TEMPLATE = """---
@@ -72,15 +72,15 @@ def prepare_generation_of_image_from_mermaid(mermaid_code, filename):
 def load_oshp_headers():
     trace("Call load_oshp_headers()")
     header_names = []
+    trace(f"Call load_oshp_headers() :: HTTP Request to {OSHP_SECURITY_HEADERS_FILE_lOCATION}")
     resp = requests.get(OSHP_SECURITY_HEADERS_FILE_lOCATION, timeout=HTTP_REQUEST_TIMEOUT)
     if resp.status_code != 200:
         raise Exception(f"Status code {resp.status_code} received for {OSHP_SECURITY_HEADERS_FILE_lOCATION}!")
     for http_header in resp.json()["headers"]:
         header_names.append(http_header["name"].lower())
-    resp = requests.get(OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION, timeout=HTTP_REQUEST_TIMEOUT)
-    if resp.status_code != 200:
-        raise Exception(f"Status code {resp.status_code} received for {OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION}!")
-    header_names = resp.text.splitlines()
+    trace(f"Call load_oshp_headers() :: Load file {OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION}")
+    with open(OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION, mode="r", encoding="utf-8") as f:
+        header_names = f.read().splitlines()
     for http_header in header_names:
         header_names.append(http_header.lower().strip(" \n\r\t"))
     header_names = list(dict.fromkeys(header_names))
