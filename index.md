@@ -62,7 +62,7 @@ pitch: Provides technical information about HTTP security headers.
 
 📈 We provide statistics, updated every month, about HTTP response security headers usage mentioned by the OWASP Secure Headers Project:
 
-* They are available through [this GitHub project](https://github.com/oshp/oshp-stats).
+* They are available through [this GitHub project](https://github.com/oshp/oshp-stats) and the tab named [Statistics](https://owasp.org/www-project-secure-headers/index.html#div-statistics).
 
 ## Security headers usage validator
 
