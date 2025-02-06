@@ -118,7 +118,7 @@ def init_stats_file():
         cdate = datetime.now().strftime("%m/%d/%Y at %H:%M:%S")
         f.write(TAB_MD_TEMPLATE)
         f.write("\n\n")
-        f.write(f"⏲️ Last update: {cdate} - Domains analyzed count: {get_domains_count()}.\n")
+        f.write(f"📅 Last update: {cdate} - Domains analyzed count: {get_domains_count()}.\n")
     trace("Call end.")
 
 
