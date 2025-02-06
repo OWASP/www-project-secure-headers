@@ -23,7 +23,7 @@ DASHBOARD_MD_FILE = "../monitoring_technical_references_dashboard.md"
 DASHBOARD_MD_FILE_TEMPLATE = f"""
 # Technical References Dashboard
 
-> :timer_clock: Last verification (UTC): {EXECUTION_DATETIME_UTC}
+> 📅 Last verification (UTC): {EXECUTION_DATETIME_UTC}
 
 ## GitHub repositories health status
 
