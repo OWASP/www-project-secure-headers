@@ -17,7 +17,7 @@ cd $IMAGE_FOLDER_LOCATION
 for mmd_file in *.mmd
 do
     png_file="${mmd_file%%.*}.png"
-    aa-exec --profile=chrome npx -p @mermaid-js/mermaid-cli mmdc --quiet --input $mmd_file --output $png_file --outputFormat png --theme default --backgroundColor transparent
+    aa-exec --profile=chrome npx -p @mermaid-js/mermaid-cli mmdc --quiet --input $mmd_file --output $png_file --outputFormat png --theme forest
 done
 # Only let PNG files
 rm *.mmd
