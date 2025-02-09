@@ -7,6 +7,7 @@
 #
 # Reference:
 #   https://github.com/mermaid-js/mermaid-cli/blob/master/.github/workflows/test.yml#L24
+#   https://mermaid.js.org/config/theming.html
 #########################################################################
 # Constants
 IMAGE_FOLDER_LOCATION="../assets/tab_stats_generated_images"
