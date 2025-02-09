@@ -1,0 +1,11 @@
+{
+    "theme": "forest",
+    "themeVariables": {
+        "primaryColor": "#233E81",
+        "primaryTextColor": "#000000",
+        "secondaryColor": "#810E81",
+        "secondaryTextColor": "#000000",
+        "tertiaryColor": "#98AFC7",
+        "tertiaryTextColor": "#000000"
+    }
+}
