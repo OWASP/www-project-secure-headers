@@ -7,6 +7,7 @@
 #
 # Reference:
 #   https://github.com/mermaid-js/mermaid-cli/blob/master/.github/workflows/test.yml#L24
+#   https://mermaid.js.org/config/theming.html
 #########################################################################
 # Constants
 IMAGE_FOLDER_LOCATION="../assets/tab_stats_generated_images"
@@ -17,7 +18,7 @@ cd $IMAGE_FOLDER_LOCATION
 for mmd_file in *.mmd
 do
     png_file="${mmd_file%%.*}.png"
-    aa-exec --profile=chrome npx -p @mermaid-js/mermaid-cli mmdc --quiet --input $mmd_file --output $png_file --outputFormat png --theme forest
+    aa-exec --profile=chrome npx -p @mermaid-js/mermaid-cli mmdc --quiet --input $mmd_file --output $png_file --outputFormat png --configFile ../../ci/tab_stats_mermaid_config.json
 done
 # Only let PNG files
 rm *.mmd
