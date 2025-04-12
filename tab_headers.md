@@ -446,7 +446,7 @@ The Permissions-Policy header replaces the existing **Feature-Policy** header fo
 ### Example
 
 ```
-Permissions-Policy: accelerometer=(),ambient-light-sensor=(),autoplay=(),battery=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),screen-wake-lock=(),web-share=(),xr-spatial-tracking=()
+Permissions-Policy: accelerometer=(), autoplay=(), camera=(), cross-origin-isolated=(), display-capture=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(self), usb=(), web-share=(), xr-spatial-tracking=(), clipboard-read=(), clipboard-write=(), gamepad=(), hid=(), idle-detection=(), interest-cohort=(), serial=(), unload=()
 ```
 
 ### References
@@ -455,6 +455,7 @@ Permissions-Policy: accelerometer=(),ambient-light-sensor=(),autoplay=(),battery
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy#directives>
 * <https://caniuse.com/permissions-policy>
 * <https://www.w3.org/TR/permissions-policy-1/>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#directives>
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy>
 * <https://www.chromestatus.com/feature/5745992911552512>
 * <https://www.permissionspolicy.com/>
