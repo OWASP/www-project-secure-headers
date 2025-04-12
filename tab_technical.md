@@ -101,4 +101,4 @@ tags: headers
 
 | Library | Description | Ref |
 | --- | --- | --- |
-| **Alamofire** | Alamofire is an HTTP networking library written in Swift. | [👩‍💻](https://github.com/Alamofire/Alamofire) |
+| **VaporSecurityHeaders** | A Middleware library for adding security headers to your Vapor application. | [👩‍💻](https://github.com/brokenhandsio/VaporSecurityHeaders) |
