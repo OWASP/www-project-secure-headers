@@ -22,6 +22,7 @@ tags: headers
   * [Python](#python)
   * [Ruby](#ruby)
   * [Rust](#rust)
+  * [Swift](#swift)
 
 ## Presentations
 
@@ -95,3 +96,9 @@ tags: headers
 | Library | Description | Ref |
 | --- | --- | --- |
 | **owasp-headers** | Best-practice OWASP HTTP response headers for Rust. | [🌎](https://docs.rs/crate/owasp-headers/latest) |
+
+### Swift
+
+| Library | Description | Ref |
+| --- | --- | --- |
+| **Alamofire** | Alamofire is an HTTP networking library written in Swift. | [👩‍💻](https://github.com/Alamofire/Alamofire) |
