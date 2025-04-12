@@ -452,11 +452,12 @@ Permissions-Policy: accelerometer=(), autoplay=(), camera=(), cross-origin-isola
 ### References
 
 * <https://github.com/w3c/webappsec-permissions-policy/blob/main/permissions-policy-explainer.md>
-* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy#directives>
 * <https://caniuse.com/permissions-policy>
-* <https://www.w3.org/TR/permissions-policy-1/>
-* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#directives>
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy#directives>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#directives>
+* <https://www.w3.org/TR/permissions-policy-1/>
 * <https://www.chromestatus.com/feature/5745992911552512>
 * <https://www.permissionspolicy.com/>
 
