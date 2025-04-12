@@ -52,7 +52,7 @@ tags: headers
 
 | Library | Description | Ref |
 | --- | --- | --- |
-| **NWebsec** | NWebsec consists of several security libraries for ASP.NET applications. | [🌎](https://docs.nwebsec.com) |
+| **NWebsec** | NWebsec consists of several security libraries for ASP.NET applications. | [👩‍💻](https://github.com/NWebsec/NWebsec) |
 | **NetEscapades.AspNetCore.SecurityHeaders** | Small package to allow adding security headers to ASP.NET Core websites. | [👩‍💻](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
 | **OwaspHeaders.Core** | .NET Core middleware for injecting the OWASP recommended HTTP Headers for increased security | [👩‍💻](https://github.com/GaProgMan/OwaspHeaders.Core) |
 
