@@ -21,7 +21,6 @@ tags: headers
   * [PHP](#php)
   * [Python](#python)
   * [Ruby](#ruby)
-  * [Rust](#rust)
   * [Swift](#swift)
 
 ## Presentations
@@ -90,12 +89,6 @@ tags: headers
 | Library | Description | Ref |
 | --- | --- | --- |
 | **secure** | HTTP middleware for Go that facilitates some quick security wins. | [👩‍💻](https://github.com/unrolled/secure) |
-
-### Rust
-
-| Library | Description | Ref |
-| --- | --- | --- |
-| **owasp-headers** | Best-practice OWASP HTTP response headers for Rust. | [🌎](https://docs.rs/crate/owasp-headers/latest) |
 
 ### Swift
 
