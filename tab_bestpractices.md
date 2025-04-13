@@ -33,7 +33,7 @@ The following section proposes a configuration for the [actively supported and w
 
 🚩 The header `Clear-Site-Data` will cause the browser to take additional processing time for the HTTP response, so, set it to the logout function when possible.
 
-🔬 For the header `Permissions-Policy`, as it is currently only supported by [Chromium based browsers](https://caniuse.com/permissions-policy), the proposed value was generated with this [site](https://www.permissionspolicy.com/) and tested against the version `128.0.6606.0` of [Chromium](https://chromium.woolyss.com/download/en/) to only specify supported features.
+🔬 For the header `Permissions-Policy`, as it is currently only supported by [Chromium based browsers](https://caniuse.com/permissions-policy), the proposed value was generated with this [site](https://www.permissionspolicy.com/) and tested against the version `137.0.7124.0` of [Chromium](https://chromium.woolyss.com/download/en/) to only specify supported features.
 
 💡 Content of the table below is also provided, as JSON, via this [file](ci/headers_add.json) (automatically updated).
 

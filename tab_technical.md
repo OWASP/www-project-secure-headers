@@ -21,7 +21,7 @@ tags: headers
   * [PHP](#php)
   * [Python](#python)
   * [Ruby](#ruby)
-  * [Rust](#rust)
+  * [Swift](#swift)
 
 ## Presentations
 
@@ -34,10 +34,10 @@ tags: headers
 | --- | --- | --- |
 | **hsecscan** | A security scanner for HTTP response headers. | [👩‍💻](https://github.com/riramar/hsecscan) |
 | **humble** | A humble, and fast, security-oriented HTTP headers analyzer. | [👩‍💻](https://github.com/rfc-st/humble) |
-| **Mozilla Observatory** | A Mozilla project designed to help developers, system administrators, and security professionals configure their sites safely and securely. | [🌎](https://observatory.mozilla.org/) / [👩‍💻](https://github.com/mozilla/http-observatory/) / [👩‍💻](https://github.com/mozilla/http-observatory-website/) |
 | **testssl.sh** | Easy to use shell script which tests not only SSL/TLS encryption but also checks common headers and analyzes those. Output is screen, JSON, CSV and HTML. | [👩‍💻](https://github.com/drwetter/testssl.sh) |
 | **DrHEADer** | DrHEADer helps with the audit of security headers received in response to a single request or a list of requests. | [👩‍💻](https://github.com/Santandersecurityresearch/DrHeader) |
 | **csp-evaluator** | NPM module allowing developers and security experts to check if a Content Security Policy serves as a strong mitigation against XSS attacks. | [👩‍💻](https://github.com/google/csp-evaluator) |
+| **mdn-http-observatory** | Service by Mozilla that checks web sites for security-relevant headers. | [👩‍💻](https://github.com/mdn/mdn-http-observatory) |
 
 ## Development Libraries
 
@@ -51,7 +51,7 @@ tags: headers
 
 | Library | Description | Ref |
 | --- | --- | --- |
-| **NWebsec** | NWebsec consists of several security libraries for ASP.NET applications. | [🌎](https://docs.nwebsec.com) |
+| **NWebsec** | NWebsec consists of several security libraries for ASP.NET applications. | [👩‍💻](https://github.com/NWebsec/NWebsec) |
 | **NetEscapades.AspNetCore.SecurityHeaders** | Small package to allow adding security headers to ASP.NET Core websites. | [👩‍💻](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
 | **OwaspHeaders.Core** | .NET Core middleware for injecting the OWASP recommended HTTP Headers for increased security | [👩‍💻](https://github.com/GaProgMan/OwaspHeaders.Core) |
 
@@ -90,8 +90,8 @@ tags: headers
 | --- | --- | --- |
 | **secure** | HTTP middleware for Go that facilitates some quick security wins. | [👩‍💻](https://github.com/unrolled/secure) |
 
-### Rust
+### Swift
 
 | Library | Description | Ref |
 | --- | --- | --- |
-| **owasp-headers** | Best-practice OWASP HTTP response headers for Rust. | [🌎](https://docs.rs/crate/owasp-headers/latest) |
+| **VaporSecurityHeaders** | A Middleware library for adding security headers to your Vapor application. | [👩‍💻](https://github.com/brokenhandsio/VaporSecurityHeaders) |
