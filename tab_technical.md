@@ -34,7 +34,6 @@ tags: headers
 | --- | --- | --- |
 | **hsecscan** | A security scanner for HTTP response headers. | [👩‍💻](https://github.com/riramar/hsecscan) |
 | **humble** | A humble, and fast, security-oriented HTTP headers analyzer. | [👩‍💻](https://github.com/rfc-st/humble) |
-| **Mozilla Observatory** | A Mozilla project designed to help developers, system administrators, and security professionals configure their sites safely and securely. | [🌎](https://observatory.mozilla.org/) / [👩‍💻](https://github.com/mozilla/http-observatory/) / [👩‍💻](https://github.com/mozilla/http-observatory-website/) |
 | **testssl.sh** | Easy to use shell script which tests not only SSL/TLS encryption but also checks common headers and analyzes those. Output is screen, JSON, CSV and HTML. | [👩‍💻](https://github.com/drwetter/testssl.sh) |
 | **DrHEADer** | DrHEADer helps with the audit of security headers received in response to a single request or a list of requests. | [👩‍💻](https://github.com/Santandersecurityresearch/DrHeader) |
 | **csp-evaluator** | NPM module allowing developers and security experts to check if a Content Security Policy serves as a strong mitigation against XSS attacks. | [👩‍💻](https://github.com/google/csp-evaluator) |
