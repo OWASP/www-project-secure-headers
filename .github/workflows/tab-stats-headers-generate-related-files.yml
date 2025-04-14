@@ -7,7 +7,8 @@ on:
     paths:
       - 'ci/tab_stats_generate_md_file.py'     
       - 'ci/tab_stats_generate_png_files.sh'     
-      - 'ci/tab_stats_manage_generation.sh'         
+      - 'ci/tab_stats_manage_generation.sh'      
+permissions: read-all       
 jobs:
   build:
     runs-on: ubuntu-latest
