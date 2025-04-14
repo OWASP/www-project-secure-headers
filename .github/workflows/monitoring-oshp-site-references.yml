@@ -6,6 +6,7 @@ on:
     - 'tab_casestudies.md'
   schedule:
     - cron: '0 0 * * 0'
+permissions: read-all     
 jobs:
   build:
     runs-on: ubuntu-latest   

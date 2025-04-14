@@ -4,6 +4,7 @@ on:
   push:
     paths:
     - 'tab_bestpractices.md' 
+permissions: read-all     
 jobs:
   build:
     runs-on: ubuntu-latest
