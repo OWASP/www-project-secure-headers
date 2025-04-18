@@ -91,9 +91,9 @@ if(args.length == 0){
 💻 Execution example:
 
 ```shell
-$ node code.js "default-src 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content"
+$ node code.js "default-src 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
 [+] CSP to evaluate:
-default-src 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content
+default-src 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests
 [+] Evaluation results:
 [Directive 'default-src' - Severity 50]: 'self' can be problematic if you host JSONP, Angular or user uploaded files.
 ```

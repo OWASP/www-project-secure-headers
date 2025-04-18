@@ -168,7 +168,7 @@ A Content Security Policy (also named CSP) requires careful tuning and testing a
 | `script-nonce`              | Define script execution by requiring the presence of the specified nonce on script elements. |
 | `plugin-types`              | Define the set of plugins that can be invoked by the protected resource by limiting the types of resources that can be embedded. |
 | `reflected-xss`             | Instruct the user agent to activate or deactivate any heuristics used to filter or block reflected cross-site scripting attacks, equivalent to the effects of the non-standard `X-XSS-Protection` header. |
-| `block-all-mixed-content`   | Prevent the user agent from loading mixed content. |
+| `block-all-mixed-content`   | *(Deprecated)* Prevent the user agent from loading mixed content. |
 | `upgrade-insecure-requests` | Instruct the user agent to using HTTPS when trying to download insecure HTTP resources |
 | `referrer`                  | *(Deprecated)* Define information the user agent can send in the `Referer` header. |
 | `report-uri`                | *(Deprecated and replaced by `report-to`)* Specifies a URI to which the user agent sends reports about policy violation. |
