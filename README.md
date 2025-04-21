@@ -47,6 +47,9 @@
 
 ## Automatically generated content
 
+> [!TIP]
+> 🔬[Technical References Dashboard](monitoring_technical_references_dashboard.md).
+
 🏭 The folder [ci](ci) (**CI** for **C**ontinuous **I**ntegration) contains materials to generate the following content.
 
 📝 Generation of the both JSON files containing the header recommended to add and remove:
