@@ -14,9 +14,10 @@ import re
 import sys
 import urllib.request
 from datetime import datetime
+from datetime import timezone
 
 # Constants
-EXECUTION_DATETIME_UTC = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+EXECUTION_DATETIME_UTC = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
 DEFAULT_ENCODING = "utf-8"
 SOURCE_MD_FILE = "../tab_technical.md"
 DASHBOARD_MD_FILE = "../monitoring_technical_references_dashboard.md"
