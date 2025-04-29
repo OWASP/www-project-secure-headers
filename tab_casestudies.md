@@ -43,7 +43,6 @@ https://owasp.org/www-project-secure-headers/index.html#div-technical_php
 ## Companies and other legal entities
 
 * [Cloud.gov](https://cloud.gov/docs/management/headers/).
-* [Amazon AWS](https://docs.aws.amazon.com/whitepapers/latest/secure-content-delivery-amazon-cloudfront/improving-security-by-enabling-security-specific-headers.html).
 * [Salesforce](https://help.salesforce.com/s/articleView?language=en_US&id=cc.b2c_declarative_security_via_http_headers.htm&type=5).
 * [Black Hills Information Security](https://www.blackhillsinfosec.com/fixing-content-security-policies-with-cloudflare-workers/).
 * [Progress](https://www.progress.com/documentation/sitefinity-cms/110/predefined-security-headers-in-http-response).
@@ -63,6 +62,7 @@ https://owasp.org/www-project-secure-headers/index.html#div-technical_php
 * [Missouri State Website](https://assets.mo.gov/samples/security/security-headers.html).
 * [SAS](https://documentation.sas.com/doc/en/sasadmincdc/v_054/viyaov/p0i3vcgjpciz45n1of1v4vkffwbn.htm).
 * [RedHat](https://www.redhat.com/en/blog/creating-web-application-firewall-red-hat-openshift).
+* [Sages](https://www.sages.io/blog/headlines-safety-review-actual-recommendations).
 
 ## Software
 

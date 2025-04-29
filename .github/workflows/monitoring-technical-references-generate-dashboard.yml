@@ -21,7 +21,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        pip install -r requirements.txt
     - name: Run generation of the dashboard
       run: |
         cd ci; python monitoring_technical_references_generate_dashboard.py "${{ secrets.GITHUB_TOKEN }}"
