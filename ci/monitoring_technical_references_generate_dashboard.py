@@ -7,16 +7,19 @@ Sources:
     https://thispointer.com/python-get-difference-between-two-dates-in-months/
     https://docs.github.com/en/rest/repos/repos#get-a-repository
 
-Try to not use any external dependency to stay the more portable possible.
+Dependencies:
+    pip install requests
 """
-import json
 import re
 import sys
-import urllib.request
+import requests
 from datetime import datetime
+from datetime import timezone
 
 # Constants
-EXECUTION_DATETIME_UTC = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+REQ_SESSION = requests.session()
+TIMEOUT_SECONDS = 240
+EXECUTION_DATETIME_UTC = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
 DEFAULT_ENCODING = "utf-8"
 SOURCE_MD_FILE = "../tab_technical.md"
 DASHBOARD_MD_FILE = "../monitoring_technical_references_dashboard.md"
@@ -46,7 +49,7 @@ def determine_health_state(repo_updated_datetime):
     # Format: 2022-09-14T13:40:24Z
     # Keep only the date part
     start_date = datetime.strptime(repo_updated_datetime.split("T")[0], "%Y-%m-%d")
-    end_date = datetime.now()
+    end_date = datetime.now(timezone.utc)
     diff_months = ((end_date.year - start_date.year) * 12) + (end_date.month - start_date.month)
     if diff_months <= 12:
         health_state_icon = ":green_circle:"
@@ -57,18 +60,15 @@ def determine_health_state(repo_updated_datetime):
     return (diff_months, health_state_icon)
 
 
-def extract_updated_datetime(github_repo_url, github_access_token):
+def extract_updated_datetime(github_repo_url):
     # Extract the repo owner and project name from the repo url
     parts = github_repo_url.strip(' \r\n\t').split("/")
     repo_owner = parts[3]
     project_name = parts[4]
     # Get the info of the repo using the GitHub API
     api_url = f"https://api.github.com/repos/{repo_owner}/{project_name}"
-    request = urllib.request.Request(url=api_url, method="GET")
-    if github_access_token is not None:
-        request.add_header("Authorization", f"Bearer {github_access_token}")
-    with urllib.request.urlopen(request) as f:
-        repo_info = json.loads(f.read().decode(DEFAULT_ENCODING))
+    response = REQ_SESSION.get(api_url, timeout=TIMEOUT_SECONDS)
+    repo_info = response.json()
     # Return the updated date attribute
     # Format: 2022-09-14T13:40:24Z
     return repo_info["pushed_at"]
@@ -86,11 +86,11 @@ def extract_github_repositories_url():
     return github_repositories_url_collection
 
 
-def generate_md_table(github_repositories_url_collection, github_access_token):
+def generate_md_table(github_repositories_url_collection):
     table_md = "| Last update | Status | Repository |\n| --- | --- | --- |\n"
     lines = []
     for repo in github_repositories_url_collection:
-        updated_datetime = extract_updated_datetime(repo, github_access_token)
+        updated_datetime = extract_updated_datetime(repo)
         health_state = determine_health_state(updated_datetime)
         repo_name = repo.replace("https://github.com/", "")
         lines.append(f"| `{updated_datetime}` ({health_state[0]} months ago) | {health_state[1]} | [{repo_name}]({repo}) |")
@@ -100,17 +100,17 @@ def generate_md_table(github_repositories_url_collection, github_access_token):
 
 
 if __name__ == "__main__":
-    github_access_token = None
     if len(sys.argv) == 2:
         print("[i] GitHub access token provided.")
         github_access_token = sys.argv[1]
+        REQ_SESSION.headers.update({"Authorization": f"Bearer {github_access_token}"})
     else:
         print("[i] No GitHub access token provided.")
     print("[+] Extract GitHub repositories url...")
     repos = extract_github_repositories_url()
     print(f"{len(repos)} repos.")
     print("[+] Generate MD table...")
-    table_md = generate_md_table(repos, github_access_token)
+    table_md = generate_md_table(repos)
     print("[+] Update dashboard MD file...")
     dashboard_content = DASHBOARD_MD_FILE_TEMPLATE % table_md
     with open(DASHBOARD_MD_FILE, mode="w", encoding=DEFAULT_ENCODING) as f:
