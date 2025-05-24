@@ -213,12 +213,8 @@ X-Permitted-Cross-Domain-Policies: none
 
 ### References
 
-<!-- markdown-link-check-disable -->
-* <https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html>
-<!-- markdown-link-check-disable -->
-* <https://danielnixon.org/http-security-headers/>
+* [https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html](https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html "SKIP_VALIDATION")
 * <https://rorsecurity.info/portfolio/new-http-headers-for-more-security>
-* <https://github.com/twitter/secureheaders/issues/88>
 * <https://gf.dev/cross-domain-policy-test>
 
 ## Referrer-Policy
@@ -323,7 +319,7 @@ This response header (also named COEP) prevents a document from loading any cros
 
 | Value               | Description |
 |---------------------|-------------|
-| `unsafe-none`   | Allows the document to fetch cross-origin resources without giving explicit permission through the [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) protocol or the [Cross-Origin-Resource-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)) header (it is the default value). |
+| `unsafe-none`   | Allows the document to fetch cross-origin resources without giving explicit permission through the [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) protocol or the [Cross-Origin-Resource-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy) header (it is the default value). |
 | `require-corp` | A document can only load resources from the same origin, or resources explicitly marked as loadable from another origin. |
 
 ### Example
@@ -592,7 +588,6 @@ X-XSS-Protection: 0
 * <https://owasp.org/www-community/attacks/xss/>
 * <https://www.virtuesecurity.com/blog/understanding-xss-auditor/>
 * <https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers>
-* <http://zinoui.com/blog/security-http-headers#x-xss-protection>
 
 ## Pragma
 
