@@ -6,12 +6,12 @@
                 "http://"
             ],
             "headers": {
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
             }
         }
     ],
-    "timeout": "240s",
-    "retryCount": 5,
+    "timeout": "60s",
+    "retryCount": 2,
     "aliveStatusCodes": [
         200,
         403,
