@@ -18,6 +18,12 @@ tags: headers
 
 ### Private Network Access request header
 
+⚠️ Work on this feature was **put on hold by Google** in favor of a new feature called **[Local Network Access](https://github.com/explainers-by-googlers/local-network-access)** for which *work is in progress*:
+
+* [Private Network Access on hold](https://developer.chrome.com/blog/pna-on-hold).
+* [Inquiry About Chrome Origin Trials Extension and Future Availability](https://github.com/WICG/private-network-access/issues/148).
+* [Discussion thread about this topic](https://groups.google.com/a/chromium.org/g/blink-dev/c/NCV3anf1KtU/m/WyL9rKjtAQAJ?pli=1).
+
 #### Description
 
 The [Private Network Access](https://wicg.github.io/private-network-access/) specification provides a feature allowing an application, located on a **[private address](https://wicg.github.io/private-network-access/#ip-address-space-private)**, to identify if the incoming HTTP request was sent from an application located on a **[public address](https://wicg.github.io/private-network-access/#public-address)**.
