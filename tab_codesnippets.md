@@ -15,7 +15,7 @@ tags: headers
 * [Test locally a Content-Security-Policy for weaknesses](#test-locally-a-content-security-policy-for-weaknesses)
 * [Generate configuration code using the OSHP headers reference files](#generate-configuration-code-using-the-oshp-headers-reference-files)
 * [Quickly check security HTTP headers](#quickly-check-security-http-headers)
-* [Syntax for adding HTTP response headers on different web servers](#syntax-for-adding-http-response-headers-on-different-web-servers)
+* [Syntax for adding HTTP response headers on different web or application servers](#syntax-for-adding-http-response-headers-on-different-web-or-application-servers)
 
 ## Convert a Permissions-Policy back to Feature-Policy
 
@@ -144,44 +144,23 @@ $ venom run --var="target_site=https://mozilla.org" --var="logout_url=/logout" t
         [info] The X-XSS-Protection header has been deprecated by modern browsers and its use can introduce additional security issues on the client side.
 ```
 
-## Syntax for adding HTTP response headers on different web servers
+## Syntax for adding HTTP response headers on different web or application servers
 
-### Apache
+Use the following steps to leverage an "LLM as a Service" (LLMaaS) to generate corresponding configuration code snippet for the wanted web or application server:
 
-💻 Directive:
+1. Download this [file](https://owasp.org/www-project-secure-headers/ci/headers_add.json).
+2. Join the json file above to the chat.
+3. Use this user prompt in the chat to ask the generation:
 
-`Header always set [HEADER_NAME] [PROPOSED_VALUE]`
+```text
+Generate a configuration code snippet to set HTTP response security headers for the '[TARGET_APPLICATION_OR_WEB_SERVER_NAME]'. Use only the information from the json file attached. Only provide the configuration code snippet. The configuration must overwrite any existing value for an HTTP response security header present into the json file attached.
+```
 
-🌎 References:
+🔬 The user prompt proposed was tested against [Google GEMINI](https://gemini.google.com/) model **2.5 Flash** and the generated configuration code was submitted to [OpenAI ChatGPT](https://chatgpt.com/) model **ChatGPT** to indicates if it was valid for the intended web or application server. The following value for the `[TARGET_APPLICATION_OR_WEB_SERVER_NAME]` placeholder were used:
 
-* <https://httpd.apache.org/docs/current/mod/mod_headers.html>
-
-### Nginx
-
-💻 Directive:
-
-`add_header [HEADER_NAME] [PROPOSED_VALUE] always;`
-
-🌎 References:
-
-* <https://nginx.org/en/docs/http/ngx_http_headers_module.html>
-
-### Lighttpd
-
-💻 Directive:
-
-`setenv.add-response-header = ("[HEADER_NAME]" => "[PROPOSED_VALUE]")`
-
-🌎 References:
-
-* <https://redmine.lighttpd.net/projects/lighttpd/wiki/Mod_setenv>
-
-### IIS
-
-💻 Directive:
-
-`<add name="[HEADER_NAME]" value="[PROPOSED_VALUE]" />`
-
-🌎 References:
-
-* <https://docs.microsoft.com/en-us/iis/configuration/system.webserver/httpprotocol/customheaders>
+* `apache web server`.
+* `nginx web server`.
+* `lighttpd web server`.
+* `litespeed web server`
+* `caddy web server`
+* `iis web server`
