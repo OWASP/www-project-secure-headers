@@ -161,6 +161,6 @@ Generate a configuration code snippet to set HTTP response security headers for 
 * `apache web server`.
 * `nginx web server`.
 * `lighttpd web server`.
-* `litespeed web server`
-* `caddy web server`
-* `iis web server`
+* `litespeed web server`.
+* `caddy web server`.
+* `iis web server`.
