@@ -23,6 +23,15 @@ tags: headers
 * [Private Network Access on hold](https://developer.chrome.com/blog/pna-on-hold).
 * [Inquiry About Chrome Origin Trials Extension and Future Availability](https://github.com/WICG/private-network-access/issues/148).
 * [Discussion thread about this topic](https://groups.google.com/a/chromium.org/g/blink-dev/c/NCV3anf1KtU/m/WyL9rKjtAQAJ?pli=1).
+* [New permission prompt for Local Network Access](https://developer.chrome.com/blog/local-network-access).
+
+🤔 According to our understanding of the **Local Network Access** permission as well as tests performed, this one do not include any special HTTP request header:
+
+![LNA test00](assets/images/miscellaneous_lna_test_00.png)
+
+![LNA test01](assets/images/miscellaneous_lna_test_01.png)
+
+![LNA test00](assets/images/miscellaneous_lna_test_02.png)
 
 #### Description
 
