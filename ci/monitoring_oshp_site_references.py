@@ -68,6 +68,7 @@ if __name__ == "__main__":
     for site_url in site_urls:
         if site_url.strip().startswith("http"):
             oshp_is_mentioned = "NO"
+            print(f"=> Checking '{site_url}'")
             for _ in range(0, MAX_RETRY):
                 try:
                     oshp_is_mentioned = verify_mention(site_url)
@@ -75,7 +76,7 @@ if __name__ == "__main__":
                         break
                     else:
                         time.sleep(WAIT_DELAY_SECONDS)
-                except requests.exceptions.Timeout:
+                except (requests.exceptions.Timeout, requests.exceptions.ConnectionError):
                     oshp_is_mentioned = "IO_ERROR"
                     time.sleep(WAIT_DELAY_SECONDS)
                     pass
