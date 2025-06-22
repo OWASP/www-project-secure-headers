@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> 📅 Last verification (UTC): 2025-06-15 00:10:34
+> 📅 Last verification (UTC): 2025-06-22 00:10:31
 
 ## GitHub repositories health status
 
@@ -36,6 +36,6 @@ Project reaching the :red_circle: status **are removed**.
 | `2025-05-07T20:57:41Z` (1 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
 | `2025-06-03T15:13:11Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
 | `2025-06-13T07:30:22Z` (0 months ago) | :green_circle: | [mdn/mdn-http-observatory](https://github.com/mdn/mdn-http-observatory) |
-| `2025-06-14T17:54:54Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
-| `2025-06-14T22:40:50Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2025-06-15T08:01:18Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2025-06-21T21:12:48Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
