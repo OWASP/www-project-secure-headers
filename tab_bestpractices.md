@@ -64,7 +64,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 
 💡 Additional information about technical information disclosure in HTTP header on [OpenCRE](https://www.opencre.org/cre/403-005?name=OWASP+Secure+Headers+Project&section=Prevent+information+disclosure+via+HTTP+headers&link=https%3A%2F%2Fowasp.org%2Fwww-project-secure-headers%2F%23div-bestpractices_prevent-information-disclosure-via-http-headers).
 
-💡 when possible, a reference link regarding the documentation of the header is provided.
+💡 When possible, a reference link about the documentation of the header is provided.
 
 🚩 The response header `Content-Type` can sometimes discloses the web framework used. It is the case for the following ones:
 
