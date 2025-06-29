@@ -77,15 +77,15 @@ This section provides a collection of HTTP response headers to remove, when poss
 | Header name         | Header value example | Description |
 | --------------------|----------------------|-------------|
 | [Server](https://webtechsurvey.com/response-header/server) | `Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips` | Contain information about the server handling the request. |
-| [Liferay-Portal](https://webtechsurvey.com/response-header/liferay-portal) | `Liferay Digital Experience Platform 7.2.10 GA1` | Contain the version of the [Liferay](https://www.liferay.com) software in use. |
+| Liferay-Portal | `Liferay Digital Experience Platform 7.2.10 GA1` | Contain the version of the [Liferay](https://www.liferay.com) software in use. |
 | [X-Turbo-Charged-By](https://webtechsurvey.com/response-header/x-turbo-charged-by) | `LiteSpeed/5.4.12 Enterprise` | Contain information about the server handling the request. |
-| [X-Powered-By](https://webtechsurvey.com/response-header/x-powered-by) | `PHP/5.3.3` | Contain information about hosting environments or other frameworks in use. |
+| X-Powered-By | `PHP/5.3.3` | Contain information about hosting environments or other frameworks in use. |
 | [X-Server-Powered-By](https://webtechsurvey.com/response-header/x-server-powered-by) | `Engintron` | Contain information about hosting environments or other frameworks in use. |
 | [X-Powered-CMS](https://webtechsurvey.com/response-header/x-powered-cms) | `Bitrix Site Manager (DEMO)` | Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response. |
 | [SourceMap](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/SourceMap) | `https://mysite.com/js/mylib.js.map`| Links generated code to a [source map](https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map) file, enabling the browser to reconstruct the original source and present the reconstructed original in the debugger. |
 | [X-SourceMap](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/SourceMap) | `https://mysite.com/js/mylib.js.map`| Links generated code to a [source map](https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map) file, enabling the browser to reconstruct the original source and present the reconstructed original in the debugger. |
-| [X-AspNetMvc-Version](https://webtechsurvey.com/response-header/x-aspnetmvc-version) | `5.2` | Contain the version of the ASP .Net MVC framework in use. |
-| [X-AspNet-Version](https://webtechsurvey.com/response-header/x-aspnet-version) | `4.0.30319` | Contain the version of the ASP .Net framework Common Language Runtime (CLR) in use (see [here](https://github.com/OWASP/www-project-secure-headers/issues/215) for more details).|
+| X-AspNetMvc-Version | `5.2` | Contain the version of the ASP .Net MVC framework in use. |
+| X-AspNet-Version | `4.0.30319` | Contain the version of the ASP .Net framework Common Language Runtime (CLR) in use (see [here](https://github.com/OWASP/www-project-secure-headers/issues/215) for more details).|
 | [X-SourceFiles](https://webtechsurvey.com/response-header/x-sourcefiles)  | `=?UTF-8?B?QzpcVXNlcnN?=` | Contain information needed by the .Net SDK debugger during debugging operation on a project. |
 | [X-Redirect-By](https://webtechsurvey.com/response-header/x-redirect-by) | `TYPO3 Shortcut/Mountpoint` | Specifies the component that is responsible for a particular redirect (source [Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)). |
 | [X-Generator](https://webtechsurvey.com/response-header/x-generator) | `Drupal 8` | Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response. |
@@ -93,13 +93,13 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-CMS](https://webtechsurvey.com/response-header/x-cms) | `Thinq CMS 1.7.0.0` | Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response. |
 | [X-Powered-By-Plesk](https://webtechsurvey.com/response-header/x-powered-by-plesk) | `PleskLin` or `PleskWin` | Indicate that the platform is based on the [Plesk](https://www.plesk.com) software in addition to the underlying operating system. |
 | [X-Php-Version](https://webtechsurvey.com/response-header/x-php-version) | `7.4` | Indicate the version of [PHP](https://www.php.net) technology used. |
-| [Powered-By](https://webtechsurvey.com/response-header/powered-by) | `PrestaShop` | Indicate the name of the framework or platform used. |
+| Powered-By | `PrestaShop` | Indicate the name of the framework or platform used. |
 | [X-Content-Encoded-By](https://webtechsurvey.com/response-header/x-content-encoded-by) | `Joomla! 2.5` | Indicate the name of the framework or platform used. |
-| [Product](https://webtechsurvey.com/response-header/product) | `Z-BlogPHP 1.7.2` | Indicate the name of the framework or platform used. |
+| Product | `Z-BlogPHP 1.7.2` | Indicate the name of the framework or platform used. |
 | [X-CF-Powered-By](https://webtechsurvey.com/response-header/x-cf-powered-by) | `CF-Joomla 0.1.5` | Indicate the name of the framework or platform used. |
 | [X-Framework](https://webtechsurvey.com/response-header/x-framework) | `JP/4.01` | Indicate the name of the framework or platform used. |
 | Host-Header | `owasp.org` | Indicate which virtual host of the web server the response is coming from. |
-| [Pega-Host](https://webtechsurvey.com/response-header/pega-host) | `srv-pega11` | Indicate the internal host name of the server that handled the request in the context of usage of a software from the [PEGA](https://www.pega.com/) company. |
+| Pega-Host | `srv-pega11` | Indicate the internal host name of the server that handled the request in the context of usage of a software from the [PEGA](https://www.pega.com/) company. |
 | [X-Atmosphere-first-request](https://github.com/Atmosphere/atmosphere) | `true` | Indicate that the java framework [Atmosphere](https://github.com/Atmosphere/atmosphere) is used. |
 | [X-Atmosphere-tracking-id](https://github.com/Atmosphere/atmosphere) | `7852fcbf-f8a9-4667-9dcc-a0b5b162499c` | Indicate that the java framework [Atmosphere](https://github.com/Atmosphere/atmosphere) is used. |
 | [X-Atmosphere-error](https://github.com/Atmosphere/atmosphere) | `Websocket protocol not supported` | Indicate that the java framework [Atmosphere](https://github.com/Atmosphere/atmosphere) is used. |
@@ -112,10 +112,10 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-Envoy-External-Address](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers) | `124.128.159.165` | Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow. |
 | [X-Envoy-Internal](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers) | `true` | Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow. |
 | [X-Envoy-Original-Dst-Host](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers) | `10.195.16.237:8888` | Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow. |
-| [X-B3-ParentSpanId](https://webtechsurvey.com/response-header/x-b3-parentspanid) | `dea3f6d0324583db` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
-| [X-B3-Sampled](https://webtechsurvey.com/response-header/x-b3-sampled) | `0` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
-| [X-B3-SpanId](https://webtechsurvey.com/response-header/x-b3-spanid) | `244753d494e83353` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
-| [X-B3-TraceId](https://webtechsurvey.com/response-header/x-b3-traceid) | `11bef07b0f5c0468` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
+| [X-B3-ParentSpanId](https://github.com/openzipkin/b3-propagation) | `dea3f6d0324583db` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
+| [X-B3-Sampled](https://github.com/openzipkin/b3-propagation) | `0` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
+| [X-B3-SpanId](https://github.com/openzipkin/b3-propagation) | `244753d494e83353` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
+| [X-B3-TraceId](https://github.com/openzipkin/b3-propagation) | `11bef07b0f5c0468` | Indicate the presence of the software [Zipkin](https://zipkin.io/) that is a distributed tracing system. |
 | [K-Proxy-Request](https://knative.dev/docs/serving/istio-authorization/) | `activator` | Indicate the presence of the software [Knative](https://knative.dev) that is an Open-Source Enterprise-level solution to build Serverless and Event Driven Applications in Kubernetes environments. |
 | [X-Old-Content-Length](https://webtechsurvey.com/response-header/x-old-content-length) | `135` | Indicate the presence of the software [WebSEAL](https://www.ibm.com/docs/en/samfm/8.0.1.2?topic=overview-webseal-introduction) that is a high performance, multithreaded web server by IBM. |
 | [$wsep](https://www.ibm.com/docs/en/was/8.5.5?topic=SSEQTP_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rweb_custom_props.htm) | `empty value` | Indicate the presence of the software [WebSphere Application Server](https://www.ibm.com/products/websphere-application-server) that is a JavaEE application server by IBM. |
