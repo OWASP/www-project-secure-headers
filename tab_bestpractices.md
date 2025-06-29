@@ -64,7 +64,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 
 💡 Additional information about technical information disclosure in HTTP header on [OpenCRE](https://www.opencre.org/cre/403-005?name=OWASP+Secure+Headers+Project&section=Prevent+information+disclosure+via+HTTP+headers&link=https%3A%2F%2Fowasp.org%2Fwww-project-secure-headers%2F%23div-bestpractices_prevent-information-disclosure-via-http-headers).
 
-💡 When an HTTP response header is known by the analytics site [WebTechSurvey](https://webtechsurvey.com/), then, a reference link is added to its usage statistics page. Otherwise, a reference link regarding the documentation of the header is provided.
+💡 When an HTTP response header is known by the analytics site [WebTechSurvey](https://webtechsurvey.com/), then, a reference link is added to its usage statistics page. Otherwise, when possible, a reference link regarding the documentation of the header is provided.
 
 🚩 The response header `Content-Type` can sometimes discloses the web framework used. It is the case for the following ones:
 
@@ -98,7 +98,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [Product](https://webtechsurvey.com/response-header/product) | `Z-BlogPHP 1.7.2` | Indicate the name of the framework or platform used. |
 | [X-CF-Powered-By](https://webtechsurvey.com/response-header/x-cf-powered-by) | `CF-Joomla 0.1.5` | Indicate the name of the framework or platform used. |
 | [X-Framework](https://webtechsurvey.com/response-header/x-framework) | `JP/4.01` | Indicate the name of the framework or platform used. |
-| [Host-Header](https://webtechsurvey.com/response-header/host-header) | `owasp.org` | Indicate which virtual host of the web server the response is coming from. |
+| Host-Header | `owasp.org` | Indicate which virtual host of the web server the response is coming from. |
 | [Pega-Host](https://webtechsurvey.com/response-header/pega-host) | `srv-pega11` | Indicate the internal host name of the server that handled the request in the context of usage of a software from the [PEGA](https://www.pega.com/) company. |
 | [X-Atmosphere-first-request](https://github.com/Atmosphere/atmosphere) | `true` | Indicate that the java framework [Atmosphere](https://github.com/Atmosphere/atmosphere) is used. |
 | [X-Atmosphere-tracking-id](https://github.com/Atmosphere/atmosphere) | `7852fcbf-f8a9-4667-9dcc-a0b5b162499c` | Indicate that the java framework [Atmosphere](https://github.com/Atmosphere/atmosphere) is used. |
@@ -124,17 +124,17 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-Nextjs-Cache](https://webtechsurvey.com/response-header/x-nextjs-cache) | `REVALIDATED` | Indicate that the web framework [Next.js](https://nextjs.org/) is used. |
 | [X-Nextjs-Redirect](https://github.com/search?q=repo%3Avercel%2Fnext.js%20X-Nextjs-Redirect&type=code) | `/home` | Indicate that the web framework [Next.js](https://nextjs.org/) is used. |
 | [X-OneAgent-JS-Injection](https://webtechsurvey.com/response-header/x-oneagent-js-injection) | `true` | Indicate that the [Dynatrace](https://www.dynatrace.com) analytics and automation platform is used. |
-| [X-ruxit-JS-Agent](https://webtechsurvey.com/response-header/X-ruxit-JS-Agent) | `true` | Indicate that the [Dynatrace](https://www.dynatrace.com) analytics and automation platform is used. |
+| X-ruxit-JS-Agent | `true` | Indicate that the [Dynatrace](https://www.dynatrace.com) analytics and automation platform is used. |
 | [X-dtHealthCheck](https://www.dynatrace.com/support/help/platform-modules/digital-experience/web-applications/initial-setup/firewall-constraints-for-rum) | `Technical diagnostic data` | Indicate that the [Dynatrace](https://www.dynatrace.com) analytics and automation platform is used. |
 | [X-dtAgentId](https://www.dynatrace.com/support/help/platform-modules/digital-experience/web-applications/initial-setup/firewall-constraints-for-rum) | `95b3121c36` | Indicate that the [Dynatrace](https://www.dynatrace.com) analytics and automation platform is used. |
 | [X-dtInjectedServlet](https://www.dynatrace.com/support/help/platform-modules/digital-experience/web-applications/initial-setup/firewall-constraints-for-rum) | `com.company.ReportServlet` | Indicate that the [Dynatrace](https://www.dynatrace.com) analytics and automation platform is used. |
-| [X-Litespeed-Cache-Control](https://webtechsurvey.com/response-header/X-Litespeed-Cache-Control) | `no-cache` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
-| [X-LiteSpeed-Purge](https://webtechsurvey.com/response-header/X-LiteSpeed-Purge) | `/phpinfo.php` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
-| [X-LiteSpeed-Tag](https://webtechsurvey.com/response-header/X-LiteSpeed-Tag) | `pubtag1,pubtag2` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
-| [X-LiteSpeed-Vary](https://webtechsurvey.com/response-header/X-LiteSpeed-Vary) | `value=ismobile` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
-| [X-LiteSpeed-Cache](https://webtechsurvey.com/response-header/X-LiteSpeed-Cache) | `hit,litemage` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
-| [X-Umbraco-Version](https://webtechsurvey.com/response-header/X-Umbraco-Version) | `4.7` | Indicate the usage of the [Umbraco CMS](https://umbraco.com/products/umbraco-cms/) software as well as its version. |
-| [OracleCommerceCloud-Version](https://webtechsurvey.com/response-header/OracleCommerceCloud-Version) | `23.08.01` | Indicate the usage of the [Oracle Commerce](https://www.oracle.com/cx/ecommerce/) software as well as its version. |
+| [X-Litespeed-Cache-Control](https://docs.litespeedtech.com/lscache/devguide/controls/) | `no-cache` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
+| [X-LiteSpeed-Purge](https://docs.litespeedtech.com/lscache/devguide/controls/) | `/phpinfo.php` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
+| [X-LiteSpeed-Tag](https://docs.litespeedtech.com/lscache/devguide/controls/) | `pubtag1,pubtag2` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
+| [X-LiteSpeed-Vary](https://docs.litespeedtech.com/lscache/devguide/controls/) | `value=ismobile` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
+| [X-LiteSpeed-Cache](https://docs.litespeedtech.com/lscache/devguide/controls/) | `hit,litemage` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
+| X-Umbraco-Version | `4.7` | Indicate the usage of the [Umbraco CMS](https://umbraco.com/products/umbraco-cms/) software as well as its version. |
+| OracleCommerceCloud-Version | `23.08.01` | Indicate the usage of the [Oracle Commerce](https://www.oracle.com/cx/ecommerce/) software as well as its version. |
 | [X-BEServer](https://webtechsurvey.com/response-header/x-beserver) | `EXSRV01` | Indicate the internal host name of the server that handled the request in the context of usage of the [Microsoft Exchange](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/08ad30b6-5b73-41bc-890b-1cab2cf49827) software. |
 | [X-DiagInfo](https://webtechsurvey.com/response-header/x-diaginfo) | `EXSRV01` | Indicate the internal host name of the server that handled the request in the context of usage of the [Microsoft Exchange](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/08ad30b6-5b73-41bc-890b-1cab2cf49827) software. |
 | [X-FEServer](https://webtechsurvey.com/response-header/x-feserver) | `EXSRV01` | Indicate the internal host name of the server that handled the request in the context of usage of the [Microsoft Exchange](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/08ad30b6-5b73-41bc-890b-1cab2cf49827) software. |
