@@ -64,7 +64,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 
 💡 Additional information about technical information disclosure in HTTP header on [OpenCRE](https://www.opencre.org/cre/403-005?name=OWASP+Secure+Headers+Project&section=Prevent+information+disclosure+via+HTTP+headers&link=https%3A%2F%2Fowasp.org%2Fwww-project-secure-headers%2F%23div-bestpractices_prevent-information-disclosure-via-http-headers).
 
-💡 When possible, a reference link about the documentation of the header is provided.
+📖 When possible, a reference link about the documentation of the header is provided.
 
 🚩 The response header `Content-Type` can sometimes discloses the web framework used. It is the case for the following ones:
 
@@ -79,7 +79,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 |  Server |  `Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips`  |  Contain information about the server handling the request.  |
 | Liferay-Portal | `Liferay Digital Experience Platform 7.2.10 GA1` | Contain the version of the [Liferay](https://www.liferay.com) software in use. |
 |  X-Turbo-Charged-By |  `LiteSpeed/5.4.12 Enterprise`  |  Contain information about the server handling the request.  |
-| X-Powered-By | `PHP/5.3.3` | Contain information about hosting environments or other frameworks in use. |
+| [X-Powered-By](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Powered-By) | `PHP/5.3.3` | Contain information about hosting environments or other frameworks in use. |
 |  X-Server-Powered-By |  `Engintron`  |  Contain information about hosting environments or other frameworks in use.  |
 |  X-Powered-CMS |  `Bitrix Site Manager (DEMO)`  |  Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response.  |
 | [SourceMap](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/SourceMap) | `https://mysite.com/js/mylib.js.map`| Links generated code to a [source map](https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map) file, enabling the browser to reconstruct the original source and present the reconstructed original in the debugger. |
@@ -103,12 +103,12 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-Atmosphere-first-request](https://github.com/Atmosphere/atmosphere) | `true` | Indicate that the java framework [Atmosphere](https://github.com/Atmosphere/atmosphere) is used. |
 | [X-Atmosphere-tracking-id](https://github.com/Atmosphere/atmosphere) | `7852fcbf-f8a9-4667-9dcc-a0b5b162499c` | Indicate that the java framework [Atmosphere](https://github.com/Atmosphere/atmosphere) is used. |
 | [X-Atmosphere-error](https://github.com/Atmosphere/atmosphere) | `Websocket protocol not supported` | Indicate that the java framework [Atmosphere](https://github.com/Atmosphere/atmosphere) is used. |
-|  X-Mod-Pagespeed |  `1.13.35.2-0`  |  Indicate the presence of the Apache module [mod_pagespeed](https://github.com/apache/incubator-pagespeed-mod) in the call flow.  |
-|  X-Page-Speed |  `1.13.35.2-0`  |  Indicate the presence of the Nginx module [mod_pagespeed](https://github.com/apache/incubator-pagespeed-ngx) in the call flow.  |
+| [X-Mod-Pagespeed](https://www.modpagespeed.com/doc/configuration) |  `1.13.35.2-0`  |  Indicate the presence of the Apache module [mod_pagespeed](https://github.com/apache/incubator-pagespeed-mod) in the call flow.  |
+| [X-Page-Speed](https://www.modpagespeed.com/doc/configuration) |  `1.13.35.2-0`  |  Indicate the presence of the Nginx module [mod_pagespeed](https://github.com/apache/incubator-pagespeed-ngx) in the call flow.  |
 |  X-Varnish-Backend |  `pb01`  |  Indicate the name of the backend server from which the [Varnish](https://varnish-cache.org) instance will accelerate the content.  |
 |  X-Varnish-Server |  `proxy01`  |  Indicate the name of the [Varnish](https://varnish-cache.org) server instance that provided the accelerated content.  |
-|  X-Envoy-Upstream-Service-Time |  `42`  |  Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow.  |
-|  X-Envoy-Attempt-Count |  `1`  |  Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow.  |
+| [X-Envoy-Upstream-Service-Time](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_filters/router_filter) |  `42`  |  Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow.  |
+| [X-Envoy-Attempt-Count](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_filters/router_filter) |  `1`  |  Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow.  |
 | [X-Envoy-External-Address](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers) | `124.128.159.165` | Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow. |
 | [X-Envoy-Internal](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers) | `true` | Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow. |
 | [X-Envoy-Original-Dst-Host](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers) | `10.195.16.237:8888` | Indicate the presence of the proxy software [Envoy](https://www.envoyproxy.io) in the call flow. |
@@ -135,10 +135,10 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-LiteSpeed-Cache](https://docs.litespeedtech.com/lscache/devguide/controls/) | `hit,litemage` | Indicate the presence of the [LiteSpeed](https://litespeedtech.com/) web server. |
 | X-Umbraco-Version | `4.7` | Indicate the usage of the [Umbraco CMS](https://umbraco.com/products/umbraco-cms/) software as well as its version. |
 | OracleCommerceCloud-Version | `23.08.01` | Indicate the usage of the [Oracle Commerce](https://www.oracle.com/cx/ecommerce/) software as well as its version. |
-|  X-BEServer |  `EXSRV01`  |  Indicate the internal host name of the server that handled the request in the context of usage of the [Microsoft Exchange](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/08ad30b6-5b73-41bc-890b-1cab2cf49827) software.  |
-|  X-DiagInfo |  `EXSRV01`  |  Indicate the internal host name of the server that handled the request in the context of usage of the [Microsoft Exchange](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/08ad30b6-5b73-41bc-890b-1cab2cf49827) software.  |
-|  X-FEServer |  `EXSRV01`  |  Indicate the internal host name of the server that handled the request in the context of usage of the [Microsoft Exchange](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/08ad30b6-5b73-41bc-890b-1cab2cf49827) software.  |
-|  X-CalculatedBETarget |  `exsrv01.mydomain.com`  |  Indicate the internal host name of the server that handled the request in the context of usage of the [Microsoft Exchange](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/08ad30b6-5b73-41bc-890b-1cab2cf49827) software.  |
+|  [X-BEServer](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/e11c906e-0a38-41e8-8b6d-571a4e84164f) |  `EXSRV01`  |  Indicate the internal host name of the server that handled the request in the context of usage of the [Microsoft Exchange](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/08ad30b6-5b73-41bc-890b-1cab2cf49827) software.  |
+|  [X-DiagInfo](https://learn.microsoft.com/en-us/exchange/management/health/troubleshooting-autodiscover-health-set) |  `EXSRV01`  |  Indicate the internal host name of the server that handled the request in the context of usage of the [Microsoft Exchange](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/08ad30b6-5b73-41bc-890b-1cab2cf49827) software.  |
+|  [X-FEServer](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/ea0b90c5-710a-4b23-823b-ddb86342b5ac) |  `EXSRV01`  |  Indicate the internal host name of the server that handled the request in the context of usage of the [Microsoft Exchange](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/08ad30b6-5b73-41bc-890b-1cab2cf49827) software.  |
+|  [X-CalculatedBETarget](https://learn.microsoft.com/en-us/exchange/management/health/troubleshooting-autodiscover-health-set) |  `exsrv01.mydomain.com`  |  Indicate the internal host name of the server that handled the request in the context of usage of the [Microsoft Exchange](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-ashttp/08ad30b6-5b73-41bc-890b-1cab2cf49827) software.  |
 |  X-OWA-Version |  `15.2.1258.27`  |  Indicate the version of the Microsoft Exchange software in use.  |
 |  X-Cocoon-Version |  `2.1.13`  |  Indicate that the web framework [Apache Cocoon](https://cocoon.apache.org/) is used as well as the version used.  |
 | [X-Kubernetes-PF-FlowSchema-UI](https://kubernetes.io/docs/reference/debug-cluster/flow-control) | `cf931e2d-5a5e-4c12-892c-9bafa71f30dc` | Indicate that the web application issuing the HTTP response is deployed on a [Kubernetes](https://kubernetes.io/) cluster. |
