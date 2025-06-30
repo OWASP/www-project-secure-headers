@@ -67,7 +67,8 @@ def generate_headers_to_remove_json(md_table):
         header_info = lines[i]
         header_parts = header_info.split("|")
         header_name = header_parts[1].strip(" `*\t\n\r")
-        header_name = re.findall(r'\[(.*)\]', header_name)[0]
+        if "[" in header_name:
+            header_name = re.findall(r'\[(.*)\]', header_name)[0]
         headers.append(header_name)
     headers.sort()
     data = {LAST_UPDATE_ATTRIBUTE_NAME: EXECUTION_DATETIME_UTC, "headers": headers}
