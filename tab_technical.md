@@ -22,6 +22,7 @@ tags: headers
   * [Python](#python)
   * [Ruby](#ruby)
   * [Swift](#swift)
+  * [Rust](#rust)
 
 ## Presentations
 
@@ -73,7 +74,6 @@ tags: headers
 | --- | --- | --- |
 | **helmet** | Module to help secure Express apps with various HTTP headers. | [👩‍💻](https://github.com/helmetjs/helmet) |
 | **ember-cli-content-security-policy** | This addon makes it easy to use Content Security Policy (CSP) in your project. It can be deployed either via a Content-Security-Policy header sent from the Ember CLI Express server, or as a meta tag in the index.html file. | [👩‍💻](https://github.com/rwjblue/ember-cli-content-security-policy/) |
-| **blankie** | A CSP plugin for [hapi](https://github.com/hapijs/hapi). | [👩‍💻](https://github.com/nlf/blankie) |
 
 ### Python
 
@@ -94,3 +94,9 @@ tags: headers
 | Library | Description | Ref |
 | --- | --- | --- |
 | **VaporSecurityHeaders** | A Middleware library for adding security headers to your Vapor application. | [👩‍💻](https://github.com/brokenhandsio/VaporSecurityHeaders) |
+
+### Rust
+
+| Library | Description | Ref |
+| --- | --- | --- |
+| **rust-helmet** | HTTP security headers middleware for multiple Rust web frameworks. | [👩‍💻](https://github.com/danielkov/rust-helmet) |
