@@ -1,5 +1,5 @@
 {
-  "last_update_utc": "2025-07-06 23:15:30",
+  "last_update_utc": "2025-08-16 21:55:59",
   "headers": [
     {
       "name": "Cache-Control",
@@ -40,6 +40,10 @@
     {
       "name": "X-Content-Type-Options",
       "value": "nosniff"
+    },
+    {
+      "name": "X-DNS-Prefetch-Control",
+      "value": "off"
     },
     {
       "name": "X-Frame-Options",
