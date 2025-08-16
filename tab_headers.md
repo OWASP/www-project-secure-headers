@@ -32,6 +32,7 @@ tags: headers
 * [Cross-Origin-Opener-Policy](#cross-origin-opener-policy)
 * [Cross-Origin-Resource-Policy](#cross-origin-resource-policy)
 * [Cache-Control](#cache-control)
+* [X-DNS-Prefetch-Control](#x-dns-prefetch-control)
 
 ⏰ **Almost deprecated**
 
@@ -144,7 +145,7 @@ X-Content-Type-Options: nosniff
 
 ## Content-Security-Policy
 
-A Content Security Policy (also named CSP) requires careful tuning and testing after definition of the policy. A content security policy can have significant impact on the way browsers render pages (e.g., inline JavaScript or CSS can disabled). A proper CSP can prevents a wide range of attacks, including cross-site scripting, other cross-site injections and click jacking.
+A Content Security Policy (also named CSP) requires careful tuning and testing after definition of the policy. A content security policy can have significant impact on the way browsers render pages (e.g., inline JavaScript or CSS can be disabled). A proper CSP can prevent a wide range of attacks, including cross-site scripting, other cross-site injections and click jacking.
 
 ### Values
 
@@ -247,17 +248,20 @@ Referrer-Policy: no-referrer
 
 ## Clear-Site-Data
 
-The Clear-Site-Data header clears browsing data (cookies, storage, cache) associated with the requesting website. It allows web developers to have more control over the data stored locally by a browser for their origins (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data)). This header is useful for example, during a logout process, in order to ensure that all stored content on the client side like cookies, storage and cache are removed.
+The Clear-Site-Data header clears browsing data associated with the requesting website. It allows web developers to have more control over the data stored locally by a browser for their origins (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data)). This header is useful for example, during a logout process, in order to ensure that all stored content on the client side like cookies, storage and cache are removed.
 
 ### Values
 
-| Value               | Description |
-|---------------------|-------------|
-| `"cache"`   | Indicates that the server wishes to remove locally cached data for the origin of the response URL. |
-| `"cookies"` | Indicates that the server wishes to remove all cookies for the origin of the response URL. HTTP authentication credentials are also cleared out. This affects the entire registered domain, including subdomains. |
-| `"storage"` | Indicates that the server wishes to remove all DOM storage for the origin of the response URL. |
-| `"executionContexts"` | Indicates that the server wishes to reload all browsing contexts for the origin of the response. Currently, this value is only supported by a small subset of browsers. |
-| `"*"` | Indicates that the server wishes to clear all types of data for the origin of the response. If more data types are added in future versions of this header, they will also be covered by it. |
+| Value                 | Experimental?  | Description |
+|-----------------------|----------------|-------------|
+| `"cache"`             | No             | Indicates that the server wishes to remove locally cached data for the origin of the response URL. |
+| `"cookies"`           | No             | Indicates that the server wishes to remove all cookies for the origin of the response URL. HTTP authentication credentials are also cleared out. This affects the entire registered domain, including subdomains. |
+| `"storage"`           | No             | Indicates that the server wishes to remove all DOM storage for the origin of the response URL. |
+| `"executionContexts"` | Yes            | Indicates that the server wishes to reload all browsing contexts for the origin of the response. |
+| `"prefetchCache"`     | Yes            | Indicates that the server wishes to remove all [speculation rules](https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API) prefetches that are scoped to the referrer origin. |
+| `"prerenderCache"`    | Yes            | Indicates that the server wishes to remove all [speculation rules](https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API) prerenders that are scoped to the referrer origin. |
+| `"clientHints"`       | Yes            | Indicates that the server wishes to remove all [client hints](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Client_hints) (requested via [Accept-CH](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Accept-CH)) stored for the origin of the response URL. |
+| `"*"`                 | No             | Indicates that the server wishes to clear all types of data for the origin of the response. |
 
 ### Example
 
@@ -428,6 +432,40 @@ Cache-Control: public, max-age=604800
 * <https://portswigger.net/research/web-cache-entanglement>
 * <https://portswigger.net/web-security/web-cache-deception>
 * <https://portswigger.net/research/gotta-cache-em-all>
+
+## X-DNS-Prefetch-Control
+
+> ⚠️ This header does not belong to any specification and is not standardized.
+
+The X-DNS-Prefetch-Control header controls [DNS prefetching](https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/dns-prefetch), a feature by which browsers proactively perform domain name resolution on links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth. The intention is that prefetching is performed in the background so that the DNS resolution is complete by the time the referenced items are needed by the browser. This reduces latency when the user clicks a link, for example (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control)).
+
+📍 Important note about the behavior of different browsers for this header based on [technical tests](https://github.com/OWASP/www-project-secure-headers/issues/201#issuecomment-3190756900) performed:
+
+* DNS prefetch seem only active on Chromium based browsers.
+* Setting **X-DNS-Prefetch-Control** to **off** is only honored by the Chrome browser.
+
+### Values
+
+| Value | Description                                                                                                                                           |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `on`  | Enables DNS prefetching. This is what browsers do if they support the feature when this header is not present.                                        |
+| `off` | Disables DNS prefetching. This is useful if you don't control the link on the pages or know that you don't want to leak information to these domains. |
+
+### Example
+
+```
+X-DNS-Prefetch-Control: off
+```
+
+### References
+
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control>
+* <https://bitsup.blogspot.com/2008/11/dns-prefetching-for-firefox.html>
+* <https://www.chromium.org/developers/design-documents/dns-prefetching/>
+* <https://http.dev/x-dns-prefetch-control>
+* <https://caniuse.com/mdn-http_headers_x-dns-prefetch-control>
+* <https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/dns-prefetch>
+* <https://www.keycdn.com/support/prefetching>
 
 ## Permissions Policy
 
