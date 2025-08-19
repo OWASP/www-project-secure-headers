@@ -1,6 +1,6 @@
 ---
 title: OWASP Secure Headers Project
-level: 3
+level: 3.5
 url: https://owasp.org/www-project-secure-headers
 type: documentation
 layout: col-sidebar
