@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> 📅 Last verification (UTC): 2025-08-17 00:10:23
+> 📅 Last verification (UTC): 2025-08-24 00:10:09
 
 ## GitHub repositories health status
 
@@ -31,10 +31,10 @@ Project reaching the :red_circle: status **are removed**.
 | `2025-05-07T14:58:20Z` (3 months ago) | :green_circle: | [mozilla/django-csp](https://github.com/mozilla/django-csp) |
 | `2025-07-14T06:19:05Z` (1 months ago) | :green_circle: | [tmotagam/Secweb](https://github.com/tmotagam/Secweb) |
 | `2025-07-15T04:58:51Z` (1 months ago) | :green_circle: | [sdelements/django-security](https://github.com/sdelements/django-security) |
-| `2025-07-22T15:51:05Z` (1 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
 | `2025-08-04T18:03:10Z` (0 months ago) | :green_circle: | [GaProgMan/OwaspHeaders.Core](https://github.com/GaProgMan/OwaspHeaders.Core) |
-| `2025-08-12T11:44:33Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
-| `2025-08-12T16:30:28Z` (0 months ago) | :green_circle: | [mdn/mdn-http-observatory](https://github.com/mdn/mdn-http-observatory) |
 | `2025-08-14T19:23:43Z` (0 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
-| `2025-08-16T20:22:04Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2025-08-18T15:11:02Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2025-08-18T16:08:17Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
+| `2025-08-22T15:47:37Z` (0 months ago) | :green_circle: | [mdn/mdn-http-observatory](https://github.com/mdn/mdn-http-observatory) |
+| `2025-08-23T18:01:09Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
