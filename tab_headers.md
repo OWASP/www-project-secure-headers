@@ -216,7 +216,6 @@ X-Permitted-Cross-Domain-Policies: none
 
 * [https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html](https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html "SKIP_VALIDATION")
 * <https://rorsecurity.info/portfolio/new-http-headers-for-more-security>
-* <https://gf.dev/cross-domain-policy-test>
 
 ## Referrer-Policy
 
