@@ -42,7 +42,7 @@ https://owasp.org/www-project-secure-headers/index.html#div-technical_php
 
 ## Companies and other legal entities
 
-* [Cloud.gov](https://cloud.gov/docs/management/headers/).
+* [Cloud.gov](https://docs.cloud.gov/platform/management/headers/).
 * [Salesforce](https://help.salesforce.com/s/articleView?language=en_US&id=cc.b2c_declarative_security_via_http_headers.htm&type=5).
 * [Black Hills Information Security](https://www.blackhillsinfosec.com/fixing-content-security-policies-with-cloudflare-workers/).
 * [Progress](https://www.progress.com/documentation/sitefinity-cms/110/predefined-security-headers-in-http-response).
@@ -54,7 +54,6 @@ https://owasp.org/www-project-secure-headers/index.html#div-technical_php
 * [Detectify](https://support.detectify.com/support/solutions/articles/48001048949-https-stripping).
 * [ImmuniWeb](https://www.immuniweb.com/websec/about).
 * [Zoom](https://developers.zoom.us/docs/zoom-apps/security/owasp/).
-* [NexusGuard](https://blog.nexusguard.com/hardening-web-applications-using-secure-http-headers).
 * [VeraCode](https://docs.veracode.com/r/enable-security-headers).
 * [Ivanti](https://forums.ivanti.com/s/article/HTTP-Security-Headers-X-Frame-Options-X-XSS-Protection-X-Content-Type-Options).
 * [Government Technology Agency of Singapore GovTech](https://info.standards.tech.gov.sg/control-catalog/as/).
