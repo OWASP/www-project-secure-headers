@@ -19,9 +19,6 @@ repositories:
   - name: www-project-secure-headers
     url: https://github.com/OWASP/www-project-secure-headers
     description: The OWASP Secure Headers Project
-  - name: owasp-swag
-    url: https://github.com/OWASP/owasp-swag
-    description: Swag for the OWASP projects and chapters
   - name: oshp-stats
     url: https://github.com/oshp/oshp-stats
     description: Stats about HTTP response security headers usage mentioned by the OSHP.
