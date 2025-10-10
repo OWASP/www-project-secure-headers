@@ -1,0 +1,38 @@
+audience:
+  - builder
+  - defender
+leaders:
+  - name: Ricardo Iramar
+    email: ricardo.iramar@owasp.org
+    github: riramar
+  - name: Dominique Righetto
+    email: dominique.righetto@owasp.org
+    github: righettod
+level: 3.5
+license:
+  - Apache-2.0
+  - GPL-2.0
+  - GPL-3.0
+name: OWASP Secure Headers Project
+pitch: Provides technical information about HTTP security headers.
+repositories:
+  - name: www-project-secure-headers
+    url: https://github.com/OWASP/www-project-secure-headers
+    description: The OWASP Secure Headers Project
+  - name: owasp-swag
+    url: https://github.com/OWASP/owasp-swag
+    description: Swag for the OWASP projects and chapters
+  - name: oshp-stats
+    url: https://github.com/oshp/oshp-stats
+    description: Stats about HTTP response security headers usage mentioned by the OSHP.
+  - name: oshp-validator
+    url: https://github.com/oshp/oshp-validator
+    description: Venom tests suite to validate an HTTP security response headers configuration against OSHP recommendation.
+  - name: oshp.github.io
+    url: https://github.com/oshp/oshp.github.io
+tags:
+  - headers
+  - custom-tag-1
+  - custom-tag-2
+type: documentation
+website: https://owasp.org/www-project-secure-headers
