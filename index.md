@@ -51,7 +51,7 @@ pitch: Provides technical information about HTTP security headers.
 
 ## Migration
 
-🌎 The OWASP Secure Headers Project was migrated from the [old website](https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project) to the [GitHub OWASP organization](https://github.com/OWASP/www-project-secure-headers).
+🌎 The OWASP Secure Headers Project was migrated from the old website (`https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project`) to the [GitHub OWASP organization](https://github.com/OWASP/www-project-secure-headers).
 
 📦 The following projects are now **archived**, they are initiatives that are now replaced by new projects:
 

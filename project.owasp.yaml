@@ -11,25 +11,25 @@ leaders:
 level: 3.5
 license:
   - Apache-2.0
-  - GPL-2.0
-  - GPL-3.0
 name: OWASP Secure Headers Project
 pitch: Provides technical information about HTTP security headers.
 repositories:
   - name: www-project-secure-headers
     url: https://github.com/OWASP/www-project-secure-headers
-    description: The OWASP Secure Headers Project
+    description: The OWASP Secure Headers Project.
   - name: oshp-stats
     url: https://github.com/oshp/oshp-stats
-    description: Stats about HTTP response security headers usage mentioned by the OSHP.
+    description: Statistics about HTTP response security headers usage mentioned by the OSHP.
   - name: oshp-validator
     url: https://github.com/oshp/oshp-validator
     description: Venom tests suite to validate an HTTP security response headers configuration against OSHP recommendation.
   - name: oshp.github.io
     url: https://github.com/oshp/oshp.github.io
 tags:
-  - headers
-  - custom-tag-1
-  - custom-tag-2
+  - http-headers
+  - http-headers-statistics
+  - http-headers-validation
+  - http-headers-security
+  - http-headers-best-practices
 type: documentation
 website: https://owasp.org/www-project-secure-headers
