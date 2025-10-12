@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> 📅 Last verification (UTC): 2025-10-05 00:09:38
+> 📅 Last verification (UTC): 2025-10-12 00:09:22
 
 ## GitHub repositories health status
 
@@ -31,10 +31,10 @@ Project reaching the :red_circle: status **are removed**.
 | `2025-09-21T15:56:40Z` (1 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
 | `2025-09-25T17:56:06Z` (1 months ago) | :green_circle: | [mozilla/django-csp](https://github.com/mozilla/django-csp) |
 | `2025-09-28T20:10:08Z` (1 months ago) | :green_circle: | [TypeError/secure](https://github.com/TypeError/secure) |
-| `2025-09-30T18:42:27Z` (1 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
 | `2025-10-01T12:03:44Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
 | `2025-10-01T14:17:04Z` (0 months ago) | :green_circle: | [GaProgMan/OwaspHeaders.Core](https://github.com/GaProgMan/OwaspHeaders.Core) |
-| `2025-10-02T12:34:37Z` (0 months ago) | :green_circle: | [mdn/mdn-http-observatory](https://github.com/mdn/mdn-http-observatory) |
 | `2025-10-03T16:02:15Z` (0 months ago) | :green_circle: | [sdelements/django-security](https://github.com/sdelements/django-security) |
-| `2025-10-04T18:12:21Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2025-10-08T10:11:41Z` (0 months ago) | :green_circle: | [mdn/mdn-http-observatory](https://github.com/mdn/mdn-http-observatory) |
+| `2025-10-10T19:38:49Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2025-10-11T21:29:25Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
 
