@@ -155,6 +155,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 |  X-Jitsi-Release |  `5082`  |  Indicate the version of [Jitsi](https://github.com/jitsi/jitsi) software in use.  |
 |  X-Joomla-Version |  `3.9.25`  | Indicate that the CMS [Joomla](https://www.joomla.org/) is used as well as the version used.  |
 |  X-Backside-Transport |  `OK OK`  | Indicate the presence of the products [IBM WebSphere DataPower](https://www.ibm.com/products/datapower-gateway) in the call flow. |
+|  [X-Woodpecker-Version](https://github.com/woodpecker-ci/woodpecker/blob/main/server/router/middleware/version.go) |  `2.7.0`  | Indicate the version of the products [Woodpecker CI](https://woodpecker-ci.org/) used. |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
