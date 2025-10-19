@@ -1,5 +1,5 @@
 {
-  "last_update_utc": "2025-08-17 15:23:47",
+  "last_update_utc": "2025-10-19 14:50:47",
   "headers": [
     "$wsep",
     "Host-Header",
@@ -67,6 +67,7 @@
     "X-Umbraco-Version",
     "X-Varnish-Backend",
     "X-Varnish-Server",
+    "X-Woodpecker-Version",
     "X-dtAgentId",
     "X-dtHealthCheck",
     "X-dtInjectedServlet",
