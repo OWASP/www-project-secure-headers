@@ -352,6 +352,8 @@ Cache-Control: no-store, max-age=0
 
 ## Prevent CSP bypasses
 
+> 💡 This [online tool](https://cspbypass.com/) can be used to identify existing bypasses for a CSP policy.
+
 This section describes some points, to keep in mind, during the creation of a [Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) (called **CSP**) policy to prevent introducing bypasses.
 
 🚩 Not every **[directives](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#directives)** fallback to the **[default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src)** directive when it is not specified in the CSP policy.
