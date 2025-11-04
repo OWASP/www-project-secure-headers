@@ -39,6 +39,7 @@ tags: headers
 | **DrHEADer** | DrHEADer helps with the audit of security headers received in response to a single request or a list of requests. | [👩‍💻](https://github.com/Santandersecurityresearch/DrHeader) |
 | **csp-evaluator** | NPM module allowing developers and security experts to check if a Content Security Policy serves as a strong mitigation against XSS attacks. | [👩‍💻](https://github.com/google/csp-evaluator) |
 | **mdn-http-observatory** | Service by Mozilla that checks web sites for security-relevant headers. | [👩‍💻](https://github.com/mdn/mdn-http-observatory) |
+| **shcheck** | A basic tool to check security headers of a website. | [👩‍💻](https://github.com/santoru/shcheck) |
 
 ## Development Libraries
 
@@ -74,6 +75,7 @@ tags: headers
 | --- | --- | --- |
 | **helmet** | Module to help secure Express apps with various HTTP headers. | [👩‍💻](https://github.com/helmetjs/helmet) |
 | **ember-cli-content-security-policy** | This addon makes it easy to use Content Security Policy (CSP) in your project. It can be deployed either via a Content-Security-Policy header sent from the Ember CLI Express server, or as a meta tag in the index.html file. | [👩‍💻](https://github.com/rwjblue/ember-cli-content-security-policy/) |
+| **Next.js** | Next.js's support for adding various security headers to the response. | [🌎](https://nextjs.org/docs/pages/api-reference/config/next-config-js/headers) |
 
 ### Python
 
