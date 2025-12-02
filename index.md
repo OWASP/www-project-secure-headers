@@ -37,11 +37,11 @@ pitch: Provides technical information about HTTP security headers.
 
 📚 The OWASP Secure Headers Project aim to provide elements about the following aspects regarding HTTP security headers:
 
-* [Guidance](https://owasp.org/www-project-secure-headers/index.html#div-bestpractices_configuration-proposal) about the recommended HTTP security headers that can be leveraged.
-* [Guidance](https://owasp.org/www-project-secure-headers/index.html#div-bestpractices_prevent-information-disclosure-via-http-headers) about the HTTP headers that should be removed.
+* Guidance about the recommended HTTP security headers that can be leveraged (**Best Practices** tab).
+* Guidance about the HTTP headers that should be removed (**Best Practices** tab).
 * [Tools](https://github.com/oshp/oshp-validator) to validate an HTTP security header configuration.
-* [Code](https://owasp.org/www-project-secure-headers/index.html#div-technical) libraries that can be leveraged to configure recommended HTTP security headers.
-* [Statistics](https://github.com/oshp/oshp-stats) about usage of the recommended HTTP security headers.
+* Code libraries that can be leveraged to configure recommended HTTP security headers (**Technical Resources** tab).
+* [Statistics](https://github.com/oshp/oshp-stats) about usage of the recommended HTTP security headers (**Statistics** tab).
 
 🏭 All the tools provided by the OSHP are gathered under this [GitHub organization](https://github.com/oshp/).
 
@@ -64,7 +64,7 @@ pitch: Provides technical information about HTTP security headers.
 
 📈 We provide statistics, updated every month, about HTTP response security headers usage mentioned by the OWASP Secure Headers Project:
 
-* They are available through [this GitHub project](https://github.com/oshp/oshp-stats) and the tab named [Statistics](https://owasp.org/www-project-secure-headers/index.html#div-statistics).
+* They are available through [this GitHub project](https://github.com/oshp/oshp-stats) and the tab named **Statistics**.
 
 ## Security headers usage validator
 
@@ -90,7 +90,7 @@ pitch: Provides technical information about HTTP security headers.
 
 ## Technical references health dashboard
 
-📍 We automatically generate and monitor this **[dashboard](https://github.com/OWASP/www-project-secure-headers/blob/master/monitoring_technical_references_dashboard.md)** to identify any dead project referenced in the **[Technical Resources](https://owasp.org/www-project-secure-headers/#div-technical)** tab.
+📍 We automatically generate and monitor this **[dashboard](https://github.com/OWASP/www-project-secure-headers/blob/master/monitoring_technical_references_dashboard.md)** to identify any dead project referenced in the **Technical Resources** tab.
 
 ## Discussions, information and roadmap
 
@@ -100,7 +100,7 @@ pitch: Provides technical information about HTTP security headers.
 
 ## Create a link to the OSHP site
 
-📖 This is documented into the **[Case Studies](https://owasp.org/www-project-secure-headers/index.html#div-casestudies)** tab.
+📖 This is documented into the **Case Studies** tab.
 
 ## Contributors
 
