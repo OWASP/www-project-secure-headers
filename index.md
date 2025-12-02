@@ -37,7 +37,7 @@ pitch: Provides technical information about HTTP security headers.
 
 📚 The OWASP Secure Headers Project aim to provide elements about the following aspects regarding HTTP security headers:
 
-* [Guidance](#div-bestpractices) about the recommended HTTP security headers that can be leveraged (**Best Practices** tab).
+* Guidance about the recommended HTTP security headers that can be leveraged (**Best Practices** tab).
 * Guidance about the HTTP headers that should be removed (**Best Practices** tab).
 * [Tools](https://github.com/oshp/oshp-validator) to validate an HTTP security header configuration.
 * Code libraries that can be leveraged to configure recommended HTTP security headers (**Technical Resources** tab).
