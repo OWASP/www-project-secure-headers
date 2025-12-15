@@ -27,7 +27,9 @@ The following section proposes a configuration for the [actively supported and w
 
 💡 Additional information about HTTP security headers on [OpenCRE](https://opencre.org/cre/636-347?name=OWASP+Secure+Headers+Project&section=configuration&link=https%3A%2F%2Fowasp.org%2Fwww-project-secure-headers%2F%23div-bestpractices).
 
-📖 The headers proposed below can be applied both in the context of a *classic web application* and in that of a *web API*.
+📖 The headers proposed below can be applied both in the context of a *classic web application* and in that of a *web API*:
+
+* This [demonstration video](assets/misc/demo_csp_usefulness_in_api_context.mp4) as well as this [blog post](https://treblle.com/blog/api-escaping-output-importance) show how HTTP response security headers, like the `Content-Security-Policy` one, can be useful in the context of a web API.
 
 🚩 Regarding the header `Content-Security-Policy`, keep in mind that the policy applicability depends on the execution context. Technical details are available [here](https://www.w3.org/TR/CSP2/#which-policy-applies). Therefore, CSP usage in a web API application implies to **define the CSP in the document consuming the content of the web API**.
 

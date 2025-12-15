@@ -13,8 +13,6 @@ pitch: Provides technical information about HTTP security headers.
 
 ## Introduction
 
-> ⚠️ We are currently experiencing a rendering issue **on Firefox** (see [here](https://github.com/OWASP/www-project-secure-headers/issues/251) for details and follow-up information). Therefore, please temporarily use **a Chromium-based browser** to view the site.
-
 ![OSHP Logo](assets/images/oshp_logo.png)
 
 [![OWASP Production](https://img.shields.io/badge/owasp-production%20project-800080.svg)](https://www.owasp.org/projects)

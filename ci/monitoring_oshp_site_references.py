@@ -37,7 +37,7 @@ def verify_mention(site_url):
                 break
     # If mention is not detected then try to check if it's an SPA
     if oshp_is_mentioned == "NO":
-        expr = r'(app|index|main)(\.|-)[a-zA-Z0-9_]+\.js'
+        expr = r'(app|index|main)(\.|-)[a-zA-Z0-9_\-]+\.js'
         bundles = re.findall(expr, content)
         if len(bundles) > 0 or "React" in content:
             oshp_is_mentioned = "SPA"
