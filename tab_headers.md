@@ -149,6 +149,8 @@ A Content Security Policy (also named CSP) requires careful tuning and testing a
 
 ### Values
 
+💡 Source used was [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives).
+
 | Directive                   | Description |
 |-----------------------------|-------------|
 | `base-uri`                  | Define the base URI for relative URIs. |
@@ -174,12 +176,95 @@ A Content Security Policy (also named CSP) requires careful tuning and testing a
 | `referrer`                  | *(Deprecated)* Define information the user agent can send in the `Referer` header. |
 | `report-uri`                | *(Deprecated and replaced by `report-to`)* Specifies a URI to which the user agent sends reports about policy violation. |
 | `report-to`                 | Specifies a group (defined in the `Report-To` header) to which the user agent sends reports about policy violation. |
+| `require-trusted-types-for` | Instructs user agents to control the data passed to [DOM XSS](https://portswigger.net/web-security/cross-site-scripting/dom-based) **sink** functions. |
+| `trusted-types`             | Specify an allowlist of [Trusted Type policy names](https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API) that a website can create using `trustedTypes.createPolicy()`. |
 
 ### Example
 
 ```
 Content-Security-Policy: script-src 'self'
 ```
+
+### Trusted Types feature
+
+[Trusted Types](https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API) is a security feature in the [Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) header that stops the browser from accepting plain strings in *dangerous functions* (called **sinks**) like `.innerHTML` or `eval()`. Instead, it forces usage of  **Trusted Type** objects that have been vetted by a defined policy.
+
+Browsers support level ([source](https://caniuse.com/trusted-types)):
+
+* Supported by default in Chromium based browsers.
+* Supported by default in Safari.
+* Supported by Firefox in its *Nightly* version.
+
+Below is an example of usage in combination with [DOMPurify](https://github.com/cure53/DOMPurify):
+
+📋 `Content-Security-Policy` policy specifying **Trusted Types** via `require-trusted-types-for` and `trusted-types` directives.
+
+```text
+default-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; require-trusted-types-for 'script'; trusted-types default dompurify;
+```
+
+🔒 Script defining the **Trusted Types policy** (file named `defineDefaultTrustedTypesPolicy.js`):
+
+```javascript
+if (window.trustedTypes && trustedTypes.createPolicy) {
+    // Create the default policy and leverage DOMPurify to sanitize any HTML content created
+    trustedTypes.createPolicy("default", {
+        createHTML: (unsafeValue) => {
+            console.info("Default trusted types policy used.");
+            return DOMPurify.sanitize(unsafeValue);
+        }
+        // Functions createScript() and createScriptURL() implementation are missing here as it is an simple example
+        // See https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy
+    });
+} else {
+    console.warn("Trusted types not supported!");
+}
+```
+
+🐞 Script defining the dangerous behavior (file named `dangerousCode.js`):
+
+```javascript
+const input = document.getElementById("userInput");
+const display = document.getElementById("display");
+const button = document.getElementById("renderBtn");
+button.addEventListener("click", () => {
+    const rawValue = input.value;
+    try {
+        display.innerHTML = rawValue;
+    } catch (e) {
+        display.innerText = "Blocked by Trusted Types! Check the console.";
+        console.error(e);
+    }
+});
+```
+
+📜 Test HTML page using elements above:
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sample</title>
+        <!-- Step 1: Load the DOMPurify library -->
+        <!-- Allow it to create its own Trusted Types policy named "dompurify" -->
+        <!-- See https://github.com/cure53/DOMPurify?tab=readme-ov-file#what-about-dompurify-and-trusted-types -->
+        <script src="purify.js"></script>
+        <!-- Step 2: Setup the Trusted Types policy named "default" referenced into the CSP header -->
+        <!-- Use the "default policy" to catch as much as possible dangerous sinks without the need to modify the existing code -->
+        <script src="defineDefaultTrustedTypesPolicy.js"></script>
+    </head>
+    <body>
+        <input type="text" id="userInput" value="Hello<script>alert(1)</script> Dominique!" size="40">
+        <button id="renderBtn">Render to DOM</button>
+        <div id="display"></div>
+        <script src="dangerousCode.js"></script>
+    </body>
+</html>
+```
+
+🔬 Execution into Chromium:
+
+![response_header_csp_trustedtypes_example](assets/images/response_header_csp_trustedtypes_example.png)
 
 ### References
 
@@ -191,6 +276,14 @@ Content-Security-Policy: script-src 'self'
 * <https://content-security-policy.com>
 * <https://report-uri.com/home/generate>
 * <https://csp-evaluator.withgoogle.com/>
+* <https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API>
+* <https://www.w3.org/TR/trusted-types/>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types>
+* <https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#the_default_policy>
+* <https://eiv.dev/trusted-types/>
+* <https://caniuse.com/trusted-types>
+* <https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API#injection_sink_interfaces>
 
 ## X-Permitted-Cross-Domain-Policies
 
