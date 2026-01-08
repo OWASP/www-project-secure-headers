@@ -206,7 +206,7 @@ default-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; fram
 🔒 Script defining the **Trusted Types policy** (file named `defineDefaultTrustedTypesPolicy.js`):
 
 ```javascript
-if (window.trustedTypes && trustedTypes.createPolicy) {
+if (window.trustedTypes && window.trustedTypes.createPolicy) {
     // Create the default policy and leverage DOMPurify to sanitize any HTML content created
     trustedTypes.createPolicy("default", {
         createHTML: (unsafeValue) => {
