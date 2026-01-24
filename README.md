@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> The OWASP Foundation has decided to migrate its content to a new CMS. As a result, OSHP content is frozen for the duration of the migration. You can find more information and explanations [here](https://github.com/OWASP/www-project-secure-headers/discussions/273).
+
 # OWASP Secure Headers Project
 
 ![OSHP Logo](assets/images/oshp_logo.png)
