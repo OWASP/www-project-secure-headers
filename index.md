@@ -13,6 +13,8 @@ pitch: Provides technical information about HTTP security headers.
 
 ## Introduction
 
+> ⚠️ **IMPORTANT**: The OWASP Foundation has decided to migrate its content to a new CMS. As a result, OSHP content is frozen for the duration of the migration. You can find more information and explanations [here](https://github.com/OWASP/www-project-secure-headers/discussions/273).
+
 ![OSHP Logo](assets/images/oshp_logo.png)
 
 [![OWASP Production](https://img.shields.io/badge/owasp-production%20project-800080.svg)](https://www.owasp.org/projects)
