@@ -16,8 +16,11 @@
 🗺️ The OSHP project is composed of the following projects:
 
 * **Main site**: It is the core of the OSHP and provide the information about HTTP security headers
+  * Called `mainsite`.
 * **Validator**: Venom tests suite to validate an HTTP security response headers configuration against OSHP recommendation.
+  * Called `validator`.
 * **Statistics**: Statistics about HTTP response security headers usage mentioned by the OSHP.
+  * Called `statistics`.
 
 ## Repository structure
 
