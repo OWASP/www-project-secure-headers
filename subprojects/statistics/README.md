@@ -55,8 +55,8 @@ $ rm majestic_million.csv
 
 💻 The update is scheduled in the following way:
 
-* The **first day** of every month the data database is updated via this [workflow](../../.github/workflows/statistics_update-datasource.yml).
-* The **fifth day** of every month the statistic data is updated via this [workflow](../../.github/workflows/mainsite_tab-stats-headers-generate-related-files.yml).
+1. The **first day** of every month the data database is updated via this [workflow](../../.github/workflows/statistics_update-datasource.yml).
+2. Once the data database is updated then the statistic data is updated via this [workflow](../../.github/workflows/mainsite_tab-stats-headers-generate-related-files.yml).
 
 # Note
 
