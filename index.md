@@ -29,9 +29,9 @@ pitch: Provides technical information about HTTP security headers.
 
 * Guidance about the recommended HTTP security headers that can be leveraged (**Best Practices** tab).
 * Guidance about the HTTP headers that should be removed (**Best Practices** tab).
-* [Tools](subprojects/validator/) to validate an HTTP security header configuration.
+* [Tools](https://github.com/OWASP/www-project-secure-headers/tree/master/subprojects/validator) to validate an HTTP security header configuration.
 * Code libraries that can be leveraged to configure recommended HTTP security headers (**Technical Resources** tab).
-* [Statistics](subprojects/statistics/) about usage of the recommended HTTP security headers (**Statistics** tab).
+* [Statistics](https://github.com/OWASP/www-project-secure-headers/tree/master/subprojects/statistics) about usage of the recommended HTTP security headers (**Statistics** tab).
 
 📺 A presentation of the project is available on the following locations:
 
@@ -43,18 +43,18 @@ pitch: Provides technical information about HTTP security headers.
 
 📈 We provide statistics, updated every month, about HTTP response security headers usage mentioned by the OWASP Secure Headers Project:
 
-* They are available through [this subproject](subprojects/statistics/) and the tab named **Statistics**.
+* They are available through [this subproject](https://github.com/OWASP/www-project-secure-headers/tree/master/subprojects/statistics) and the tab named **Statistics**.
 
 ## Security headers usage validator
 
 ✅ We provide a [venom](https://github.com/ovh/venom) tests suite to validate an HTTP security response header configuration against OWASP Secure Headers Project recommendation:
 
-* It is available through [this subproject](subprojects/validator/).
+* It is available through [this subproject](https://github.com/OWASP/www-project-secure-headers/tree/master/subprojects/validator).
 
 🧪 We also provide a *online mock endpoint* returning an HTTP response, for which, all HTTP response headers recommended by the OSHP will be set:
 
 * It is automatically deployed on `https://oshp-validator-mock.onrender.com`
-* Technical details about this endpoint are [here](subprojects/validator/README.md#tests-suite-mock-service).
+* Technical details about this endpoint are [here](https://github.com/OWASP/www-project-secure-headers/tree/master/subprojects/validator#tests-suite-mock-service).
 
 ## Security headers reference files
 
@@ -62,8 +62,8 @@ pitch: Provides technical information about HTTP security headers.
 
 💡 Additionally, we provide this information as two JSON files to enable automation in the context of a provisioning workflow:
 
-* Collection of [HTTP response security headers to add](ci/headers_add.json).
-* Collection of [HTTP response headers to remove](ci/headers_remove.json).
+* Collection of [HTTP response security headers to add](https://github.com/OWASP/www-project-secure-headers/blob/master/ci/headers_add.json).
+* Collection of [HTTP response headers to remove](https://github.com/OWASP/www-project-secure-headers/blob/master/ci/headers_remove.json).
 
 📡 These json files are automatically updated.
 
