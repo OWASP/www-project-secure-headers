@@ -74,7 +74,7 @@ docker run --mount type=bind,source=$(pwd)/tests_suite.yml,target=/workdir/tests
 
 🌍 The python script [test_suite_mock.py](test_suite_mock.py) provides a mock endpoint returning an HTTP response, for which, all HTTP response headers recommended by the [OSHP](https://owasp.org/www-project-secure-headers/) will be set.
 
-📦 It is automatically deployed on `https://oshp-validator-mock.onrender.com` and it is used, by this [CI workflow](../../.github/workflows/validator_validate-tests-suite.yml), to test the venom tests suite.
+📦 It is automatically deployed on `https://oshp-validator-mock.onrender.com` and it is used, by this [CI workflow](../../.github/workflows/validator_validate_tests-suite.yml), to test the venom tests suite.
 
 # Case sensitivity for header names in Venom
 
