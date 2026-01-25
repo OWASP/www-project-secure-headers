@@ -1,0 +1,37 @@
+name: validator - Validate test suites
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 6'  
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+permissions: read-all    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Get yamllint and wake-up the mirror endpoint
+        run: |
+          sudo apt-get install -y curl wget yamllint
+          curl --connect-timeout 600 -sk https://oshp-validator-mock.onrender.com
+      - name: Validate the venom tests suite file
+        run: |
+          cd subprojects/validator
+          yamllint --strict tests_suite.yml         
+      - name: Get the latest release of venom
+        run: |
+          cd subprojects/validator
+          wget -q -O venom https://github.com/ovh/venom/releases/download/v1.0.1/venom.linux-amd64
+          chmod +x venom
+          ./venom update || true
+          ./venom version
+      - name: Execute the test plan
+        run: |
+          cd subprojects/validator
+          ./venom run --var="target_site=https://oshp-validator-mock.onrender.com" --var="logout_url=/" tests_suite.yml
+          echo "[+] Venom log file content:"
+          cat venom.log
+
