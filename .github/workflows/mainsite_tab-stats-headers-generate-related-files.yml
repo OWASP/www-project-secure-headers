@@ -1,13 +1,12 @@
 name: mainsite - Update tab stats related files
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 0 5 * *'  
+  workflow_dispatch: 
   push:
     paths:
       - 'ci/tab_stats_generate_md_file.py'     
       - 'ci/tab_stats_generate_png_files.sh'     
-      - 'ci/tab_stats_manage_generation.sh'      
+      - 'ci/tab_stats_manage_generation.sh'  
+      - 'subprojects/statistics/data/data.db'      
 permissions: read-all       
 jobs:
   build:
