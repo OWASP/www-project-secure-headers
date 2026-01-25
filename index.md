@@ -19,16 +19,6 @@ pitch: Provides technical information about HTTP security headers.
 
 [![OWASP Production](https://img.shields.io/badge/owasp-production%20project-800080.svg)](https://www.owasp.org/projects)
 
-[![External Links Validity Check](https://github.com/OWASP/www-project-secure-headers/actions/workflows/check-external-links.yml/badge.svg?branch=master)](https://github.com/OWASP/www-project-secure-headers/actions/workflows/check-external-links.yml)
-
-[![Update headers reference JSON files](https://github.com/OWASP/www-project-secure-headers/actions/workflows/headers-generate-json-files.yml/badge.svg?branch=master)](https://github.com/OWASP/www-project-secure-headers/actions/workflows/headers-generate-json-files.yml)
-
-[![Update monitoring technical references dashboard](https://github.com/OWASP/www-project-secure-headers/actions/workflows/monitoring-technical-references-generate-dashboard.yml/badge.svg?branch=master)](https://github.com/OWASP/www-project-secure-headers/actions/workflows/monitoring-technical-references-generate-dashboard.yml)
-
-[![Perform_monitoring_oshp_site_references](https://github.com/OWASP/www-project-secure-headers/actions/workflows/monitoring-oshp-site-references.yml/badge.svg?branch=master)](https://github.com/OWASP/www-project-secure-headers/actions/workflows/monitoring-oshp-site-references.yml)
-
-[![update_tab_stats_related_files](https://github.com/OWASP/www-project-secure-headers/actions/workflows/tab-stats-headers-generate-related-files.yml/badge.svg?branch=master)](https://github.com/OWASP/www-project-secure-headers/actions/workflows/tab-stats-headers-generate-related-files.yml)
-
 🎯 The **OWASP Secure Headers Project** (also called **OSHP**) describes HTTP response headers that your application can use to increase the security of your application. Once set, these HTTP response headers can restrict modern browsers from running into easily preventable vulnerabilities. The OWASP Secure Headers Project intends to raise awareness and use of these headers.
 
 🤔 HTTP headers are well known and also despised. Seeking a balance between usability and security, developers implement functionality through the headers that can make applications more versatile or secure. But in practice how are the headers being implemented? What sites follow the best implementation practices? Big companies, small, all or none?
@@ -39,11 +29,9 @@ pitch: Provides technical information about HTTP security headers.
 
 * Guidance about the recommended HTTP security headers that can be leveraged (**Best Practices** tab).
 * Guidance about the HTTP headers that should be removed (**Best Practices** tab).
-* [Tools](https://github.com/oshp/oshp-validator) to validate an HTTP security header configuration.
+* [Tools](subprojects/validator/) to validate an HTTP security header configuration.
 * Code libraries that can be leveraged to configure recommended HTTP security headers (**Technical Resources** tab).
-* [Statistics](https://github.com/oshp/oshp-stats) about usage of the recommended HTTP security headers (**Statistics** tab).
-
-🏭 All the tools provided by the OSHP are gathered under this [GitHub organization](https://github.com/oshp/).
+* [Statistics](subprojects/statistics/) about usage of the recommended HTTP security headers (**Statistics** tab).
 
 📺 A presentation of the project is available on the following locations:
 
@@ -51,31 +39,22 @@ pitch: Provides technical information about HTTP security headers.
 * [Application Security Podcast Youtube playlists](https://www.youtube.com/watch?v=0SNU9clVhKU).
 * [NoLimitSecu Podcast](https://www.nolimitsecu.fr/owasp-secure-headers-project/) (*French*).
 
-## Migration
-
-🌎 The OWASP Secure Headers Project was migrated from the old website (`https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project`) to the [GitHub OWASP organization](https://github.com/OWASP/www-project-secure-headers).
-
-📦 The following projects are now **archived**, they are initiatives that are now replaced by new projects:
-
-* [headers](https://github.com/oshp/headers).
-* [headers-ui-container](https://github.com/oshp/headers-ui-container).
-
 ## Security headers usage statistics
 
 📈 We provide statistics, updated every month, about HTTP response security headers usage mentioned by the OWASP Secure Headers Project:
 
-* They are available through [this GitHub project](https://github.com/oshp/oshp-stats) and the tab named **Statistics**.
+* They are available through [this subproject](subprojects/statistics/) and the tab named **Statistics**.
 
 ## Security headers usage validator
 
 ✅ We provide a [venom](https://github.com/ovh/venom) tests suite to validate an HTTP security response header configuration against OWASP Secure Headers Project recommendation:
 
-* It is available through [this GitHub project](https://github.com/oshp/oshp-validator).
+* It is available through [this subproject](subprojects/validator/).
 
 🧪 We also provide a *online mock endpoint* returning an HTTP response, for which, all HTTP response headers recommended by the OSHP will be set:
 
 * It is automatically deployed on `https://oshp-validator-mock.onrender.com`
-* Technical details about this endpoint are [here](https://github.com/oshp/oshp-validator#tests-suite-mock-service).
+* Technical details about this endpoint are [here](subprojects/validator/README.md#tests-suite-mock-service).
 
 ## Security headers reference files
 

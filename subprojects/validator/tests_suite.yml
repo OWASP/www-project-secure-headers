@@ -1,0 +1,236 @@
+name: HTTP security response headers test suites
+vars:
+  target_site: ''
+  logout_url: ''
+  request_timeout_in_seconds: 20
+testcases:
+  - name: Strict-Transport-Security
+    steps:
+      - type: http
+        method: GET
+        url: '{{.target_site}}'
+        skip_body: true
+        timeout: '{{.request_timeout_in_seconds}}'
+        assertions:
+          - result.statuscode ShouldEqual 200
+          - result.headers.Strict-Transport-Security ShouldNotBeNil
+          - or:
+              - result.headers.Strict-Transport-Security ShouldEqual "max-age=31536000; includeSubDomains"
+              - result.headers.Strict-Transport-Security ShouldEqual "max-age=31536000; includeSubDomains; preload"
+  - name: X-Frame-Options
+    steps:
+      - type: http
+        method: GET
+        url: '{{.target_site}}'
+        skip_body: true
+        timeout: '{{.request_timeout_in_seconds}}'
+        assertions:
+          - result.statuscode ShouldEqual 200
+          - result.headers.X-Frame-Options ShouldNotBeNil
+          - result.headers.X-Frame-Options ShouldBeIn "deny" "DENY"
+  - name: X-Content-Type-Options
+    steps:
+      - type: http
+        method: GET
+        url: '{{.target_site}}'
+        skip_body: true
+        timeout: '{{.request_timeout_in_seconds}}'
+        assertions:
+          - result.statuscode ShouldEqual 200
+          - result.headers.X-Content-Type-Options ShouldNotBeNil
+          - result.headers.X-Content-Type-Options ShouldEqual "nosniff"
+  - name: Content-Security-Policy
+    steps:
+      - type: http
+        method: GET
+        url: '{{.target_site}}'
+        skip_body: true
+        timeout: '{{.request_timeout_in_seconds}}'
+        assertions:
+          - result.statuscode ShouldEqual 200
+          - result.headers.Content-Security-Policy ShouldNotBeNil
+          - result.headers.Content-Security-Policy ShouldNotContainSubstring "unsafe"
+  - name: X-Permitted-Cross-Domain-Policies
+    steps:
+      - type: http
+        method: GET
+        url: '{{.target_site}}'
+        skip_body: true
+        timeout: '{{.request_timeout_in_seconds}}'
+        assertions:
+          - result.statuscode ShouldEqual 200
+          - result.headers.X-Permitted-Cross-Domain-Policies ShouldNotBeNil
+          - result.headers.X-Permitted-Cross-Domain-Policies ShouldEqual "none"
+  - name: Referrer-Policy
+    steps:
+      - type: http
+        method: GET
+        url: '{{.target_site}}'
+        skip_body: true
+        timeout: '{{.request_timeout_in_seconds}}'
+        assertions:
+          - result.statuscode ShouldEqual 200
+          - result.headers.Referrer-Policy ShouldNotBeNil
+          - result.headers.Referrer-Policy ShouldEqual "no-referrer"
+  - name: Clear-Site-Data
+    steps:
+      - type: http
+        method: GET
+        url: '{{.target_site}}/{{.logout_url}}'
+        skip_body: true
+        timeout: '{{.request_timeout_in_seconds}}'
+        assertions:
+          - result.statuscode ShouldEqual 200
+          - result.headers.Clear-Site-Data ShouldNotBeNil
+          - result.headers.Clear-Site-Data ShouldEqual '"cache","cookies","storage"'
+  - name: Cross-Origin-Embedder-Policy
+    steps:
+      - type: http
+        method: GET
+        url: '{{.target_site}}'
+        skip_body: true
+        timeout: '{{.request_timeout_in_seconds}}'
+        assertions:
+          - result.statuscode ShouldEqual 200
+          - result.headers.Cross-Origin-Embedder-Policy ShouldNotBeNil
+          - result.headers.Cross-Origin-Embedder-Policy ShouldEqual "require-corp"
+  - name: Cross-Origin-Opener-Policy
+    steps:
+      - type: http
+        method: GET
+        url: '{{.target_site}}'
+        skip_body: true
+        timeout: '{{.request_timeout_in_seconds}}'
+        assertions:
+          - result.statuscode ShouldEqual 200
+          - result.headers.Cross-Origin-Opener-Policy ShouldNotBeNil
+          - result.headers.Cross-Origin-Opener-Policy ShouldEqual "same-origin"
+  - name: Cross-Origin-Resource-Policy
+    steps:
+      - type: http
+        method: GET
+        url: '{{.target_site}}'
+        skip_body: true
+        timeout: '{{.request_timeout_in_seconds}}'
+        assertions:
+          - result.statuscode ShouldEqual 200
+          - result.headers.Cross-Origin-Resource-Policy ShouldNotBeNil
+          - result.headers.Cross-Origin-Resource-Policy ShouldEqual "same-origin"
+  - name: Permissions-Policy
+    steps:
+      - type: http
+        method: GET
+        url: '{{.target_site}}'
+        skip_body: true
+        timeout: '{{.request_timeout_in_seconds}}'
+        assertions:
+          - result.statuscode ShouldEqual 200
+          - result.headers.Permissions-Policy ShouldNotBeNil
+          - result.headers.Permissions-Policy ShouldContainSubstring accelerometer=()
+          - result.headers.Permissions-Policy ShouldContainSubstring autoplay=()
+          - result.headers.Permissions-Policy ShouldContainSubstring camera=()
+          - result.headers.Permissions-Policy ShouldContainSubstring clipboard-read=()
+          - result.headers.Permissions-Policy ShouldContainSubstring clipboard-write=()
+          - result.headers.Permissions-Policy ShouldContainSubstring cross-origin-isolated=()
+          - result.headers.Permissions-Policy ShouldContainSubstring display-capture=()
+          - result.headers.Permissions-Policy ShouldContainSubstring encrypted-media=()
+          - result.headers.Permissions-Policy ShouldContainSubstring fullscreen=()
+          - result.headers.Permissions-Policy ShouldContainSubstring gamepad=()
+          - result.headers.Permissions-Policy ShouldContainSubstring geolocation=()
+          - result.headers.Permissions-Policy ShouldContainSubstring gyroscope=()
+          - result.headers.Permissions-Policy ShouldContainSubstring hid=()
+          - result.headers.Permissions-Policy ShouldContainSubstring idle-detection=()
+          - result.headers.Permissions-Policy ShouldContainSubstring interest-cohort=()
+          - result.headers.Permissions-Policy ShouldContainSubstring keyboard-map=()
+          - result.headers.Permissions-Policy ShouldContainSubstring magnetometer=()
+          - result.headers.Permissions-Policy ShouldContainSubstring microphone=()
+          - result.headers.Permissions-Policy ShouldContainSubstring midi=()
+          - result.headers.Permissions-Policy ShouldContainSubstring payment=()
+          - result.headers.Permissions-Policy ShouldContainSubstring picture-in-picture=()
+          - result.headers.Permissions-Policy ShouldContainSubstring publickey-credentials-get=()
+          - result.headers.Permissions-Policy ShouldContainSubstring screen-wake-lock=()
+          - result.headers.Permissions-Policy ShouldContainSubstring serial=()
+          - or:
+              - result.headers.Permissions-Policy ShouldContainSubstring sync-xhr=(self)
+              - result.headers.Permissions-Policy ShouldContainSubstring sync-xhr=()
+          - result.headers.Permissions-Policy ShouldContainSubstring unload=()
+          - result.headers.Permissions-Policy ShouldContainSubstring usb=()
+          - result.headers.Permissions-Policy ShouldContainSubstring web-share=()
+          - result.headers.Permissions-Policy ShouldContainSubstring xr-spatial-tracking=()
+
+  - name: Cache-Control
+    steps:
+      - type: http
+        method: GET
+        url: '{{.target_site}}'
+        skip_body: true
+        timeout: '{{.request_timeout_in_seconds}}'
+        assertions:
+          - result.statuscode ShouldEqual 200
+          - result.headers.Cache-Control ShouldNotBeNil
+          - 'result.headers.Cache-Control ShouldEqual "no-store, max-age=0"'
+  - name: X-DNS-Prefetch-Control
+    steps:
+      - type: http
+        method: GET
+        url: '{{.target_site}}'
+        skip_body: true
+        timeout: '{{.request_timeout_in_seconds}}'
+        assertions:
+          - result.statuscode ShouldEqual 200
+          - result.headers.X-Dns-Prefetch-Control ShouldNotBeNil
+          - result.headers.X-Dns-Prefetch-Control ShouldEqual "off"
+  - name: Feature-Policy (should not exist)
+    steps:
+      - type: http
+        method: GET
+        url: '{{.target_site}}'
+        skip_body: true
+        info: >-
+          This header has now been renamed to Permissions-Policy in the
+          specification.
+        timeout: '{{.request_timeout_in_seconds}}'
+        assertions:
+          - result.statuscode ShouldEqual 200
+          - result.headers.Feature-Policy ShouldBeNil
+  - name: Public-Key-Pins (should not exist)
+    steps:
+      - type: http
+        method: GET
+        url: '{{.target_site}}'
+        skip_body: true
+        info: >-
+          This header has been deprecated by all major browsers and is no longer
+          recommended. Avoid using it, and update existing code if possible!
+        timeout: '{{.request_timeout_in_seconds}}'
+        assertions:
+          - result.statuscode ShouldEqual 200
+          - result.headers.Public-Key-Pins ShouldBeNil
+  - name: Expect-CT (should not exist)
+    steps:
+      - type: http
+        method: GET
+        url: '{{.target_site}}'
+        skip_body: true
+        info: >-
+          This header will likely become obsolete in June 2021. Since May 2018
+          new certificates are expected to support SCTs by default. Certificates
+          before March 2018 were allowed to have a lifetime of 39 months, those
+          will all be expired in June 2021.
+        timeout: '{{.request_timeout_in_seconds}}'
+        assertions:
+          - result.statuscode ShouldEqual 200
+          - result.headers.Expect-CT ShouldBeNil
+  - name: X-XSS-Protection (should not exist)
+    steps:
+      - type: http
+        method: GET
+        url: '{{.target_site}}'
+        skip_body: true
+        info: >-
+          The X-XSS-Protection header has been deprecated by modern browsers and
+          its use can introduce additional security issues on the client side.
+        timeout: '{{.request_timeout_in_seconds}}'
+        assertions:
+          - result.statuscode ShouldEqual 200
+          - result.headers.X-XSS-Protection ShouldBeNil

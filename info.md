@@ -11,10 +11,6 @@
 * <i class="fas fa-toolbox fa-2x" style="color:#233e81;"></i> Builder
 * <i class="fas fa-shield-alt fa-2x" style="color:#233e81;"></i> Defender
 
-### Project GitHub Organization
-
-* 💻 [OSHP](https://github.com/oshp/)
-
 ### Notification
 
 * 🌏 We use the hashtag `owasp_shp` in our posts on [Bluesky](https://bsky.app/hashtag/owasp_shp) and [LinkedIn](https://www.linkedin.com/feed/hashtag/?keywords=owasp_shp), to publish an update about the project.

@@ -4,6 +4,7 @@ remote_theme: "owasp/www--site-theme@main"
 exclude:
   - README.md
   - monitoring_technical_references_dashboard.md
+  - subprojects/
 
 plugins:
   - jekyll-include-cache-0.2.0

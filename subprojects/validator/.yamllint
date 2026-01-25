@@ -1,0 +1,8 @@
+extends: default
+# See https://yamllint.readthedocs.io/en/stable/configuration.html
+rules:
+  line-length: disable
+  document-start: disable
+  comments:
+    require-starting-space: false
+    ignore-shebangs: true

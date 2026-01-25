@@ -1,0 +1,38 @@
+name: statistics - Gather data
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 1 * *'
+permissions: read-all    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write    
+    steps:
+    - uses: actions/checkout@v6
+    - name: Set up Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: "3.12"
+    - name: Install dependencies
+      run: |
+        cd subprojects/statistics
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Generate the input CSV file from a fresh Majestic CSV file
+      run: |
+        cd subprojects/statistics
+        wget http://downloads.majestic.com/majestic_million.csv
+        cat majestic_million.csv | awk -F  "," 'NR>1 {print $1 "," $3}' > data/input.csv
+        rm majestic_million.csv        
+    - name: Run data gathering script
+      run: |
+        cd subprojects/statistics
+        cd scripts
+        python gather_data.py
+        ls -l --block-size=M ../data/data.db
+    - name: Set up Git user
+      run: git config --global user.email "gha@github.com"; git config --global user.name "GHActionBot"
+    - name: Commit update
+      run: git commit -am "Sync statistics data DB and corresponding input CSV file"; git push
