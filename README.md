@@ -19,8 +19,10 @@
   * Called `mainsite`.
 * **Validator**: Venom tests suite to validate an HTTP security response headers configuration against OSHP recommendation.
   * Called `validator`.
+  * Content is [here](subprojects/validator/).
 * **Statistics**: Statistics about HTTP response security headers usage mentioned by the OSHP.
   * Called `statistics`.
+  * Content is [here](subprojects/statistics/).
 
 ## Repository structure
 
