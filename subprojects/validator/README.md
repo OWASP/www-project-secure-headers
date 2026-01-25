@@ -24,7 +24,7 @@
 
 📋 It is provided via this [single file](tests_suite.yml).
 
-💻 [Visual Studio Code](https://code.visualstudio.com/) is used for the tests suite development. A Visual Studio Code [workspace file](../../project.code-workspace) is provided for the project with [recommended extensions](.vscode/extensions.json).
+💻 [Visual Studio Code](https://code.visualstudio.com/) is used for the tests suite development. A Visual Studio Code [workspace file](../../project.code-workspace) is provided for the project with [recommended extensions](../../.vscode/extensions.json).
 
 📐 The following parameters are supported:
 
