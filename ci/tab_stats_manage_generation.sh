@@ -30,6 +30,7 @@ then
     exit 1
 else
     echo "[V] $img_count image files were generated!"
-    sha256sum *.png
+
+    sha256sum $IMAGE_FOLDER_LOCATION/*.png
     exit 0
 fi
