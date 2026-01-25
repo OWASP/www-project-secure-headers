@@ -1,4 +1,4 @@
-name: mainsite - Validate external links validity 
+name: mainsite - Validate external links validity
 on:
   workflow_dispatch:
   push:
