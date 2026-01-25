@@ -1,4 +1,4 @@
-name: mainsite - Update headers reference json files
+name: mainsite - Generate headers reference json files
 on:
   workflow_dispatch:
   push:

@@ -1,4 +1,4 @@
-name: mainsite - Update tab stats related files
+name: mainsite - Generate tab stats related files
 on:
   workflow_dispatch: 
   push:
