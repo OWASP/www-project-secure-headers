@@ -45,7 +45,7 @@ The following section proposes a configuration for the [actively supported and w
 
 🔬 For the header `Permissions-Policy`, as it is currently only supported by [Chromium based browsers](https://caniuse.com/permissions-policy), the proposed value was generated with this [site](https://www.permissionspolicy.com/) and tested against the version `140.0.7292.0` of [Chromium](https://chromium.woolyss.com/download/en/) to only specify supported features.
 
-💡 Content of the table below is also provided, as JSON, via this [file](ci/headers_add.json) (automatically updated).
+💡 Content of the table below is also provided, as JSON, via this [file](https://github.com/OWASP/www-project-secure-headers/blob/master/ci/headers_add.json) (automatically updated).
 
 <!-- HEADERS_ADD_TABLE_START -->
 
@@ -81,7 +81,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 
 * [Spring Boot Actuator REST API](https://docs.spring.io/spring-boot/api/rest/actuator/auditevents.html): `Content-Type: application/vnd.spring-boot.actuator.v3+json`.
 
-💡 Content of the table below is also provided, as JSON, via this [file](ci/headers_remove.json) (automatically updated).
+💡 Content of the table below is also provided, as JSON, via this [file](https://github.com/OWASP/www-project-secure-headers/blob/master/ci/headers_remove.json) (automatically updated).
 
 <!-- HEADERS_REMOVE_TABLE_START -->
 
