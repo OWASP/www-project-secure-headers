@@ -33,22 +33,11 @@ pitch: Provides technical information about HTTP security headers.
 * Code libraries that can be leveraged to configure recommended HTTP security headers (**Technical Resources** tab).
 * [Statistics](subprojects/statistics/) about usage of the recommended HTTP security headers (**Statistics** tab).
 
-🏭 All the tools provided by the OSHP are gathered under this [GitHub organization](https://github.com/oshp/).
-
 📺 A presentation of the project is available on the following locations:
 
 * [OWASP Spotlight Youtube playlists](https://www.youtube.com/watch?v=N4F3VWQYU9E).
 * [Application Security Podcast Youtube playlists](https://www.youtube.com/watch?v=0SNU9clVhKU).
 * [NoLimitSecu Podcast](https://www.nolimitsecu.fr/owasp-secure-headers-project/) (*French*).
-
-## Migration
-
-🌎 The OWASP Secure Headers Project was migrated from the old website (`https://wiki.owasp.org/index.php/OWASP_Secure_Headers_Project`) to the [GitHub OWASP organization](https://github.com/OWASP/www-project-secure-headers).
-
-📦 The following projects are now **archived**, they are initiatives that are now replaced by new projects:
-
-* [headers](https://github.com/oshp/headers).
-* [headers-ui-container](https://github.com/oshp/headers-ui-container).
 
 ## Security headers usage statistics
 

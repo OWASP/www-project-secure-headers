@@ -45,14 +45,14 @@
 
 |Status|File|
 | :--- | :--- |
-|![mainsite_generate_headers-json-files.yml](https://github.com/righettod/www-project-secure-headers/actions/workflows/mainsite_generate_headers-json-files.yml/badge.svg)|[📄](https://github.com/righettod/www-project-secure-headers/actions/workflows/mainsite_generate_headers-json-files.yml)|
-|![mainsite_generate_tab-stats-related-files.yml](https://github.com/righettod/www-project-secure-headers/actions/workflows/mainsite_generate_tab-stats-related-files.yml/badge.svg)|[📄](https://github.com/righettod/www-project-secure-headers/actions/workflows/mainsite_generate_tab-stats-related-files.yml)|
-|![mainsite_generate_technical-references-dashboard.yml](https://github.com/righettod/www-project-secure-headers/actions/workflows/mainsite_generate_technical-references-dashboard.yml/badge.svg)|[📄](https://github.com/righettod/www-project-secure-headers/actions/workflows/mainsite_generate_technical-references-dashboard.yml)|
-|![mainsite_monitor_oshp-site-references.yml](https://github.com/righettod/www-project-secure-headers/actions/workflows/mainsite_monitor_oshp-site-references.yml/badge.svg)|[📄](https://github.com/righettod/www-project-secure-headers/actions/workflows/mainsite_monitor_oshp-site-references.yml)|
-|![mainsite_validate_external-links.yml](https://github.com/righettod/www-project-secure-headers/actions/workflows/mainsite_validate_external-links.yml/badge.svg)|[📄](https://github.com/righettod/www-project-secure-headers/actions/workflows/mainsite_validate_external-links.yml)|
-|![mainsite_validate_owasp-nest-metadata.yaml](https://github.com/righettod/www-project-secure-headers/actions/workflows/mainsite_validate_owasp-nest-metadata.yaml/badge.svg)|[📄](https://github.com/righettod/www-project-secure-headers/actions/workflows/mainsite_validate_owasp-nest-metadata.yaml)|
-|![statistics_generate_datasource.yml](https://github.com/righettod/www-project-secure-headers/actions/workflows/statistics_generate_datasource.yml/badge.svg)|[📄](https://github.com/righettod/www-project-secure-headers/actions/workflows/statistics_generate_datasource.yml)|
-|![validator_validate_tests-suite.yml](https://github.com/righettod/www-project-secure-headers/actions/workflows/validator_validate_tests-suite.yml/badge.svg)|[📄](https://github.com/righettod/www-project-secure-headers/actions/workflows/validator_validate_tests-suite.yml)|
+|![mainsite_generate_headers-json-files.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_generate_headers-json-files.yml/badge.svg)|[📄](.github/workflows/mainsite_generate_headers-json-files.yml)|
+|![mainsite_generate_tab-stats-related-files.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_generate_tab-stats-related-files.yml/badge.svg)|[📄](.github/workflows/mainsite_generate_tab-stats-related-files.yml)|
+|![mainsite_generate_technical-references-dashboard.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_generate_technical-references-dashboard.yml/badge.svg)|[📄](.github/workflows/mainsite_generate_technical-references-dashboard.yml)|
+|![mainsite_monitor_oshp-site-references.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_monitor_oshp-site-references.yml/badge.svg)|[📄](.github/workflows/mainsite_monitor_oshp-site-references.yml)|
+|![mainsite_validate_external-links.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_validate_external-links.yml/badge.svg)|[📄](.github/workflows/mainsite_validate_external-links.yml)|
+|![mainsite_validate_owasp-nest-metadata.yaml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_validate_owasp-nest-metadata.yaml/badge.svg)|[📄](.github/workflows/mainsite_validate_owasp-nest-metadata.yaml)|
+|![statistics_generate_datasource.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/statistics_generate_datasource.yml/badge.svg)|[📄](.github/workflows/statistics_generate_datasource.yml)|
+|![validator_validate_tests-suite.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/validator_validate_tests-suite.yml/badge.svg)|[📄](.github/workflows/validator_validate_tests-suite.yml)|
 
 ## Issue and discussions
 

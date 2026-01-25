@@ -1,4 +1,4 @@
-name: mainsite - Update technical references dashboard monitoring
+name: mainsite - Update technical references monitoring dashboard
 on:
   workflow_dispatch:
   push:
