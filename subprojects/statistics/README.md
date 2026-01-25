@@ -29,7 +29,7 @@ $ rm majestic_million.csv
 > 📦 They are all stored in the [scripts](scripts) folder and they are Python 3.x based.
 
 > [!IMPORTANT]
-> ⚠️ Usage of the script [generate_stats_md_file](scripts/generate_stats_md_file.py) was replaced by a [workflow](../../.github/workflows/tab-stats-headers-generate-related-files.yml) on the main OSHP site..
+> ⚠️ Usage of the script [generate_stats_md_file](scripts/generate_stats_md_file.py) was replaced by a [workflow](../../.github/workflows/mainsite_tab-stats-headers-generate-related-files.yml) on the main OSHP site..
 
 💻 [Visual Studio Code](https://code.visualstudio.com/) is used for the scripts development. A Visual Studio Code [workspace file](../../project.code-workspace) is provided for the project with [recommended extensions](../../.vscode/extensions.json).
 
@@ -56,7 +56,7 @@ $ rm majestic_million.csv
 💻 The update is scheduled in the following way:
 
 * The **first day** of every month the data database is updated via this [workflow](../../.github/workflows/statistics_update-datasource.yml).
-* The **fifth day** of every month the statistic data is updated via this [workflow](../../.github/workflows/mainsite_tab-stats-headers-generate-related-files).
+* The **fifth day** of every month the statistic data is updated via this [workflow](../../.github/workflows/mainsite_tab-stats-headers-generate-related-files.yml).
 
 # Note
 
