@@ -39,7 +39,7 @@
       * [ci/tab_stats_manage_generation.sh](ci/tab_stats_manage_generation.sh).
       * [ci/tab_stats_generate_md_file.py](ci/tab_stats_generate_md_file.py).
       * [ci/tab_stats_generate_png_files.sh](ci/tab_stats_generate_png_files.sh).
-      * The specified cron expression was selected because the database containing the data used by the script [tab_stats_generate_md_file.py](ci/tab_stats_generate_md_file.py) is updated on the first day of each month by this [workflow](.github/workflows/statistics_update-datasource.yml):
+      * The specified cron expression was selected because the database containing the data used by the script [tab_stats_generate_md_file.py](ci/tab_stats_generate_md_file.py) is updated on the first day of each month by this [workflow](.github/workflows/statistics_update-datasource.yml).
 * The project official logo is stored into the folder [logo](logo) as well as into the [OWASP Swag](https://github.com/OWASP/owasp-swag) GitHub repository.
 
 ## Issue and discussions
