@@ -29,9 +29,9 @@ pitch: Provides technical information about HTTP security headers.
 
 * Guidance about the recommended HTTP security headers that can be leveraged (**Best Practices** tab).
 * Guidance about the HTTP headers that should be removed (**Best Practices** tab).
-* [Tools](https://github.com/oshp/oshp-validator) to validate an HTTP security header configuration.
+* [Tools](subprojects/validator/) to validate an HTTP security header configuration.
 * Code libraries that can be leveraged to configure recommended HTTP security headers (**Technical Resources** tab).
-* [Statistics](https://github.com/oshp/oshp-stats) about usage of the recommended HTTP security headers (**Statistics** tab).
+* [Statistics](subprojects/statistics/) about usage of the recommended HTTP security headers (**Statistics** tab).
 
 🏭 All the tools provided by the OSHP are gathered under this [GitHub organization](https://github.com/oshp/).
 
@@ -54,18 +54,18 @@ pitch: Provides technical information about HTTP security headers.
 
 📈 We provide statistics, updated every month, about HTTP response security headers usage mentioned by the OWASP Secure Headers Project:
 
-* They are available through [this GitHub project](https://github.com/oshp/oshp-stats) and the tab named **Statistics**.
+* They are available through [this subproject](subprojects/statistics/) and the tab named **Statistics**.
 
 ## Security headers usage validator
 
 ✅ We provide a [venom](https://github.com/ovh/venom) tests suite to validate an HTTP security response header configuration against OWASP Secure Headers Project recommendation:
 
-* It is available through [this GitHub project](https://github.com/oshp/oshp-validator).
+* It is available through [this subproject](subprojects/validator/).
 
 🧪 We also provide a *online mock endpoint* returning an HTTP response, for which, all HTTP response headers recommended by the OSHP will be set:
 
 * It is automatically deployed on `https://oshp-validator-mock.onrender.com`
-* Technical details about this endpoint are [here](https://github.com/oshp/oshp-validator#tests-suite-mock-service).
+* Technical details about this endpoint are [here](subprojects/validator/README.md#tests-suite-mock-service).
 
 ## Security headers reference files
 
