@@ -1,4 +1,4 @@
-name: update_headers_reference_json_files
+name: mainsite - Update headers reference json files
 on:
   workflow_dispatch:
   push:
@@ -12,7 +12,7 @@ jobs:
       contents: write    
     steps:
     - uses: actions/checkout@v6
-    - name: Set up Python 3.12
+    - name: Set up Python
       uses: actions/setup-python@v6
       with:
         python-version: "3.12"

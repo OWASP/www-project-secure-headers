@@ -1,4 +1,4 @@
-name: check_validity_of_all_external_links
+name: mainsite - Check validity external links
 on:
   workflow_dispatch:
   push:

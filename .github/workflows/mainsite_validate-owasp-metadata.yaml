@@ -1,5 +1,4 @@
-name: Validate OWASP entity metadata
-
+name: mainsite - Validate OWASP entity metadata for NEST
 on:
   pull_request:
     paths:
@@ -7,18 +6,14 @@ on:
   push:
     paths:
       - '*.owasp.yaml'
-
 permissions:
   contents: read
-
 concurrency:
   cancel-in-progress: true
   group: ${{ github.repository }}-${{ github.workflow }}-${{ github.ref }}
-
 jobs:
   validate-metadata:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v6

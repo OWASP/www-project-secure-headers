@@ -1,4 +1,4 @@
-name: update_monitoring_technical_references_dashboard
+name: mainsite - Update technical references dashboard monitoring
 on:
   workflow_dispatch:
   push:
@@ -14,7 +14,7 @@ jobs:
       contents: write    
     steps:
     - uses: actions/checkout@v6
-    - name: Set up Python 3.12
+    - name: Set up Python
       uses: actions/setup-python@v6
       with:
         python-version: "3.12"
