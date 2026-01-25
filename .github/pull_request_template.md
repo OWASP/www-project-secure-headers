@@ -11,4 +11,4 @@ Hi,
 
 ...
 
-Thanks in advance 😀.
+Thanks in advance 😀

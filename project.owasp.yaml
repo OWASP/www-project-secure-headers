@@ -17,14 +17,6 @@ repositories:
   - name: www-project-secure-headers
     url: https://github.com/OWASP/www-project-secure-headers
     description: The OWASP Secure Headers Project.
-  - name: oshp-stats
-    url: https://github.com/oshp/oshp-stats
-    description: Statistics about HTTP response security headers usage mentioned by the OSHP.
-  - name: oshp-validator
-    url: https://github.com/oshp/oshp-validator
-    description: Venom tests suite to validate an HTTP security response headers configuration against OSHP recommendation.
-  - name: oshp.github.io
-    url: https://github.com/oshp/oshp.github.io
 tags:
   - http-headers
   - http-headers-statistics
