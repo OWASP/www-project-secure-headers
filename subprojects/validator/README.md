@@ -1,7 +1,5 @@
 # OWASP Secure Headers Project validator
 
-[![Validate test suites](https://github.com/oshp/oshp-validator/actions/workflows/validate-tests-suite.yml/badge.svg?branch=main)](https://github.com/oshp/oshp-validator/actions/workflows/validate-tests-suite.yml)
-
 ✅ [Venom](https://github.com/ovh/venom) test suites to validate an [HTTP security response headers](https://owasp.org/www-project-secure-headers/#div-headers) configuration against [OSHP recommendation](https://owasp.org/www-project-secure-headers/#div-bestpractices).
 
 🎯 The objective is to provide a way to validate the configuration of non-Internet exposed applications in a flexible/portable way.
@@ -26,7 +24,7 @@
 
 📋 It is provided via this [single file](tests_suite.yml).
 
-💻 [Visual Studio Code](https://code.visualstudio.com/) is used for the tests suite development. A Visual Studio Code [workspace file](project.code-workspace) is provided for the project with [recommended extensions](.vscode/extensions.json).
+💻 [Visual Studio Code](https://code.visualstudio.com/) is used for the tests suite development. A Visual Studio Code [workspace file](../../project.code-workspace) is provided for the project with [recommended extensions](.vscode/extensions.json).
 
 📐 The following parameters are supported:
 
@@ -67,6 +65,7 @@ $ venom run --var="target_site=https://mysite.com" --var="logout_url=/logout" te
 ```bash
 docker run --mount type=bind,source=$(pwd)/tests_suite.yml,target=/workdir/tests_suite.yml  ovhcom/venom:latest run --var="target_site=https://mysite.com" tests_suite.yml
 ```
+
 # Reporting
 
 📖 This [section](https://github.com/ovh/venom#export-tests-report) of the venom documentation describes the different formats supported for the integration in a CI/CD platform.
@@ -75,7 +74,7 @@ docker run --mount type=bind,source=$(pwd)/tests_suite.yml,target=/workdir/tests
 
 🌍 The python script [test_suite_mock.py](test_suite_mock.py) provides a mock endpoint returning an HTTP response, for which, all HTTP response headers recommended by the [OSHP](https://owasp.org/www-project-secure-headers/) will be set.
 
-📦 It is automatically deployed on `https://oshp-validator-mock.onrender.com` and it is used, by this [CI workflow](.github/workflows/validate-tests-suite.yml), to test the venom tests suite.
+📦 It is automatically deployed on `https://oshp-validator-mock.onrender.com` and it is used, by this [CI workflow](../../.github/workflows/validator_validate-tests-suite.yml), to test the venom tests suite.
 
 # Case sensitivity for header names in Venom
 
