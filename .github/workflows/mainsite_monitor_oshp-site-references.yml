@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-    - 'tab_casestudies.md'
+      - 'tab_casestudies.md'
   schedule:
     - cron: '0 0 * * 0'
 permissions: read-all     
