@@ -6,7 +6,7 @@ on:
       - 'ci/tab_stats_generate_md_file.py'     
       - 'ci/tab_stats_generate_png_files.sh'     
       - 'ci/tab_stats_manage_generation.sh'  
-      - 'subprojects/statistics/data/data.db'      
+      - 'subprojects/statistics/data/input.csv'
 permissions: read-all       
 jobs:
   build:
