@@ -233,4 +233,4 @@ testcases:
         timeout: '{{.request_timeout_in_seconds}}'
         assertions:
           - result.statuscode ShouldEqual 200
-          - result.headers.X-XSS-Protection ShouldBeNil
+          - result.headers.X-Xss-Protection ShouldBeNil
