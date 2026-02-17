@@ -220,7 +220,7 @@ testcases:
         timeout: '{{.request_timeout_in_seconds}}'
         assertions:
           - result.statuscode ShouldEqual 200
-          - result.headers.Expect-CT ShouldBeNil
+          - result.headers.Expect-Ct ShouldBeNil
   - name: X-XSS-Protection (should not exist)
     steps:
       - type: http
