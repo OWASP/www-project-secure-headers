@@ -68,15 +68,15 @@ HTTP Strict Transport Security (also named *HSTS*) is a browser security policy 
 ### Example
 
 ```
-Strict-Transport-Security: max-age=31536000
+Strict-Transport-Security: max-age=63072000
 ```
 
 ```
-Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Strict-Transport-Security: max-age=63072000 ; includeSubDomains
 ```
 
 ```
-Strict-Transport-Security: max-age=31536000 ; includeSubDomains ; preload
+Strict-Transport-Security: max-age=63072000 ; includeSubDomains ; preload
 ```
 
 ### References
