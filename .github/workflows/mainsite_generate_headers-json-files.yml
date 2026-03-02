@@ -28,7 +28,7 @@ jobs:
     - name: Commit update
       run: git commit -am "Sync reference headers json files"; git push
     - name: Attach generated artefacts      
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       with:
         name: data
         path: |
