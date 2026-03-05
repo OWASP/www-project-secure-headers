@@ -1,5 +1,5 @@
 {
-  "last_update_utc": "2026-01-25 15:45:51",
+  "last_update_utc": "2026-03-05 05:54:38",
   "headers": [
     {
       "name": "Cache-Control",
@@ -35,7 +35,7 @@
     },
     {
       "name": "Strict-Transport-Security",
-      "value": "max-age=63072000; includeSubDomains ; preload"
+      "value": "max-age=63072000; includeSubDomains"
     },
     {
       "name": "X-Content-Type-Options",
