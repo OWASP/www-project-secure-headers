@@ -55,7 +55,17 @@ HTTP Strict Transport Security (also named *HSTS*) is a browser security policy 
 * The `Strict-Transport-Security` header **is ignored by the browser when your site has only been accessed using HTTP**.
 * Once your site is accessed over HTTPS **with no certificate errors**, the browser knows your site is HTTPS capable and will honor the `Strict-Transport-Security` header.
 
-💡 If you need to let the access open, via HTTP, to the web server but want to ensure that `Strict-Transport-Security` header is taken into account for your site then you can use the **[preload](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security#preloading_strict_transport_security)** directive.
+💡 More information about *Preloading Strict Transport Security* can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security#preloading_strict_transport_security).
+
+💡 The `preload` directive is not part of the RFC and its support/evolution is managed at browsers level. We explicitly decided to keep this directive out of the configuration proposed to be aligned with the advice specified by the `hstspreload.org` team ([source](https://hstspreload.org/#opt-in)):
+
+```text
+If you maintain a project that provides HTTPS configuration advice or provides an option to enable HSTS, do not include the preload directive by default.
+
+We get regular emails from site operators who tried out HSTS this way, only to find themselves on the preload list without realizing that some subdomains cannot support HTTPS. 
+
+Removal tends to be slow and painful for those sites.
+```
 
 ### Values
 
