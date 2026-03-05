@@ -51,7 +51,7 @@ The following section proposes a configuration for the [actively supported and w
 
 | Header name                                  | Proposed value  |
 | ---------------------------------------------|------------|
-| Strict-Transport-Security                    | `max-age=31536000; includeSubDomains` |
+| Strict-Transport-Security                    | `max-age=63072000; includeSubDomains` |
 | X-Frame-Options                              | `deny` |
 | X-Content-Type-Options                       | `nosniff` |
 | Content-Security-Policy                      | `default-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests` |
