@@ -1,3 +1,11 @@
 {
-    "recommendations": ["davidanson.vscode-markdownlint", "redhat.vscode-yaml", "ms-python.python", "ms-python.vscode-pylance"]
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "ms-python.autopep8",
+        "ms-python.isort",
+        "bierner.markdown-mermaid",
+        "davidanson.vscode-markdownlint"
+    ]
 }
