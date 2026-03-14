@@ -1,6 +1,8 @@
 name: mainsite - Generate tab stats related files
 on:
   workflow_dispatch: 
+  schedule:
+    - cron: '0 0 3 * *'  
   push:
     paths:
       - 'ci/tab_stats_generate_md_file.py'     
