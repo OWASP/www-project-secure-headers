@@ -22,6 +22,6 @@ jobs:
         pip install -r requirements.txt
     - name: Run the validation
       run: |
-        cd ci; python monitoring_oshp_site_references.py
+        cd ci; python monitoring_oshp_site_references.py "${{ secrets.GITHUB_TOKEN }}"
 
 
