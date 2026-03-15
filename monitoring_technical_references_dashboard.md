@@ -1,7 +1,7 @@
 
 # Technical References Dashboard
 
-> 📅 Last verification (UTC): 2026-03-15 00:52:04
+> 📅 Last verification (UTC): 2026-03-15 05:56:41
 
 ## GitHub repositories health status
 
@@ -17,7 +17,6 @@ Project reaching the :red_circle: status **are removed**.
 
 | Last update | Status | Repository |
 | --- | --- | --- |
-| `2023-11-17T09:59:27Z` (28 months ago) | :red_circle: | [aidantwoods/SecureHeaders](https://github.com/aidantwoods/SecureHeaders) |
 | `2024-10-22T21:52:10Z` (17 months ago) | :orange_circle: | [unrolled/secure](https://github.com/unrolled/secure) |
 | `2024-11-03T20:39:16Z` (16 months ago) | :orange_circle: | [brokenhandsio/VaporSecurityHeaders](https://github.com/brokenhandsio/VaporSecurityHeaders) |
 | `2025-01-01T09:04:23Z` (14 months ago) | :orange_circle: | [rwjblue/ember-cli-content-security-policy/](https://github.com/rwjblue/ember-cli-content-security-policy/) |
@@ -29,6 +28,7 @@ Project reaching the :red_circle: status **are removed**.
 | `2026-01-15T05:57:39Z` (2 months ago) | :green_circle: | [tmotagam/Secweb](https://github.com/tmotagam/Secweb) |
 | `2026-02-20T00:04:08Z` (1 months ago) | :green_circle: | [GaProgMan/OwaspHeaders.Core](https://github.com/GaProgMan/OwaspHeaders.Core) |
 | `2026-02-20T14:46:48Z` (1 months ago) | :green_circle: | [sdelements/django-security](https://github.com/sdelements/django-security) |
+| `2026-02-21T14:39:48Z` (1 months ago) | :green_circle: | [spatie/laravel-csp](https://github.com/spatie/laravel-csp) |
 | `2026-02-28T04:09:41Z` (1 months ago) | :green_circle: | [google/csp-evaluator](https://github.com/google/csp-evaluator) |
 | `2026-03-01T00:31:26Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
 | `2026-03-05T23:40:36Z` (0 months ago) | :green_circle: | [bepsvpt/secure-headers](https://github.com/bepsvpt/secure-headers) |
