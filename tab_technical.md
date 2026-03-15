@@ -66,8 +66,8 @@ tags: headers
 
 | Library | Description | Ref |
 | --- | --- | --- |
-| **SecureHeaders** | A PHP class aiming to make the use of browser security features more accessible. | [👩‍💻](https://github.com/aidantwoods/SecureHeaders) |
 | **secure-headers** | PHP Secure Headers for Laravel and non-Laravel projects. | [👩‍💻](https://github.com/bepsvpt/secure-headers) |
+| **laravel-csp** | Package to set content security policy headers in a Laravel app. | [👩‍💻](https://github.com/spatie/laravel-csp) |
 
 ### NodeJS
 
