@@ -146,21 +146,30 @@ $ venom run --var="target_site=https://mozilla.org" --var="logout_url=/logout" t
 
 ## Syntax for adding HTTP response headers on different web or application servers
 
-Use the following steps to leverage an "LLM as a Service" (LLMaaS) to generate corresponding configuration code snippet for the wanted web or application server:
-
-1. Download this [file](https://owasp.org/www-project-secure-headers/ci/headers_add.json).
-2. Join the json file above to the chat.
-3. Use this user prompt in the chat to ask the generation:
+Use the following **user prompt** to leverage an "LLM as a Service" (LLMaaS) to generate corresponding configuration code snippet for the wanted web or application server:
 
 ```text
-Generate a configuration code snippet to set HTTP response security headers for the '[TARGET_APPLICATION_OR_WEB_SERVER_NAME]'. Use only the information from the json file attached. Only provide the configuration code snippet. The configuration must overwrite any existing value for an HTTP response security header present into the json file attached.
+Generate the configuration code for the "[TARGET_APPLICATION_OR_WEB_SERVER_NAME]" server to set HTTP response security headers recommended by the OWASP Secure Headers Project (project website is "https://owasp.org/www-project-secure-headers/").
+
+The list of HTTP response security headers recommended is available in a JSON file located here "https://raw.githubusercontent.com/OWASP/www-project-secure-headers/refs/heads/master/ci/headers_add.json".
+
+Requirements:
+- Parse the JSON file and extract all headers and their recommended values.
+- Preserve header values exactly as defined in the JSON.
+- Ensure the configuration overwrites any existing header values.
+- Add comments indicating the purpose of each header.
+- Do not include explanatory text outside the configuration block.
 ```
 
-🔬 The user prompt proposed was tested against [Google GEMINI](https://gemini.google.com/) model **2.5 Flash** and the generated configuration code was submitted to [OpenAI ChatGPT](https://chatgpt.com/) model **ChatGPT** to indicates if it was valid for the intended web or application server. The following value for the `[TARGET_APPLICATION_OR_WEB_SERVER_NAME]` placeholder were used:
+🔬 The user prompt proposed was tested against the following model:
 
-* `apache web server`.
-* `nginx web server`.
-* `lighttpd web server`.
-* `litespeed web server`.
-* `caddy web server`.
-* `iis web server`.
+* Google Gemini 3 Flash.
+* OpenAI ChatGPT GPT-5.3.
+* Anthropic Claude Sonnet 4.6.
+* Mistral AI Large.
+
+💡 The following value for the `[TARGET_APPLICATION_OR_WEB_SERVER_NAME]` placeholder can be used:
+
+* `apache web`.
+* `nginx`.
+* `iis`.
