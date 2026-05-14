@@ -168,6 +168,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 |  X-Joomla-Version |  `3.9.25`  | Indicate that the CMS [Joomla](https://www.joomla.org/) is used as well as the version used.  |
 |  X-Backside-Transport |  `OK OK`  | Indicate the presence of the products [IBM WebSphere DataPower](https://www.ibm.com/products/datapower-gateway) in the call flow. |
 |  [X-Woodpecker-Version](https://github.com/woodpecker-ci/woodpecker/blob/main/server/router/middleware/version.go) |  `2.7.0`  | Indicate the version of the products [Woodpecker CI](https://woodpecker-ci.org/) used. |
+|  X-Gitlab-Meta |  `{"correlation_id":"01KR...","version":"1"}`  | Indicate that the flow has involved an instance of the [GitLab](https://gitlab.com/) source code management software. |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
