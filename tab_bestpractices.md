@@ -77,9 +77,19 @@ This section provides a collection of HTTP response headers to remove, when poss
 
 📖 When possible, a reference link about the documentation of the header is provided.
 
-🚩 The response header `Content-Type` can sometimes discloses the web framework used. It is the case for the following ones:
+🚩 The response header [Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Type) can sometimes disclose the web framework used. It is the case for the following ones:
 
 * [Spring Boot Actuator REST API](https://docs.spring.io/spring-boot/api/rest/actuator/auditevents.html): `Content-Type: application/vnd.spring-boot.actuator.v3+json`.
+* For the Spring Boot case above, ensure to update the response header `Content-Type` with the value `application/json`.
+
+🚩 The response header [WWW-Authenticate](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/WWW-Authenticate) can sometimes disclose the software requiring authentication:
+
+* Example of value for the response header `WWW-Authenticate` disclosing the software requiring authentication:
+  * `Basic realm="rocketmq"`
+  * `Basic realm="Prometheus Access"`
+  * `Basic realm="Karma Alertmanager UI"`
+  * `Basic realm="NETGEAR D7800`
+* Ensure to update the value of the attribute **[realm](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/WWW-Authenticate#realm)** to something generic like `RestrictedArea`.  
 
 💡 Content of the table below is also provided, as JSON, via this [file](https://github.com/OWASP/www-project-secure-headers/blob/master/ci/headers_remove.json) (automatically updated).
 
