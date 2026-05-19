@@ -169,6 +169,15 @@ This section provides a collection of HTTP response headers to remove, when poss
 |  X-Backside-Transport |  `OK OK`  | Indicate the presence of the products [IBM WebSphere DataPower](https://www.ibm.com/products/datapower-gateway) in the call flow. |
 |  [X-Woodpecker-Version](https://github.com/woodpecker-ci/woodpecker/blob/main/server/router/middleware/version.go) |  `2.7.0`  | Indicate the version of the products [Woodpecker CI](https://woodpecker-ci.org/) used. |
 |  X-Gitlab-Meta |  `{"correlation_id":"01KR...","version":"1"}`  | Indicate that the flow has involved an instance of the [GitLab](https://gitlab.com/) source code management software. |
+| [X-Kong-Proxy-Latency](https://developer.konghq.com/gateway/logs/) | `4` | Indicate that the flow has involved an instance of the API gateway software from the company named [Kong](https://konghq.com/products/kong-gateway). |
+| [X-Kong-Upstream-Latency](https://developer.konghq.com/gateway/logs/) | `12` | Indicate that the flow has involved an instance of the API gateway software from the company named [Kong](https://konghq.com/products/kong-gateway). |
+| [X-Kong-Response-Latency](https://developer.konghq.com/gateway/logs/) | `8` | Indicate that the flow has involved an instance of the API gateway software from the company named [Kong](https://konghq.com/products/kong-gateway). |
+| [X-Kong-Admin-Latency](https://developer.konghq.com/gateway/logs/) | `9` | Indicate that the flow has involved an instance of the API gateway software from the company named [Kong](https://konghq.com/products/kong-gateway). |
+| [X-Kong-Upstream-Status](https://developer.konghq.com/gateway/logs/) | `200` | Indicate that the flow has involved an instance of the API gateway software from the company named [Kong](https://konghq.com/products/kong-gateway). |
+| [X-Kong-Request-Id](https://developer.konghq.com/gateway/logs/) | `125cc1e1-c72a-4ea0-b9ff-93849847e40c` | Indicate that the flow has involved an instance of the API gateway software from the company named [Kong](https://konghq.com/products/kong-gateway). |
+| [X-Kong-Total-Latency](https://developer.konghq.com/gateway/logs/) | `100` | Indicate that the flow has involved an instance of the API gateway software from the company named [Kong](https://konghq.com/products/kong-gateway). |
+| [X-Kong-Third-Party-Latency](https://developer.konghq.com/gateway/logs/) | `46` | Indicate that the flow has involved an instance of the API gateway software from the company named [Kong](https://konghq.com/products/kong-gateway). |
+| [X-Kong-Client-Latency](https://developer.konghq.com/gateway/logs/) | `50` | Indicate that the flow has involved an instance of the API gateway software from the company named [Kong](https://konghq.com/products/kong-gateway). |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
