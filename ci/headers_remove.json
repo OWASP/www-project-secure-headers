@@ -1,5 +1,5 @@
 {
-  "last_update_utc": "2026-05-14 11:49:47",
+  "last_update_utc": "2026-05-19 11:47:03",
   "headers": [
     "$wsep",
     "Host-Header",
@@ -40,6 +40,15 @@
     "X-Gitlab-Meta",
     "X-Jitsi-Release",
     "X-Joomla-Version",
+    "X-Kong-Admin-Latency",
+    "X-Kong-Client-Latency",
+    "X-Kong-Proxy-Latency",
+    "X-Kong-Request-Id",
+    "X-Kong-Response-Latency",
+    "X-Kong-Third-Party-Latency",
+    "X-Kong-Total-Latency",
+    "X-Kong-Upstream-Latency",
+    "X-Kong-Upstream-Status",
     "X-Kubernetes-PF-FlowSchema-UI",
     "X-Kubernetes-PF-PriorityLevel-UID",
     "X-LiteSpeed-Cache",
