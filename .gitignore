@@ -1,7 +1,10 @@
 __pycache__
 *.pyc
 env
+venv
 _site/
 # File used as temporary workspace
 scratchpad.md
 save-migration-work.ps1
+.vscode/
+.DS_Store
