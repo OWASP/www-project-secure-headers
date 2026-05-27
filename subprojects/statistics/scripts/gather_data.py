@@ -22,7 +22,7 @@ OSHP_SECURITY_HEADERS_FILE_LOCATION = (
     "refs/heads/master/ci/headers_add.json"
 )
 OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION = "oshp_headers_extra_to_include.txt"
-NUMBER_OF_DOMAINS_TO_TAKE = 30000
+NUMBER_OF_DOMAINS_TO_TAKE = 6000
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -34,7 +34,7 @@ DATA_DB_FILE = f"{DATA_FOLDER}/data.db"
 CSV_INPUT_FILE = f"{DATA_FOLDER}/input.csv"
 CHECKPOINT_FILE = f"{DATA_FOLDER}/checkpoint.json"
 
-CONCURRENCY = 300
+CONCURRENCY = 200
 TIMEOUT_TOTAL = 10      # Hard time-limit over the full lifecycle of one request
 TIMEOUT_CONNECT = 5     # means if a TCP connection to the server isn't established within 5 seconds, abort.
 
@@ -218,9 +218,6 @@ async def fetch_headers(
         result = await _aiohttp_fetch(session, f"https://{domain}", security_headers, TIMEOUT_CONNECT)
 
         if result is None:
-            result = await _aiohttp_fetch(session, f"https://www.{domain}", security_headers, TIMEOUT_CONNECT)
-
-        if result is None:
             result = await _aiohttp_fetch(session, f"http://{domain}", security_headers, TIMEOUT_CONNECT)
 
         if result:
@@ -304,7 +301,10 @@ async def main():
     connector = aiohttp.TCPConnector(
         limit=CONCURRENCY,
         limit_per_host=3,
-        resolver=aiohttp.AsyncResolver(),
+        # Explicit nameservers to bypass the GitHub Actions runner's internal DNS
+        # which gets rate-limited under high concurrency and produces
+        # "Timeout while contacting DNS servers".
+        resolver=aiohttp.AsyncResolver(nameservers=["8.8.8.8", "1.1.1.1"]),
         ttl_dns_cache=300,
         enable_cleanup_closed=True,
     )
@@ -319,7 +319,6 @@ async def main():
 
         print(f"[+] Loading domains from {CSV_INPUT_FILE}...")
         all_domains = load_domains(CSV_INPUT_FILE, NUMBER_OF_DOMAINS_TO_TAKE)
-        # all_domains = ['mcmaster.ca']
         total_domains = len(all_domains)
         print(f"[+] Loaded {total_domains} domains.")
 
