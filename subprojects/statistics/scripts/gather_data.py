@@ -7,14 +7,13 @@ and checkpoint/resume support so interrupted GitHub Actions jobs can continue
 from where they left off.
 """
 import asyncio
-import aiohttp
-import sqlite3
-import ssl
 import json
 import os
 import signal
-import sys
+import sqlite3
 import time
+
+import aiohttp
 
 # -------- CONSTANTS ---------
 
@@ -194,12 +193,12 @@ async def _try_fetch(
     try:
         async with session.get(url, timeout=timeout, allow_redirects=True, ssl=False) as resp:
             return [
-                (header.lower(), value)
+                (header.lower(), value.encode("utf-8", errors="ignore").decode("utf-8"))
                 for header, value in resp.headers.items()
                 if header.lower() in security_headers
             ]
     except Exception as e:
-        print(f"[-] Error: URL - {url} message: \n {e}")
+        print(f"[-] Error: URL - {url} message: \n {str(e)}")
         return None
 
 
@@ -340,7 +339,7 @@ async def main():
 
     record_count = get_record_count()
     elapsed_min = round((time.time() - start_time) / 60, 1)
-    print(f"\n[+] Data gathered:")
+    print("\n[+] Data gathered:")
     print(f"    Records: {record_count}")
     print(f"    Domains processed: {final_index}/{total_domains}")
     print(f"    Time: {elapsed_min} minutes")
