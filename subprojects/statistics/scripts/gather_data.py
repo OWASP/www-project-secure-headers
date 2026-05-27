@@ -303,7 +303,7 @@ async def main():
     connector = aiohttp.TCPConnector(
         limit=CONCURRENCY,
         limit_per_host=3,
-        # Explicit nameservers to bypass the GitHub Actions runner's internal DNS
+        # Explicit nameservers over the GitHub Actions runner's internal DNS
         # which gets rate-limited under high concurrency and produces
         # "Timeout while contacting DNS servers".
         resolver=aiohttp.AsyncResolver(nameservers=NAMESERVERS),
