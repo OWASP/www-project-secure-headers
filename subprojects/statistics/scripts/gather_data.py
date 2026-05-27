@@ -22,7 +22,7 @@ OSHP_SECURITY_HEADERS_FILE_LOCATION = (
     "refs/heads/master/ci/headers_add.json"
 )
 OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION = "oshp_headers_extra_to_include.txt"
-NUMBER_OF_DOMAINS_TO_TAKE = 6000
+NUMBER_OF_DOMAINS_TO_TAKE = 250000
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -33,6 +33,8 @@ DATA_FOLDER = "../data"
 DATA_DB_FILE = f"{DATA_FOLDER}/data.db"
 CSV_INPUT_FILE = f"{DATA_FOLDER}/input.csv"
 CHECKPOINT_FILE = f"{DATA_FOLDER}/checkpoint.json"
+
+NAMESERVERS=["8.8.8.8", "1.1.1.1"]
 
 CONCURRENCY = 200
 TIMEOUT_TOTAL = 10      # Hard time-limit over the full lifecycle of one request
@@ -304,7 +306,7 @@ async def main():
         # Explicit nameservers to bypass the GitHub Actions runner's internal DNS
         # which gets rate-limited under high concurrency and produces
         # "Timeout while contacting DNS servers".
-        resolver=aiohttp.AsyncResolver(nameservers=["8.8.8.8", "1.1.1.1"]),
+        resolver=aiohttp.AsyncResolver(nameservers=NAMESERVERS),
         ttl_dns_cache=300,
         enable_cleanup_closed=True,
     )
