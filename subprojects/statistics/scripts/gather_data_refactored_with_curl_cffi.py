@@ -14,6 +14,7 @@ import sqlite3
 import time
 
 import aiohttp
+from curl_cffi.requests import AsyncSession as CurlSession
 
 # -------- CONSTANTS ---------
 
@@ -22,7 +23,7 @@ OSHP_SECURITY_HEADERS_FILE_LOCATION = (
     "refs/heads/master/ci/headers_add.json"
 )
 OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION = "oshp_headers_extra_to_include.txt"
-NUMBER_OF_DOMAINS_TO_TAKE = 300000
+NUMBER_OF_DOMAINS_TO_TAKE = 2500
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -179,16 +180,13 @@ def load_domains(filepath: str, limit: int) -> list:
     return domains
 
 
-async def _try_fetch(
+async def _fetch_standard_tls(
     session: aiohttp.ClientSession,
     url: str,
     security_headers: set,
     connect_timeout: int,
 ) -> list | None:
-    """
-    GET *url* and return a list of (header_name, value) pairs for any
-    security headers present.  Returns None on any network/HTTP error.
-    """
+    """aiohttp fetch using Python's standard TLS stack. Returns None on any error."""
     timeout = aiohttp.ClientTimeout(total=TIMEOUT_TOTAL, connect=connect_timeout)
     try:
         async with session.get(url, timeout=timeout, allow_redirects=True, ssl=False) as resp:
@@ -198,26 +196,55 @@ async def _try_fetch(
                 if header.lower() in security_headers
             ]
     except Exception as e:
-        print(f"[-] Error for URL '{url}' with message:\n{str(e)}")
+        print(f"[-] Error for URL '{url}' with message: {str(e)}")
+        return None
+
+
+async def _fetch_browser_tls(
+    curl_session: CurlSession,
+    url: str,
+    security_headers: set,
+) -> list | None:
+    """
+    curl_cffi fallback that impersonates Chrome's TLS fingerprint (JA3/JA4).
+    Used when _fetch_standard_tls fails, sites like Adobe that silently blocks Python's OpenSSL handshake.
+    """
+    try:
+        resp = await curl_session.get(url, timeout=TIMEOUT_TOTAL, allow_redirects=True)
+        return [
+            (header.lower(), value.encode("utf-8", errors="ignore").decode("utf-8"))
+            for header, value in resp.headers.items()
+            if header.lower() in security_headers
+        ]
+    except Exception:
         return None
 
 
 async def fetch_headers(
     session: aiohttp.ClientSession,
+    curl_session: CurlSession,
     semaphore: asyncio.Semaphore,
     domain: str,
     security_headers: set,
 ) -> list:
     """
-    Fetch security headers for *domain*, trying HTTPS first then plain HTTP.
-    Returns a list of (domain, header_name, header_value) tuples.
-    Yields a single (domain, None, None) entry when the site is unreachable
-    or exposes no tracked headers.
+    Fetch security headers for *domain*.
+    Try order: standard TLS (aiohttp) → browser-impersonated TLS (curl_cffi) → plain HTTP.
+    Returns a list of (domain, header_name, header_value) tuples, or
+    [(domain, None, None)] when the site is unreachable or exposes no tracked headers.
     """
     async with semaphore:
-        result = await _try_fetch(session, f"https://{domain}", security_headers, TIMEOUT_CONNECT)
+        result = await _fetch_standard_tls(session, f"https://www.{domain}", security_headers, TIMEOUT_CONNECT)
+
         if result is None:
-            result = await _try_fetch(session, f"http://{domain}", security_headers, TIMEOUT_CONNECT)
+            result = await _fetch_browser_tls(curl_session, f"https://{domain}", security_headers)
+
+        if result is None:
+            result = await _fetch_browser_tls(curl_session, f"https://{domain}", security_headers)
+
+        if result is None:
+            result = await _fetch_standard_tls(session, f"http://{domain}", security_headers, TIMEOUT_CONNECT)
+
         if result:
             return [(domain, name, value) for name, value in result]
         return [(domain, None, None)]
@@ -225,6 +252,7 @@ async def fetch_headers(
 
 async def process_domains(
     session: aiohttp.ClientSession,
+    curl_session: CurlSession,
     domains: list,
     resume_index: int,
     total_domains: int,
@@ -255,7 +283,7 @@ async def process_domains(
         batch_end = batch_start + BATCH_SIZE
         batch = domains[batch_start:batch_end]
 
-        tasks = [fetch_headers(session, semaphore, domain, security_headers) for domain in batch]
+        tasks = [fetch_headers(session, curl_session, semaphore, domain, security_headers) for domain in batch]
         results = await asyncio.gather(*tasks, return_exceptions=True)
 
         for result in results:
@@ -304,10 +332,10 @@ async def main():
         enable_cleanup_closed=True,
     )
 
-    async with aiohttp.ClientSession(connector=connector, 
+    async with aiohttp.ClientSession(connector=connector,
         headers=REQ_HEADERS,
         max_field_size=65536,   # default is 8190; Twitter's CSP alone exceeds that :)
-    ) as session:
+    ) as session, CurlSession(impersonate="chrome") as curl_session:
         print("[+] Loading OSHP security headers list...")
         security_headers = await load_security_headers(session)
         print(f"    Headers: {security_headers}")
@@ -331,7 +359,7 @@ async def main():
         print(f"[+] Starting work: {len(domains)} domains to process, concurrency={CONCURRENCY}")
 
         processed_count = await process_domains(
-            session, domains, resume_index, total_domains, security_headers, start_time
+            session, curl_session, domains, resume_index, total_domains, security_headers, start_time
         )
 
         final_index = resume_index + processed_count
