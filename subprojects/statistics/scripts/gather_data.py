@@ -198,7 +198,7 @@ async def _try_fetch(
                 if header.lower() in security_headers
             ]
     except Exception as e:
-        print(f"[-] Error: URL - {url} message: \n {str(e)}")
+        print(f"[-] Error for URL '{url}' with message:\n{str(e)}")
         return None
 
 
