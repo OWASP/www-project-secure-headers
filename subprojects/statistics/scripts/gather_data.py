@@ -22,7 +22,7 @@ OSHP_SECURITY_HEADERS_FILE_LOCATION = (
     "refs/heads/master/ci/headers_add.json"
 )
 OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION = "oshp_headers_extra_to_include.txt"
-NUMBER_OF_DOMAINS_TO_TAKE = 1000
+NUMBER_OF_DOMAINS_TO_TAKE = 250000
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
