@@ -34,11 +34,17 @@ DATA_DB_FILE = f"{DATA_FOLDER}/data.db"
 CSV_INPUT_FILE = f"{DATA_FOLDER}/input.csv"
 CHECKPOINT_FILE = f"{DATA_FOLDER}/checkpoint.json"
 
-NAMESERVERS=["8.8.8.8", "1.1.1.1"]
+NAMESERVERS = ["8.8.8.8", "1.1.1.1", "9.9.9.9", "208.67.222.222"]
 
 CONCURRENCY = 200
-TIMEOUT_TOTAL = 10      # Hard time-limit over the full lifecycle of one request
-TIMEOUT_CONNECT = 5     # means if a TCP connection to the server isn't established within 5 seconds, abort.
+TIMEOUT_CONNECT = 5     # TCP handshake timeout for HTTPS attempts
+TIMEOUT_READ = 10       # Socket read timeout (response body) for HTTPS attempts
+# HTTP fallback uses shorter timeouts: if HTTPS already failed, the site is likely slow/blocked
+TIMEOUT_HTTP_FALLBACK_CONNECT = 3
+TIMEOUT_HTTP_FALLBACK_READ = 7
+
+RATE_LIMIT_PAUSE_DOMAIN_LIMIT = 10000   # pause briefly every N domains to let rate-limited IPs cool down
+RATE_LIMIT_PAUSE_SECS = 1.0
 
 BATCH_SIZE = 500
 CHECKPOINT_INTERVAL = 10000   # persist checkpoint every N domains
@@ -186,12 +192,17 @@ async def _aiohttp_fetch(
     url: str,
     security_headers: set,
     connect_timeout: int,
+    read_timeout: int,
 ) -> list | None:
     """
     GET *url* and return a list of (header_name, value) pairs for any
     security headers present.  Returns None on any network/HTTP error.
+
+    Uses sock_connect (not connect) so the timeout applies only to the TCP
+    handshake — not to time spent waiting for a free slot in the connection
+    pool (aiohttp issue #10313).
     """
-    timeout = aiohttp.ClientTimeout(total=TIMEOUT_TOTAL, connect=connect_timeout)
+    timeout = aiohttp.ClientTimeout(sock_connect=connect_timeout, sock_read=read_timeout)
     try:
         async with session.get(url, timeout=timeout, allow_redirects=True, ssl=False) as resp:
             return [
@@ -217,10 +228,10 @@ async def fetch_headers(
     or exposes no tracked headers.
     """
     async with semaphore:
-        result = await _aiohttp_fetch(session, f"https://{domain}", security_headers, TIMEOUT_CONNECT)
+        result = await _aiohttp_fetch(session, f"https://{domain}", security_headers, TIMEOUT_CONNECT, TIMEOUT_READ)
 
         if result is None:
-            result = await _aiohttp_fetch(session, f"http://{domain}", security_headers, TIMEOUT_CONNECT)
+            result = await _aiohttp_fetch(session, f"http://{domain}", security_headers, TIMEOUT_HTTP_FALLBACK_CONNECT, TIMEOUT_HTTP_FALLBACK_READ)
 
         if result:
             return [(domain, name, value) for name, value in result]
@@ -277,7 +288,12 @@ async def process_domains(
         if domains_since_checkpoint >= CHECKPOINT_INTERVAL:
             save_checkpoint(resume_index + processed_count)
             domains_since_checkpoint = 0
-        
+
+        # Brief pause every N domains so that servers or CDNs that are
+        # temporarily rate-limiting this runner's IP have a chance to reset.
+        if processed_count % RATE_LIMIT_PAUSE_DOMAIN_LIMIT < BATCH_SIZE and processed_count > 0:
+            await asyncio.sleep(RATE_LIMIT_PAUSE_SECS)
+
         # Print progress at every PROGRESS_INTERVAL boundary.
         if processed_count % PROGRESS_INTERVAL < BATCH_SIZE:
             elapsed = time.time() - start_time
@@ -306,9 +322,15 @@ async def main():
         # Explicit nameservers over the GitHub Actions runner's internal DNS
         # which gets rate-limited under high concurrency and produces
         # "Timeout while contacting DNS servers".
-        resolver=aiohttp.AsyncResolver(nameservers=NAMESERVERS),
+        # rotate=True enables c-ares round-robin across all servers (default is
+        # always-first-server with failover only on failure).
+        resolver=aiohttp.AsyncResolver(nameservers=NAMESERVERS, rotate=True),
         ttl_dns_cache=300,
         enable_cleanup_closed=True,
+        # Each domain is visited once, so keep-alive connections are never
+        # reused. force_close prevents timed-out connections from leaving
+        # "sticky" slots in the pool (aiohttp issue #9670).
+        force_close=True,
     )
 
     async with aiohttp.ClientSession(connector=connector,
