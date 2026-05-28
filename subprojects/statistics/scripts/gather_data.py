@@ -22,7 +22,7 @@ OSHP_SECURITY_HEADERS_FILE_LOCATION = (
     "refs/heads/master/ci/headers_add.json"
 )
 OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION = "oshp_headers_extra_to_include.txt"
-NUMBER_OF_DOMAINS_TO_TAKE = 250000
+NUMBER_OF_DOMAINS_TO_TAKE = 1000
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -37,11 +37,17 @@ CHECKPOINT_FILE = f"{DATA_FOLDER}/checkpoint.json"
 NAMESERVERS = ["8.8.8.8", "1.1.1.1", "9.9.9.9", "208.67.222.222"]
 
 CONCURRENCY = 200
-TIMEOUT_CONNECT = 5     # TCP handshake timeout for HTTPS attempts
-TIMEOUT_READ = 10       # Socket read timeout (response body) for HTTPS attempts
-# HTTP fallback uses shorter timeouts: if HTTPS already failed, the site is likely slow/blocked
+# sock_connect = TCP handshake only (excludes pool-queue wait, unlike 'connect').
+# sock_read    = per-chunk idle timeout on the socket.
+# total        = hard ceiling on the whole request (DNS + TCP + TLS + body).
+#                Without total, a hanging DNS lookup holds the semaphore slot indefinitely.
+TIMEOUT_CONNECT = 5
+TIMEOUT_READ = 10
+TIMEOUT_TOTAL = 20
+# HTTP fallback uses shorter budgets: HTTPS already burned up to 20 s.
 TIMEOUT_HTTP_FALLBACK_CONNECT = 3
 TIMEOUT_HTTP_FALLBACK_READ = 7
+TIMEOUT_HTTP_FALLBACK_TOTAL = 15
 
 RATE_LIMIT_PAUSE_DOMAIN_LIMIT = 10000   # pause briefly every N domains to let rate-limited IPs cool down
 RATE_LIMIT_PAUSE_SECS = 1.0
@@ -193,6 +199,7 @@ async def _aiohttp_fetch(
     security_headers: set,
     connect_timeout: int,
     read_timeout: int,
+    total_timeout: int,
 ) -> list | None:
     """
     GET *url* and return a list of (header_name, value) pairs for any
@@ -202,7 +209,7 @@ async def _aiohttp_fetch(
     handshake — not to time spent waiting for a free slot in the connection
     pool (aiohttp issue #10313).
     """
-    timeout = aiohttp.ClientTimeout(sock_connect=connect_timeout, sock_read=read_timeout)
+    timeout = aiohttp.ClientTimeout(total=total_timeout, sock_connect=connect_timeout, sock_read=read_timeout)
     try:
         async with session.get(url, timeout=timeout, allow_redirects=True, ssl=False) as resp:
             return [
@@ -228,10 +235,10 @@ async def fetch_headers(
     or exposes no tracked headers.
     """
     async with semaphore:
-        result = await _aiohttp_fetch(session, f"https://{domain}", security_headers, TIMEOUT_CONNECT, TIMEOUT_READ)
+        result = await _aiohttp_fetch(session, f"https://{domain}", security_headers, TIMEOUT_CONNECT, TIMEOUT_READ, TIMEOUT_TOTAL)
 
         if result is None:
-            result = await _aiohttp_fetch(session, f"http://{domain}", security_headers, TIMEOUT_HTTP_FALLBACK_CONNECT, TIMEOUT_HTTP_FALLBACK_READ)
+            result = await _aiohttp_fetch(session, f"http://{domain}", security_headers, TIMEOUT_HTTP_FALLBACK_CONNECT, TIMEOUT_HTTP_FALLBACK_READ, TIMEOUT_HTTP_FALLBACK_TOTAL)
 
         if result:
             return [(domain, name, value) for name, value in result]
