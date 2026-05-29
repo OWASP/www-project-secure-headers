@@ -37,20 +37,23 @@ CHECKPOINT_FILE = f"{DATA_FOLDER}/checkpoint.json"
 NAMESERVERS = ["8.8.8.8", "1.1.1.1", "9.9.9.9", "208.67.222.222"]
 
 CONCURRENCY = 200
-# sock_connect = TCP handshake only (excludes pool-queue wait, unlike 'connect').
-# sock_read    = per-chunk idle timeout on the socket.
-# total        = hard ceiling on the whole request (DNS + TCP + TLS + body).
-#                Without total, a hanging DNS lookup holds the semaphore slot indefinitely.
-TIMEOUT_CONNECT = 5
-TIMEOUT_READ = 10
-TIMEOUT_TOTAL = 20
-# HTTP fallback uses shorter budgets: HTTPS already burned up to 20 s.
-TIMEOUT_HTTP_FALLBACK_CONNECT = 3
-TIMEOUT_HTTP_FALLBACK_READ = 7
-TIMEOUT_HTTP_FALLBACK_TOTAL = 15
 
-RATE_LIMIT_PAUSE_DOMAIN_LIMIT = 10000   # pause briefly every N domains to let rate-limited IPs cool down
-RATE_LIMIT_PAUSE_SECS = 1.0
+# HTTPS timeouts. sock_connect covers only the TCP handshake, so requests
+# waiting for a free pool slot don't burn the budget (aiohttp issue #10313).
+# The total timeout is still needed as a hard ceiling over DNS + TLS + body.
+TIMEOUT_CONNECT = 5    # TCP handshake
+TIMEOUT_READ    = 10   # idle time between response chunks
+TIMEOUT_TOTAL   = 20   # DNS + TCP + TLS + body combined
+
+# Simliar to HTTPS timeouts but with a shorter budget for HTTP. HTTPS already consumed a lot of time.
+TIMEOUT_HTTP_FALLBACK_CONNECT = 3
+TIMEOUT_HTTP_FALLBACK_READ    = 7
+TIMEOUT_HTTP_FALLBACK_TOTAL   = 15
+
+# After every N domains, pause briefly so any temporarily rate-limited IPs
+# (CDNs recognising the GHA runner) have a window to reset.
+RATE_LIMIT_PAUSE_DOMAIN_LIMIT = 10000
+RATE_LIMIT_PAUSE_SECS         = 5.0
 
 BATCH_SIZE = 500
 CHECKPOINT_INTERVAL = 10000   # persist checkpoint every N domains
@@ -327,8 +330,7 @@ async def main():
         limit=CONCURRENCY,
         limit_per_host=3,
         # Explicit nameservers over the GitHub Actions runner's internal DNS
-        # which gets rate-limited under high concurrency and produces
-        # "Timeout while contacting DNS servers".
+        # which gets rate-limited under high concurrency.
         # rotate=True enables c-ares round-robin across all servers (default is
         # always-first-server with failover only on failure).
         resolver=aiohttp.AsyncResolver(nameservers=NAMESERVERS, rotate=True),
