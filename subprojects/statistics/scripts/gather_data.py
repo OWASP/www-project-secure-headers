@@ -34,6 +34,14 @@ DATA_DB_FILE = f"{DATA_FOLDER}/data.db"
 CSV_INPUT_FILE = f"{DATA_FOLDER}/input.csv"
 CHECKPOINT_FILE = f"{DATA_FOLDER}/checkpoint.json"
 
+# Explicit nameservers with round-robin rotation nameservers replace 
+# the GHA runner's internal DNS, which gets rate-limited and produces 
+# Timeout while contacting DNS servers.
+#
+# 8.8.8.8 -> Google Public DNS. One of the most widely used public DNS services.
+# 1.1.1.1 -> Cloudflare DNS. Known for speed and privacy-focused policies.
+# 9.9.9.9 -> Quad9 DNS. Includes threat intelligence feeds to block many malicious domains.
+# 208.67.222.222 -> OpenDNS (owned by Cisco). Offers filtering and security features.
 NAMESERVERS = ["8.8.8.8", "1.1.1.1", "9.9.9.9", "208.67.222.222"]
 
 CONCURRENCY = 200
