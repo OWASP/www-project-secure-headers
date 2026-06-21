@@ -10,7 +10,7 @@
 #   https://mermaid.js.org/config/theming.html
 #########################################################################
 # Constants
-MERMAID_CONFIG_FILE_LOCATION="$(pwd)/../ci/tab_stats_mermaid_config.json"
+MERMAID_CONFIG_FILE_LOCATION="$(pwd)/tab_stats_mermaid_config.json"
 IMAGE_FOLDER_LOCATION="../mainsite/assets/tab_stats_generated_images"
 # Generate images
 # We use aa-exec since Ubuntu 24.04's AppArmor profile blocks the use of puppeteer otherwise
