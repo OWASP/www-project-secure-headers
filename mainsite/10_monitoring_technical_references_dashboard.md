@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-xxxxd
-=======
-[Index](00_index.md) | [Response Headers](01_headers.md) | [Browser Support](02_browser_support.md) | [Best Practices](03_best_practices.md) | [Technical Resources](04_technical_resources.md) | [Code Snippets](05_code_snippets.md) | [Miscellaneous](06_misc.md) | [Statistics](07_statistics.md) | [Case Studies](08_case_studies.md) | [Logo](09_logo.md) | [Monitoring Technical Teferences Dashboard](10_monitoring_technical_references_dashboard.md)
+[Index](00_index.md) | [Response Headers](01_headers.md) | [Browser Support](02_browser_support.md) | [Best Practices](03_best_practices.md) | [Technical Resources](04_technical_resources.md) | [Code Snippets](05_code_snippets.md) | [Miscellaneous](06_misc.md) | [Statistics](07_statistics.md) | [Case Studies](08_case_studies.md) | [Logo](09_logo.md) | [Monitoring Technical References Dashboard](10_monitoring_technical_references_dashboard.md)
 
 ---
 
 # Technical References Dashboard
 
-> 📅 Last verification (UTC): 2026-06-21 07:28:05
+> 📅 Last verification (UTC): 2026-06-21 07:38:03
 
 ## GitHub repositories health status
 
@@ -46,4 +43,3 @@ Project reaching the :red_circle: status **are removed**.
 | `2026-06-20T16:34:57Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
 | `2026-06-20T20:45:59Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
->>>>>>> e266ac47e3dd5aa378a72f69b3126f2f139dc177
