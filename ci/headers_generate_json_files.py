@@ -20,7 +20,7 @@ import re
 from datetime import datetime, timezone
 
 # Constants
-SOURCE_MD_FILE = "../mainsite/03_bestpractices.md"
+SOURCE_MD_FILE = "../mainsite/03_best_practices.md"
 HEADERS_TO_ADD_JSON_FILE = "headers_add.json"
 HEADERS_TO_REMOVE_JSON_FILE = "headers_remove.json"
 HEADERS_TO_ADD_TABLE_EXTRACTION_MARKERS = ("<!-- HEADERS_ADD_TABLE_START -->", "<!-- HEADERS_ADD_TABLE_END -->")
