@@ -23,7 +23,8 @@ DATA_DB_FILE = "/tmp/data.db"
 OSHP_SECURITY_HEADERS_FILE_lOCATION = "headers_add.json"
 OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION = "/tmp/oshp_headers_extra_to_include.txt"
 MD_FILE = "../mainsite/07_statistics.md"
-IMAGE_FOLDER_LOCATION = "assets/tab_stats_generated_images"
+IMAGE_FOLDER_LOCATION = "../mainsite/assets/tab_stats_generated_images"
+ASSETS_FOLDER_LOCATION = IMAGE_FOLDER_LOCATION.replace("../mainsite/", "")
 TAB_MD_TEMPLATE = f"""{TOP_NAVIGATION_LINKS}
 
 ---
@@ -40,7 +41,7 @@ SECTION_TEMPLATE = f"""
 
 %s
 
-![%s]({IMAGE_FOLDER_LOCATION}/%s)
+![%s]({ASSETS_FOLDER_LOCATION}/%s)
 """
 SECTION_TEMPLATE_NO_MERMAID_CODE = """
 ## %s
