@@ -25,7 +25,6 @@ https://github.com/OWASP/www-project-secure-headers/tree/master/mainsite/01_head
 * [Cloud.gov](https://docs.cloud.gov/platform/management/headers/).
 * [Salesforce](https://help.salesforce.com/s/articleView?language=en_US&id=cc.b2c_declarative_security_via_http_headers.htm&type=5).
 * [Black Hills Information Security](https://www.blackhillsinfosec.com/fixing-content-security-policies-with-cloudflare-workers/).
-* [Progress](https://www.progress.com/documentation/sitefinity-cms/110/predefined-security-headers-in-http-response).
 * [Bloomreach](https://documentation.bloomreach.com/14/library/concepts/security/configure-security-response-headers.html).
 * [Tableau](https://help.tableau.com/current/server-linux/en-us/security_http_headers.htm).
 * [42Crunch](https://docs.42crunch.com/latest/content/extras/protection_security_headers.htm).

@@ -14,6 +14,7 @@
     "retryCount": 2,
     "aliveStatusCodes": [
         200,
+        202,
         403,
         429,
         500,
