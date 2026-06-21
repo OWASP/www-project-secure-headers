@@ -4,8 +4,6 @@
 
 ## Introduction
 
-> ⚠️ **IMPORTANT**: The OWASP Foundation has decided to migrate its content to a new CMS. As a result, OSHP content is frozen for the duration of the migration. You can find more information and explanations [here](https://github.com/OWASP/www-project-secure-headers/discussions/273).
-
 ![OSHP Logo](assets/images/oshp_logo.png)
 
 [![OWASP Production](https://img.shields.io/badge/owasp-production%20project-800080.svg)](https://www.owasp.org/projects)
@@ -18,11 +16,11 @@
 
 📚 The OWASP Secure Headers Project aim to provide elements about the following aspects regarding HTTP security headers:
 
-* Guidance about the recommended HTTP security headers that can be leveraged (**Best Practices** tab).
-* Guidance about the HTTP headers that should be removed (**Best Practices** tab).
+* Guidance about the recommended HTTP security headers that can be leveraged (**[best practices](03_best_practices.md)** section).
+* Guidance about the HTTP headers that should be removed (**[best practices](03_best_practices.md)** section).
 * [Tools](https://github.com/OWASP/www-project-secure-headers/tree/master/subprojects/validator) to validate an HTTP security header configuration.
-* Code libraries that can be leveraged to configure recommended HTTP security headers (**Technical Resources** tab).
-* [Statistics](https://github.com/OWASP/www-project-secure-headers/tree/master/subprojects/statistics) about usage of the recommended HTTP security headers (**Statistics** tab).
+* Code libraries that can be leveraged to configure recommended HTTP security headers (**[technical resources](04_technical_resources.md)** section).
+* [Statistics](https://github.com/OWASP/www-project-secure-headers/tree/master/subprojects/statistics) about usage of the recommended HTTP security headers (**[statistics](07_statistics.md)** section).
 
 📺 A presentation of the project is available on the following locations:
 
@@ -34,11 +32,11 @@
 
 📈 We provide statistics, updated every month, about HTTP response security headers usage mentioned by the OWASP Secure Headers Project:
 
-* They are available through [this subproject](https://github.com/OWASP/www-project-secure-headers/tree/master/subprojects/statistics) and the tab named **Statistics**.
+* They are available through [this subproject](https://github.com/OWASP/www-project-secure-headers/tree/master/subprojects/statistics) and the **[statistics](07_statistics.md)** section.
 
 ## Security headers usage validator
 
-✅ We provide a [venom](https://github.com/ovh/venom) tests suite to validate an HTTP security response header configuration against OWASP Secure Headers Project recommendation:
+✅ We provide a [venom](https://github.com/ovh/venom) tests suite to validate an HTTP security response header configuration against *OWASP Secure Headers Project* recommendation:
 
 * It is available through [this subproject](https://github.com/OWASP/www-project-secure-headers/tree/master/subprojects/validator).
 
@@ -53,14 +51,14 @@
 
 💡 Additionally, we provide this information as two JSON files to enable automation in the context of a provisioning workflow:
 
-* Collection of [HTTP response security headers to add](https://github.com/OWASP/www-project-secure-headers/blob/master/ci/headers_add.json).
-* Collection of [HTTP response headers to remove](https://github.com/OWASP/www-project-secure-headers/blob/master/ci/headers_remove.json).
+* Collection of [HTTP response security headers to add](../ci/headers_add.json).
+* Collection of [HTTP response headers to remove](../ci/headers_remove.json).
 
 📡 These json files are automatically updated.
 
 ## Technical references health dashboard
 
-📍 We automatically generate and monitor this **[dashboard](10_monitoring_technical_references_dashboard.md)** to identify any dead project referenced in the **Technical Resources** tab.
+📍 We automatically generate and monitor this **[dashboard](10_monitoring_technical_references_dashboard.md)** to identify any dead project referenced in the **[technical resources](04_technical_resources.md)** section.
 
 ## Discussions, information and roadmap
 
@@ -70,7 +68,7 @@
 
 ## Create a link to the OSHP site
 
-📖 This is documented into the **[Case Studies section](08_case_studies.md)**.
+📖 This is documented into the **[case studies](08_case_studies.md)** section.
 
 ## Project leaders
 
