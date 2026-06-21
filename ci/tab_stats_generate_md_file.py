@@ -15,6 +15,8 @@ from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
+from common import TOP_NAVIGATION_LINKS
+
 # Constants
 DEBUG = True
 DATA_DB_FILE = "/tmp/data.db"
@@ -22,7 +24,7 @@ OSHP_SECURITY_HEADERS_FILE_lOCATION = "headers_add.json"
 OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION = "/tmp/oshp_headers_extra_to_include.txt"
 MD_FILE = "../mainsite/07_statistics.md"
 IMAGE_FOLDER_LOCATION = "assets/tab_stats_generated_images"
-TAB_MD_TEMPLATE = """[Index](00_index.md) | [Response Headers](01_headers.md) | [Browser Support](02_browser_support.md) | [Best Practices](03_best_practices.md) | [Technical Resources](04_technical_resources.md) | [Code Snippets](05_code_snippets.md) | [Miscellaneous](06_misc.md) | [Statistics](07_statistics.md) | [Case Studies](08_case_studies.md) | [Logo](09_logo.md) | [Monitoring Technical Teferences Dashboard](10_monitoring_technical_references_dashboard.md)
+TAB_MD_TEMPLATE = f"""{TOP_NAVIGATION_LINKS}
 
 ---
 
