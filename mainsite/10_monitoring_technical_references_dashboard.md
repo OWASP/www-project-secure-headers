@@ -1,3 +1,6 @@
+[Index](00_index.md) | [Response Headers](01_headers.md) | [Browser Support](02_browser_support.md) | [Best Practices](03_best_practices.md) | [Technical Resources](04_technical_resources.md) | [Code Snippets](05_code_snippets.md) | [Miscellaneous](06_misc.md) | [Statistics](07_statistics.md) | [Case Studies](08_case_studies.md) | [Logo](09_logo.md) | [Monitoring Technical Teferences Dashboard](10_monitoring_technical_references_dashboard.md)
+
+---
 
 # Technical References Dashboard
 
@@ -39,4 +42,3 @@ Project reaching the :red_circle: status **are removed**.
 | `2026-06-12T13:33:04Z` (0 months ago) | :green_circle: | [mdn/mdn-http-observatory](https://github.com/mdn/mdn-http-observatory) |
 | `2026-06-13T00:59:43Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
 | `2026-06-13T20:02:35Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
-

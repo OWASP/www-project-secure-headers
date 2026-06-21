@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'tab_technical.md'
+      - 'mainsite/04_technical_resources.md'
   schedule:
       - cron: '0 0 * * 0'
 permissions: read-all     

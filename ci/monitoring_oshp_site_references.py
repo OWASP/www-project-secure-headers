@@ -6,11 +6,12 @@ The goal is to allow detection of site not mentioning the OSHP anymore and then 
 Dependencies:
     pip install requests
 """
-import re
-import requests
-import time
 import os
+import re
 import sys
+import time
+
+import requests
 
 OSHP_MARKER_STRINGS = ["owasp secure headers project", "https://owasp.org/www-project-secure-headers", "https://www.owasp.org/index.php/security_headers", "https://owasp.org/index.php/owasp_secure_headers_project"]
 DEFAULT_ENCODING = "utf-8"
@@ -18,7 +19,7 @@ WAIT_DELAY_SECONDS = 4
 MAX_RETRY = 4
 TIMEOUT_SECONDS = 20
 IGNORED_HTTP_RESPONSE_CODES = [401]
-SOURCE_MD_FILE = "../tab_casestudies.md"
+SOURCE_MD_FILE = "../mainsite/08_case_studies.md"
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
 GITHUB_API_CONTENT_URL_TEMPLATE = "https://api.github.com/repos/%s/%s/contents/%s"
 

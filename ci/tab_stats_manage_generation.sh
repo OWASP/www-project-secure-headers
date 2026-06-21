@@ -7,7 +7,7 @@ OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION="../subprojects/statistics/scripts/osh
 OSHP_SECURITY_HEADERS_EXTRA_FILE="/tmp/oshp_headers_extra_to_include.txt"
 DATA_DB_FILE_LOCATION="../subprojects/statistics/data/data.db"
 DATA_DB_FILE="/tmp/data.db"
-IMAGE_FOLDER_LOCATION="../assets/tab_stats_generated_images"
+IMAGE_FOLDER_LOCATION="../mainsite/assets/tab_stats_generated_images"
 echo "[+] Prepare and validate datasources used..."
 cp $OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION $OSHP_SECURITY_HEADERS_EXTRA_FILE 
 cp $DATA_DB_FILE_LOCATION $DATA_DB_FILE 

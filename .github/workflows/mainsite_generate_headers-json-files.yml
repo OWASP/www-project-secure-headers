@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'tab_bestpractices.md' 
+      - 'mainsite/03_best_practices.md' 
 permissions: read-all     
 jobs:
   build:

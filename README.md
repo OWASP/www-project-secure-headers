@@ -1,7 +1,7 @@
 > [!IMPORTANT]
 > The OWASP Foundation has decided to migrate its content to a new CMS. As a result, OSHP content is frozen for the duration of the migration. You can find more information and explanations [here](https://github.com/OWASP/www-project-secure-headers/discussions/273).
 
-![OSHP Logo](assets/images/oshp_logo.png)
+![OSHP Logo](mainsite/assets/images/oshp_logo.png)
 
 [![OWASP Production](https://img.shields.io/badge/owasp-production%20project-800080.svg)](https://www.owasp.org/projects)
 
@@ -17,6 +17,7 @@
 
 * **Main site**: It is the core of the OSHP and provide the information about HTTP security headers
   * Called `mainsite`.
+  * Content is [here](mainsite/).  
 * **Validator**: Venom tests suite to validate an HTTP security response headers configuration against OSHP recommendation.
   * Called `validator`.
   * Content is [here](subprojects/validator/).
@@ -84,6 +85,12 @@
 
 [LINK_TO_SOURCE_USED]
 ```
+
+## Project leaders
+
+🧑‍💻 [Ricardo Iramar](mailto:ricardo.iramar@owasp.org)
+
+🧑‍💻 [Dominique Righetto](mailto:dominique.righetto@owasp.org)
 
 ## Contributors
 
