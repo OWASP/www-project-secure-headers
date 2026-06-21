@@ -4,7 +4,7 @@
 
 # Technical References Dashboard
 
-> 📅 Last verification (UTC): 2026-06-14 01:19:24
+> 📅 Last verification (UTC): 2026-06-21 06:54:58
 
 ## GitHub repositories health status
 
@@ -34,11 +34,12 @@ Project reaching the :red_circle: status **are removed**.
 | `2026-05-26T12:52:22Z` (1 months ago) | :green_circle: | [google/csp-evaluator](https://github.com/google/csp-evaluator) |
 | `2026-05-26T15:40:23Z` (1 months ago) | :green_circle: | [danielkov/rust-helmet](https://github.com/danielkov/rust-helmet) |
 | `2026-06-02T08:01:20Z` (0 months ago) | :green_circle: | [spatie/laravel-csp](https://github.com/spatie/laravel-csp) |
-| `2026-06-03T11:46:25Z` (0 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
 | `2026-06-04T18:50:40Z` (0 months ago) | :green_circle: | [OWASP/www-project-randomized-header-channel-for-csrf-protection/tree/main/resources/security-headers](https://github.com/OWASP/www-project-randomized-header-channel-for-csrf-protection/tree/main/resources/security-headers) |
-| `2026-06-07T16:11:14Z` (0 months ago) | :green_circle: | [TypeError/secure](https://github.com/TypeError/secure) |
-| `2026-06-08T09:33:16Z` (0 months ago) | :green_circle: | [GaProgMan/OwaspHeaders.Core](https://github.com/GaProgMan/OwaspHeaders.Core) |
-| `2026-06-10T12:11:18Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
-| `2026-06-12T13:33:04Z` (0 months ago) | :green_circle: | [mdn/mdn-http-observatory](https://github.com/mdn/mdn-http-observatory) |
-| `2026-06-13T00:59:43Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
-| `2026-06-13T20:02:35Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2026-06-14T02:48:43Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
+| `2026-06-14T20:30:35Z` (0 months ago) | :green_circle: | [GaProgMan/OwaspHeaders.Core](https://github.com/GaProgMan/OwaspHeaders.Core) |
+| `2026-06-15T16:59:00Z` (0 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
+| `2026-06-16T09:47:30Z` (0 months ago) | :green_circle: | [mdn/mdn-http-observatory](https://github.com/mdn/mdn-http-observatory) |
+| `2026-06-19T00:57:57Z` (0 months ago) | :green_circle: | [TypeError/secure](https://github.com/TypeError/secure) |
+| `2026-06-20T16:34:57Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2026-06-20T20:45:59Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+
