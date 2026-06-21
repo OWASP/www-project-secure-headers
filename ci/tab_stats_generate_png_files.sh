@@ -12,10 +12,11 @@
 # Constants
 MERMAID_CONFIG_FILE_LOCATION="$(pwd)/tab_stats_mermaid_config.json"
 IMAGE_FOLDER_LOCATION="../mainsite/assets/tab_stats_generated_images"
+echo "[i] MERMAID_CONFIG_FILE_LOCATION => $MERMAID_CONFIG_FILE_LOCATION"
+file $MERMAID_CONFIG_FILE_LOCATION"
 # Generate images
 # We use aa-exec since Ubuntu 24.04's AppArmor profile blocks the use of puppeteer otherwise
 # See https://github.com/puppeteer/puppeteer/issues/12818
-echo "[i] MERMAID_CONFIG_FILE_LOCATION => $MERMAID_CONFIG_FILE_LOCATION"
 cd $IMAGE_FOLDER_LOCATION
 for mmd_file in *.mmd
 do
