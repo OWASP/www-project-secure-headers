@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-xxxx
-=======
-[Index](00_index.md) | [Response Headers](01_headers.md) | [Browser Support](02_browser_support.md) | [Best Practices](03_best_practices.md) | [Technical Resources](04_technical_resources.md) | [Code Snippets](05_code_snippets.md) | [Miscellaneous](06_misc.md) | [Statistics](07_statistics.md) | [Case Studies](08_case_studies.md) | [Logo](09_logo.md) | [Monitoring Technical Teferences Dashboard](10_monitoring_technical_references_dashboard.md)
+[Index](00_index.md) | [Response Headers](01_headers.md) | [Browser Support](02_browser_support.md) | [Best Practices](03_best_practices.md) | [Technical Resources](04_technical_resources.md) | [Code Snippets](05_code_snippets.md) | [Miscellaneous](06_misc.md) | [Statistics](07_statistics.md) | [Case Studies](08_case_studies.md) | [Logo](09_logo.md) | [Monitoring Technical References Dashboard](10_monitoring_technical_references_dashboard.md)
 
 ---
 
@@ -13,7 +10,7 @@ xxxx
 
 
 
-📅 Last update: 06/21/2026 at 07:25:17 - Domains analyzed count: 250000.
+📅 Last update: 06/21/2026 at 07:36:13 - Domains analyzed count: 250000.
 
 ## Global usage of secure headers
 
@@ -181,4 +178,3 @@ Based on [Report-URI CSP](https://report-uri.com/home/generate) generator allowe
 
 ![c7ef83055cf836a48ed9dd26b3a8d55103645022](assets/tab_stats_generated_images/c7ef83055cf836a48ed9dd26b3a8d55103645022.png)
 
->>>>>>> e266ac47e3dd5aa378a72f69b3126f2f139dc177
