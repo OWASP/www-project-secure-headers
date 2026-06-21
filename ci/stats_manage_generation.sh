@@ -16,11 +16,11 @@ file $OSHP_SECURITY_HEADERS_EXTRA_FILE
 wc -l $OSHP_SECURITY_HEADERS_EXTRA_FILE
 echo "[+] Set correct access rights for the scripts as well as UNIX CRLF settings..."
 dos2unix *.sh
-chmod +x tab_stats_generate_*
+chmod +x stats_generate_*
 echo "[+] Generate the MD file of the TAB and all the MMD files for every pie chart image..."
-python tab_stats_generate_md_file.py
+python stats_generate_md_file.py
 echo "[+] Generate the PNG image corresponding to each MMD file..."
-bash tab_stats_generate_png_files.sh
+bash stats_generate_png_files.sh
 echo "[+] Check correct generation of the images..."
 img_count=$(find $IMAGE_FOLDER_LOCATION -name "*.png" | wc -l)
 if [ $img_count -eq 0 ]

@@ -10,7 +10,7 @@
 #   https://mermaid.js.org/config/theming.html
 #########################################################################
 # Constants
-MERMAID_CONFIG_FILE_LOCATION="$(pwd)/tab_stats_mermaid_config.json"
+MERMAID_CONFIG_FILE_LOCATION="$(pwd)/stats_mermaid_config.json"
 IMAGE_FOLDER_LOCATION="../mainsite/assets/tab_stats_generated_images"
 echo "[i] MERMAID_CONFIG_FILE_LOCATION => $MERMAID_CONFIG_FILE_LOCATION"
 file $MERMAID_CONFIG_FILE_LOCATION
