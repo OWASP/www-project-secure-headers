@@ -39,7 +39,7 @@
 |Status|File|
 | :--- | :--- |
 |![mainsite_generate_headers-json-files.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_generate_headers-json-files.yml/badge.svg)|[📄](.github/workflows/mainsite_generate_headers-json-files.yml)|
-|![mainsite_generate_stats-related-files.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_generate_tab-stats-related-files.yml/badge.svg)|[📄](.github/workflows/mainsite_generate_stats-related-files.yml)|
+|![mainsite_generate_stats-related-files.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_generate_stats-related-files.yml/badge.svg)|[📄](.github/workflows/mainsite_generate_stats-related-files.yml)|
 |![mainsite_generate_technical-references-dashboard.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_generate_technical-references-dashboard.yml/badge.svg)|[📄](.github/workflows/mainsite_generate_technical-references-dashboard.yml)|
 |![mainsite_monitor_oshp-site-references.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_monitor_oshp-site-references.yml/badge.svg)|[📄](.github/workflows/mainsite_monitor_oshp-site-references.yml)|
 |![mainsite_validate_external-links.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_validate_external-links.yml/badge.svg)|[📄](.github/workflows/mainsite_validate_external-links.yml)|
