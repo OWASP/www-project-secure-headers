@@ -10,15 +10,17 @@
 #   https://mermaid.js.org/config/theming.html
 #########################################################################
 # Constants
+MERMAID_CONFIG_FILE_LOCATION="$(pwd)/../ci/tab_stats_mermaid_config.json"
 IMAGE_FOLDER_LOCATION="../mainsite/assets/tab_stats_generated_images"
 # Generate images
 # We use aa-exec since Ubuntu 24.04's AppArmor profile blocks the use of puppeteer otherwise
 # See https://github.com/puppeteer/puppeteer/issues/12818
+echo "[i] MERMAID_CONFIG_FILE_LOCATION => $MERMAID_CONFIG_FILE_LOCATION"
 cd $IMAGE_FOLDER_LOCATION
 for mmd_file in *.mmd
 do
     png_file="${mmd_file%%.*}.png"
-    aa-exec --profile=chrome npx -p @mermaid-js/mermaid-cli mmdc --quiet --input $mmd_file --output $png_file --outputFormat png --configFile ../../ci/tab_stats_mermaid_config.json
+    aa-exec --profile=chrome npx -p @mermaid-js/mermaid-cli mmdc --quiet --input $mmd_file --output $png_file --outputFormat png --configFile $MERMAID_CONFIG_FILE_LOCATION
 done
 # Only let PNG files
 rm *.mmd
