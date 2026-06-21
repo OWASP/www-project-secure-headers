@@ -1,8 +1,7 @@
 #!/bin/bash
-#########################################################################
-# This script manage the generation/update of the tab represented by the 
-# file "tab_statistics.md".
-#########################################################################
+#################################################################################################################
+# This script manage the generation/update of the represention of statistics via the file "07_statistics.md"
+#################################################################################################################
 OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION="../subprojects/statistics/scripts/oshp_headers_extra_to_include.txt"
 OSHP_SECURITY_HEADERS_EXTRA_FILE="/tmp/oshp_headers_extra_to_include.txt"
 DATA_DB_FILE_LOCATION="../subprojects/statistics/data/data.db"

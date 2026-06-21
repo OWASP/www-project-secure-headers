@@ -5,7 +5,7 @@ markdown file "tab_statistics.md" with mermaid pie charts with differents statis
 
 Source:
     https://mermaid-js.github.io/mermaid/#/pie
-    https://github.com/oshp/oshp-stats/
+    https://github.com/righettod/www-project-secure-headers/tree/master/subprojects/statistics
 """
 import hashlib
 import json
