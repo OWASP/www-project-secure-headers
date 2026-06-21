@@ -1,21 +1,16 @@
-> [!IMPORTANT]
-> The OWASP Foundation has decided to migrate its content to a new CMS. As a result, OSHP content is frozen for the duration of the migration. You can find more information and explanations [here](https://github.com/OWASP/www-project-secure-headers/discussions/273).
-
 ![OSHP Logo](mainsite/assets/images/oshp_logo.png)
 
 [![OWASP Production](https://img.shields.io/badge/owasp-production%20project-800080.svg)](https://www.owasp.org/projects)
 
 # Introduction
 
-📦 This repository contains all the content of the **OWASP Secure Headers Project** (also named **OSHP**).
-
-🎯 The OSHP describes HTTP response headers that your application can use to increase the security of your application. Once set, these HTTP response headers can restrict modern browsers from running into easily preventable vulnerabilities. The OSHP intends to raise awareness and use of these headers.
+📦 This repository contains all the content of the **[OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/)** (also named **OSHP**).
 
 # OSHP ecosystem
 
 🗺️ The OSHP project is composed of the following projects:
 
-* **Main site**: It is the core of the OSHP and provide the information about HTTP security headers
+* **Main site**: It is the core of the OSHP and provide the information about HTTP security headers.
   * Called `mainsite`.
   * Content is [here](mainsite/).  
 * **Validator**: Venom tests suite to validate an HTTP security response headers configuration against OSHP recommendation.
@@ -26,9 +21,6 @@
   * Content is [here](subprojects/statistics/).
 
 ## Repository structure
-
-> [!TIP]
-> 🔬[Technical References Dashboard](monitoring_technical_references_dashboard.md).
 
 * The base of the repository contains the **main site**.
 * The other projects are stored in the folder [subprojects](subprojects/): Each sub projects have it own folder.
