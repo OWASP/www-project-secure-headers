@@ -12,7 +12,7 @@
 
 ## How to create a link to the OSHP site?
 
-🌎 Since the migration of the OWASP foundation to its new CMS and the decision of the OSHP team to keep content on GitHub, see [here](https://github.com/OWASP/www-project-secure-headers/discussions/273) for all the details, you can directly reference the **mardown** content of the site located in folder **[mainsite](../mainsite/)**.
+🌎 Since the migration of the OWASP foundation to its new CMS and the decision of the OSHP team to keep content on GitHub (see [here](https://github.com/OWASP/www-project-secure-headers/discussions/273) for all the details), you can directly reference the **mardown** content of the site located in folder **[mainsite](../mainsite/)**.
 
 💡 Example:
 
