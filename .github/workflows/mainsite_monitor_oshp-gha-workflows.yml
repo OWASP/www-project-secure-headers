@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@v6
     - name: Install dependencies
       run: |
-        sudo apt install -y curl dos2unix
+        sudo apt install -y curl dos2unix jq
     - name: Run the validation
       run: |
         dos2unix ci/monitoring_oshp_gha_workflows.sh
