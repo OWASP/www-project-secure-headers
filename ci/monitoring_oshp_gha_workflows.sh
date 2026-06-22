@@ -39,3 +39,5 @@ $PLUMBER_BINARY_LOCATION config validate
 echo "[+] Audit the GHA workflows..."
 rm -f $PLUMBER_REPORT_LOCATION 2>/dev/null
 $PLUMBER_BINARY_LOCATION analyze --sarif $PLUMBER_REPORT_LOCATION
+# force exit 0 because plumber return an code 3 because an access token is not provided
+exit 0
