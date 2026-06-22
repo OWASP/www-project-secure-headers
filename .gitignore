@@ -10,3 +10,5 @@ save-migration-work.ps1
 .DS_Store
 # Utility script proper to righettod
 save.ps1
+# Report files
+*.sarif
