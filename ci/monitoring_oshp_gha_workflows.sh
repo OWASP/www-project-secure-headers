@@ -45,7 +45,8 @@ $PLUMBER_BINARY_LOCATION analyze --sarif $PLUMBER_REPORT_LOCATION
 # So we update the attribute "invocations[0].executionSuccessful" to true if the report was correctly generated
 if [ -s "$PLUMBER_REPORT_LOCATION" ]
 then
-  jq '(.runs[].invocations[].executionSuccessful) = true' $PLUMBER_REPORT_LOCATION
+  jq '(.runs[].invocations[].executionSuccessful) = true' $PLUMBER_REPORT_LOCATION > "$PLUMBER_REPORT_LOCATION.tmp"
+  mv "$PLUMBER_REPORT_LOCATION.tmp" $PLUMBER_REPORT_LOCATION
 fi
 cat $PLUMBER_REPORT_LOCATION | jq
 # Force exit 0 because plumber return an exit code 3 because an access token is not provided
