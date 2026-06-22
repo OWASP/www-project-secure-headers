@@ -19,7 +19,6 @@ PLUMBER_RELEASE_SHA256="9090ce56e911e3a35d3b01e254bc4121f97c1ee94c90f375991140a0
 PLUMBER_DOWNLOAD_URL="https://github.com/getplumber/plumber/releases/download/v$PLUMBER_RELEASE_USED/plumber-linux-amd64"
 PLUMBER_BINARY_LOCATION="/tmp/plumber"
 PLUMBER_REPORT_LOCATION="/tmp/plumber-report.sarif"
-export PATH=$PLUMBER_BINARY_LOCATION:$PATH
 export PLUMBER_NO_UPDATE_CHECK=1
 echo "[+] Download the release v$PLUMBER_RELEASE_USED of plumber..." 
 curl -L -s -o $PLUMBER_BINARY_LOCATION "$PLUMBER_DOWNLOAD_URL"
@@ -36,7 +35,7 @@ then
     exit 1
 fi
 echo "[+] Validate the plumber configuration file..."
-plumber config validate
+$PLUMBER_BINARY_LOCATION config validate
 echo "[+] Audit the GHA workflows..."
 rm -f $PLUMBER_REPORT_LOCATION 2>/dev/null
-plumber analyze --sarif $PLUMBER_REPORT_LOCATION
+$PLUMBER_BINARY_LOCATION analyze --sarif $PLUMBER_REPORT_LOCATION
