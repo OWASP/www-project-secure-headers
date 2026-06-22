@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Validate metadata file
         uses: owasp/nest-schema/.github/actions/validate@011b47d59567ae7cfd246948c67503ba2f6cc15b
