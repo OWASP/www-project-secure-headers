@@ -6,7 +6,7 @@
 #   apt install curl jq
 #
 # We use a fixed version to apply control on the version used and
-# decrease exposure if the repo of plumber is compromised.
+# decrease exposure if the repo of Plumber is compromised.
 #
 # The fixed hash is taken for the VirusTotal scan of the "plumber-linux-amd64"
 # artefacts of the release.
