@@ -8,8 +8,12 @@ on:
     - cron: '0 0 * * 0'
 permissions: read-all
 jobs:
-  build:
+  analyze:
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
     steps:
     - uses: actions/checkout@v6
     - name: Install dependencies
