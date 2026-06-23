@@ -1,0 +1,14 @@
+remote_theme: "owasp/www--site-theme@main"
+
+# core files/folders to exclude
+exclude:
+  - README.md
+  - subprojects/
+  - mainsite/
+  - archives/
+  - .github/
+  - .vscode/
+  - ci/
+
+plugins:
+  - jekyll-include-cache-0.2.0
