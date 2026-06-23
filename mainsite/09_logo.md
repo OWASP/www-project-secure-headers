@@ -36,7 +36,7 @@
 
 ## Set 2
 
-📦 The folder [generated-via-ai](https://github.com/OWASP/www-project-secure-headers/tree/master/logo/generated-via-ai) contains several base images that were generated via the following AI systems:
+📦 The folder [generated-via-ai](logo/generated-via-ai) contains several base images that were generated via the following AI systems:
 
 * [ChatGPT](https://chatgpt.com/).
 * [Microsoft Copilot](https://copilot.microsoft.com/).
