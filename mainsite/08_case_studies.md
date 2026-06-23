@@ -1,10 +1,5 @@
----
-title: casestudies
-displaytext: Case Studies
-layout: null
-tab: true
-order: 8
-tags: headers
+[Index](00_index.md) | [Response Headers](01_headers.md) | [Browser Support](02_browser_support.md) | [Best Practices](03_best_practices.md) | [Technical Resources](04_technical_resources.md) | [Code Snippets](05_code_snippets.md) | [Miscellaneous](06_misc.md) | [Statistics](07_statistics.md) | [Case Studies](08_case_studies.md) | [Logo](09_logo.md) | [Monitoring Technical References Dashboard](10_monitoring_technical_references_dashboard.md)
+
 ---
 
 # Case Studies
@@ -17,27 +12,12 @@ tags: headers
 
 ## How to create a link to the OSHP site?
 
-🌎 Use the following absolute URL syntax to create a reference link to a specific location of the OSHP site. The presence of the `index.html` file is mandatory otherwise any anchor specified is not effective:
+🌎 Since the migration of the OWASP foundation to its new CMS and the decision of the OSHP team to keep content on GitHub (see [here](https://github.com/OWASP/www-project-secure-headers/discussions/273) for all the details), you can directly reference the **mardown** content of the site located in folder **[mainsite](../mainsite/)**.
 
-```text
-https://owasp.org/www-project-secure-headers/index.html#[TAB-ID]_[HEADER-ID-INSIDE-TAB]
+💡 Example:
+
 ```
-
-💡 Where:
-
-* `[TAB-ID]`: ID of the tab that can be obtained with the link to it.
-* `[HEADER-ID-INSIDE-TAB]`: Href value of the link to the section inside the tab.
-
-👀 Example of reference link to the section about the header **Clear-Site-Data** in the **Response Headers** tab:
-
-```text
-https://owasp.org/www-project-secure-headers/index.html#div-headers_clear-site-data
-```
-
-👀 Example of reference link to the section **PHP** in the **Technical Resources** tab:
-
-```text
-https://owasp.org/www-project-secure-headers/index.html#div-technical_php
+https://github.com/OWASP/www-project-secure-headers/tree/master/mainsite/01_headers.md#x-content-type-options
 ```
 
 ## Companies and other legal entities
@@ -45,11 +25,9 @@ https://owasp.org/www-project-secure-headers/index.html#div-technical_php
 * [Cloud.gov](https://docs.cloud.gov/platform/management/headers/).
 * [Salesforce](https://help.salesforce.com/s/articleView?language=en_US&id=cc.b2c_declarative_security_via_http_headers.htm&type=5).
 * [Black Hills Information Security](https://www.blackhillsinfosec.com/fixing-content-security-policies-with-cloudflare-workers/).
-* [Progress](https://www.progress.com/documentation/sitefinity-cms/110/predefined-security-headers-in-http-response).
 * [Bloomreach](https://documentation.bloomreach.com/14/library/concepts/security/configure-security-response-headers.html).
 * [Tableau](https://help.tableau.com/current/server-linux/en-us/security_http_headers.htm).
 * [42Crunch](https://docs.42crunch.com/latest/content/extras/protection_security_headers.htm).
-* [SAP](https://help.sap.com/docs/SAP_UPSCALE_COMMERCE/4620dd88ff9047c89ffb7fa897207a46/30af09ca9e394505a85661fa530d1263.html).
 * [SecureAuth](https://docs.secureauth.com/2104/en/identity-platform-http-security-header-best-practices.html).
 * [Detectify](https://support.detectify.com/support/solutions/articles/48001048949-https-stripping).
 * [ImmuniWeb](https://www.immuniweb.com/websec/about).

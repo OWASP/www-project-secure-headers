@@ -8,3 +8,7 @@ scratchpad.md
 save-migration-work.ps1
 .vscode/
 .DS_Store
+# Utility script proper to righettod
+save.ps1
+# Report files
+*.sarif

@@ -1,15 +1,18 @@
 #!/usr/bin/env python
+import argparse
 import json
-import re
 import os
 import os.path
-import argparse
 import pathlib
+import re
 import sys
+
 import requests
+from common import DEFAULT_ENCODING, USER_AGENT
 from requests import Session
 from requests.adapters import HTTPAdapter
 from urllib3.util import Retry
+
 """
 Script used to validate all HTTP/HTTPS links contained into a collection of
 markdown (called MD) files.
@@ -40,15 +43,15 @@ Dependencies:
     pip install requests
 """
 VALIDATION_SKIP_MARKER = "SKIP_VALIDATION"
-DEFAULT_ENCODING = "utf-8"
 DEFAULT_TIMEOUT_IN_SECONDS = 5
 DEFAULT_RETRY_COUNT = 2
 DEFAULT_ALIVE_STATUS_CODE = [200, 429, 502, 503, 504]
 DEFAULT_MAX_REDIRECT = 5
 DEFAULT_HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+    "User-Agent": USER_AGENT
 }
 DEBUG_MODE = False
+requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
 
 
 def load_config(markdown_link_check_config_file_path):
@@ -144,7 +147,6 @@ if __name__ == "__main__":
     conf = load_config(markdown_link_check_config_file_path)
     print(f"Default config loaded? {conf['defaultConfig']}")
     print("[+] Search and process any MD file")
-    requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
     dead_links_global_count = 0
     for md_file in pathlib.Path(base_folder).rglob("*.md", case_sensitive=False):
         markdown_file_path = str(md_file)

@@ -15,13 +15,12 @@ at each run of the script (made commit easier to manage).
 """
 
 import json
-import re
 import operator
-from datetime import datetime
-from datetime import timezone
+import re
+from datetime import datetime, timezone
 
 # Constants
-SOURCE_MD_FILE = "../tab_bestpractices.md"
+SOURCE_MD_FILE = "../mainsite/03_best_practices.md"
 HEADERS_TO_ADD_JSON_FILE = "headers_add.json"
 HEADERS_TO_REMOVE_JSON_FILE = "headers_remove.json"
 HEADERS_TO_ADD_TABLE_EXTRACTION_MARKERS = ("<!-- HEADERS_ADD_TABLE_START -->", "<!-- HEADERS_ADD_TABLE_END -->")

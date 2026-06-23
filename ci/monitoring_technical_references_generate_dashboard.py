@@ -12,18 +12,21 @@ Dependencies:
 """
 import re
 import sys
+from datetime import datetime, timezone
+
 import requests
-from datetime import datetime
-from datetime import timezone
+from common import DEFAULT_ENCODING, TOP_NAVIGATION_LINKS
 
 # Constants
 REQ_SESSION = requests.session()
 TIMEOUT_SECONDS = 240
 EXECUTION_DATETIME_UTC = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
-DEFAULT_ENCODING = "utf-8"
-SOURCE_MD_FILE = "../tab_technical.md"
-DASHBOARD_MD_FILE = "../monitoring_technical_references_dashboard.md"
-DASHBOARD_MD_FILE_TEMPLATE = f"""
+SOURCE_MD_FILE = "../mainsite/04_technical_resources.md"
+DASHBOARD_MD_FILE = "../mainsite/10_monitoring_technical_references_dashboard.md"
+DASHBOARD_MD_FILE_TEMPLATE = f"""{TOP_NAVIGATION_LINKS}
+
+---
+
 # Technical References Dashboard
 
 > 📅 Last verification (UTC): {EXECUTION_DATETIME_UTC}

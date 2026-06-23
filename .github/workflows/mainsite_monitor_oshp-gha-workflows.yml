@@ -1,0 +1,33 @@
+name: mainsite - Monitor oshp gha workflows
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/*.yml'
+  schedule:
+    - cron: '0 0 * * 0'
+permissions: read-all
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    steps:
+    - uses: actions/checkout@v6
+    - name: Install dependencies
+      run: |
+        sudo apt install -y curl dos2unix jq
+    - name: Run the validation
+      run: |
+        dos2unix ci/monitoring_oshp_gha_workflows.sh
+        chmod +x ci/monitoring_oshp_gha_workflows.sh
+        bash ci/monitoring_oshp_gha_workflows.sh
+    - name: Upload SARIF scan report to GitHub Code Scanning
+      uses: github/codeql-action/upload-sarif@v4
+      with:
+        sarif_file: /tmp/plumber-report.sarif
+        category: gha-workflows-audit
+
+

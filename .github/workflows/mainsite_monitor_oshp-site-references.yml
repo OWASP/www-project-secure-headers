@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'tab_casestudies.md'
+      - 'mainsite/08_case_studies.md'
   schedule:
     - cron: '0 0 * * 0'
 permissions: read-all     
@@ -20,6 +20,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        playwright install --with-deps chromium
     - name: Run the validation
       run: |
         cd ci; python monitoring_oshp_site_references.py "${{ secrets.GITHUB_TOKEN }}"

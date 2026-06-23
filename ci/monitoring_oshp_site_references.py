@@ -4,22 +4,26 @@ Utility script to verify that every site mentioned in the tab named "Case Studie
 The goal is to allow detection of site not mentioning the OSHP anymore and then update the "Case Studies" content.
 
 Dependencies:
-    pip install requests
+    pip install requests playwright
+    playwright install --with-deps chromium
 """
-import re
-import requests
-import time
 import os
+import re
 import sys
+import time
 
+import requests
+from common import DEFAULT_ENCODING, USER_AGENT
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
+from playwright.sync_api import sync_playwright
+
+DEBUG = True
 OSHP_MARKER_STRINGS = ["owasp secure headers project", "https://owasp.org/www-project-secure-headers", "https://www.owasp.org/index.php/security_headers", "https://owasp.org/index.php/owasp_secure_headers_project"]
-DEFAULT_ENCODING = "utf-8"
 WAIT_DELAY_SECONDS = 4
 MAX_RETRY = 4
 TIMEOUT_SECONDS = 20
 IGNORED_HTTP_RESPONSE_CODES = [401]
-SOURCE_MD_FILE = "../tab_casestudies.md"
-USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+SOURCE_MD_FILE = "../mainsite/08_case_studies.md"
 GITHUB_API_CONTENT_URL_TEMPLATE = "https://api.github.com/repos/%s/%s/contents/%s"
 
 
@@ -27,15 +31,27 @@ def verify_mention(site_url, github_token=""):
     # Assume by default that site refer to static non SPA page
     oshp_is_mentioned = "NO"
     # If the site is a GitHub repository then use the GH API to prevent facing the request limiter (HTTP 429)
+    # otherwise use playwright to bypass bot protection
     response_code = 0
     response_content = ""
     response_headers = {}
-    request_custom_headers = {"User-Agent": USER_AGENT}
+    request_custom_headers = {}
     if not site_url.lower().startswith("https://github.com/"):
-        response = requests.get(url=site_url, headers=request_custom_headers, timeout=TIMEOUT_SECONDS, allow_redirects=True)
-        response_code = response.status_code
-        response_content = response.text
-        response_headers = response.headers
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page(user_agent=USER_AGENT)
+            try:
+                response = page.goto(site_url, wait_until="networkidle", timeout=TIMEOUT_SECONDS*1000)
+                response_code = response.status
+                response_content = page.content()
+                response_headers = response.headers
+            except PlaywrightTimeoutError:
+                # Reached when there is still network IO after the "timeout" delay specified via the parameter "timeout"
+                # but we consider this OK to get the content loaded
+                response_code = 200
+                response_content = page.content()
+                pass
+            browser.close()
     else:
         parts = site_url.split("/")
         owner_name = parts[3]
@@ -61,14 +77,22 @@ def verify_mention(site_url, github_token=""):
                 oshp_is_mentioned = "YES"
                 break
     # If mention is not detected then try to check if it's an SPA
-    if oshp_is_mentioned == "NO":
+    if oshp_is_mentioned == "NO" and response_code == 200:
         expr = r'(app|index|main)(\.|-)[a-zA-Z0-9_\-]+\.js'
         bundles = re.findall(expr, content)
         if len(bundles) > 0 or "React" in content:
             oshp_is_mentioned = "SPA"
     # If mention is not detected then try to check if the site is protected by CLOUDFLARE
-    if oshp_is_mentioned == "NO" and ("CF-RAY" in response_headers or "cf-mitigated" in response_headers):
+    if oshp_is_mentioned == "NO" and response_code == 200 and ("CF-RAY" in response_headers or "cf-mitigated" in response_headers):
         oshp_is_mentioned = "CLOUDFLARE"
+    # Debug
+    if oshp_is_mentioned == "NO" and DEBUG:
+        print("**************************************************")
+        print(f"** SITE: {site_url}")
+        print("**************************************************")
+        print(f"RESPONSE CODE:\n{response_code}\n\n")
+        print(f"RESPONSE HEADERS:\n{response_headers}\n\n")
+        print(f"RESPONSE CONTENT:\n{response_content}\n\n")
     return oshp_is_mentioned
 
 
@@ -111,6 +135,7 @@ if __name__ == "__main__":
                     oshp_is_mentioned = "IO_ERROR"
                     time.sleep(WAIT_DELAY_SECONDS)
                     pass
+            print(f"==> State '{oshp_is_mentioned}'")
             if oshp_is_mentioned not in valid_mentions:
                 print_github_error(site_url, oshp_is_mentioned)
                 error_count += 1
