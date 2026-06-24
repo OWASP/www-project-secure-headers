@@ -51,7 +51,7 @@ $ rm majestic_million.csv
 # Data and statistics update
 
 > [!NOTE]
-> 💡 Only the first **150000** entries of the CSV datasource are used to fit the processing timeframe allowed for a github action workfows using the free tiers.
+> 💡 Only the first **250000** entries of the CSV datasource are used to fit the processing timeframe allowed for a github action workfows using the free tiers.
 
 💻 The update is scheduled in the following way:
 
