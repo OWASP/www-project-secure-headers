@@ -20,19 +20,17 @@ jobs:
         cd subprojects/statistics
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Generate the input CSV file from a fresh Majestic CSV file
-      run: |
-        cd subprojects/statistics
-        wget http://downloads.majestic.com/majestic_million.csv
-        cat majestic_million.csv | awk -F  "," 'NR>1 {print $1 "," $3}' > data/input.csv
-        rm majestic_million.csv        
     - name: Run data gathering script
       run: |
-        cd subprojects/statistics
-        cd scripts
+        cd subprojects/statistics/scripts
         python gather_data.py
         ls -l --block-size=M ../data/data.db
-    - name: Set up Git user
-      run: git config --global user.email "gha@github.com"; git config --global user.name "GHActionBot"
-    - name: Commit update
-      run: git commit -am "Sync statistics data DB and corresponding input CSV file"; git push
+    - name: Publish dataset release
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        RELEASE_TAG="statistics-dataset-$(date +'%Y-%m-%d')"
+        if ! gh release view "$RELEASE_TAG"; then
+          gh release create "$RELEASE_TAG" --title "$RELEASE_TAG" --notes "Monthly generated dataset."
+        fi
+        gh release upload "$RELEASE_TAG" subprojects/statistics/data/data.db subprojects/statistics/data/input.csv --clobber

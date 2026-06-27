@@ -32,6 +32,7 @@ USER_AGENT = (
 DATA_FOLDER = "../data"
 DATA_DB_FILE = f"{DATA_FOLDER}/data.db"
 CSV_INPUT_FILE = f"{DATA_FOLDER}/input.csv"
+MAJESTIC_CSV_URL = "http://downloads.majestic.com/majestic_million.csv"
 CHECKPOINT_FILE = f"{DATA_FOLDER}/checkpoint.json"
 
 # Explicit nameservers with round-robin rotation nameservers replace 
@@ -185,6 +186,39 @@ async def load_security_headers(session: aiohttp.ClientSession) -> list:
                     headers.append(name)
 
     return set(headers)
+
+
+async def get_input_csv(session: aiohttp.ClientSession):
+    """
+    Download and parse the Majestic Top 1M CSV if the local input file is missing.
+    Extracts the rank and domain columns to match the expected format.
+    """
+    
+    # Skip downloading if the file exists. This speeds up local development
+    # and ensures resumed checkpoint runs use the exact same dataset.
+    if os.path.exists(CSV_INPUT_FILE):
+        return
+
+    print(f"[+] {CSV_INPUT_FILE} not found. Downloading Majestic Top 1M CSV...")
+    os.makedirs(os.path.dirname(CSV_INPUT_FILE), exist_ok=True)
+
+    async with session.get(MAJESTIC_CSV_URL, timeout=aiohttp.ClientTimeout(total=300)) as resp:
+        if resp.status != 200:
+            raise RuntimeError(f"Failed to fetch Majestic CSV: HTTP {resp.status}")
+        
+        with open(CSV_INPUT_FILE, "w", encoding="utf-8") as out_f:
+            # Skip the first header line
+            await resp.content.readline()
+            
+            async for line in resp.content:
+                decoded_line = line.decode('utf-8', errors='ignore').strip()
+                if not decoded_line:
+                    continue
+                parts = decoded_line.split(',')
+                if len(parts) >= 3:
+                    out_f.write(f"{parts[0]},{parts[2]}\n")
+
+    print(f"[+] Successfully generated {CSV_INPUT_FILE}")
 
 
 def load_domains(filepath: str, limit: int) -> list:
@@ -357,6 +391,8 @@ async def main():
         print("[+] Loading OSHP security headers list...")
         security_headers = await load_security_headers(session)
         print(f"    Headers: {security_headers}")
+
+        await get_input_csv(session)
 
         print(f"[+] Loading domains from {CSV_INPUT_FILE}...")
         all_domains = load_domains(CSV_INPUT_FILE, NUMBER_OF_DOMAINS_TO_TAKE)
