@@ -14,14 +14,7 @@
 * [MAJESTIC Top 1 million sites list](https://blog.majestic.com/development/majestic-million-csv-daily/).
 * [CISCO Top 1 million sites CSV file](http://s3-us-west-1.amazonaws.com/umbrella-static/index.html).
 
-```bash
-# Download the MAJESTIC Top 1 million sites CSV file
-$ wget http://downloads.majestic.com/majestic_million.csv
-# Transform the downloaded file to an input source that use the same format 
-# than the CISCO Top 1 million sites CSV file
-$ cat majestic_million.csv | awk -F  "," 'NR>1 {print $1 "," $3}' > data/input.csv
-$ rm majestic_million.csv
-```
+The `gather_data.py` script will automatically download and parse the Majestic CSV if `data/input.csv` is not present.
 
 # Scripts
 
@@ -29,7 +22,7 @@ $ rm majestic_million.csv
 > 📦 They are all stored in the [scripts](scripts) folder and they are Python 3.x based.
 
 > [!IMPORTANT]
-> ⚠️ Usage of the script [generate_stats_md_file](scripts/generate_stats_md_file.py) was replaced by a [workflow](../../.github/workflows/mainsite_generate_tab-stats-related-files.yml) on the main OSHP site.
+> ⚠️ Usage of the script [generate_stats_md_file](scripts/generate_stats_md_file.py) was replaced by a [workflow](../../.github/workflows/mainsite_generate_stats-related-files.yml) on the main OSHP site.
 
 💻 [Visual Studio Code](https://code.visualstudio.com/) is used for the scripts development. A Visual Studio Code [workspace file](../../project.code-workspace) is provided for the project with [recommended extensions](../../.vscode/extensions.json).
 
@@ -41,12 +34,12 @@ $ rm majestic_million.csv
 # Data
 
 > [!NOTE]
-> 📦 They are all stored in the [data](data) folder.
+> 📦 During execution, these files are generated and stored locally in the `data` folder. For distribution, they are published as GitHub Release assets attached to this repository.
 
 📑 Files:
 
-* [input.csv](data/input.csv): MAJESTIC Top 1 million sites list formated as one entry `ranking,domain` by line.
-* [data.db](data/data.db): SQLITE database with information about HTTP security headers usage.
+* `input.csv`: MAJESTIC Top 1 million sites list formated as one entry `ranking,domain` by line.
+* `data.db`: SQLITE database with information about HTTP security headers usage.
 
 # Data and statistics update
 
@@ -55,8 +48,8 @@ $ rm majestic_million.csv
 
 💻 The update is scheduled in the following way:
 
-1. The **first day** of every month the data database is updated via this [workflow](../../.github/workflows/statistics_generate_datasource.yml).
-2. Once the data database is updated then the statistic data is updated via this [workflow](../../.github/workflows/mainsite_generate_tab-stats-related-files.yml).
+1. The **first day** of every month the database is updated via this [workflow](../../.github/workflows/statistics_generate_datasource.yml).
+2. Once the data database is updated then the statistic data is updated via this [workflow](../../.github/workflows/mainsite_generate_stats-related-files.yml).
 
 # Note
 
