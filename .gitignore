@@ -12,3 +12,7 @@ save-migration-work.ps1
 save.ps1
 # Report files
 *.sarif
+
+# Dataset files
+subprojects/statistics/data/data.db
+subprojects/statistics/data/input.csv
