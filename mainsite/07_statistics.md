@@ -10,7 +10,7 @@
 
 
 
-📅 Last update: 06/23/2026 at 16:25:47 - Domains analyzed count: 250000.
+📅 Last update: 06/28/2026 at 06:22:48 - Domains analyzed count: 250000.
 
 ## Global usage of secure headers
 
@@ -164,8 +164,8 @@ Provide the distribution of usage of the '[preload](https://developer.mozilla.or
 ## Global common 'max-age' values of the Strict Transport Security header
 
 * Most common value used is 31536000 seconds (525600 minutes) across all domains analyzed.
-* Maximum value used is 100000000000 seconds (1666666667 minutes) across all domains analyzed.
-* Minimum value used is -331884274 seconds (-5531405 minutes) across all domains analyzed.
+* Maximum value used is 333153600000 seconds (5552560000 minutes) across all domains analyzed.
+* Minimum value used is -333662315 seconds (-5561039 minutes) across all domains analyzed.
 
 
 ## Global usage of content security policy with directives allowing unsafe expressions
