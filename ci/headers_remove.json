@@ -1,5 +1,5 @@
 {
-  "last_update_utc": "2026-06-23 16:23:09",
+  "last_update_utc": "2026-06-30 12:42:24",
   "headers": [
     "$wsep",
     "Host-Header",
@@ -27,6 +27,11 @@
     "X-CalculatedBETarget",
     "X-Cocoon-Version",
     "X-Content-Encoded-By",
+    "X-Datadog-Origin",
+    "X-Datadog-Parent-Id",
+    "X-Datadog-Sampling-Priority",
+    "X-Datadog-Tags",
+    "X-Datadog-Trace-Id",
     "X-DiagInfo",
     "X-Envoy-Attempt-Count",
     "X-Envoy-External-Address",
@@ -74,6 +79,7 @@
     "X-SourceFiles",
     "X-SourceMap",
     "X-Turbo-Charged-By",
+    "X-Tyk-Trace-Id",
     "X-Umbraco-Version",
     "X-Varnish-Backend",
     "X-Varnish-Server",
