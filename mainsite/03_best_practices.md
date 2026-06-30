@@ -173,6 +173,12 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [X-Kong-Total-Latency](https://developer.konghq.com/gateway/logs/) | `100` | Indicate that the flow has involved an instance of the API gateway software from the company named [Kong](https://konghq.com/products/kong-gateway). |
 | [X-Kong-Third-Party-Latency](https://developer.konghq.com/gateway/logs/) | `46` | Indicate that the flow has involved an instance of the API gateway software from the company named [Kong](https://konghq.com/products/kong-gateway). |
 | [X-Kong-Client-Latency](https://developer.konghq.com/gateway/logs/) | `50` | Indicate that the flow has involved an instance of the API gateway software from the company named [Kong](https://konghq.com/products/kong-gateway). |
+| X-Tyk-Trace-Id | `ba31c85da42c43d28fe00c6f780c7151` | Indicate that the flow has involved an instance of the API gateway software from the company named [Tyk](https://tyk.io/api-gateway/). |
+| [X-Datadog-Origin](https://docs.datadoghq.com/tracing/trace_collection/trace_context_propagation/?tab=java#custom-header-formats) | `rum` | Indicate that the flow has involved an instance of the observability software from the company named [Datadog](https://www.datadoghq.com/). |
+| [X-Datadog-Parent-Id](https://docs.datadoghq.com/tracing/trace_collection/trace_context_propagation/?tab=java#custom-header-formats) | `856398187332022578` | Indicate that the flow has involved an instance of the observability software from the company named [Datadog](https://www.datadoghq.com/). |
+| [X-Datadog-Trace-Id](https://docs.datadoghq.com/tracing/trace_collection/trace_context_propagation/?tab=java#custom-header-formats) | `987298187332022483` | Indicate that the flow has involved an instance of the observability software from the company named [Datadog](https://www.datadoghq.com/). |
+| [X-Datadog-Sampling-Priority](https://docs.datadoghq.com/tracing/trace_collection/trace_context_propagation/?tab=java#custom-header-formats) | `1` | Indicate that the flow has involved an instance of the observability software from the company named [Datadog](https://www.datadoghq.com/). |
+| [X-Datadog-Tags](https://docs.datadoghq.com/tracing/trace_collection/trace_context_propagation/?tab=java#custom-header-formats) | `_dd.p.tid=6593c2f700000000` | Indicate that the flow has involved an instance of the observability software from the company named [Datadog](https://www.datadoghq.com/). |
 
 <!-- HEADERS_REMOVE_TABLE_END -->
 
