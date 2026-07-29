@@ -72,7 +72,13 @@ def load_config(markdown_link_check_config_file_path):
     if "timeout" not in cfg:
         cfg["timeout"] = DEFAULT_TIMEOUT_IN_SECONDS
     else:
-        cfg["timeout"] = int(cfg["timeout"].strip("ms"))
+        timeout = cfg["timeout"].strip()
+        if timeout.endswith("ms"):
+            cfg["timeout"] = float(timeout[:-2]) / 1000
+        elif timeout.endswith("s"):
+            cfg["timeout"] = float(timeout[:-1])
+        else:
+            cfg["timeout"] = float(timeout)
     if "retryCount" not in cfg:
         cfg["retryCount"] = DEFAULT_RETRY_COUNT
     if "aliveStatusCodes" not in cfg:
