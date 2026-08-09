@@ -4,7 +4,7 @@
 
 # Technical References Dashboard
 
-> 📅 Last verification (UTC): 2026-08-02 00:51:57
+> 📅 Last verification (UTC): 2026-08-09 00:29:25
 
 ## GitHub repositories health status
 
@@ -36,10 +36,10 @@ Project reaching the :red_circle: status **are removed**.
 | `2026-07-22T20:45:15Z` (1 months ago) | :green_circle: | [andrewlock/NetEscapades.AspNetCore.SecurityHeaders](https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders) |
 | `2026-07-23T00:33:38Z` (1 months ago) | :green_circle: | [TypeError/secure](https://github.com/TypeError/secure) |
 | `2026-07-27T15:57:10Z` (1 months ago) | :green_circle: | [github/secure_headers](https://github.com/github/secure_headers) |
-| `2026-07-31T00:22:33Z` (1 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
 | `2026-07-31T07:19:59Z` (1 months ago) | :green_circle: | [tmotagam/Secweb](https://github.com/tmotagam/Secweb) |
-| `2026-07-31T15:28:58Z` (1 months ago) | :green_circle: | [mdn/mdn-http-observatory](https://github.com/mdn/mdn-http-observatory) |
 | `2026-08-01T00:02:40Z` (0 months ago) | :green_circle: | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
 | `2026-08-01T12:16:44Z` (0 months ago) | :green_circle: | [danielkov/rust-helmet](https://github.com/danielkov/rust-helmet) |
-| `2026-08-01T19:32:51Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2026-08-03T22:51:52Z` (0 months ago) | :green_circle: | [mdn/mdn-http-observatory](https://github.com/mdn/mdn-http-observatory) |
+| `2026-08-04T00:22:40Z` (0 months ago) | :green_circle: | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
+| `2026-08-08T18:39:09Z` (0 months ago) | :green_circle: | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
