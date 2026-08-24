@@ -186,10 +186,11 @@ def compute_hsts_preload_global_usage():
     header_name = "strict-transport-security"
     title = "Global usage of the Strict Transport Security 'preload' feature"
     description = f"Provide the distribution of usage of the '[preload](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security#preloading_strict_transport_security)' feature for the header '{header_name}' across all domains analyzed."
-    query = f"select count(*) from stats where lower(http_header_name) = '{header_name}' and lower(http_header_value) not like '%preload%'"
-    count_of_domains = execute_query_against_data_db(query)[0][0]
+    # Count domains whose HSTS value DOES include 'preload'; this is the "Using it" bucket.
+    query = f"select count(*) from stats where lower(http_header_name) = '{header_name}' and lower(http_header_value) like '%preload%'"
+    count_of_domains_using_preload = execute_query_against_data_db(query)[0][0]
     domains_count = get_domains_count()
-    percentage_of_domains = (count_of_domains * 100) / domains_count
+    percentage_of_domains = (count_of_domains_using_preload * 100) / domains_count
     dataset_tuples = [("Using it", percentage_of_domains),
                       ("Not using it", (100-percentage_of_domains))]
     pie_chart_code = get_pie_chart_code(title, dataset_tuples)
