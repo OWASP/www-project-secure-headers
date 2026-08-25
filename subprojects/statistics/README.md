@@ -14,27 +14,23 @@
 * [MAJESTIC Top 1 million sites list](https://blog.majestic.com/development/majestic-million-csv-daily/).
 * [CISCO Top 1 million sites CSV file](http://s3-us-west-1.amazonaws.com/umbrella-static/index.html).
 
-The `gather_data.py` script will automatically download and parse the Majestic CSV if `data/input.csv` is not present.
+ℹ️ The `gather_data.py` script will automatically download and parse the Majestic CSV if `data/input.csv` is not present.
 
 # Scripts
 
 > [!NOTE]
 > 📦 They are all stored in the [scripts](scripts) folder and they are Python 3.x based.
 
-> [!IMPORTANT]
-> ⚠️ Usage of the script [generate_stats_md_file](scripts/generate_stats_md_file.py) was replaced by a [workflow](../../.github/workflows/mainsite_generate_stats-related-files.yml) on the main OSHP site.
-
 💻 [Visual Studio Code](https://code.visualstudio.com/) is used for the scripts development. A Visual Studio Code [workspace file](../../project.code-workspace) is provided for the project with [recommended extensions](../../.vscode/extensions.json).
 
 📑 Files:
 
 * [gather_data](scripts/gather_data.py): Script gathering the information about HTTP security headers usage in a [SQLITE database](data/data.db) based on the "MAJESTIC Top 1 million sites CSV file" data source.
-* [generate_stats_md_file](scripts/generate_stats_md_file.py): Script using the gathered data to generate/update the markdown file [stats](stats.md), with [mermaid pie charts](https://mermaid-js.github.io/mermaid/#/pie) with differents statistics about HTTP security headers usage (⚠️**not used anymore**).
 
 # Data
 
 > [!NOTE]
-> 📦 During execution, these files are generated and stored locally in the `data` folder. For distribution, they are published as GitHub Release assets attached to this repository.
+> 📦 During execution, these files are generated and stored locally in the `data` folder. For distribution, they are published as [GitHub Release assets](https://github.com/OWASP/www-project-secure-headers/releases?q=statistics-dataset-&expanded=true) attached to this repository.
 
 📑 Files:
 
