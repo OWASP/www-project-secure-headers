@@ -69,7 +69,7 @@ Removal tends to be slow and painful for those sites.
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `max-age=SECONDS`   | The time, in seconds, that the browser should remember that this site is only to be accessed using HTTPS.                                                                                                             |
 | `includeSubDomains` | If this optional parameter is specified, this rule applies to all of the site's subdomains as well.                                                                                                                   |
-| `preload`           | If this optional parameter is specified, its instruct the browser to always access the site using HTTPS because the site is included into `Strict-Transport-Security` [preload list](https://www.chromium.org/hsts/). |
+| `preload`           | If this optional parameter is specified, it instructs the browser to always access the site using HTTPS because the site is included into `Strict-Transport-Security` [preload list](https://www.chromium.org/hsts/). |
 
 ### Example
 
@@ -151,7 +151,7 @@ X-Content-Type-Options: nosniff
 
 ## Content-Security-Policy
 
-A Content Security Policy (also named CSP) requires careful tuning and testing after definition of the policy. A content security policy can have significant impact on the way browsers render pages (e.g., inline JavaScript or CSS can be disabled). A proper CSP can prevent a wide range of attacks, including cross-site scripting, other cross-site injections and click jacking.
+A Content Security Policy (also named CSP) requires careful tuning and testing after definition of the policy. A content security policy can have a significant impact on the way browsers render pages (e.g., inline JavaScript or CSS can be disabled). A proper CSP can prevent a wide range of attacks, including cross-site scripting, other cross-site injections and click jacking.
 
 ### Values
 
@@ -178,7 +178,7 @@ A Content Security Policy (also named CSP) requires careful tuning and testing a
 | `plugin-types`              | Define the set of plugins that can be invoked by the protected resource by limiting the types of resources that can be embedded.                                                                          |
 | `reflected-xss`             | Instruct the user agent to activate or deactivate any heuristics used to filter or block reflected cross-site scripting attacks, equivalent to the effects of the non-standard `X-XSS-Protection` header. |
 | `block-all-mixed-content`   | *(Deprecated)* Prevent the user agent from loading mixed content.                                                                                                                                         |
-| `upgrade-insecure-requests` | Instruct the user agent to using HTTPS when trying to download insecure HTTP resources                                                                                                                    |
+| `upgrade-insecure-requests` | Instruct the user agent to use HTTPS when trying to download insecure HTTP resources.                                                                                                                     |
 | `referrer`                  | *(Deprecated)* Define information the user agent can send in the `Referer` header.                                                                                                                        |
 | `report-uri`                | *(Deprecated and replaced by `report-to`)* Specifies a URI to which the user agent sends reports about policy violation.                                                                                  |
 | `report-to`                 | Specifies a group (defined in the `Report-To` header) to which the user agent sends reports about policy violation.                                                                                       |
@@ -328,7 +328,7 @@ loadContent("/unsafe.txt", document.getElementById("display"));
         <!-- See https://github.com/cure53/DOMPurify?tab=readme-ov-file#what-about-dompurify-and-trusted-types -->
         <script src="purify.js"></script>
         <!-- Step 2: Setup the content loading function creating the Trusted Types policy named "content_loader" referenced into the CSP header -->
-        <!-- Such content loader is used to retrieve unsafe from an API -->
+        <!-- Such content loader is used to retrieve unsafe content from an API -->
         <script src="defineContentLoader.js"></script>
     </head>
     <body>
@@ -415,7 +415,7 @@ Referrer-Policy: no-referrer
 
 ## Clear-Site-Data
 
-The Clear-Site-Data header clears browsing data associated with the requesting website. It allows web developers to have more control over the data stored locally by a browser for their origins (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data)). This header is useful for example, during a logout process, in order to ensure that all stored content on the client side like cookies, storage and cache are removed.
+The Clear-Site-Data header clears browsing data associated with the requesting website. It allows web developers to have more control over the data stored locally by a browser for their origins (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data)). This header is useful, for example, during a logout process, in order to ensure that all stored content on the client side like cookies, storage and cache are removed.
 
 ### Values
 
@@ -446,7 +446,7 @@ Clear-Site-Data: "cache","cookies","storage"
 
 ## Cross-Origin-Resource-Policy
 
-This response header (also named CORP) allows to define a policy that lets web sites and applications opt in to protection against certain requests from other origins (such as those issued with elements like `<script>` and `<img>`), to mitigate speculative [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack), like [Spectre](https://spectreattack.com/), as well as [Cross-Site Script Inclusion (XSSI)](https://www.scip.ch/en/?labs.20160414) attacks (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy)).
+This response header (also named CORP) allows one to define a policy that lets web sites and applications opt in to protection against certain requests from other origins (such as those issued with elements like `<script>` and `<img>`), to mitigate speculative [side-channel attacks](https://en.wikipedia.org/wiki/Side-channel_attack), like [Spectre](https://spectreattack.com/), as well as [Cross-Site Script Inclusion (XSSI)](https://www.scip.ch/en/?labs.20160414) attacks (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy)).
 
 💡 To fully understand where **CORP** and **COEP** work:
 
@@ -455,10 +455,10 @@ This response header (also named CORP) allows to define a policy that lets web s
 
 ### Values
 
-| Value          | Description                                                                                                                                                                                                                                                            |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `same-site`    | Only requests from the same [Site](https://developer.mozilla.org/en-US/docs/Glossary/Site) can read the resource.                                                                                                                                                      |
-| `same-origin`  | Only requests from the same [Origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) (i.e. scheme + host + port) can read the resource.                                                                                                                      |
+| Value          | Description                                                                                                                                                                                                                                                           |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `same-site`    | Only requests from the same [Site](https://developer.mozilla.org/en-US/docs/Glossary/Site) can read the resource.                                                                                                                                                     |
+| `same-origin`  | Only requests from the same [Origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) (i.e. scheme + host + port) can read the resource.                                                                                                                     |
 | `cross-origin` | Requests from any [Origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) (both `same-site` and `cross-site`) can read the resource. Browsers are using this policy when a [CORP header is not specified](https://resourcepolicy.fyi/#corp-and-isolation). |
 
 ### Example
@@ -510,7 +510,7 @@ Cross-Origin-Embedder-Policy: require-corp
 
 ## Cross-Origin-Opener-Policy
 
-This response header (also named COOP) allows you to ensure a top-level document does not share a browsing context group with cross-origin documents. COOP will process-isolate your document and potential attackers can't access to your global object if they were opening it in a popup, preventing a set of cross-origin attacks dubbed [XS-Leaks](https://xsleaks.dev/) (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy)).
+This response header (also named COOP) allows you to ensure a top-level document does not share a browsing context group with cross-origin documents. COOP will process-isolate your document and potential attackers can't access your global object if they were opening it in a popup, preventing a set of cross-origin attacks dubbed [XS-Leaks](https://xsleaks.dev/) (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy)).
 
 ### Values
 
@@ -541,7 +541,7 @@ Cross-Origin-Opener-Policy: same-origin
 
 ## Cache-Control
 
-This header holds directives (instructions) for caching in both **requests** and **responses**. If a given directive is in a request, it does not mean this directive is in the response (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)). Specify the capability of a resource to be cached is important to prevent [exposure of information via the cache](https://cwe.mitre.org/data/definitions/525.html).
+This header holds directives (instructions) for caching in both **requests** and **responses**. If a given directive is in a request, it does not mean this directive is in the response (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)). Specifying the capability of a resource to be cached is important to prevent [exposure of information via the cache](https://cwe.mitre.org/data/definitions/525.html).
 
 The headers named [Expires](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires) and [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) can be used in addition to the [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) header. [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) header can be used for backwards compatibility with the HTTP/1.0 caches. However, *Cache-Control* is the recommended way to define the caching policy.
 
@@ -608,7 +608,7 @@ The X-DNS-Prefetch-Control header controls [DNS prefetching](https://developer.m
 
 📍 Important note about the behavior of different browsers for this header based on [technical tests](https://github.com/OWASP/www-project-secure-headers/issues/201#issuecomment-3190756900) performed:
 
-* DNS prefetch seem only active on Chromium based browsers.
+* DNS prefetch seems only active on Chromium based browsers.
 * Setting **X-DNS-Prefetch-Control** to **off** is only honored by the Chrome browser.
 
 ### Values
@@ -667,9 +667,9 @@ The values allowed for `blocked-destinations` and `sources` directives are the f
 
 ### Example
 
-The following *policy* instruct the browser to block the loading of any script resource, for which, the `<script>` tag does not specify the `integrity` attribute. Any violation report will be sent to the endpoint `https://example.com/report` via an HTTP POST request:
+The following *policy* instructs the browser to block the loading of any script resource, for which, the `<script>` tag does not specify the `integrity` attribute. Any violation report will be sent to the endpoint `https://example.com/report` via an HTTP POST request:
 
-```
+```text
 Reporting-Endpoints: integrity-endpoint="https://example.com/report"
 Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint)
 ```
@@ -738,7 +738,7 @@ Feature Policy allows web developers to selectively enable, disable, and modify 
 
 ### Values
 
-Refer to this [page](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy#directives) to obtains the list of supported directives.
+Refer to this [page](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy#directives) to obtain the list of supported directives.
 
 ### Example
 
@@ -760,10 +760,10 @@ Feature-Policy: vibrate 'none'; geolocation 'none'
 
 > **⚠️ Warning:** This header will likely become obsolete in June 2021. Since May 2018 new certificates are expected to support SCTs by default. Certificates before March 2018 were allowed to have a lifetime of 39 months, those will all be expired in June 2021.
 
-The `Expect-CT` header is used by a server to indicate that browsers should evaluate connections to the host for Certificate Transparency compliance.  
+The `Expect-CT` header is used by a server to indicate that browsers should evaluate connections to the host for Certificate Transparency compliance.
 In Chrome 61 (Aug 2017) Chrome enabled its enforcement via SCT by default ([source](https://www.chromestatus.com/feature/5677171733430272)). You can still use this header to specify an `report-uri`.  
-  
-This header comes from the (now expired) internet draft [Expect-CT Extension for HTTP](https://datatracker.ietf.org/doc/html/rfc9163).
+
+This header comes from [RFC 9163](https://datatracker.ietf.org/doc/html/rfc9163) (Expect-CT Extension for HTTP).
 
 ### Values
 
@@ -840,7 +840,7 @@ This header enables the cross-site scripting (XSS) filter in your browser.
 | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `0`                                             | Filter disabled.                                                                                                                                                                  |
 | `1`                                             | Filter enabled. If a cross-site scripting attack is detected, in order to stop the attack, the browser will sanitize the page.                                                    |
-| `1; mode=block`                                 | Filter enabled. Rather than sanitize the page, when an XSS attack is detected, the browser will prevent rendering of the page.                                                     |
+| `1; mode=block`                                 | Filter enabled. Rather than sanitize the page, when an XSS attack is detected, the browser will prevent rendering of the page.                                                    |
 | `1; report=http://[YOURDOMAIN]/your_report_URI` | Filter enabled. The browser will sanitize the page and report the violation. This is a Chromium function utilizing CSP violation reports to send details to a URI of your choice. |
 
 ### Example
@@ -887,3 +887,38 @@ Pragma: no-cache
 * <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma>
 * <https://http.dev/pragma>
 * <https://caniuse.com/mdn-http_headers_pragma>
+
+# Mode Report-Only
+
+ℹ️ The following HTTP response headers offer a variant in which the processing **is not blocked** in case of detection of a violation but a violation notification is sent to a defined *endpoint*.
+
+📖 Headers:
+
+* [Content-Security-Policy-Report-Only](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only): Send the violation report to the endpoint defined into the directive named `report-to`.
+* [Cross-Origin-Embedder-Policy-Report-Only](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy-Report-Only): Send the violation report to the endpoint defined into the parameter named `report-to`.
+* [Integrity-Policy-Report-Only](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy-Report-Only): Send the violation report to the endpoint defined into the parameter named `endpoints`.
+* [Permissions-Policy-Report-Only](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy-Report-Only): Send the violation report to the endpoint defined into the directive named `report-to`.
+* [Cross-Origin-Opener-Policy-Report-Only](https://html.spec.whatwg.org/multipage/browsers.html#cross-origin-opener-policy-report-only): Send the violation report to the endpoint defined into the parameter named `report-to`.
+
+📄 Mapping of the violation report to the related header:
+
+| Header                                     | Violation report structure                                                                                                                                       |
+| ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Content-Security-Policy-Report-Only`      | [CSPViolationReport](https://developer.mozilla.org/en-US/docs/Web/API/CSPViolationReport)                                                                        |
+| `Cross-Origin-Embedder-Policy-Report-Only` | [COEPViolationReport](https://developer.mozilla.org/en-US/docs/Web/API/COEPViolationReport)                                                                      |
+| `Integrity-Policy-Report-Only`             | [IntegrityViolationReport](https://developer.mozilla.org/en-US/docs/Web/API/IntegrityViolationReport)                                                            |
+| `Permissions-Policy-Report-Only`           | [PermissionsPolicyViolationReport](https://developer.mozilla.org/en-US/docs/Web/API/PermissionsPolicyViolationReport)                                            |
+| `Cross-Origin-Opener-Policy-Report-Only`   | Not clearly documented but information can be found in this [section](https://html.spec.whatwg.org/multipage/browsers.html#coop-reporting) of the specification. |
+
+⚠️ The **name** of the endpoint specified in `report-to` / `endpoints` must reference an endpoint defined in a HTTP response header named **[Reporting-Endpoints](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints)** returned in the same HTTP response.
+
+💡 Example of HTTP response:
+
+```text
+HTTP/2 200 
+Date: Thu, 30 Aug 2026 09:45:51 GMT
+Content-Type: text/html;charset=UTF-8
+Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrity-endpoint)
+Reporting-Endpoints: integrity-endpoint="https://example.com/report"
+...
+```
