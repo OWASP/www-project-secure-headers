@@ -888,7 +888,7 @@ Pragma: no-cache
 * <https://http.dev/pragma>
 * <https://caniuse.com/mdn-http_headers_pragma>
 
-# Mode Report-Only
+# Response Headers With Report-Only Support
 
 ℹ️ The following HTTP response headers offer a variant in which the processing **is not blocked** in case of detection of a violation but a violation notification is sent to a defined *endpoint*.
 
