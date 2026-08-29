@@ -151,39 +151,38 @@ X-Content-Type-Options: nosniff
 
 ## Content-Security-Policy
 
-A Content Security Policy (also named CSP) requires careful tuning and testing after definition of the policy. A content security policy can have a significant impact on the way browsers render pages (e.g., inline JavaScript or CSS can be disabled). A proper CSP can prevent a wide range of attacks, including cross-site scripting, other cross-site injections and click jacking.
+A Content Security Policy (also named CSP) requires careful tuning and testing after definition of the policy. A content security policy can have a significant impact on the way browsers render pages (e.g., inline JavaScript or CSS can be disabled). A proper CSP can prevent a wide range of attacks, including cross-site scripting, other cross-site injections and clickjacking.
 
 ### Values
 
 💡 Source used was [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives).
 
-| Directive                   | Description                                                                                                                                                                                               |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `base-uri`                  | Define the base URI for relative URIs.                                                                                                                                                                    |
-| `default-src`               | Define loading policy for all resources type in case a resource type's dedicated directive is not defined (fallback).                                                                                     |
-| `script-src`                | Define which scripts the protected resource can execute.                                                                                                                                                  |
-| `object-src`                | Define from where the protected resource can load plugins.                                                                                                                                                |
-| `style-src`                 | Define which styles (CSS) can be applied to the protected resource.                                                                                                                                       |
-| `img-src`                   | Define from where the protected resource can load images.                                                                                                                                                 |
-| `media-src`                 | Define from where the protected resource can load video and audio.                                                                                                                                        |
-| `frame-src`                 | *(Deprecated and replaced by `child-src`)* Define from where the protected resource can embed frames.                                                                                                     |
-| `child-src`                 | Define from where the protected resource can embed frames.                                                                                                                                                |
-| `frame-ancestors`           | Define from where the protected resource can be embedded in frames. Useful against [click jacking](https://owasp.org/www-community/attacks/Clickjacking)                                                  |
-| `font-src`                  | Define from where the protected resource can load fonts.                                                                                                                                                  |
-| `connect-src`               | Define which URIs the protected resource can load using script interfaces.                                                                                                                                |
-| `manifest-src`              | Define from where the protected resource can load manifests.                                                                                                                                              |
-| `form-action`               | Define which URIs can be used as the action of HTML form elements.                                                                                                                                        |
-| `sandbox`                   | Specifies an HTML sandbox policy that the user agent applies to the protected resource.                                                                                                                   |
-| `script-nonce`              | Define script execution by requiring the presence of the specified nonce on script elements.                                                                                                              |
-| `plugin-types`              | Define the set of plugins that can be invoked by the protected resource by limiting the types of resources that can be embedded.                                                                          |
-| `reflected-xss`             | Instruct the user agent to activate or deactivate any heuristics used to filter or block reflected cross-site scripting attacks, equivalent to the effects of the non-standard `X-XSS-Protection` header. |
-| `block-all-mixed-content`   | *(Deprecated)* Prevent the user agent from loading mixed content.                                                                                                                                         |
-| `upgrade-insecure-requests` | Instruct the user agent to use HTTPS when trying to download insecure HTTP resources.                                                                                                                     |
-| `referrer`                  | *(Deprecated)* Define information the user agent can send in the `Referer` header.                                                                                                                        |
-| `report-uri`                | *(Deprecated and replaced by `report-to`)* Specifies a URI to which the user agent sends reports about policy violation.                                                                                  |
-| `report-to`                 | Specifies a group (defined in the `Report-To` header) to which the user agent sends reports about policy violation.                                                                                       |
-| `require-trusted-types-for` | Instructs user agents to control the data passed to [DOM XSS](https://portswigger.net/web-security/cross-site-scripting/dom-based) **sink** functions.                                                    |
-| `trusted-types`             | Specify an allowlist of [Trusted Type policy names](https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API) that a website can create using `trustedTypes.createPolicy()`.                    |
+The values below are an overview of available directives, for an exhaustive list please consult the dedicated [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives) section.
+
+| Directive                   | Description                                                                                                                                                                            |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `base-uri`                  | Define the base URI for relative URIs.                                                                                                                                                 |
+| `default-src`               | Define loading policy for all resources type in case a resource type's dedicated directive is not defined (fallback).                                                                  |
+| `script-src`                | Define which scripts the protected resource can execute.                                                                                                                               |
+| `object-src`                | Define from where the protected resource can load plugins.                                                                                                                             |
+| `style-src`                 | Define which styles (CSS) can be applied to the protected resource.                                                                                                                    |
+| `img-src`                   | Define from where the protected resource can load images.                                                                                                                              |
+| `media-src`                 | Define from where the protected resource can load video and audio.                                                                                                                     |
+| `frame-src`                 | *(Deprecated and replaced by `child-src`)* Define from where the protected resource can embed frames.                                                                                  |
+| `child-src`                 | Define from where the protected resource can embed frames.                                                                                                                             |
+| `frame-ancestors`           | Define from where the protected resource can be embedded in frames. Useful against [clickjacking](https://owasp.org/www-community/attacks/Clickjacking)                                |
+| `font-src`                  | Define from where the protected resource can load fonts.                                                                                                                               |
+| `connect-src`               | Define which URIs the protected resource can load using script interfaces.                                                                                                             |
+| `manifest-src`              | Define from where the protected resource can load manifests.                                                                                                                           |
+| `form-action`               | Define which URIs can be used as the action of HTML form elements.                                                                                                                     |
+| `sandbox`                   | Specifies an HTML sandbox policy that the user agent applies to the protected resource.                                                                                                |
+| `block-all-mixed-content`   | *(Deprecated)* Prevent the user agent from loading mixed content.                                                                                                                      |
+| `upgrade-insecure-requests` | Instruct the user agent to use HTTPS when trying to download insecure HTTP resources.                                                                                                  |
+| `referrer`                  | *(Deprecated)* Define information the user agent can send in the `Referer` header.                                                                                                     |
+| `report-uri`                | *(Deprecated and replaced by `report-to`)* Specifies a URI to which the user agent sends reports about policy violation.                                                               |
+| `report-to`                 | Specifies a group (defined in the `Report-To` header) to which the user agent sends reports about policy violation.                                                                    |
+| `require-trusted-types-for` | Instructs user agents to control the data passed to [DOM XSS](https://portswigger.net/web-security/cross-site-scripting/dom-based) **sink** functions.                                 |
+| `trusted-types`             | Specify an allowlist of [Trusted Type policy names](https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API) that a website can create using `trustedTypes.createPolicy()`. |
 
 ### Example
 
@@ -391,16 +390,16 @@ The `Referrer-Policy` HTTP header governs which referrer information, sent in th
 
 ### Values
 
-| Value                             | Description                                                                                                                                                                                                             |
-| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `no-referrer`                     | The `Referer` header will be omitted entirely. No referrer information is sent along with requests.                                                                                                                     |
-| `no-referrer-when-downgrade`      | This is the user agent's default behavior if no policy is specified. The origin is sent as referrer to a-priori as-much-secure destination (HTTPS → HTTPS), but isn't sent to a less secure destination (HTTPS → HTTP). |
-| `origin`                          | Only send the origin of the document as the referrer in all cases. (e.g. the document `https://example.com/page.html` will send the referrer `https://example.com/`.)                                                   |
-| `origin-when-cross-origin`        | Send a full URL when performing a same-origin request, but only send the origin of the document for other cases.                                                                                                        |
-| `same-origin`                     | A referrer will be sent for same-site origins, but cross-origin requests will contain no referrer information.                                                                                                          |
-| `strict-origin`                   | Only send the origin of the document as the referrer to a-priori as-much-secure destination (HTTPS → HTTPS), but don't send it to a less secure destination (HTTPS → HTTP).                                             |
-| `strict-origin-when-cross-origin` | Send a full URL when performing a same-origin request, only send the origin of the document to a-priori as-much-secure destination (HTTPS → HTTPS), and send no header to a less secure destination (HTTPS → HTTP).     |
-| `unsafe-url`                      | Send a full URL (stripped from parameters) when performing a same-origin or cross-origin request.                                                                                                                       |
+| Value                             | Description                                                                                                                                                                                                           |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `no-referrer`                     | The `Referer` header will be omitted entirely. No referrer information is sent along with requests.                                                                                                                   |
+| `no-referrer-when-downgrade`      | This is the user agent's default behavior if no policy is specified. The origin is sent as referrer to an a-priori as-secure destination (HTTPS → HTTPS), but isn't sent to a less secure destination (HTTPS → HTTP). |
+| `origin`                          | Only send the origin of the document as the referrer in all cases. (e.g. the document `https://example.com/page.html` will send the referrer `https://example.com/`.)                                                 |
+| `origin-when-cross-origin`        | Send a full URL when performing a same-origin request, but only send the origin of the document for other cases.                                                                                                      |
+| `same-origin`                     | A referrer will be sent for same-site origins, but cross-origin requests will contain no referrer information.                                                                                                        |
+| `strict-origin`                   | Only send the origin of the document as the referrer to an a-priori as-secure destination (HTTPS → HTTPS), but don't send it to a less secure destination (HTTPS → HTTP).                                             |
+| `strict-origin-when-cross-origin` | Send a full URL when performing a same-origin request, only send the origin of the document to an a-priori as-secure destination (HTTPS → HTTPS), and send no header to a less secure destination (HTTPS → HTTP).     |
+| `unsafe-url`                      | Send a full URL (stripped from parameters) when performing a same-origin or cross-origin request.                                                                                                                     |
 
 ### Example
 
@@ -510,7 +509,7 @@ Cross-Origin-Embedder-Policy: require-corp
 
 ## Cross-Origin-Opener-Policy
 
-This response header (also named COOP) allows you to ensure a top-level document does not share a browsing context group with cross-origin documents. COOP will process-isolate your document and potential attackers can't access your global object if they were opening it in a popup, preventing a set of cross-origin attacks dubbed [XS-Leaks](https://xsleaks.dev/) (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy)).
+This response header (also named COOP) allows you to ensure a top-level document does not share a browsing context group with cross-origin documents. COOP will process-isolate your document and potential attackers can't access your global object if they were to open it in a popup, preventing a set of cross-origin attacks dubbed [XS-Leaks](https://xsleaks.dev/) (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy)).
 
 ### Values
 
@@ -702,7 +701,7 @@ Example of violation report sent based on technical tests performed:
 * <https://caniuse.com/mdn-http_headers_integrity-policy_blocked-destinations_script>
 * <https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/integrity>
 
-## Permissions Policy
+## Permissions-Policy
 
 > 💻 **Working draft.**
 
@@ -758,10 +757,10 @@ Feature-Policy: vibrate 'none'; geolocation 'none'
 
 > **Deprecated.**
 
-> **⚠️ Warning:** This header will likely become obsolete in June 2021. Since May 2018 new certificates are expected to support SCTs by default. Certificates before March 2018 were allowed to have a lifetime of 39 months, those will all be expired in June 2021.
+> **⚠️ Warning:** This header will likely become obsolete in June 2021. Since May 2018, new certificates are expected to support SCTs by default. Certificates before March 2018 were allowed to have a lifetime of 39 months, those will all be expired in June 2021.
 
 The `Expect-CT` header is used by a server to indicate that browsers should evaluate connections to the host for Certificate Transparency compliance.
-In Chrome 61 (Aug 2017) Chrome enabled its enforcement via SCT by default ([source](https://www.chromestatus.com/feature/5677171733430272)). You can still use this header to specify an `report-uri`.  
+In Chrome 61 (Aug 2017) Chrome enabled its enforcement via SCT by default ([source](https://www.chromestatus.com/feature/5677171733430272)). You can still use this header to specify a `report-uri`.  
 
 This header comes from [RFC 9163](https://datatracker.ietf.org/doc/html/rfc9163) (Expect-CT Extension for HTTP).
 
@@ -894,11 +893,11 @@ Pragma: no-cache
 
 📖 Headers:
 
-* [Content-Security-Policy-Report-Only](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only): Send the violation report to the endpoint defined into the directive named `report-to`.
-* [Cross-Origin-Embedder-Policy-Report-Only](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy-Report-Only): Send the violation report to the endpoint defined into the parameter named `report-to`.
-* [Integrity-Policy-Report-Only](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy-Report-Only): Send the violation report to the endpoint defined into the parameter named `endpoints`.
-* [Permissions-Policy-Report-Only](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy-Report-Only): Send the violation report to the endpoint defined into the directive named `report-to`.
-* [Cross-Origin-Opener-Policy-Report-Only](https://html.spec.whatwg.org/multipage/browsers.html#cross-origin-opener-policy-report-only): Send the violation report to the endpoint defined into the parameter named `report-to`.
+* [Content-Security-Policy-Report-Only](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only): Send the violation report to the endpoint defined in the directive named `report-to`.
+* [Cross-Origin-Embedder-Policy-Report-Only](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy-Report-Only): Send the violation report to the endpoint defined in the parameter named `report-to`.
+* [Integrity-Policy-Report-Only](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy-Report-Only): Send the violation report to the endpoint defined in the parameter named `endpoints`.
+* [Permissions-Policy-Report-Only](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy-Report-Only): Send the violation report to the endpoint defined in the directive named `report-to`.
+* [Cross-Origin-Opener-Policy-Report-Only](https://html.spec.whatwg.org/multipage/browsers.html#cross-origin-opener-policy-report-only): Send the violation report to the endpoint defined in the parameter named `report-to`.
 
 📄 Mapping of the violation report to the related header:
 
@@ -910,7 +909,7 @@ Pragma: no-cache
 | `Permissions-Policy-Report-Only`           | [PermissionsPolicyViolationReport](https://developer.mozilla.org/en-US/docs/Web/API/PermissionsPolicyViolationReport)                                            |
 | `Cross-Origin-Opener-Policy-Report-Only`   | Not clearly documented but information can be found in this [section](https://html.spec.whatwg.org/multipage/browsers.html#coop-reporting) of the specification. |
 
-⚠️ The **name** of the endpoint specified in `report-to` / `endpoints` must reference an endpoint defined in a HTTP response header named **[Reporting-Endpoints](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints)** returned in the same HTTP response.
+⚠️ The **name** of the endpoint specified in `report-to` / `endpoints` must reference an endpoint defined in an HTTP response header named **[Reporting-Endpoints](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints)** returned in the same HTTP response.
 
 💡 Example of HTTP response:
 
@@ -922,3 +921,24 @@ Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrit
 Reporting-Endpoints: integrity-endpoint="https://example.com/report"
 ...
 ```
+
+📍 The endpoint defined to receive the violation report will have the following properties:
+
+* Exposed publicly.
+* Exposed without authentication.
+* Can contain malicious content due to these two situations:
+  * Direct attacks against the endpoint.
+  * Presence of a malicious payload contained in the violation report due to the initial violation detected and then the sample provided in the report.
+
+⚠️ It is why it is important to process the violation report considering that data provided are not safe. The following approach can be used:
+
+1. For a field for which the type is known, like for example number, then validate the value received against the type and a range of minimum and maximum allowed values.
+2. For a field for which the type is a string and for which the expected values are known, then validate the value against a whitelist of allowed values.
+3. For the other cases, encode the value in HEX prior to storing it. This way, the information is kept for analysis but it is stored in a way that the malicious payload is not directly executed/triggered when it is read back from the system consuming the violation report.
+
+🤔 For what purposes could these variants be used?
+
+* Test a policy against a real production context prior to enforcing it: load, types of browsers used by users, etc.
+* Debug an existing policy causing issues after the update of a specific browser to its latest release.
+* Define a new attack detection use case using a violation report as a source of data like a "sensor".
+* and so on.
