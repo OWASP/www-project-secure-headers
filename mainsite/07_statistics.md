@@ -10,7 +10,7 @@
 
 
 
-📅 Last update: 08/24/2026 at 17:24:17 - Domains analyzed count: 250000.
+📅 Last update: 08/30/2026 at 05:30:48 - Domains analyzed count: 250000.
 
 ## Global usage of secure headers
 
@@ -54,11 +54,25 @@ Provide the distribution of usage of the header 'cross-origin-embedder-policy' a
 ![0753b0c4fecc8c56d81e31f36bc8c397cea5032b](assets/tab_stats_generated_images/0753b0c4fecc8c56d81e31f36bc8c397cea5032b.png)
 
 
+## Global usage of header 'cross-origin-embedder-policy-report-only'
+
+Provide the distribution of usage of the header 'cross-origin-embedder-policy-report-only' across all domains analyzed.
+
+![a14cf3487010797887da3b9f86faafb083b6a1cb](assets/tab_stats_generated_images/a14cf3487010797887da3b9f86faafb083b6a1cb.png)
+
+
 ## Global usage of header 'cross-origin-opener-policy'
 
 Provide the distribution of usage of the header 'cross-origin-opener-policy' across all domains analyzed.
 
 ![e7e550d9cbff786153f7f13f664361e41efee57c](assets/tab_stats_generated_images/e7e550d9cbff786153f7f13f664361e41efee57c.png)
+
+
+## Global usage of header 'cross-origin-opener-policy-report-only'
+
+Provide the distribution of usage of the header 'cross-origin-opener-policy-report-only' across all domains analyzed.
+
+![57378fe5f403c67aba70ee66ee68443d3782d94a](assets/tab_stats_generated_images/57378fe5f403c67aba70ee66ee68443d3782d94a.png)
 
 
 ## Global usage of header 'cross-origin-resource-policy'
@@ -75,11 +89,25 @@ Provide the distribution of usage of the header 'expect-ct' across all domains a
 ![78fc7e8d03077546e27c016ee80b2143dc4ebb08](assets/tab_stats_generated_images/78fc7e8d03077546e27c016ee80b2143dc4ebb08.png)
 
 
+## Global usage of header 'integrity-policy-report-only'
+
+Provide the distribution of usage of the header 'integrity-policy-report-only' across all domains analyzed.
+
+![dea2ae8c2a2a971cf413caa5203f21bfe11dfc89](assets/tab_stats_generated_images/dea2ae8c2a2a971cf413caa5203f21bfe11dfc89.png)
+
+
 ## Global usage of header 'permissions-policy'
 
 Provide the distribution of usage of the header 'permissions-policy' across all domains analyzed.
 
 ![87eabe1fe075f9034dc4db8f76be07da0d08afe3](assets/tab_stats_generated_images/87eabe1fe075f9034dc4db8f76be07da0d08afe3.png)
+
+
+## Global usage of header 'permissions-policy-report-only'
+
+Provide the distribution of usage of the header 'permissions-policy-report-only' across all domains analyzed.
+
+![f4a85ca2f52b903238b026b1e4fa0b0f1a1ee568](assets/tab_stats_generated_images/f4a85ca2f52b903238b026b1e4fa0b0f1a1ee568.png)
 
 
 ## Global usage of header 'public-key-pins'
