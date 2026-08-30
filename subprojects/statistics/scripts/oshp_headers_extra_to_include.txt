@@ -2,3 +2,7 @@ expect-ct
 public-key-pins
 x-xss-protection
 content-security-policy-report-only
+cross-origin-embedder-policy-report-only
+cross-origin-opener-policy-report-only
+integrity-policy-report-only
+permissions-policy-report-only
