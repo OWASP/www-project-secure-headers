@@ -26,7 +26,7 @@ The following section proposes a configuration for the [actively supported and w
 
 * This [demonstration video](assets/misc/demo_csp_usefulness_in_api_context.mp4) as well as this [blog post](https://treblle.com/blog/api-escaping-output-importance) show how HTTP response security headers, like the `Content-Security-Policy` one, can be useful in the context of a web API.
 
-🚩 Regarding the header `Content-Security-Policy`, keep in mind that the policy applicability depends on the execution context. Technical details are available [here](https://www.w3.org/TR/CSP2/#which-policy-applies). Therefore, CSP usage in a web API application implies to **define the CSP in the document consuming the content of the web API**.
+🚩 Regarding the header `Content-Security-Policy`, keep in mind that the policy applicability depends on the execution context. Technical details are available [here](https://www.w3.org/TR/CSP2/#which-policy-applies). Therefore, CSP usage in a web API application implies **defining the CSP in the document consuming the content of the web API**.
 
 🚩 The header `Clear-Site-Data` will cause the browser to take additional processing time for the HTTP response, so, set it to the logout function when possible. Additional information about the support for experimental values:
 
