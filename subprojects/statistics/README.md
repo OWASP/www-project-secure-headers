@@ -1,8 +1,8 @@
 # OWASP Secure Headers Project Statistics
 
-📊 [Statistics](https://owasp.org/www-project-secure-headers/index.html#div-statistics) about HTTP response security headers usage mentioned by the [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/) (OSHP).
+📊 [Statistics](../../mainsite/07_statistics.md) about HTTP response security headers usage mentioned by the [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/) (OSHP).
 
-💾 This project gather data, about the usage of HTTP response security headers, into a [SQLITE database](data/data.db) to allow the generation of statistics in a second time.
+💾 This project gather data, about the usage of HTTP response security headers, into a SQLITE database to allow the generation of statistics in a second time.
 
 💡 See this [issue](https://github.com/OWASP/www-project-secure-headers/issues/61) for details.
 
@@ -25,7 +25,7 @@
 
 📑 Files:
 
-* [gather_data](scripts/gather_data.py): Script gathering the information about HTTP security headers usage in a [SQLITE database](data/data.db) based on the "MAJESTIC Top 1 million sites CSV file" data source.
+* [gather_data](scripts/gather_data.py): Script gathering the information about HTTP security headers usage in a SQLITE database based on the "MAJESTIC Top 1 million sites CSV file" data source.
 
 # Data
 
@@ -49,4 +49,4 @@
 
 # Note
 
-* [DB Browser for SQLite](https://github.com/sqlitebrowser/sqlitebrowser) can be used to access to the raw data of the [SQLITE DB](data/data.db).
+* [DB Browser for SQLite](https://github.com/sqlitebrowser/sqlitebrowser) can be used to access to the raw data of the SQLITE database.
