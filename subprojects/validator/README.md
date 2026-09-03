@@ -1,6 +1,6 @@
 # OWASP Secure Headers Project validator
 
-✅ [Venom](https://github.com/ovh/venom) test suites to validate an [HTTP security response headers](https://owasp.org/www-project-secure-headers/#div-headers) configuration against [OSHP recommendation](https://owasp.org/www-project-secure-headers/#div-bestpractices).
+✅ [Venom](https://github.com/ovh/venom) test suites to validate an [HTTP security response headers](../../mainsite/01_headers.md) configuration against [OSHP recommendation](../../mainsite/03_best_practices.md#configuration-proposal).
 
 🎯 The objective is to provide a way to validate the configuration of non-Internet exposed applications in a flexible/portable way.
 
