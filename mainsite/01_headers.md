@@ -170,7 +170,7 @@ The values below are an overview of available directives, for an exhaustive list
 | `media-src`                 | Define from where the protected resource can load video and audio.                                                                                                                     |
 | `frame-src`                 | *(Deprecated and replaced by `child-src`)* Define from where the protected resource can embed frames.                                                                                  |
 | `child-src`                 | Define from where the protected resource can embed frames.                                                                                                                             |
-| `frame-ancestors`           | Define from where the protected resource can be embedded in frames. Useful against [clickjacking](https://owasp.org/www-community/attacks/Clickjacking)                                |
+| `frame-ancestors`           | Define from where the protected resource can be embedded in frames. Useful against [clickjacking](https://portswigger.net/web-security/clickjacking)                                   |
 | `font-src`                  | Define from where the protected resource can load fonts.                                                                                                                               |
 | `connect-src`               | Define which URIs the protected resource can load using script interfaces.                                                                                                             |
 | `manifest-src`              | Define from where the protected resource can load manifests.                                                                                                                           |
@@ -816,7 +816,6 @@ Public-Key-Pins: pin-sha256="d6qzRu9zOECb90Uez27xWltNsj0e1Md7GkYYkVoZWmM="; pin-
 ### References
 
 * <https://tools.ietf.org/html/rfc7469>
-* <https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning#HTTP_pinning>
 * <https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning>
 * <https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning>
 * <https://raymii.org/s/articles/HTTP_Public_Key_Pinning_Extension_HPKP.html>
@@ -857,7 +856,7 @@ X-XSS-Protection: 0
 * <https://github.com/zaproxy/zaproxy/issues/5849>
 * <https://scotthelme.co.uk/security-headers-updates/#removing-the-x-xss-protection-header>
 * <https://portswigger.net/daily-swig/google-chromes-xss-auditor-goes-back-to-filter-mode>
-* <https://owasp.org/www-community/attacks/xss/>
+* <https://portswigger.net/web-security/cross-site-scripting>
 * <https://www.virtuesecurity.com/blog/understanding-xss-auditor/>
 * <https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers>
 
