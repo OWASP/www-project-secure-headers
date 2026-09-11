@@ -54,8 +54,8 @@ nav_order: 1
 
 💡 Additionally, we provide this information as two JSON files to enable automation in the context of a provisioning workflow:
 
-* Collection of [HTTP response security headers to add](../ci/headers_add.json).
-* Collection of [HTTP response headers to remove](../ci/headers_remove.json).
+* Collection of [HTTP response security headers to add](https://github.com/OWASP/www-project-secure-headers/blob/master/ci/headers_add.json).
+* Collection of [HTTP response headers to remove](https://github.com/OWASP/www-project-secure-headers/blob/master/ci/headers_remove.json).
 
 📡 These json files are automatically updated.
 

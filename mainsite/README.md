@@ -1,6 +1,3 @@
-> [!NOTE]
-> This is the main content of the OSHP following the migration of the OWASP foundation to its new CMS. See [here](https://github.com/OWASP/www-project-secure-headers/discussions/273) for all the details.
-
 > [!TIP]
 > [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/OWASP/www-project-secure-headers)
 
