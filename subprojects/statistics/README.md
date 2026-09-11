@@ -1,6 +1,6 @@
 # OWASP Secure Headers Project Statistics
 
-📊 [Statistics](../../mainsite/07_statistics.md) about HTTP response security headers usage mentioned by the [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/) (OSHP).
+📊 [Statistics](../../mainsite/07_statistics.md) about HTTP response security headers usage mentioned by the [OWASP Secure Headers Project](https://owasp.org/projects/secure-headers-project) (OSHP).
 
 💾 This project gather data, about the usage of HTTP response security headers, into a SQLITE database to allow the generation of statistics in a second time.
 
