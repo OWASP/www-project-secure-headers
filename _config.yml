@@ -1,14 +1,27 @@
-remote_theme: "owasp/www--site-theme@main"
+title: OWASP Secure Headers Project
+description: Provides technical information about HTTP security headers.
 
-# core files/folders to exclude
+theme: jekyll-theme-dinky
+
+permalink: /:title/
+
 exclude:
   - README.md
+  - CONTRIBUTING.md
+  - CODE_OF_CONDUCT.md
+  - SECURITY.md
+  - CLAUDE.md
+  - LICENSE.txt
   - subprojects/
-  - mainsite/
   - archives/
   - .github/
   - .vscode/
   - ci/
+  - "*.py"
+  - "*.json"
+  - "*.yaml"
+  - "*.txt"
+  - "*.code-workspace"
 
 plugins:
-  - jekyll-include-cache-0.2.0
+  - jekyll-include-cache

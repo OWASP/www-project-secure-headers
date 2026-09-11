@@ -1,5 +1,5 @@
-[Index](00_index.md) | [Response Headers](01_headers.md) | [Browser Support](02_browser_support.md) | [Best Practices](03_best_practices.md) | [Technical Resources](04_technical_resources.md) | [Code Snippets](05_code_snippets.md) | [Miscellaneous](06_misc.md) | [Statistics](07_statistics.md) | [Case Studies](08_case_studies.md) | [Logo](09_logo.md) | [Monitoring Technical References Dashboard](10_monitoring_technical_references_dashboard.md)
-
+---
+title: Index
 ---
 
 ## Introduction
@@ -69,6 +69,11 @@
 ## Create a link to the OSHP site
 
 📖 This is documented into the **[case studies](08_case_studies.md)** section.
+
+## Communication
+
+* 🌏 We use the hashtag `owasp_shp` in our posts on [Bluesky](https://bsky.app/hashtag/owasp_shp) and [LinkedIn](https://www.linkedin.com/feed/hashtag/?keywords=owasp_shp), to publish an update about the project.
+* 📡 This [atom web feed](https://github.com/OWASP/www-project-secure-headers/commits/master.atom) can be used to be notified when an update is pushed on the OSHP website's repository.
 
 ## Project leaders
 
