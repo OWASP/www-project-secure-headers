@@ -1,5 +1,7 @@
 ---
+layout: default
 title: Technical Resources
+permalink: /technical-resources/
 ---
 
 # Technical Resources

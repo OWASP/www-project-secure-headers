@@ -1,5 +1,7 @@
 ---
+layout: default
 title: Best Practices
+permalink: /best-practices/
 ---
 
 # Best Practices

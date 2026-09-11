@@ -1,5 +1,7 @@
 ---
+layout: default
 title: Code Snippets
+permalink: /code-snippets/
 ---
 
 # Code Snippets

@@ -1,5 +1,7 @@
 ---
+layout: default
 title: Logo
+permalink: /logo/
 ---
 
 # Official project logo

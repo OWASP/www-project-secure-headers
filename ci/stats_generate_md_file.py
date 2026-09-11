@@ -24,7 +24,9 @@ MD_FILE = "../mainsite/07_statistics.md"
 IMAGE_FOLDER_LOCATION = "../mainsite/assets/tab_stats_generated_images"
 ASSETS_FOLDER_LOCATION = IMAGE_FOLDER_LOCATION.replace("../mainsite/", "")
 TAB_MD_TEMPLATE = """---
+layout: default
 title: Statistics
+permalink: /statistics/
 ---
 
 

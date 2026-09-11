@@ -1,5 +1,7 @@
 ---
+layout: default
 title: Response Headers
+permalink: /response-headers/
 ---
 
 # Response Headers

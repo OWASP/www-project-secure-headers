@@ -1,5 +1,7 @@
 ---
+layout: default
 title: Browser Support
+permalink: /browser-support/
 ---
 
 # Browser Support

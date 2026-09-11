@@ -24,7 +24,9 @@ EXECUTION_DATETIME_UTC = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S"
 SOURCE_MD_FILE = "../mainsite/04_technical_resources.md"
 DASHBOARD_MD_FILE = "../mainsite/10_monitoring_technical_references_dashboard.md"
 DASHBOARD_MD_FILE_TEMPLATE = f"""---
+layout: default
 title: Technical References Dashboard
+permalink: /technical-references-dashboard/
 ---
 
 # Technical References Dashboard
