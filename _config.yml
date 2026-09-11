@@ -1,5 +1,6 @@
 title: OWASP Secure Headers Project
 description: Provides technical information about HTTP security headers.
+baseurl: /www-project-secure-headers
 
 theme: jekyll-theme-dinky
 
