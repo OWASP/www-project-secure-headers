@@ -26,6 +26,7 @@ ASSETS_FOLDER_LOCATION = IMAGE_FOLDER_LOCATION.replace("../mainsite/", "")
 TAB_MD_TEMPLATE = """---
 layout: default
 title: Statistics
+nav_order: 8
 permalink: /statistics/
 ---
 

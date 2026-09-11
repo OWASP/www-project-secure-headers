@@ -26,6 +26,7 @@ DASHBOARD_MD_FILE = "../mainsite/10_monitoring_technical_references_dashboard.md
 DASHBOARD_MD_FILE_TEMPLATE = f"""---
 layout: default
 title: Technical References Dashboard
+nav_order: 11
 permalink: /technical-references-dashboard/
 ---
 

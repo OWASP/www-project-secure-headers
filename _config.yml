@@ -21,6 +21,17 @@ exclude:
   - archives/
   - ci/
   - logo/
+  - README.md
+  - CONTRIBUTING.md
+  - CODE_OF_CONDUCT.md
+  - SECURITY.md
+  - CLAUDE.md
+  - LICENSE.txt
+  - requirements.txt
+  - pad-md-tables.py
+  - markdown-link-check_config.json
+  - project.code-workspace
+  - project.owasp.yaml
 
 plugins:
   - jekyll-remote-theme
