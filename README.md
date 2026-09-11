@@ -4,7 +4,7 @@
 
 # Introduction
 
-📦 This repository contains all the content of the **[OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/)** (also named **OSHP**).
+📦 This repository contains all the content of the **[OWASP Secure Headers Project](https://owasp.org/projects/secure-headers-project)** (also named **OSHP**).
 
 # OSHP ecosystem
 
