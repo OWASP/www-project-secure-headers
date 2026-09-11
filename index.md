@@ -3,4 +3,4 @@ title: OWASP Secure Headers Project
 layout: default
 ---
 
-TEST
+<script>window.location="/index/";</script>

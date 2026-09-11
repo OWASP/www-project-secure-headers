@@ -75,8 +75,9 @@ nav_order: 1
 
 ## Communication
 
-* 🌏 We use the hashtag `owasp_shp` in our posts on [Bluesky](https://bsky.app/hashtag/owasp_shp) and [LinkedIn](https://www.linkedin.com/feed/hashtag/?keywords=owasp_shp), to publish an update about the project.
-* 📡 This [atom web feed](https://github.com/OWASP/www-project-secure-headers/commits/master.atom) can be used to be notified when an update is pushed on the OSHP website's repository.
+🌏 We use the hashtag `owasp_shp` in our posts on [Bluesky](https://bsky.app/hashtag/owasp_shp) and [LinkedIn](https://www.linkedin.com/feed/hashtag/?keywords=owasp_shp), to publish an update about the project.
+
+📡 This [atom web feed](https://github.com/OWASP/www-project-secure-headers/commits/master.atom) can be used to be notified when an update is pushed on the OSHP website's repository.
 
 ## Project leaders
 
