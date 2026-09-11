@@ -5,23 +5,20 @@ theme: jekyll-theme-dinky
 
 permalink: /:title/
 
+defaults:
+  - scope:
+      path: "mainsite"
+    values:
+      layout: "default"
+
+include:
+  - mainsite/
+
 exclude:
-  - README.md
-  - CONTRIBUTING.md
-  - CODE_OF_CONDUCT.md
-  - SECURITY.md
-  - CLAUDE.md
-  - LICENSE.txt
   - subprojects/
   - archives/
-  - .github/
-  - .vscode/
   - ci/
-  - "*.py"
-  - "*.json"
-  - "*.yaml"
-  - "*.txt"
-  - "*.code-workspace"
+  - logo/
 
 plugins:
   - jekyll-include-cache
