@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Browser Support
+nav_order: 3
 permalink: /browser-support/
 ---
 

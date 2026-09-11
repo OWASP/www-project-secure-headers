@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Miscellaneous
+nav_order: 7
 permalink: /miscellaneous/
 ---
 

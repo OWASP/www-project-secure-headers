@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Case Studies
+nav_order: 9
 permalink: /case-studies/
 ---
 

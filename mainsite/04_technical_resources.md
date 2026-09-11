@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Technical Resources
+nav_order: 5
 permalink: /technical-resources/
 ---
 

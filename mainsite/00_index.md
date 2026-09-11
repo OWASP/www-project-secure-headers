@@ -2,6 +2,7 @@
 layout: default
 title: Index
 permalink: /index/
+nav_order: 1
 ---
 
 ## Introduction

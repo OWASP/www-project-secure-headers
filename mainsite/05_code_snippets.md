@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Code Snippets
+nav_order: 6
 permalink: /code-snippets/
 ---
 

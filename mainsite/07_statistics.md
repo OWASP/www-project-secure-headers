@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Statistics
+nav_order: 8
 permalink: /statistics/
 ---
 
