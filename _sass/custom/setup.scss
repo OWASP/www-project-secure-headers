@@ -1,4 +1,4 @@
 // Reduce sidebar width (default is 16.5rem / ~264px). Must stay in rem to
 // avoid unit conflict with $content-width in the theme's Sass arithmetic.
-$nav-width:    13rem !default; // ~208px
-$nav-width-md: 12rem !default; // ~192px (mobile-breakpoint variant)
+$nav-width:    13rem; // ~208px
+$nav-width-md: 12rem; // ~192px (mobile-breakpoint variant)
