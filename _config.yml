@@ -1,7 +1,7 @@
+# See https://just-the-docs.com/docs/configuration
 title: OWASP Secure Headers Project
 description: Provides technical information about HTTP security headers.
 baseurl: /www-project-secure-headers
-
 remote_theme: just-the-docs/just-the-docs
 url: https://righettod.github.io
 
@@ -36,3 +36,26 @@ exclude:
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
+
+# Aux links for the upper right navigation
+aux_links:
+  "Just the Docs on GitHub":
+    - "//github.com/just-the-docs/just-the-docs"
+
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: false
+
+footer_content: "<a href=\"https://owasp.org/projects/secure-headers-project\">OWASP Secure Header Project</a>"
+
+# Enable or disable the site search
+search_enabled: true
+
+# Enable or disable the side/mobile menu globally
+nav_enabled: true
+
+# Set a path/url to a logo that will be displayed instead of the title
+logo: "assets/images/oshp_logo.png"
+
+# Set a path/url to a favicon that will be displayed by the browser
+favicon_ico: "assets/images/oshp_logo.png"
+
