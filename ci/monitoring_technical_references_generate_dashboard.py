@@ -36,7 +36,7 @@ permalink: /technical-references-dashboard/
 
 ## GitHub repositories health status
 
-Provides a quick visual status on the health status (whether they are updated or not) of the referenced GitHub projects in the tab named **Technical**.
+Provides a quick visual status on the health status (whether they are updated or not) of the referenced GitHub projects in the section named **Technical Resources**.
 
 Project reaching the 🟥 status **are removed**.
 
