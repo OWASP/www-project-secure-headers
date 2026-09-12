@@ -33,10 +33,8 @@ h1, h2, h3, h4, h5, h6 {
   color: $owasp-dark;
 }
 
-// Sidebar – blue background with white text, narrower width
+// Sidebar – blue background with white text
 .side-bar {
-  width: 210px !important;
-  min-width: 210px !important;
   background-color: $owasp-blue;
   border-right: none;
 
