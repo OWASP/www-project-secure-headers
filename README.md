@@ -6,6 +6,11 @@
 
 📦 This repository contains all the content of the **[OWASP Secure Headers Project](https://owasp.org/projects/secure-headers-project)** (also named **OSHP**).
 
+# OSHP Web URL
+
+* Project page on the OWASP site: <https://owasp.org/projects/secure-headers-project>
+* Web rendering of the main site: <https://owasp.github.io/www-project-secure-headers/>
+
 # OSHP ecosystem
 
 🗺️ The OSHP project is composed of the following projects:
