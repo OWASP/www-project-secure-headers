@@ -38,7 +38,7 @@ permalink: /technical-references-dashboard/
 
 Provides a quick visual status on the health status (whether they are updated or not) of the referenced GitHub projects in the tab named **Technical**.
 
-Project reaching the :red_circle: status **are removed**.
+Project reaching the 🟥 status **are removed**.
 
 ℹ️ **Status icon legends:**
 
