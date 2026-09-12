@@ -7,13 +7,13 @@ permalink: /technical-references-dashboard/
 
 # Technical References Dashboard
 
-> 📅 Last verification (UTC): 2026-09-12 11:23:32
+> 📅 Last verification (UTC): 2026-09-12 12:04:13
 
 ## GitHub repositories health status
 
 Provides a quick visual status on the health status (whether they are updated or not) of the referenced GitHub projects in the tab named **Technical**.
 
-Project reaching the :red_circle: status **are removed**.
+Project reaching the 🟥 status **are removed**.
 
 ℹ️ **Status icon legends:**
 
