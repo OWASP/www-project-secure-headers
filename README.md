@@ -17,7 +17,9 @@
 
 * **Main site**: It is the core of the OSHP and provide the information about HTTP security headers.
   * Called `mainsite`.
-  * Content is [here](mainsite/).  
+  * Content is [here](mainsite/).
+    * It is **the master data in markdown** and is the content that is updated.
+  * Web rendered content is [here](https://owasp.github.io/www-project-secure-headers/) and is based on the **the master data in markdown**.
 * **Validator**: Venom tests suite to validate an HTTP security response headers configuration against OSHP recommendation.
   * Called `validator`.
   * Content is [here](subprojects/validator/).
