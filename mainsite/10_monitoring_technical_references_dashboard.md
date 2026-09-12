@@ -7,11 +7,11 @@ permalink: /technical-references-dashboard/
 
 # Technical References Dashboard
 
-> 📅 Last verification (UTC): 2026-09-12 12:04:13
+> 📅 Last verification (UTC): 2026-09-12 16:34:04
 
 ## GitHub repositories health status
 
-Provides a quick visual status on the health status (whether they are updated or not) of the referenced GitHub projects in the tab named **Technical**.
+Provides a quick visual status on the health status (whether they are updated or not) of the referenced GitHub projects in the section named **Technical Resources**.
 
 Project reaching the 🟥 status **are removed**.
 
@@ -43,6 +43,6 @@ Project reaching the 🟥 status **are removed**.
 | `2026-09-10T10:26:15Z` (0 months ago) | 🟩 | [mdn/mdn-http-observatory](https://github.com/mdn/mdn-http-observatory) |
 | `2026-09-11T14:16:59Z` (0 months ago) | 🟩 | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
 | `2026-09-11T16:42:51Z` (0 months ago) | 🟩 | [github/secure_headers](https://github.com/github/secure_headers) |
-| `2026-09-11T17:22:06Z` (0 months ago) | 🟩 | [rfc-st/humble](https://github.com/rfc-st/humble) |
 | `2026-09-11T18:28:06Z` (0 months ago) | 🟩 | [GaProgMan/OwaspHeaders.Core](https://github.com/GaProgMan/OwaspHeaders.Core) |
+| `2026-09-12T16:33:46Z` (0 months ago) | 🟩 | [rfc-st/humble](https://github.com/rfc-st/humble) |
 
