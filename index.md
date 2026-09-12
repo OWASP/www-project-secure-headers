@@ -1,17 +1,13 @@
 ---
 title: OWASP Secure Headers Project
-level: 3.5
-url: https://owasp.org/www-project-secure-headers
-type: documentation
-layout: col-sidebar
-tags: headers
-pitch: Provides technical information about HTTP security headers.
+layout: default
+nav_order: 1
 ---
 
-<link rel="stylesheet" href="assets/css/styles.css">
-
-🏛️ The [OWASP foundation](https://owasp.org/) initiated a migration to a new CMS, all the details are available [here](https://github.com/OWASP/www-project-secure-headers/discussions/273).
-
-🧑‍💻 Following our decision to keep the content on GitHub, the content of the project is now located [here](https://github.com/OWASP/www-project-secure-headers).
-
-Ricardo & Dominique
+<!-- Auto redirect to the entry point of the mainsite -->
+<!--
+<script> window.location.href = "https://owasp.github.io/www-project-secure-headers/mainsite/"; </script>
+<meta http-equiv="refresh" content="0; url=https://owasp.github.io/www-project-secure-headers/mainsite/" />
+<p>If you are not redirected automatically, <a href="https://owasp.github.io/www-project-secure-headers/mainsite/">click here</a>.</p>
+-->
+<script> window.location.href = "https://righettod.github.io/www-project-secure-headers/mainsite/"; </script>

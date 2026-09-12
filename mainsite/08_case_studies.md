@@ -1,10 +1,13 @@
-[Index](00_index.md) | [Response Headers](01_headers.md) | [Browser Support](02_browser_support.md) | [Best Practices](03_best_practices.md) | [Technical Resources](04_technical_resources.md) | [Code Snippets](05_code_snippets.md) | [Miscellaneous](06_misc.md) | [Statistics](07_statistics.md) | [Case Studies](08_case_studies.md) | [Logo](09_logo.md) | [Monitoring Technical References Dashboard](10_monitoring_technical_references_dashboard.md)
-
+---
+layout: default
+title: Case Studies
+nav_order: 10
+permalink: /case-studies/
 ---
 
 # Case Studies
 
-📋 This section list the entities referencing the [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/).
+📋 This section list the entities referencing the [OWASP Secure Headers Project](https://owasp.org/projects/secure-headers-project).
 
 📩 Feel free to contact project leaders if your company or software (open source or not) was using the OSHP project.
 
@@ -12,11 +15,11 @@
 
 ## How to create a link to the OSHP site?
 
-🌎 Since the migration of the OWASP foundation to its new CMS and the decision of the OSHP team to keep content on GitHub (see [here](https://github.com/OWASP/www-project-secure-headers/discussions/273) for all the details), you can directly reference the **mardown** content of the site located in folder **[mainsite](../mainsite/)**.
+🌎 Since the migration of the OWASP foundation to its new CMS and the decision of the OSHP team to keep content on GitHub (see [here](https://github.com/OWASP/www-project-secure-headers/discussions/273) for all the details), you can directly reference the **mardown** content of the site located in folder **[mainsite](https://github.com/OWASP/www-project-secure-headers/tree/master/mainsite)**, this way you have a **stable reference** across the time.
 
 💡 Example:
 
-```
+```text
 https://github.com/OWASP/www-project-secure-headers/tree/master/mainsite/01_headers.md#x-content-type-options
 ```
 

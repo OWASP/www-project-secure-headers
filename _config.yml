@@ -1,14 +1,64 @@
-remote_theme: "owasp/www--site-theme@main"
+# See https://just-the-docs.com/docs/configuration
+title: OWASP Secure Headers Project
+description: Provides technical information about HTTP security headers.
+baseurl: /www-project-secure-headers
+remote_theme: just-the-docs/just-the-docs@2ed4c0af735e95af5c0dcf7a605b07d903005b4e
+url: https://righettod.github.io
 
-# core files/folders to exclude
-exclude:
-  - README.md
-  - subprojects/
+permalink: /:title/
+
+defaults:
+  - scope:
+      path: "mainsite"
+    values:
+      layout: "default"
+
+include:
   - mainsite/
+
+exclude:
+  - subprojects/
   - archives/
-  - .github/
-  - .vscode/
   - ci/
+  - logo/
+  - mainsite/README.md
+  - README.md
+  - CONTRIBUTING.md
+  - CODE_OF_CONDUCT.md
+  - SECURITY.md
+  - CLAUDE.md
+  - LICENSE.txt
+  - requirements.txt
+  - pad-md-tables.py
+  - markdown-link-check_config.json
+  - project.code-workspace
+  - project.owasp.yaml
 
 plugins:
-  - jekyll-include-cache-0.2.0
+  - jekyll-remote-theme
+  - jekyll-include-cache
+
+# Aux links for the upper right navigation
+aux_links:
+  "OWASP":
+    - "//owasp.org"
+  "OSHP Page":
+    - "//owasp.org/projects/secure-headers-project"    
+  "OSHP GitHub":
+    - "//github.com/OWASP/www-project-secure-headers/"        
+
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: false
+
+# Enable or disable the site search
+search_enabled: true
+
+# Enable or disable the side/mobile menu globally
+nav_enabled: true
+
+# Set a path/url to a logo that will be displayed instead of the title
+logo: "mainsite/assets/images/oshp_logo.png"
+
+# Set a path/url to a favicon that will be displayed by the browser
+favicon_ico: "mainsite/assets/images/oshp_logo.png"
+

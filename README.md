@@ -1,10 +1,15 @@
 ![OSHP Logo](mainsite/assets/images/oshp_logo.png)
 
-[![OWASP Production](https://img.shields.io/badge/owasp-production%20project-800080.svg)](https://www.owasp.org/projects) [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/OWASP/www-project-secure-headers)
+[![OWASP Production](https://img.shields.io/badge/owasp-production%20project-800080.svg)](https://www.owasp.org/projects)
 
 # Introduction
 
 📦 This repository contains all the content of the **[OWASP Secure Headers Project](https://owasp.org/projects/secure-headers-project)** (also named **OSHP**).
+
+# OSHP Web URL
+
+* Project page on the OWASP site: <https://owasp.org/projects/secure-headers-project>
+* Web rendering of the main site: <https://owasp.github.io/www-project-secure-headers/>
 
 # OSHP ecosystem
 
@@ -12,7 +17,9 @@
 
 * **Main site**: It is the core of the OSHP and provide the information about HTTP security headers.
   * Called `mainsite`.
-  * Content is [here](mainsite/).  
+  * Content is [here](mainsite/).
+    * It is **the master data in markdown** and is the content that is updated.
+  * Web rendered content is [here](https://owasp.github.io/www-project-secure-headers/) and is based on the **the master data in markdown**.
 * **Validator**: Venom tests suite to validate an HTTP security response headers configuration against OSHP recommendation.
   * Called `validator`.
   * Content is [here](subprojects/validator/).
@@ -37,7 +44,7 @@
 🔋 Health status:
 
 |Status|File|
-| :--- | :--- |
+|:---|:---|
 |![mainsite_generate_headers-json-files.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_generate_headers-json-files.yml/badge.svg)|[📄](.github/workflows/mainsite_generate_headers-json-files.yml)|
 |![mainsite_generate_stats-related-files.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_generate_stats-related-files.yml/badge.svg)|[📄](.github/workflows/mainsite_generate_stats-related-files.yml)|
 |![mainsite_generate_technical-references-dashboard.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_generate_technical-references-dashboard.yml/badge.svg)|[📄](.github/workflows/mainsite_generate_technical-references-dashboard.yml)|

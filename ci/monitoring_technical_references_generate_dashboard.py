@@ -15,7 +15,7 @@ import sys
 from datetime import datetime, timezone
 
 import requests
-from common import DEFAULT_ENCODING, TOP_NAVIGATION_LINKS
+from common import DEFAULT_ENCODING
 
 # Constants
 REQ_SESSION = requests.session()
@@ -23,8 +23,11 @@ TIMEOUT_SECONDS = 240
 EXECUTION_DATETIME_UTC = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
 SOURCE_MD_FILE = "../mainsite/04_technical_resources.md"
 DASHBOARD_MD_FILE = "../mainsite/10_monitoring_technical_references_dashboard.md"
-DASHBOARD_MD_FILE_TEMPLATE = f"""{TOP_NAVIGATION_LINKS}
-
+DASHBOARD_MD_FILE_TEMPLATE = f"""---
+layout: default
+title: Technical References Dashboard
+nav_order: 12
+permalink: /technical-references-dashboard/
 ---
 
 # Technical References Dashboard
@@ -37,11 +40,11 @@ Provides a quick visual status on the health status (whether they are updated or
 
 Project reaching the :red_circle: status **are removed**.
 
-:speech_balloon: **Status icon legends:**
+ℹ️ **Status icon legends:**
 
-* :green_circle: Updated within the last **12 months** from the date of verification.
-* :orange_circle: Updated within the last **24 months** from the date of verification.
-* :red_circle: Not updated for **more than 24 months** from the date of verification.
+* 🟩 Updated within the last **12 months** from the date of verification.
+* 🟧 Updated within the last **24 months** from the date of verification.
+* 🟥 Not updated for **more than 24 months** from the date of verification.
 
 %s
 
@@ -55,11 +58,11 @@ def determine_health_state(repo_updated_datetime):
     end_date = datetime.now(timezone.utc)
     diff_months = ((end_date.year - start_date.year) * 12) + (end_date.month - start_date.month)
     if diff_months <= 12:
-        health_state_icon = ":green_circle:"
+        health_state_icon = "🟩"
     elif diff_months <= 24:
-        health_state_icon = ":orange_circle:"
+        health_state_icon = "🟧"
     else:
-        health_state_icon = ":red_circle:"
+        health_state_icon = "🟥"
     return (diff_months, health_state_icon)
 
 

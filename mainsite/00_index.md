@@ -1,12 +1,15 @@
-[Index](00_index.md) | [Response Headers](01_headers.md) | [Browser Support](02_browser_support.md) | [Best Practices](03_best_practices.md) | [Technical Resources](04_technical_resources.md) | [Code Snippets](05_code_snippets.md) | [Miscellaneous](06_misc.md) | [Statistics](07_statistics.md) | [Case Studies](08_case_studies.md) | [Logo](09_logo.md) | [Monitoring Technical References Dashboard](10_monitoring_technical_references_dashboard.md)
-
+---
+layout: default
+title: Index
+permalink: /index/
+nav_order: 2
 ---
 
 ## Introduction
 
 ![OSHP Logo](assets/images/oshp_logo.png)
 
-[![OWASP Production](https://img.shields.io/badge/owasp-production%20project-800080.svg)](https://www.owasp.org/projects) [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/righettod/toolbox-pentest-web)
+[![OWASP Production](https://img.shields.io/badge/owasp-production%20project-800080.svg)](https://www.owasp.org/projects)
 
 🎯 The **OWASP Secure Headers Project** (also called **OSHP**) describes HTTP response headers that your application can use to increase the security of your application. Once set, these HTTP response headers can restrict modern browsers from running into easily preventable vulnerabilities. The OWASP Secure Headers Project intends to raise awareness and use of these headers.
 
@@ -51,8 +54,8 @@
 
 💡 Additionally, we provide this information as two JSON files to enable automation in the context of a provisioning workflow:
 
-* Collection of [HTTP response security headers to add](../ci/headers_add.json).
-* Collection of [HTTP response headers to remove](../ci/headers_remove.json).
+* Collection of [HTTP response security headers to add](https://github.com/OWASP/www-project-secure-headers/blob/master/ci/headers_add.json).
+* Collection of [HTTP response headers to remove](https://github.com/OWASP/www-project-secure-headers/blob/master/ci/headers_remove.json).
 
 📡 These json files are automatically updated.
 
@@ -69,6 +72,12 @@
 ## Create a link to the OSHP site
 
 📖 This is documented into the **[case studies](08_case_studies.md)** section.
+
+## Communication
+
+🌏 We use the hashtag `owasp_shp` in our posts on [Bluesky](https://bsky.app/hashtag/owasp_shp) and [LinkedIn](https://www.linkedin.com/feed/hashtag/?keywords=owasp_shp), to publish an update about the project.
+
+📡 This [atom web feed](https://github.com/OWASP/www-project-secure-headers/commits/master.atom) can be used to be notified when an update is pushed on the OSHP website's repository.
 
 ## Project leaders
 
