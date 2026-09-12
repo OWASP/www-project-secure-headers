@@ -27,14 +27,14 @@
   * Called `statistics`.
   * Content is [here](subprojects/statistics/).
 
-## Repository structure
+# Repository structure
 
 * The base of the repository contains the **main site**.
 * The other projects are stored in the folder [subprojects](subprojects/): Each sub projects have it own folder.
 * The project official logo is stored into the folder [logo](logo) as well as into the [OWASP Swag](https://github.com/OWASP/owasp-swag) GitHub repository.
 * The folder [ci](ci) (**CI** for **C**ontinuous **I**ntegration) contains materials to generate or update content using GitHub actions [workflows](.github/workflows/).
 
-## GitHub actions
+# GitHub actions
 
 📝 The naming convention used is `[project_call_name]_[action]_[target].yml` where:
 
@@ -55,20 +55,20 @@
 |![statistics_generate_datasource.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/statistics_generate_datasource.yml/badge.svg)|[📄](.github/workflows/statistics_generate_datasource.yml)|
 |![validator_validate_tests-suite.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/validator_validate_tests-suite.yml/badge.svg)|[📄](.github/workflows/validator_validate_tests-suite.yml)|
 
-## Issue and discussions
+# Issue and discussions
 
 💬 Both are handled using the following GitHub features:
 
 * [Issues](https://github.com/OWASP/www-project-secure-headers/issues).
 * [Discussions](https://github.com/OWASP/www-project-secure-headers/discussions).
 
-## Content editor
+# Content editor
 
 👩‍💻 Content editing is done with [Visual Studio Code](https://code.visualstudio.com/).
 
 📦 A [workspace file](project.code-workspace) is provided with [recommended extensions](.vscode/extensions.json).
 
-## Social media communication
+# Social media communication
 
 📩 This template is used to announce news on social media about OSHP update:
 
@@ -86,13 +86,13 @@
 [LINK_TO_SOURCE_USED]
 ```
 
-## Project leaders
+# Project leaders
 
 🧑‍💻 [Ricardo Iramar](mailto:ricardo.iramar@owasp.org)
 
 🧑‍💻 [Dominique Righetto](mailto:dominique.righetto@owasp.org)
 
-## Contributors
+# Contributors
 
 💌 Contributors to OSHP, before the migration of the project to [GitHub](https://github.com/OWASP/www-project-secure-headers):
 
@@ -102,16 +102,16 @@
 
 💌 Visit this [page](https://github.com/OWASP/www-project-secure-headers/graphs/contributors) for updated information about the contributors since the migration of the project to GitHub.
 
-## Licensing
+# Licensing
 
 📑 This project content is free to use. It is licensed under the [Apache 2.0 License](LICENSE.txt).
 
-## Usage of GenIA
+# Usage of GenIA
 
 > [!CAUTION]
 > 📍 The content is created by a human, and GenIA is used as an assistant.
 
-### Rules
+## Rules
 
 🧑‍💻 We limit the usage of GenIA models to the following cases:
 
@@ -126,7 +126,7 @@
 * A human must write and vouch for that content.
 * GenIA may only help research or validate it.
 
-### Help commands
+## Help commands
 
 * The claude code command [`validate-md-content`](.claude/commands/validate-md-content.md) was created to help validating the content of a markdown file against predefined rules.
   * Usage from a claude session is `/validate-md-content [markdown-file-to-validate]`.
