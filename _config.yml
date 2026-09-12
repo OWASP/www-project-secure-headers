@@ -43,6 +43,8 @@ aux_links:
     - "//owasp.org"
   "OSHP Page":
     - "//owasp.org/projects/secure-headers-project"    
+  "OSHP GitHub":
+    - "//github.com/OWASP/www-project-secure-headers/"        
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
