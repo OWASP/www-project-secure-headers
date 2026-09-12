@@ -1,0 +1,116 @@
+// OWASP brand palette
+$owasp-blue:     #003594;
+$owasp-cyan:     #00A7E1;
+$owasp-dark:     #101820;
+$owasp-yellow:   #ffb81b;
+$owasp-link:     #0056d6;
+$owasp-light-bg: #f1f6fe;
+$owasp-gray:     #757575;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+
+// CSS variable overrides (just-the-docs theming tokens)
+:root {
+  --sidebar-color:                    #{$owasp-blue};
+  --sidebar-nav-item-active-color:    #{$owasp-cyan};
+  --link-color:                       #{$owasp-link};
+  --btn-primary-color:                #{$owasp-blue};
+  --body-heading-color:               #{$owasp-dark};
+  --body-text-color:                  #{$owasp-dark};
+  --table-background-color:           #{$owasp-light-bg};
+  --search-background-color:          #fff;
+  --border-color:                     #d7d7d7;
+}
+
+// Typography
+body {
+  font-family: 'Barlow', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  color: $owasp-dark;
+}
+
+// Sidebar – blue background with white text
+.side-bar {
+  background-color: $owasp-blue;
+  border-right: none;
+
+  .site-title {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+  }
+
+  .site-button {
+    color: rgba(255, 255, 255, 0.8);
+
+    &:hover { color: #fff; }
+  }
+}
+
+.nav-list .nav-list-item .nav-list-link {
+  color: rgba(255, 255, 255, 0.85);
+
+  &:hover {
+    background-color: rgba(0, 167, 225, 0.25);
+    color: #fff;
+  }
+
+  &.active {
+    background-color: $owasp-cyan;
+    color: #fff;
+    font-weight: 600;
+  }
+}
+
+// Search box inside sidebar
+.search-input {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+
+  &::placeholder { color: rgba(255, 255, 255, 0.5); }
+  &:focus        { border-color: $owasp-cyan; }
+}
+
+// Top breadcrumb bar
+.main-header {
+  background-color: #fff;
+  border-bottom: 3px solid $owasp-cyan;
+}
+
+// Links
+a {
+  color: $owasp-link;
+  &:hover { color: $owasp-blue; }
+}
+
+// H1 with cyan underline accent
+h1 {
+  border-bottom: 3px solid $owasp-cyan;
+  padding-bottom: 0.4rem;
+}
+
+// Tables – blue header row, striped body
+table th {
+  background-color: $owasp-blue;
+  color: #fff;
+}
+
+table tr:nth-child(even) td {
+  background-color: $owasp-light-bg;
+}
+
+// Code blocks – keep readable but add a left accent
+pre.highlight {
+  border-left: 4px solid $owasp-cyan;
+}
+
+// Labels / badges keep yellow accent
+.label {
+  background-color: $owasp-yellow;
+  color: $owasp-dark;
+}

@@ -1,6 +1,6 @@
 ![OSHP Logo](mainsite/assets/images/oshp_logo.png)
 
-[![OWASP Production](https://img.shields.io/badge/owasp-production%20project-800080.svg)](https://www.owasp.org/projects) [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/OWASP/www-project-secure-headers)
+[![OWASP Production](https://img.shields.io/badge/owasp-production%20project-800080.svg)](https://www.owasp.org/projects)
 
 # Introduction
 
@@ -37,7 +37,7 @@
 🔋 Health status:
 
 |Status|File|
-| :--- | :--- |
+|:---|:---|
 |![mainsite_generate_headers-json-files.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_generate_headers-json-files.yml/badge.svg)|[📄](.github/workflows/mainsite_generate_headers-json-files.yml)|
 |![mainsite_generate_stats-related-files.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_generate_stats-related-files.yml/badge.svg)|[📄](.github/workflows/mainsite_generate_stats-related-files.yml)|
 |![mainsite_generate_technical-references-dashboard.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_generate_technical-references-dashboard.yml/badge.svg)|[📄](.github/workflows/mainsite_generate_technical-references-dashboard.yml)|
