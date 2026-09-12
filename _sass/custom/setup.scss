@@ -1,2 +1,1 @@
-// Reduce sidebar width (default is 264px)
-$nav-width: 210px;
+// Nav width is overridden via CSS in custom.scss to avoid rem/px unit conflict in theme arithmetic.
