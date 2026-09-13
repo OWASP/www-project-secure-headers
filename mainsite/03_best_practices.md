@@ -23,7 +23,7 @@ Please note the best practices below suggest methods to change web server config
 
 The following section proposes a configuration for the [actively supported and working draft security headers](01_headers.md#response-headers).
 
-💡 Additional information about HTTP security headers on [OpenCRE](https://opencre.org/cre/636-347?name=OWASP+Secure+Headers+Project&section=configuration&link=https%3A%2F%2Fowasp.org%2Fwww-project-secure-headers%2F%23div-bestpractices).
+💡 Additional information about HTTP security headers on [OpenCRE](https://opencre.org/cre/636-347?name=OWASP+Secure+Headers+Project&section=configuration&link=https%3A%2F%2Fgithub.com%2FOWASP%2Fwww-project-secure-headers%2Fblob%2Fmaster%2Fmainsite%2F03_best_practices.md%23configuration-proposal).
 
 📖 The headers proposed below can be applied both in the context of a *classic web application* and in that of a *web API*:
 
@@ -73,7 +73,7 @@ The following section proposes a configuration for the [actively supported and w
 
 This section provides a collection of HTTP response headers to remove, when possible, from any HTTP response to prevent any [disclosure of technical information](https://cwe.mitre.org/data/definitions/200.html) about environment. The following list of headers can be used to configure a [reverse proxy](https://www.nginx.com/resources/glossary/reverse-proxy-server/) or a [web application firewall](https://en.wikipedia.org/wiki/Web_application_firewall) to handle removal operation of the mentioned headers.
 
-💡 Additional information about technical information disclosure in HTTP header on [OpenCRE](https://www.opencre.org/cre/403-005?name=OWASP+Secure+Headers+Project&section=Prevent+information+disclosure+via+HTTP+headers&link=https%3A%2F%2Fowasp.org%2Fwww-project-secure-headers%2F%23div-bestpractices_prevent-information-disclosure-via-http-headers).
+💡 Additional information about technical information disclosure in HTTP header on [OpenCRE](https://www.opencre.org/cre/403-005?name=OWASP+Secure+Headers+Project&section=Prevent+information+disclosure+via+HTTP+headers&link=https%3A%2F%2Fgithub.com%2FOWASP%2Fwww-project-secure-headers%2Fblob%2Fmaster%2Fmainsite%2F03_best_practices.md%23prevent-information-disclosure-via-http-headers).
 
 📖 When possible, a reference link about the documentation of the header is provided.
 
