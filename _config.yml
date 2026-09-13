@@ -1,9 +1,9 @@
 # See https://just-the-docs.com/docs/configuration
 title: OWASP Secure Headers Project
 description: Provides technical information about HTTP security headers.
-baseurl: https://owasp.github.io/www-project-secure-headers
+baseurl: /www-project-secure-headers
 remote_theme: just-the-docs/just-the-docs@2ed4c0af735e95af5c0dcf7a605b07d903005b4e
-url: https://righettod.github.io
+url: https://owasp.github.io
 
 permalink: /:title/
 
