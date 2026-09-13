@@ -30,7 +30,10 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p subprojects/statistics/data
-          gh release download --pattern "data.db" --dir subprojects/statistics/data
+          #gh release download --pattern "data.db" --dir subprojects/statistics/data
+          TAG=$(gh release list --limit 10 --json tagName --jq '[.[] | select(.tagName | startswith("statistics-dataset-"))] | first | .tagName')
+          echo "Downloading statistics data from release: $TAG"
+          gh release download "$TAG" --pattern "data.db" --dir subprojects/statistics/data          
       - name: Run update of the tab related files
         run: |
           cd ci; bash stats_manage_generation.sh
