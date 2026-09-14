@@ -55,8 +55,8 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(255, 255, 255, 0.85);
 
   &:hover {
-    background-color: rgba(0, 167, 225, 0.25);
-    color: #fff;
+    background-color: #fff;
+    color: $owasp-blue;
   }
 
   &.active {
