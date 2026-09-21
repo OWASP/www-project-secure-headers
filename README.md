@@ -8,7 +8,7 @@
 
 # OSHP Web URL
 
-> ℹ️ The url `https://owasp.org/www-project-secure-headers/` redirect to the *web rendering* url.
+> ℹ️ The url `https://owasp.org/www-project-secure-headers/` redirect to the *project page on the OWASP site*.
 
 * Project page on the OWASP site: <https://owasp.org/projects/secure-headers-project>
 * Web rendering of the main site: <https://owasp.github.io/www-project-secure-headers/>
