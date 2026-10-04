@@ -318,7 +318,7 @@ $ nuclei -silent -template-id cors-misconfig -u https://domain.com
 * <https://developer.mozilla.org/en-US/docs/Glossary/Origin>
 * <https://cwe.mitre.org/data/definitions/942.html>
 * <https://cwe.mitre.org/data/definitions/346.html>
-* [OWASP WSTG - Testing Cross Origin Resource Sharing](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/11-Client-side_Testing/07-Testing_Cross_Origin_Resource_Sharing)
+* <https://wstg.owasp.org/latest/4-Web_Application_Security_Testing/11-Client-side/07-Cross_Origin_Resource_Sharing/>
 * <https://pkg.go.dev/github.com/jub0bs/cors>
 
 ## Prevent information disclosure via the browser local cached files
@@ -373,7 +373,7 @@ Cache-Control: no-store, max-age=0
 * <https://caniuse.com/mdn-http_headers_cache-control>
 * <https://cwe.mitre.org/data/definitions/525.html>
 * <https://cwe.mitre.org/data/definitions/524.html>
-* [OWASP WSTG - Testing for Browser Cache Weaknesses](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/04-Authentication_Testing/06-Testing_for_Browser_Cache_Weaknesses)
+* <https://wstg.owasp.org/latest/4-Web_Application_Security_Testing/04-Authentication/06-Browser_Cache_Weaknesses/>
 * <https://portswigger.net/kb/issues/00700100_cacheable-https-response>
 * <https://portswigger.net/web-security/web-cache-poisoning>
 * <https://portswigger.net/web-security/web-cache-deception>

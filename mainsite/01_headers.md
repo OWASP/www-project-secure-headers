@@ -92,7 +92,7 @@ Strict-Transport-Security: max-age=63072000 ; includeSubDomains ; preload
 
 * <https://tools.ietf.org/html/rfc6797>
 * <https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html>
-* <https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/07-Test_HTTP_Strict_Transport_Security.html>
+* <https://wstg.owasp.org/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management/07-HTTP_Strict_Transport_Security/>
 * <https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security>
 * <https://www.chromium.org/hsts>
 * <https://hstspreload.org/>
