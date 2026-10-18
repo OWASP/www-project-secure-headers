@@ -14,8 +14,8 @@ license:
 name: OWASP Secure Headers Project
 pitch: Provides technical information about HTTP security headers.
 repositories:
-  - name: www-project-secure-headers
-    url: https://github.com/OWASP/www-project-secure-headers
+  - name: secure-headers-project
+    url: https://github.com/OWASP/secure-headers-project
     description: The OWASP Secure Headers Project.
 tags:
   - http-headers

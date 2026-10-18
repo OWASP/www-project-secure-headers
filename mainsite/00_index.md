@@ -21,9 +21,9 @@ nav_order: 2
 
 * Guidance about the recommended HTTP security headers that can be leveraged (**[best practices](03_best_practices.md)** section).
 * Guidance about the HTTP headers that should be removed (**[best practices](03_best_practices.md)** section).
-* [Tools](https://github.com/OWASP/www-project-secure-headers/tree/master/subprojects/validator) to validate an HTTP security header configuration.
+* [Tools](https://github.com/OWASP/secure-headers-project/tree/master/subprojects/validator) to validate an HTTP security header configuration.
 * Code libraries that can be leveraged to configure recommended HTTP security headers (**[technical resources](04_technical_resources.md)** section).
-* [Statistics](https://github.com/OWASP/www-project-secure-headers/tree/master/subprojects/statistics) about usage of the recommended HTTP security headers (**[statistics](07_statistics.md)** section).
+* [Statistics](https://github.com/OWASP/secure-headers-project/tree/master/subprojects/statistics) about usage of the recommended HTTP security headers (**[statistics](07_statistics.md)** section).
 
 📺 A presentation of the project is available on the following locations:
 
@@ -35,18 +35,18 @@ nav_order: 2
 
 📈 We provide statistics, updated every month, about HTTP response security headers usage mentioned by the OWASP Secure Headers Project:
 
-* They are available through [this subproject](https://github.com/OWASP/www-project-secure-headers/tree/master/subprojects/statistics) and the **[statistics](07_statistics.md)** section.
+* They are available through [this subproject](https://github.com/OWASP/secure-headers-project/tree/master/subprojects/statistics) and the **[statistics](07_statistics.md)** section.
 
 ## Security headers usage validator
 
 ✅ We provide a [venom](https://github.com/ovh/venom) tests suite to validate an HTTP security response header configuration against *OWASP Secure Headers Project* recommendation:
 
-* It is available through [this subproject](https://github.com/OWASP/www-project-secure-headers/tree/master/subprojects/validator).
+* It is available through [this subproject](https://github.com/OWASP/secure-headers-project/tree/master/subprojects/validator).
 
 🧪 We also provide a *online mock endpoint* returning an HTTP response, for which, all HTTP response headers recommended by the OSHP will be set:
 
 * It is automatically deployed on `https://oshp-validator-mock.onrender.com`
-* Technical details about this endpoint are [here](https://github.com/OWASP/www-project-secure-headers/tree/master/subprojects/validator#tests-suite-mock-service).
+* Technical details about this endpoint are [here](https://github.com/OWASP/secure-headers-project/tree/master/subprojects/validator#tests-suite-mock-service).
 
 ## Security headers reference files
 
@@ -54,8 +54,8 @@ nav_order: 2
 
 💡 Additionally, we provide this information as two JSON files to enable automation in the context of a provisioning workflow:
 
-* Collection of [HTTP response security headers to add](https://github.com/OWASP/www-project-secure-headers/blob/master/ci/headers_add.json).
-* Collection of [HTTP response headers to remove](https://github.com/OWASP/www-project-secure-headers/blob/master/ci/headers_remove.json).
+* Collection of [HTTP response security headers to add](https://github.com/OWASP/secure-headers-project/blob/master/ci/headers_add.json).
+* Collection of [HTTP response headers to remove](https://github.com/OWASP/secure-headers-project/blob/master/ci/headers_remove.json).
 
 📡 These json files are automatically updated.
 
@@ -65,7 +65,7 @@ nav_order: 2
 
 ## Discussions, information and roadmap
 
-💬 We use the GitHub [discussions feature](https://github.com/OWASP/www-project-secure-headers/discussions) for discussions about the project as well as spreading global information about it.
+💬 We use the GitHub [discussions feature](https://github.com/OWASP/secure-headers-project/discussions) for discussions about the project as well as spreading global information about it.
 
 👩‍💻 The work on the OSHP projects and associated components is tracked using the GitHub [project feature](https://github.com/orgs/OWASP/projects/44).
 
@@ -77,7 +77,7 @@ nav_order: 2
 
 🌏 We use the hashtag `owasp_shp` in our posts on [Bluesky](https://bsky.app/hashtag/owasp_shp) and [LinkedIn](https://www.linkedin.com/feed/hashtag/?keywords=owasp_shp), to publish an update about the project.
 
-📡 This [atom web feed](https://github.com/OWASP/www-project-secure-headers/commits/master.atom) can be used to be notified when an update is pushed on the OSHP website's repository.
+📡 This [atom web feed](https://github.com/OWASP/secure-headers-project/commits/master.atom) can be used to be notified when an update is pushed on the OSHP website's repository.
 
 ## Project leaders
 
@@ -87,13 +87,13 @@ nav_order: 2
 
 ## Contributors
 
-💌 Contributors to OSHP, before the migration of the project to [GitHub](https://github.com/OWASP/www-project-secure-headers):
+💌 Contributors to OSHP, before the migration of the project to [GitHub](https://github.com/OWASP/secure-headers-project):
 
 * [Alexandre Menezes](mailto:alexandre.fmenezes@owasp.org)
 * [Adam Averay](https://github.com/adamaveray)
 * [Jim Manico](https://github.com/jmanico)
 
-💌 Visit this [page](https://github.com/OWASP/www-project-secure-headers/graphs/contributors) for updated information about the contributors since the migration of the project to GitHub.
+💌 Visit this [page](https://github.com/OWASP/secure-headers-project/graphs/contributors) for updated information about the contributors since the migration of the project to GitHub.
 
 ## Licensing
 

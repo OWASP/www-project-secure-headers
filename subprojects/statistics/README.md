@@ -4,7 +4,7 @@
 
 💾 This project gather data, about the usage of HTTP response security headers, into a SQLITE database to allow the generation of statistics in a second time.
 
-💡 See this [issue](https://github.com/OWASP/www-project-secure-headers/issues/61) for details.
+💡 See this [issue](https://github.com/OWASP/secure-headers-project/issues/61) for details.
 
 # Data source
 
@@ -30,7 +30,7 @@
 # Data
 
 > [!NOTE]
-> 📦 During execution, these files are generated and stored locally in the `data` folder. For distribution, they are published as [GitHub Release assets](https://github.com/OWASP/www-project-secure-headers/releases?q=statistics-dataset-&expanded=true) attached to this repository.
+> 📦 During execution, these files are generated and stored locally in the `data` folder. For distribution, they are published as [GitHub Release assets](https://github.com/OWASP/secure-headers-project/releases?q=statistics-dataset-&expanded=true) attached to this repository.
 
 📑 Files:
 

@@ -608,7 +608,7 @@ Cache-Control: public, max-age=604800
 
 The X-DNS-Prefetch-Control header controls [DNS prefetching](https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/dns-prefetch), a feature by which browsers proactively perform domain name resolution on links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth. The intention is that prefetching is performed in the background so that the DNS resolution is complete by the time the referenced items are needed by the browser. This reduces latency when the user clicks a link, for example (source [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control)).
 
-📍 Important note about the behavior of different browsers for this header based on [technical tests](https://github.com/OWASP/www-project-secure-headers/issues/201#issuecomment-3190756900) performed:
+📍 Important note about the behavior of different browsers for this header based on [technical tests](https://github.com/OWASP/secure-headers-project/issues/201#issuecomment-3190756900) performed:
 
 * DNS prefetch seems only active on Chromium based browsers.
 * Setting **X-DNS-Prefetch-Control** to **off** is only honored by the Chrome browser.

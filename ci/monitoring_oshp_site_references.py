@@ -18,7 +18,7 @@ from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
 
 DEBUG = True
-OSHP_MARKER_STRINGS = ["owasp secure headers project", "https://owasp.org/www-project-secure-headers", "https://www.owasp.org/index.php/security_headers", "https://owasp.org/index.php/owasp_secure_headers_project"]
+OSHP_MARKER_STRINGS = ["owasp secure headers project", "https://owasp.org/secure-headers-project", "https://www.owasp.org/index.php/security_headers", "https://owasp.org/index.php/owasp_secure_headers_project"]
 WAIT_DELAY_SECONDS = 4
 MAX_RETRY = 4
 TIMEOUT_SECONDS = 20

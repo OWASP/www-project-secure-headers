@@ -104,7 +104,7 @@ The following _bash_ code snippet, leveraging [jq](https://stedolan.github.io/jq
 
 ```shell
 # Generate the Nginx collection of instructions to add the recommended HTTP response headers
-$ curl -sk https://owasp.org/www-project-secure-headers/ci/headers_add.json | jq -r '.headers[] | "add_header \(.name) \(.value);"'
+$ curl -sk https://owasp.org/secure-headers-project/ci/headers_add.json | jq -r '.headers[] | "add_header \(.name) \(.value);"'
 add_header Cache-Control no-store, max-age=0;
 add_header Clear-Site-Data "cache","cookies","storage";
 add_header Cross-Origin-Embedder-Policy require-corp;
@@ -147,9 +147,9 @@ $ venom run --var="target_site=https://mozilla.org" --var="logout_url=/logout" t
 Use the following **user prompt** to leverage an "LLM as a Service" (LLMaaS) to generate corresponding configuration code snippet for the wanted web or application server:
 
 ```text
-Generate the configuration code for the "[TARGET_APPLICATION_OR_WEB_SERVER_NAME]" server to set HTTP response security headers recommended by the OWASP Secure Headers Project (project website is "https://owasp.org/www-project-secure-headers/").
+Generate the configuration code for the "[TARGET_APPLICATION_OR_WEB_SERVER_NAME]" server to set HTTP response security headers recommended by the OWASP Secure Headers Project (project website is "https://owasp.org/secure-headers-project/").
 
-The list of HTTP response security headers recommended is available in a JSON file located here "https://raw.githubusercontent.com/OWASP/www-project-secure-headers/refs/heads/master/ci/headers_add.json".
+The list of HTTP response security headers recommended is available in a JSON file located here "https://raw.githubusercontent.com/OWASP/secure-headers-project/refs/heads/master/ci/headers_add.json".
 
 Requirements:
 - Parse the JSON file and extract all headers and their recommended values.

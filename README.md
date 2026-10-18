@@ -8,10 +8,10 @@
 
 # OSHP Web URL
 
-> ℹ️ The url `https://owasp.org/www-project-secure-headers/` redirect to the *project page on the OWASP site*.
+> ℹ️ The url `https://owasp.org/secure-headers-project/` redirect to the *project page on the OWASP site*.
 
 * Project page on the OWASP site: <https://owasp.org/projects/secure-headers-project>
-* Web rendering of the main site: <https://owasp.github.io/www-project-secure-headers/>
+* Web rendering of the main site: <https://owasp.github.io/secure-headers-project/>
 
 # OSHP ecosystem
 
@@ -21,7 +21,7 @@
   * Called `mainsite`.
   * Content is [here](mainsite/).
     * It is **the master data in markdown** and is the content that is updated.
-  * Web rendered content is [here](https://owasp.github.io/www-project-secure-headers/) and is based on the **the master data in markdown**.
+  * Web rendered content is [here](https://owasp.github.io/secure-headers-project/) and is based on the **the master data in markdown**.
 * **Validator**: Venom tests suite to validate an HTTP security response headers configuration against OSHP recommendation.
   * Called `validator`.
   * Content is [here](subprojects/validator/).
@@ -45,24 +45,24 @@
 
 🔋 Health status:
 
-|Status|File|
-|:---|:---|
-|![mainsite_generate_headers-json-files.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_generate_headers-json-files.yml/badge.svg)|[📄](.github/workflows/mainsite_generate_headers-json-files.yml)|
-|![mainsite_generate_stats-related-files.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_generate_stats-related-files.yml/badge.svg)|[📄](.github/workflows/mainsite_generate_stats-related-files.yml)|
-|![mainsite_generate_technical-references-dashboard.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_generate_technical-references-dashboard.yml/badge.svg)|[📄](.github/workflows/mainsite_generate_technical-references-dashboard.yml)|
-|![mainsite_monitor_oshp-site-references.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_monitor_oshp-site-references.yml/badge.svg)|[📄](.github/workflows/mainsite_monitor_oshp-site-references.yml)|
-|![mainsite_monitor_oshp-gha-workflows.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_monitor_oshp-gha-workflows.yml/badge.svg)|[📄](.github/workflows/mainsite_monitor_oshp-gha-workflows.yml)|
-|![mainsite_validate_external-links.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_validate_external-links.yml/badge.svg)|[📄](.github/workflows/mainsite_validate_external-links.yml)|
-|![mainsite_validate_owasp-nest-metadata.yaml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/mainsite_validate_owasp-nest-metadata.yaml/badge.svg)|[📄](.github/workflows/mainsite_validate_owasp-nest-metadata.yaml)|
-|![statistics_generate_datasource.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/statistics_generate_datasource.yml/badge.svg)|[📄](.github/workflows/statistics_generate_datasource.yml)|
-|![validator_validate_tests-suite.yml](https://github.com/OWASP/www-project-secure-headers/actions/workflows/validator_validate_tests-suite.yml/badge.svg)|[📄](.github/workflows/validator_validate_tests-suite.yml)|
+| Status                                                                                                                                                                                    | File                                                                        |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------- |
+| ![mainsite_generate_headers-json-files.yml](https://github.com/OWASP/secure-headers-project/actions/workflows/mainsite_generate_headers-json-files.yml/badge.svg)                         | [📄](.github/workflows/mainsite_generate_headers-json-files.yml)             |
+| ![mainsite_generate_stats-related-files.yml](https://github.com/OWASP/secure-headers-project/actions/workflows/mainsite_generate_stats-related-files.yml/badge.svg)                       | [📄](.github/workflows/mainsite_generate_stats-related-files.yml)            |
+| ![mainsite_generate_technical-references-dashboard.yml](https://github.com/OWASP/secure-headers-project/actions/workflows/mainsite_generate_technical-references-dashboard.yml/badge.svg) | [📄](.github/workflows/mainsite_generate_technical-references-dashboard.yml) |
+| ![mainsite_monitor_oshp-site-references.yml](https://github.com/OWASP/secure-headers-project/actions/workflows/mainsite_monitor_oshp-site-references.yml/badge.svg)                       | [📄](.github/workflows/mainsite_monitor_oshp-site-references.yml)            |
+| ![mainsite_monitor_oshp-gha-workflows.yml](https://github.com/OWASP/secure-headers-project/actions/workflows/mainsite_monitor_oshp-gha-workflows.yml/badge.svg)                           | [📄](.github/workflows/mainsite_monitor_oshp-gha-workflows.yml)              |
+| ![mainsite_validate_external-links.yml](https://github.com/OWASP/secure-headers-project/actions/workflows/mainsite_validate_external-links.yml/badge.svg)                                 | [📄](.github/workflows/mainsite_validate_external-links.yml)                 |
+| ![mainsite_validate_owasp-nest-metadata.yaml](https://github.com/OWASP/secure-headers-project/actions/workflows/mainsite_validate_owasp-nest-metadata.yaml/badge.svg)                     | [📄](.github/workflows/mainsite_validate_owasp-nest-metadata.yaml)           |
+| ![statistics_generate_datasource.yml](https://github.com/OWASP/secure-headers-project/actions/workflows/statistics_generate_datasource.yml/badge.svg)                                     | [📄](.github/workflows/statistics_generate_datasource.yml)                   |
+| ![validator_validate_tests-suite.yml](https://github.com/OWASP/secure-headers-project/actions/workflows/validator_validate_tests-suite.yml/badge.svg)                                     | [📄](.github/workflows/validator_validate_tests-suite.yml)                   |
 
 # Issue and discussions
 
 💬 Both are handled using the following GitHub features:
 
-* [Issues](https://github.com/OWASP/www-project-secure-headers/issues).
-* [Discussions](https://github.com/OWASP/www-project-secure-headers/discussions).
+* [Issues](https://github.com/OWASP/secure-headers-project/issues).
+* [Discussions](https://github.com/OWASP/secure-headers-project/discussions).
 
 # Content editor
 
@@ -96,13 +96,13 @@
 
 # Contributors
 
-💌 Contributors to OSHP, before the migration of the project to [GitHub](https://github.com/OWASP/www-project-secure-headers):
+💌 Contributors to OSHP, before the migration of the project to [GitHub](https://github.com/OWASP/secure-headers-project):
 
 * [Alexandre Menezes](mailto:alexandre.fmenezes@owasp.org)
 * [Adam Averay](https://github.com/adamaveray)
 * [Jim Manico](https://github.com/jmanico)
 
-💌 Visit this [page](https://github.com/OWASP/www-project-secure-headers/graphs/contributors) for updated information about the contributors since the migration of the project to GitHub.
+💌 Visit this [page](https://github.com/OWASP/secure-headers-project/graphs/contributors) for updated information about the contributors since the migration of the project to GitHub.
 
 # Licensing
 

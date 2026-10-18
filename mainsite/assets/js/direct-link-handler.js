@@ -41,7 +41,7 @@ function handleDirectLink() {
 window.addEventListener("load", function () {
     const isFirefox = (navigator.userAgent.indexOf("Firefox") !== -1);
     if (isFirefox) {
-        //Fix for issue "github.com/OWASP/www-project-secure-headers/issues/251"
+        //Fix for issue "github.com/OWASP/secure-headers-project/issues/251"
         console.debug(`[DirectLinkHandler] Firefox so delayed call to let the page load.`);
         setTimeout(() => { handleDirectLink(); }, "3000");
     } else {

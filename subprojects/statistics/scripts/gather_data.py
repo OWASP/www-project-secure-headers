@@ -18,7 +18,7 @@ import aiohttp
 # -------- CONSTANTS ---------
 
 OSHP_SECURITY_HEADERS_FILE_LOCATION = (
-    "https://raw.githubusercontent.com/OWASP/www-project-secure-headers/"
+    "https://raw.githubusercontent.com/OWASP/secure-headers-project/"
     "refs/heads/master/ci/headers_add.json"
 )
 OSHP_SECURITY_HEADERS_EXTRA_FILE_LOCATION = "oshp_headers_extra_to_include.txt"

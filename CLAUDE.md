@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repository is
 
-This is the content repository for the **OWASP Secure Headers Project (OSHP)**, published at <https://owasp.org/www-project-secure-headers/>. It is a **documentation project**, not an application: there is no build step, no test suite to run, and no server to start. The bulk of the work here is editing Markdown content and the small set of Python/Bash scripts that generate derived files from that content via GitHub Actions.
+This is the content repository for the **OWASP Secure Headers Project (OSHP)**, published at <https://owasp.org/secure-headers-project/>. It is a **documentation project**, not an application: there is no build step, no test suite to run, and no server to start. The bulk of the work here is editing Markdown content and the small set of Python/Bash scripts that generate derived files from that content via GitHub Actions.
 
 ## Repository structure
 

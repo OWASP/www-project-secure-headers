@@ -61,7 +61,7 @@ In other words, this header tells a server whether a request for a resource is c
 ### Example
 
 ```text
-GET /www-project-secure-headers/
+GET /secure-headers-project/
 Host: owasp.org
 User-Agent: Chrome/91.0.4472.124
 Sec-Fetch-Dest: document

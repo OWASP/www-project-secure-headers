@@ -52,7 +52,7 @@ $ venom run --var="target_site=https://mysite.com" tests_suite.yml
 $ venom run --var="target_site=https://mysite.com" --var="logout_url=/logout" tests_suite.yml 
 ```
 
-📽️ Live usage example (the parameter `internet_facing` does not exists anymore, see [here](https://github.com/OWASP/www-project-secure-headers/pull/193) for explanation):
+📽️ Live usage example (the parameter `internet_facing` does not exists anymore, see [here](https://github.com/OWASP/secure-headers-project/pull/193) for explanation):
 
 [![Watch the video](demo.png)](demo.mp4)
 
@@ -72,7 +72,7 @@ docker run --mount type=bind,source=$(pwd)/tests_suite.yml,target=/workdir/tests
 
 # Tests suite mock service
 
-🌍 The python script [test_suite_mock.py](test_suite_mock.py) provides a mock endpoint returning an HTTP response, for which, all HTTP response headers recommended by the [OSHP](https://owasp.org/www-project-secure-headers/) will be set.
+🌍 The python script [test_suite_mock.py](test_suite_mock.py) provides a mock endpoint returning an HTTP response, for which, all HTTP response headers recommended by the [OSHP](https://owasp.org/secure-headers-project/) will be set.
 
 📦 It is automatically deployed on `https://oshp-validator-mock.onrender.com` and it is used, by this [CI workflow](../../.github/workflows/validator_validate_tests-suite.yml), to test the venom tests suite.
 
