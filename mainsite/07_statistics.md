@@ -14,7 +14,7 @@ permalink: /statistics/
 
 
 
-📅 Last update: 10/03/2026 at 00:51:56 - Domains analyzed count: 250000.
+📅 Last update: 10/18/2026 at 07:07:07 - Domains analyzed count: 250000.
 
 ## Global usage of secure headers
 
