@@ -9,11 +9,11 @@ const sourceDomain = window.location.hostname;
 
 if (sourceDomain === owaspSubDomain) {
     const targetLocation = `https://${owaspSubDomain}/index/`;
-    console.info(`Visitor come from the custom sub domain so redirect it to '${targetLocation}'...`);
+    console.info(`Visitor come from the custom sub domain so redirect it to '${targetLocation}'.`);
     window.location.replace(targetLocation);
 } else if (sourceDomain === githubPageSubDomain) {
     const targetLocation = `https://${githubPageSubDomain}/secure-headers-project/index/`;
-    console.info(`Visitor come from the GH page domain so redirect it to '${targetLocation}'...`);
+    console.info(`Visitor come from the GH page domain so redirect it to '${targetLocation}'.`);
     window.location.replace(targetLocation);
 } else {
     console.error("The source domain is not an expected one so do nothing !");
