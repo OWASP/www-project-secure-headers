@@ -7,7 +7,7 @@ permalink: /technical-references-dashboard/
 
 # Technical References Dashboard
 
-> 📅 Last verification (UTC): 2026-10-11 01:00:32
+> 📅 Last verification (UTC): 2026-10-18 00:51:35
 
 ## GitHub repositories health status
 
@@ -40,9 +40,9 @@ Project reaching the 🟥 status **are removed**.
 | `2026-09-30T20:05:46Z` (1 months ago) | 🟩 | [OWASP/www-project-randomized-header-channel-for-csrf-protection/tree/main/resources/security-headers](https://github.com/OWASP/www-project-randomized-header-channel-for-csrf-protection/tree/main/resources/security-headers) |
 | `2026-10-04T11:01:42Z` (0 months ago) | 🟩 | [helmetjs/helmet](https://github.com/helmetjs/helmet) |
 | `2026-10-06T16:49:41Z` (0 months ago) | 🟩 | [GaProgMan/OwaspHeaders.Core](https://github.com/GaProgMan/OwaspHeaders.Core) |
-| `2026-10-06T21:57:41Z` (0 months ago) | 🟩 | [mdn/mdn-http-observatory](https://github.com/mdn/mdn-http-observatory) |
-| `2026-10-07T14:20:04Z` (0 months ago) | 🟩 | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
 | `2026-10-08T22:14:20Z` (0 months ago) | 🟩 | [github/secure_headers](https://github.com/github/secure_headers) |
-| `2026-10-09T19:51:00Z` (0 months ago) | 🟩 | [rfc-st/humble](https://github.com/rfc-st/humble) |
 | `2026-10-10T16:28:56Z` (0 months ago) | 🟩 | [unrolled/secure](https://github.com/unrolled/secure) |
+| `2026-10-16T17:38:48Z` (0 months ago) | 🟩 | [mdn/mdn-http-observatory](https://github.com/mdn/mdn-http-observatory) |
+| `2026-10-17T20:48:02Z` (0 months ago) | 🟩 | [rfc-st/humble](https://github.com/rfc-st/humble) |
+| `2026-10-17T21:38:59Z` (0 months ago) | 🟩 | [drwetter/testssl.sh](https://github.com/drwetter/testssl.sh) |
 
