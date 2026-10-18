@@ -18,7 +18,7 @@ from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
 
 DEBUG = True
-OSHP_MARKER_STRINGS = ["owasp secure headers project", "https://owasp.org/secure-headers-project", "https://www.owasp.org/index.php/security_headers", "https://owasp.org/index.php/owasp_secure_headers_project"]
+OSHP_MARKER_STRINGS = ["owasp secure headers project", "https://www.owasp.org/index.php/security_headers", "https://owasp.org/index.php/owasp_secure_headers_project", "https://owasp.org/projects/secure-headers-project", "https://owasp.org/www-project-secure-headers"]
 WAIT_DELAY_SECONDS = 4
 MAX_RETRY = 4
 TIMEOUT_SECONDS = 20
@@ -50,7 +50,6 @@ def verify_mention(site_url, github_token=""):
                 # but we consider this OK to get the content loaded
                 response_code = 200
                 response_content = page.content()
-                pass
             browser.close()
     else:
         parts = site_url.split("/")
@@ -124,7 +123,7 @@ if __name__ == "__main__":
         if site_url.strip().startswith("http"):
             oshp_is_mentioned = "NO"
             print(f"=> Checking '{site_url}'")
-            for _ in range(0, MAX_RETRY):
+            for _ in range(MAX_RETRY):
                 try:
                     oshp_is_mentioned = verify_mention(site_url, github_token=github_access_token)
                     if oshp_is_mentioned in valid_mentions:
@@ -134,7 +133,6 @@ if __name__ == "__main__":
                 except (requests.exceptions.Timeout, requests.exceptions.ConnectionError):
                     oshp_is_mentioned = "IO_ERROR"
                     time.sleep(WAIT_DELAY_SECONDS)
-                    pass
             print(f"==> State '{oshp_is_mentioned}'")
             if oshp_is_mentioned not in valid_mentions:
                 print_github_error(site_url, oshp_is_mentioned)
