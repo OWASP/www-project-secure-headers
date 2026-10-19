@@ -6,15 +6,14 @@ Script to dynamically handle the redirection to the "/index" path depending on t
 const owaspSubDomain = "secure-headers-project.owasp.org";
 const githubPageSubDomain = "owasp.github.io";
 const sourceDomain = window.location.hostname;
+const oshpFullUrl = `https://${owaspSubDomain}/index/`;
 
 if (sourceDomain === owaspSubDomain) {
-    const targetLocation = `https://${owaspSubDomain}/index/`;
-    console.info(`Visitor come from the custom sub domain so redirect it to '${targetLocation}'.`);
-    window.location.replace(targetLocation);
+    console.info(`Visitor come from the custom sub domain so redirect it to '${oshpFullUrl}'.`);
+    window.location.replace(oshpFullUrl);
 } else if (sourceDomain === githubPageSubDomain) {
-    const targetLocation = `https://${githubPageSubDomain}/secure-headers-project/index/`;
-    console.info(`Visitor come from the GH page domain so redirect it to '${targetLocation}'.`);
-    window.location.replace(targetLocation);
+    console.info(`Visitor come from the GH page domain so redirect it to '${oshpFullUrl}'.`);
+    window.location.replace(oshpFullUrl);
 } else {
     console.error("The source domain is not an expected one so do nothing !");
 }
