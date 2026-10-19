@@ -11,7 +11,7 @@
 > ℹ️ The url `https://owasp.org/www-project-secure-headers` redirect to the *project page on the OWASP site*.
 
 * Project page on the OWASP site: <https://owasp.org/projects/secure-headers-project>
-* Web rendering of the main site: <https://owasp.github.io/secure-headers-project/>
+* Web rendering of the main site: <https://secure-headers-project.owasp.org>
 
 # OSHP ecosystem
 
@@ -21,7 +21,8 @@
   * Called `mainsite`.
   * Content is [here](mainsite/).
     * It is **the master data in markdown** and is the content that is updated.
-  * Web rendered content is [here](https://owasp.github.io/secure-headers-project/) and is based on the **the master data in markdown**.
+  * Web rendered content is [here](https://secure-headers-project.owasp.org). It is based on the **the master data in markdown** and use the GitHub pages feature.
+  * GitHub pages original URL is `https://owasp.github.io/secure-headers-project/`
 * **Validator**: Venom tests suite to validate an HTTP security response headers configuration against OSHP recommendation.
   * Called `validator`.
   * Content is [here](subprojects/validator/).
