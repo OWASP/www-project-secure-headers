@@ -22,7 +22,7 @@
   * Content is [here](mainsite/).
     * It is **the master data in markdown** and is the content that is updated.
   * Web rendered content is [here](https://secure-headers-project.owasp.org). It is based on the **the master data in markdown** and use the GitHub pages feature.
-  * GitHub pages original URL is `https://owasp.github.io/secure-headers-project/`
+  * GitHub pages original URL is `https://owasp.github.io/secure-headers-project/`.
 * **Validator**: Venom tests suite to validate an HTTP security response headers configuration against OSHP recommendation.
   * Called `validator`.
   * Content is [here](subprojects/validator/).
